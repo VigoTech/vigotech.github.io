@@ -1,0 +1,11 @@
+baseURL = "http://vigotech.github.io/"
+languageCode = "gl-es"
+title = "VigoTech"
+
+[Params]
+  github = "VigoTech"
+  twitter = "vigotech_"
+  email = "grupos@vigotech.org"
+  description = ""
+  cover = "/images/porto_low.jpg"
+  logo = "/images/logo.png"
