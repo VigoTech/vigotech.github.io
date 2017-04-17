@@ -2,8 +2,13 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://vigotech.github.io/post/vigotech-intro/</loc>
+    <loc>http://vigotech.github.io/post/vigotech-grupos/</loc>
     <lastmod>2017-04-14T16:52:11+02:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://vigotech.github.io/post/vigotech-calendario/</loc>
+    <lastmod>2017-04-13T16:52:11+02:00</lastmod>
   </url>
   
   <url>

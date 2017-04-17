@@ -13,11 +13,20 @@
     
     <item>
       <title>Grupos</title>
-      <link>http://vigotech.github.io/post/vigotech-intro/</link>
+      <link>http://vigotech.github.io/post/vigotech-grupos/</link>
       <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
       
-      <guid>http://vigotech.github.io/post/vigotech-intro/</guid>
+      <guid>http://vigotech.github.io/post/vigotech-grupos/</guid>
       <description>Agile Vigo   CodeSign Project   GDG Vigo    Grupo de Usuarios de Joomla de Vigo   JavascriptVigo   PHPVigo    PythonVigo   SysAdmin Galicia   VigoJUG    VigoLabs   WordPress en Vigo     </description>
+    </item>
+    
+    <item>
+      <title>Calendario</title>
+      <link>http://vigotech.github.io/post/vigotech-calendario/</link>
+      <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>http://vigotech.github.io/post/vigotech-calendario/</guid>
+      <description> </description>
     </item>
     
   </channel>
