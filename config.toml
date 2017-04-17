@@ -1,6 +1,8 @@
 baseURL = "http://vigotech.github.io/"
 languageCode = "gl-es"
 title = "VigoTech"
+publishDir = "docs"
+theme = "hugoscroll"
 
 [Params]
   github = "VigoTech"
