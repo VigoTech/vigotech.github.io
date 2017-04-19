@@ -1,13 +1,13 @@
-baseURL = "https://vigotechalliance.github.io/"
+baseURL = "https://vigotech.github.io/"
 languageCode = "gl-es"
-title = "VigoTech"
+title = "Vigo Tech Alliance"
 publishDir = "docs"
 theme = "hugoscroll"
 
 [Params]
   github = "VigoTech"
-  twitter = "vigotech_"
-  email = "grupos@vigotech.org"
+  twitter = "vigotechallianc"
+  email = "vigotechalliance@gmail.com"
   description = "Agregrador dos diferentes meetups de Tecnoloxía en Vigo"
   cover = "/images/porto_low.jpg"
   logo = "/images/logo.png"
