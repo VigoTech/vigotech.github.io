@@ -1,4 +1,4 @@
-baseURL = "http://vigotech.github.io/"
+baseURL = "https://vigotechalliance.github.io/"
 languageCode = "gl-es"
 title = "VigoTech"
 publishDir = "docs"
