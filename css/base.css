@@ -2582,24 +2582,35 @@ a.fn-item.active {
 
 /* Added to list groups */
 
-#container {
+.container {
     display: table;
     border-collapse: separate;
     border-spacing: 25px;
 }
 
-#row  {
+.row  {
     display: table-row;
 }
 
-#cell {
+.cell {
     display: table-cell;
     width: 150px;
-    height: 150px;
     text-align: center;
-    vertical-align: middle;
+    vertical-align: top;
     padding:15px;
     text-decoration: none;
+    line-height: 1.1em;
+}
+
+.cell .picture-wrapper {
+  width: 150px;
+  height: 150px;
+  margin-bottom: 10px;
+  background: #fff;
+}
+.cell img{
+  margin-bottom: 10px;
+  vertical-align: middle;
 }
 
 
