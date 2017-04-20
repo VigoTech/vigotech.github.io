@@ -19,6 +19,13 @@ var $post = $('.post'),
     }
     $(document).ready(function(){
 
+        $('.matchHeight').matchHeight({
+        });
+
+
+
+
+
         $postholder.each(function (e) {
         	if(e % 2 != 0)
         		$(this).addClass("oneOff")

@@ -5,80 +5,102 @@ title = "Grupos"
 
 +++
 
-<div id="container">
-<div id="row">
-    <div id="cell">
+<div class="container">
+<div class="row">
+    <div class="cell">
         <a href="https://www.agilevigo.com/">
-            <img src="/images/agile_vigo.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/agile_vigo.jpg" alt="Agile Vigo">
+            </div>
             Agile Vigo
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.meetup.com/es-ES/codesign-project/">
-            <img src="/images/logo.png">
+            <div class="picture-wrapper">
+                <img src="/images/codesignproject.jpeg" alt="Codesign Project">
+             </div>
             CodeSign Project
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.gdgvigo.com">
-            <img src="/images/gdg_vigo.png">
+            <div class="picture-wrapper">
+                <img src="/images/gdg_vigo.png" alt="GDG Vigo">
+            </div>
             GDG Vigo
         </a>
     </div>
 </div>
 
-<div id="row">
-    <div id="cell">
+<div class="row">
+    <div class="cell">
         <a href="https://www.meetup.com/Grupo-de-Usuarios-de-Joomla-de-Vigo/">
-            <img src="/images/joomla_vigo.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/joomla_vigo.jpg" alt="Joomla Vigo">
+            </div>
             Grupo de Usuarios de Joomla de Vigo
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.meetup.com/es-ES/JavaScriptVigo/">
-            <img src="/images/javascript_vigo.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/javascript_vigo.jpg"  alt="JavaScript Vigo">
+            </div>
             JavascriptVigo
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.phpvigo.com">
-            <img src="/images/php_vigo.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/php_vigo.jpg" alt="PHPVigo">
+            </div>    
             PHPVigo
         </a>
     </div>
 </div>
 
-<div id="row">
-    <div id="cell">
+<div class="row">
+    <div class="cell">
         <a href="http://www.python-vigo.es">
-            <img src="/images/python_vigo.png">
+            <div class="picture-wrapper">
+                <img src="/images/python_vigo.png" alt="Python Vigo">
+            </div>
             PythonVigo
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.meetup.com/es-ES/Sysadmin-Galicia/">
-            <img src="/images/sysadmin_galicia.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/sysadmin_galicia.jpg" alt="Sysadmin Galicia">
+            </div>
             SysAdmin Galicia
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="http://www.vigojug.org">
-            <img src="/images/vigojug.jpg">
+            <div class="picture-wrapper">
+                <img src="/images/vigojug.jpg" alt="VigoJUG">
+            </div>    
             VigoJUG
         </a>
     </div>
 </div>
 
-<div id="row">
-    <div id="cell">
+<div class="row">
+    <div class="cell">
         <a href="http://vigolabs.gal/">
-            <img src="/images/vigolabs.jpeg">
+            <div class="picture-wrapper">
+                <img src="/images/vigolabs.jpeg" alt="VigoLabs">
+            </div>
             VigoLabs
         </a>
     </div>
-    <div id="cell">
+    <div class="cell">
         <a href="https://www.meetup.com/Meetup-de-WordPress-en-Vigo/">
-            <img src="/images/logo.png">
+            <div class="picture-wrapper">
+                <img src="/images/logo.png" class="Wordpress en Vigo">
+            </div>
             WordPress en Vigo
         </a>
     </div>
