@@ -17,7 +17,21 @@ var $post = $('.post'),
 			scrollTop: e.offset().top
 		}, 1000);
     }
+
     $(document).ready(function(){
+
+        $('.matchHeight').matchHeight({
+
+        });
+
+        $('.picture-wrapper').matchHeight({
+            byRow: false,
+            property: 'height',
+            target: null,
+            remove: false
+        });
+
+
 
         $postholder.each(function (e) {
         	if(e % 2 != 0)
