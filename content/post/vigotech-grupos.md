@@ -2,6 +2,9 @@
 date = "2017-04-14T16:52:11+02:00"
 draft = false
 title = "Grupos"
+weight = 1
+type = "post"
+class="post first"
 
 +++
 

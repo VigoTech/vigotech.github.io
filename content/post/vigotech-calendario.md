@@ -2,6 +2,9 @@
 date = "2017-04-13T16:52:11+02:00"
 draft = false
 title = "Calendario"
+weight = 100
+type = "post"
+class="post last"
 
 +++
 
