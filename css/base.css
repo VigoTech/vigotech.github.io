@@ -1,1992 +1,2589 @@
 @charset "UTF-8";
+
+/* FONT PATH
+ * -------------------------- */
+
+/* latin-ext */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v11/yQiAaD56cjx1AooMTSghGfY6323mHUZFJMgTvxaG2iE.woff2) format('woff2');
+    unicode-range: U+0100-024F, U+1E00-1EFF, U+20A0-20AB, U+20AD-20CF, U+2C60-2C7F, U+A720-A7FF;
+}
+
+/* latin */
+@font-face {
+    font-family: 'Raleway';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Raleway'), local('Raleway-Regular'), url(https://fonts.gstatic.com/s/raleway/v11/0dTEPzkLWceF7z0koJaX1A.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2212, U+2215;
+}
+
 /*!
  *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
-/* FONT PATH
- * -------------------------- */
 @font-face {
-  font-family: 'FontAwesome';
-  src: url("../fonts/font-awesome/fontawesome-webfont.eot?v=4.2.0");
-  src: url("../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/font-awesome/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/font-awesome/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/font-awesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
-  font-weight: normal;
-  font-style: normal; }
+    font-family: 'FontAwesome';
+    src: url("../fonts/font-awesome/fontawesome-webfont.eot?v=4.2.0");
+    src: url("../fonts/font-awesome/fontawesome-webfont.eot?#iefix&v=4.2.0") format("embedded-opentype"), url("../fonts/font-awesome/fontawesome-webfont.woff?v=4.2.0") format("woff"), url("../fonts/font-awesome/fontawesome-webfont.ttf?v=4.2.0") format("truetype"), url("../fonts/font-awesome/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular") format("svg");
+    font-weight: normal;
+    font-style: normal; }
+
+
 .fa {
-  display: inline-block;
-  font: normal normal normal 14px/1 FontAwesome;
-  font-size: inherit;
-  text-rendering: auto;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale; }
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
 
 /* makes the font 33% larger relative to the icon container */
 .fa-lg {
-  font-size: 1.33333em;
-  line-height: 0.75em;
-  vertical-align: -15%; }
+    font-size: 1.33333em;
+    line-height: 0.75em;
+    vertical-align: -15%;
+}
 
 .fa-2x {
-  font-size: 2em; }
+    font-size: 2em;
+}
 
 .fa-3x {
-  font-size: 3em; }
+    font-size: 3em;
+}
 
 .fa-4x {
-  font-size: 4em; }
+    font-size: 4em;
+}
 
 .fa-5x {
-  font-size: 5em; }
+    font-size: 5em;
+}
 
 .fa-fw {
-  width: 1.28571em;
-  text-align: center; }
+    width: 1.28571em;
+    text-align: center;
+}
 
 .fa-ul {
-  padding-left: 0;
-  margin-left: 2.14286em;
-  list-style-type: none; }
-  .fa-ul > li {
-    position: relative; }
+    padding-left: 0;
+    margin-left: 2.14286em;
+    list-style-type: none;
+}
+
+.fa-ul > li {
+    position: relative;
+}
 
 .fa-li {
-  position: absolute;
-  left: -2.14286em;
-  width: 2.14286em;
-  top: 0.14286em;
-  text-align: center; }
-  .fa-li.fa-lg {
-    left: -1.85714em; }
+    position: absolute;
+    left: -2.14286em;
+    width: 2.14286em;
+    top: 0.14286em;
+    text-align: center;
+}
+
+.fa-li.fa-lg {
+    left: -1.85714em;
+}
 
 .fa-border {
-  padding: .2em .25em .15em;
-  border: solid 0.08em #eee;
-  border-radius: .1em; }
+    padding: .2em .25em .15em;
+    border: solid 0.08em #eee;
+    border-radius: .1em;
+}
 
 .pull-right {
-  float: right; }
+    float: right;
+}
 
 .pull-left {
-  float: left; }
+    float: left;
+}
 
 .fa.pull-left {
-  margin-right: .3em; }
+    margin-right: .3em;
+}
+
 .fa.pull-right {
-  margin-left: .3em; }
+    margin-left: .3em;
+}
 
 .fa-spin {
-  -webkit-animation: fa-spin 2s infinite linear;
-  animation: fa-spin 2s infinite linear; }
+    -webkit-animation: fa-spin 2s infinite linear;
+    animation: fa-spin 2s infinite linear;
+}
 
 @-webkit-keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
 @keyframes fa-spin {
-  0% {
-    -webkit-transform: rotate(0deg);
-    transform: rotate(0deg); }
-  100% {
-    -webkit-transform: rotate(359deg);
-    transform: rotate(359deg); } }
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+    100% {
+        -webkit-transform: rotate(359deg);
+        transform: rotate(359deg);
+    }
+}
+
 .fa-rotate-90 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
-  -webkit-transform: rotate(90deg);
-  -ms-transform: rotate(90deg);
-  transform: rotate(90deg); }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
+    -webkit-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+}
 
 .fa-rotate-180 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: rotate(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotate(180deg); }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    transform: rotate(180deg);
+}
 
 .fa-rotate-270 {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
-  -webkit-transform: rotate(270deg);
-  -ms-transform: rotate(270deg);
-  transform: rotate(270deg); }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+    -webkit-transform: rotate(270deg);
+    -ms-transform: rotate(270deg);
+    transform: rotate(270deg);
+}
 
 .fa-flip-horizontal {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
-  -webkit-transform: scale(-1, 1);
-  -ms-transform: scale(-1, 1);
-  transform: scale(-1, 1); }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0);
+    -webkit-transform: scale(-1, 1);
+    -ms-transform: scale(-1, 1);
+    transform: scale(-1, 1);
+}
 
 .fa-flip-vertical {
-  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
-  -webkit-transform: scale(1, -1);
-  -ms-transform: scale(1, -1);
-  transform: scale(1, -1); }
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
+    -webkit-transform: scale(1, -1);
+    -ms-transform: scale(1, -1);
+    transform: scale(1, -1);
+}
 
 :root .fa-rotate-90,
 :root .fa-rotate-180,
 :root .fa-rotate-270,
 :root .fa-flip-horizontal,
 :root .fa-flip-vertical {
-  filter: none; }
+    filter: none;
+}
 
 .fa-stack {
-  position: relative;
-  display: inline-block;
-  width: 2em;
-  height: 2em;
-  line-height: 2em;
-  vertical-align: middle; }
+    position: relative;
+    display: inline-block;
+    width: 2em;
+    height: 2em;
+    line-height: 2em;
+    vertical-align: middle;
+}
 
 .fa-stack-1x, .fa-stack-2x {
-  position: absolute;
-  left: 0;
-  width: 100%;
-  text-align: center; }
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+}
 
 .fa-stack-1x {
-  line-height: inherit; }
+    line-height: inherit;
+}
 
 .fa-stack-2x {
-  font-size: 2em; }
+    font-size: 2em;
+}
 
 .fa-inverse {
-  color: #fff; }
+    color: #fff;
+}
 
 /* Font Awesome uses the Unicode Private Use Area (PUA) to ensure screen
    readers do not read off random characters that represent icons */
 .fa-glass:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-music:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-search:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-envelope-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-heart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-star:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-star-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-user:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-film:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-th-large:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-th:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-th-list:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-check:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-remove:before,
 .fa-close:before,
 .fa-times:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-search-plus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-search-minus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-power-off:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-signal:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gear:before,
 .fa-cog:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-trash-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-home:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-clock-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-road:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-download:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-o-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-o-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-inbox:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-play-circle-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rotate-right:before,
 .fa-repeat:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-refresh:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-list-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-lock:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flag:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-headphones:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-volume-off:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-volume-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-volume-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-qrcode:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-barcode:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tag:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tags:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-book:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bookmark:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-print:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-camera:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-font:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bold:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-italic:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-text-height:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-text-width:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-align-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-align-center:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-align-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-align-justify:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-list:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dedent:before,
 .fa-outdent:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-indent:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-video-camera:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-photo:before,
 .fa-image:before,
 .fa-picture-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pencil:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-map-marker:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-adjust:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tint:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-edit:before,
 .fa-pencil-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-share-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-check-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrows:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-step-backward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fast-backward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-backward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-play:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pause:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stop:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-forward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fast-forward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-step-forward:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-eject:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plus-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-minus-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-times-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-check-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-question-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-info-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-crosshairs:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-times-circle-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-check-circle-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ban:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-mail-forward:before,
 .fa-share:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-expand:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-compress:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-minus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-asterisk:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-exclamation-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gift:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-leaf:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fire:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-eye:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-eye-slash:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-warning:before,
 .fa-exclamation-triangle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plane:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-calendar:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-random:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-comment:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-magnet:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-retweet:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-shopping-cart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-folder:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-folder-open:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrows-v:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrows-h:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bar-chart-o:before,
 .fa-bar-chart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tt-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fb-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-camera-retro:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-key:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gears:before,
 .fa-cogs:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-comments:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-thumbs-o-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-thumbs-o-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-star-half:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-heart-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sign-out:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ll-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-thumb-tack:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-external-link:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sign-in:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-trophy:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-github-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-upload:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-lemon-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-phone:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bookmark-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-phone-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fb:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-github:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-unlock:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-credit-card:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rss:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hdd-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bullhorn:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bell:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-certificate:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hand-o-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hand-o-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hand-o-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hand-o-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-globe:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-wrench:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tasks:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-filter:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-briefcase:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrows-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-group:before,
 .fa-users:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chain:before,
 .fa-link:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cloud:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flask:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cut:before,
 .fa-scissors:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-copy:before,
 .fa-files-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paperclip:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-save:before,
 .fa-floppy-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-navicon:before,
 .fa-reorder:before,
 .fa-bars:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-list-ul:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-list-ol:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-strikethrough:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-underline:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-table:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-magic:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-truck:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pinterest:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pinterest-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-google-plus-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-google-plus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-money:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-caret-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-caret-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-caret-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-caret-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-columns:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-unsorted:before,
 .fa-sort:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-down:before,
 .fa-sort-desc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-up:before,
 .fa-sort-asc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-envelope:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ll:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rotate-left:before,
 .fa-undo:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-legal:before,
 .fa-gavel:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dashboard:before,
 .fa-tachometer:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-comment-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-comments-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flash:before,
 .fa-bolt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sitemap:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-umbrella:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paste:before,
 .fa-clipboard:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-lightbulb-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-exchange:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cloud-download:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cloud-upload:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-user-md:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stethoscope:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-suitcase:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bell-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-coffee:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cutlery:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-text-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-building-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hospital-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ambulance:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-medkit:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fighter-jet:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-beer:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-h-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plus-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-double-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-double-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-double-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-double-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angle-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-desktop:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-laptop:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tablet:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-mobile-phone:before,
 .fa-mobile:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-circle-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-quote-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-quote-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-spinner:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-mail-reply:before,
 .fa-reply:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-github-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-folder-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-folder-open-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-smile-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-frown-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-meh-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gamepad:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-keyboard-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flag-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flag-checkered:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-terminal:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-code:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-mail-reply-all:before,
 .fa-reply-all:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-star-half-empty:before,
 .fa-star-half-full:before,
 .fa-star-half-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-location-arrow:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-crop:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-code-fork:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-unlink:before,
 .fa-chain-broken:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-question:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-info:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-exclamation:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-superscript:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-subscript:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-eraser:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-puzzle-piece:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-microphone:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-microphone-slash:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-shield:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-calendar-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fire-extinguisher:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rocket:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-maxcdn:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-circle-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-circle-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-circle-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-chevron-circle-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-html5:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-css3:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-anchor:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-unlock-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bullseye:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ellipsis-h:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ellipsis-v:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rss-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-play-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ticket:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-minus-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-minus-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-level-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-level-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-check-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pencil-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-external-link-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-share-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-compass:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-down:before,
 .fa-caret-square-o-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-up:before,
 .fa-caret-square-o-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-right:before,
 .fa-caret-square-o-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-euro:before,
 .fa-eur:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gbp:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dollar:before,
 .fa-usd:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-rupee:before,
 .fa-inr:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cny:before,
 .fa-rmb:before,
 .fa-yen:before,
 .fa-jpy:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ruble:before,
 .fa-rouble:before,
 .fa-rub:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-won:before,
 .fa-krw:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bitcoin:before,
 .fa-btc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-text:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-alpha-asc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-alpha-desc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-amount-asc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-amount-desc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-numeric-asc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sort-numeric-desc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-thumbs-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-thumbs-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-youtube-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-youtube:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-xing:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-xing-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-youtube-play:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dropbox:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stack-overflow:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-instagram:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-flickr:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-adn:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bitbucket:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bitbucket-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tumblr:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tumblr-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-long-arrow-down:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-long-arrow-up:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-long-arrow-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-long-arrow-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-apple:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-windows:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-android:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-linux:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dribbble:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-skype:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-foursquare:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-trello:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-female:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-male:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-gittip:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sun-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-moon-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-archive:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bug:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-vk:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-weibo:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-renren:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pagelines:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stack-exchange:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-o-right:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-arrow-circle-o-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-left:before,
 .fa-caret-square-o-left:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-dot-circle-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-wheelchair:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-vimeo-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-turkish-lira:before,
 .fa-try:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plus-square-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-space-shuttle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-slack:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-envelope-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-wordpress:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-openid:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-institution:before,
 .fa-bank:before,
 .fa-university:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-mortar-board:before,
 .fa-graduation-cap:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-yahoo:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-google:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-reddit:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-reddit-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stumbleupon-circle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-stumbleupon:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-delicious:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-digg:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pied-piper:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pied-piper-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-drupal:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-joomla:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-language:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-fax:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-building:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-child:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paw:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-spoon:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cube:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cubes:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-behance:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-behance-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-steam:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-steam-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-recycle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-automobile:before,
 .fa-car:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cab:before,
 .fa-taxi:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tree:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-spotify:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-deviantart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-soundcloud:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-database:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-pdf-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-word-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-excel-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-powerpoint-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-photo-o:before,
 .fa-file-picture-o:before,
 .fa-file-image-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-zip-o:before,
 .fa-file-archive-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-sound-o:before,
 .fa-file-audio-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-movie-o:before,
 .fa-file-video-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-file-code-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-vine:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-codepen:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-jsfiddle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-life-bouy:before,
 .fa-life-buoy:before,
 .fa-life-saver:before,
 .fa-support:before,
 .fa-life-ring:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-circle-o-notch:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ra:before,
 .fa-rebel:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ge:before,
 .fa-empire:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-git-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-git:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-hacker-news:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tencent-weibo:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-qq:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-wechat:before,
 .fa-weixin:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-send:before,
 .fa-paper-plane:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-send-o:before,
 .fa-paper-plane-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-history:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-circle-thin:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-header:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paragraph:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-sliders:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-share-alt:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-share-alt-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bomb:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-soccer-ball-o:before,
 .fa-futbol-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-tty:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-binoculars:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-plug:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-slideshare:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-twitch:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-yelp:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-newspaper-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-wifi:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-calculator:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paypal:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-google-wallet:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-visa:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-mastercard:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-discover:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-amex:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-paypal:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc-stripe:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bell-slash:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bell-slash-o:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-trash:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-copyright:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-at:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-eyedropper:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-paint-brush:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-birthday-cake:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-area-chart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-pie-chart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-line-chart:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-lastfm:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-lastfm-square:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-off:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-toggle-on:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bicycle:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-bus:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-ioxhost:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-angellist:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-cc:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-shekel:before,
 .fa-sheqel:before,
 .fa-ils:before {
-  content: ""; }
+    content: "";
+}
 
 .fa-meanpath:before {
-  content: ""; }
+    content: "";
+}
 
 /* http://meyerweb.com/eric/tools/css/reset/
    v2.0 | 20110126
    License: none (public domain)
 */
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
 
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
-  display: block; }
+    display: block;
+}
 
 body {
-  line-height: 1; }
+    line-height: 1;
+}
 
 ol, ul {
-  list-style: none; }
+    list-style: none;
+}
 
 blockquote, q {
-  quotes: none; }
+    quotes: none;
+}
 
 blockquote:before, blockquote:after {
-  content: '';
-  content: none; }
+    content: '';
+    content: none;
+}
 
 q:before, q:after {
-  content: '';
-  content: none; }
+    content: '';
+    content: none;
+}
 
 table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* Apply these base styles to all icons */
 .icon-feed, .icon-twitter, .icon-google-plus, .icon-facebook {
-  font-family: 'icons';
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  text-decoration: none; }
+    font-family: 'icons';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    text-decoration: none;
+}
 
 /* Each icon is created by inserting the corret character into the
    content of the :before pseudo element. Like a boss. */
 .icon-feed:before {
-  content: "\e001"; }
+    content: "\e001";
+}
 
 .icon-twitter:before {
-  content: "\e002";
-  font-size: 1.1em; }
+    content: "\e002";
+    font-size: 1.1em;
+}
 
 .icon-google-plus:before {
-  content: "\e003"; }
+    content: "\e003";
+}
 
 .icon-facebook:before {
-  content: "\e004"; }
+    content: "\e004";
+}
 
 /* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
 html {
-  height: 100%;
-  max-height: 100%;
-  font-size: 67,5%;
-  overflow-x: hidden; }
+    height: 100%;
+    max-height: 100%;
+    font-size: 67, 5%;
+    overflow-x: hidden;
+}
 
 body {
-  height: 100%;
-  max-height: 100%;
-  font-family: "Times New Roman", serif;
-  font-size: 1.5rem;
-  line-height: 1.6em;
-  color: black; }
+    height: 100%;
+    max-height: 100%;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    line-height: 1.6em;
+    color: black;
+}
 
 a.fa {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 ::-moz-selection {
-  color: #222;
-  background: #D6EDFF;
-  text-shadow: none; }
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
 
 ::selection {
-  color: #222;
-  background: #D6EDFF;
-  text-shadow: none; }
+    color: #222;
+    background: #D6EDFF;
+    text-shadow: none;
+}
 
 .left {
-  float: left; }
+    float: left;
+}
 
 .right {
-  float: right; }
+    float: right;
+}
 
 .clear {
-  clear: both; }
+    clear: both;
+}
 
 h1, h2, h3,
 h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 1;
-  margin-top: 0;
-  margin-bottom: 10px;
-  font-family: "Impact", sans-serif; }
+    text-rendering: optimizeLegibility;
+    line-height: 1;
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-family: 'Raleway', sans-serif;
+}
 
 h3, h4, h5, h6 {
-  text-rendering: optimizeLegibility;
-  line-height: 120%;
-  margin-top: 0;
-  font-family: "Impact", sans-serif;
-  margin-bottom: 0%; }
+    text-rendering: optimizeLegibility;
+    line-height: 120%;
+    margin-top: 0;
+    font-family: 'Raleway', sans-serif;
+    margin-bottom: 0%;
+}
 
 h1 {
-  font-size: 3rem;
-  line-height: 1.2em;
-  letter-spacing: -2px;
-  text-indent: -3px; }
+    font-size: 3rem;
+    line-height: 1.2em;
+    letter-spacing: -2px;
+    text-indent: -3px;
+}
 
 h2 {
-  font-size: 2rem;
-  line-height: 1.2em;
-  letter-spacing: -1px;
-  text-indent: -2px; }
+    font-size: 2rem;
+    line-height: 1.2em;
+    letter-spacing: -1px;
+    text-indent: -2px;
+}
 
 h3 {
-  font-size: 2rem; }
+    font-size: 2rem;
+}
 
 h4 {
-  font-size: 1.5rem; }
+    font-size: 1.5rem;
+}
 
 h5 {
-  font-size: 1rem; }
+    font-size: 1rem;
+}
 
 h6 {
-  font-size: 1rem; }
+    font-size: 1rem;
+}
 
 a {
-  color: inherit;
+    color: inherit;
     text-decoration: none;
-  transition: all ease 0.3s;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s; }
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+}
 
 a:hover {
     text-decoration: none;
-  color: #ff4260; }
+    color: #ff4260;
+}
 
 a.btn {
-  text-decoration: none;
-  background-color: #ff4260;
-  border-radius: 6px;
-  -webkit-border-radius: 6px;
-  color: white;
-  display: inline-block;
-  font-size: 16px;
-  letter-spacing: 1px;
-  margin: 0;
-  overflow: visible;
-  padding: 10px 20px 10px 20px;
-  position: relative;
-  margin-top: 2rem;
-  cursor: pointer;
-  font-family: 'Oswald', sans-serif;
-  text-transform: uppercase;
-  font-weight: lighter; }
+    text-decoration: none;
+    background-color: #ff4260;
+    border-radius: 6px;
+    -webkit-border-radius: 6px;
+    color: white;
+    display: inline-block;
+    font-size: 16px;
+    letter-spacing: 1px;
+    margin: 0;
+    overflow: visible;
+    padding: 10px 20px 10px 20px;
+    position: relative;
+    margin-top: 2rem;
+    cursor: pointer;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-weight: lighter;
+}
 
 a.btn:hover {
-  background: #93ca54; }
+    background: #93ca54;
+}
 
 #header-arrow {
-  font-size: 140px;
-  margin: -10px auto;
-  text-align: center;
-  position: absolute;
-  width: 100%;
-  left: 0;
-  bottom: -120px;
-  cursor: pointer;
-  opacity: 0.6;
-  transition: all ease 0.3s;
-  -webkit-transition: all ease 0.3s;
-  -moz-transition: all ease 0.3s; }
+    font-size: 140px;
+    margin: -10px auto;
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    left: 0;
+    bottom: -120px;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: all ease 0.3s;
+    -webkit-transition: all ease 0.3s;
+    -moz-transition: all ease 0.3s;
+}
 
 #header-arrow:hover {
-  opacity: 0.9; }
+    opacity: 0.9;
+}
 
 h1 a, h2 a, h3 a,
 h4 a, h5 a, h6 a {
-  /*color: #50585D;*/ }
+    /*color: #50585D;*/
+}
 
 p, ul, ol {
-  margin: 1em 0; }
+    margin: 1em 0;
+}
 
 ol ol, ul ul,
 ul ol, ol ul {
-  margin: 0.4em 0; }
+    margin: 0.4em 0;
+}
 
 hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 1px solid #efefef;
-  margin: 3.2em 0;
-  padding: 0; }
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #efefef;
+    margin: 3.2em 0;
+    padding: 0;
+}
 
 blockquote {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.0em 0 1.0em -2.2em;
-  padding: 0 0 0 1.0em;
-  /*border-left: #4a4a4a 0.4em solid;*/
-  font-weight: lighter; }
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.0em 0 1.0em -2.2em;
+    padding: 0 0 0 1.0em;
+    /*border-left: #4a4a4a 0.4em solid;*/
+    font-weight: lighter;
+}
 
 blockquote p {
-  margin: 0.8em 0; }
+    margin: 0.8em 0;
+}
 
 .quo {
-  /*float: left;*/
-  margin-right: 10px;
-  margin-left: 10px;
-  font-size: 20px; }
+    /*float: left;*/
+    margin-right: 10px;
+    margin-left: 10px;
+    font-size: 20px;
+}
 
 blockquote small {
-  display: inline-block;
-  margin: 0.8em 0 0.8em 1.5em;
-  font-size: 0.9em;
-  color: #ccc; }
+    display: inline-block;
+    margin: 0.8em 0 0.8em 1.5em;
+    font-size: 0.9em;
+    color: #ccc;
+}
 
 blockquote small:before {
-  content: '\2014 \00A0'; }
+    content: '\2014 \00A0';
+}
 
 blockquote cite {
-  font-weight: bold; }
+    font-weight: bold;
+}
 
 blockquote cite a {
-  font-weight: normal; }
+    font-weight: normal;
+}
 
 dl {
-  margin: 1.6em 0; }
+    margin: 1.6em 0;
+}
 
 dl dt {
-  float: left;
-  width: 180px;
-  overflow: hidden;
-  clear: left;
-  text-align: right;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  font-weight: bold;
-  margin-bottom: 1em; }
+    float: left;
+    width: 180px;
+    overflow: hidden;
+    clear: left;
+    text-align: right;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: bold;
+    margin-bottom: 1em;
+}
 
 dl dd {
-  margin-left: 200px;
-  margin-bottom: 1em; }
+    margin-left: 200px;
+    margin-bottom: 1em;
+}
 
 mark {
-  background-color: #df1441; }
+    background-color: #df1441;
+}
 
 code, tt {
-  padding: 3px 5px;
-  font-family: monospace, sans-serif;
-  font-size: 0.75em;
-  /*white-space: pre;*/
-  border: 1px solid #E3EDF3;
-  background: #F7FAFB;
-  border-radius: 2px;
-  color: black; }
+    padding: 3px 5px;
+    font-family: monospace, sans-serif;
+    font-size: 0.75em;
+    /*white-space: pre;*/
+    border: 1px solid #E3EDF3;
+    background: #F7FAFB;
+    border-radius: 2px;
+    color: black;
+}
 
 pre {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0;
-  border: 1px solid #E3EDF3;
-  width: 100%;
-  padding: 10px;
-  font-family: monospace, sans-serif;
-  font-size: 0.9em;
-  white-space: pre;
-  overflow: auto;
-  background: #F7FAFB;
-  border-radius: 3px; }
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    border: 1px solid #E3EDF3;
+    width: 100%;
+    padding: 10px;
+    font-family: monospace, sans-serif;
+    font-size: 0.9em;
+    white-space: pre;
+    overflow: auto;
+    background: #F7FAFB;
+    border-radius: 3px;
+}
 
 pre code, tt {
-  font-size: inherit;
-  white-space: -moz-pre-wrap;
-  white-space: pre-wrap;
-  background: transparent;
-  border: none;
-  padding: 0; }
+    font-size: inherit;
+    white-space: -moz-pre-wrap;
+    white-space: pre-wrap;
+    background: transparent;
+    border: none;
+    padding: 0;
+}
 
 kbd {
-  display: inline-block;
-  margin-bottom: 0.4em;
-  padding: 1px 8px;
-  border: #ccc 1px solid;
-  color: #666;
-  text-shadow: #fff 0 1px 0;
-  font-size: 0.9em;
-  font-weight: bold;
-  background: #f4f4f4;
-  border-radius: 4px;
-  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset; }
+    display: inline-block;
+    margin-bottom: 0.4em;
+    padding: 1px 8px;
+    border: #ccc 1px solid;
+    color: #666;
+    text-shadow: #fff 0 1px 0;
+    font-size: 0.9em;
+    font-weight: bold;
+    background: #f4f4f4;
+    border-radius: 4px;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.2), 0 1px 0 0 #fff inset;
+}
 
 table {
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 1.6em 0;
-  width: 100%;
-  max-width: 100%;
-  background-color: transparent; }
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 1.6em 0;
+    width: 100%;
+    max-width: 100%;
+    background-color: transparent;
+}
 
 table th,
 table td {
-  padding: 8px;
-  line-height: 20px;
-  text-align: left;
-  vertical-align: top;
-  border-top: 1px solid #efefef; }
+    padding: 8px;
+    line-height: 20px;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid #efefef;
+}
 
 table th {
-  color: #000; }
+    color: #000;
+}
 
 table caption + thead tr:first-child th,
 table caption + thead tr:first-child td,
@@ -1994,586 +2591,693 @@ table colgroup + thead tr:first-child th,
 table colgroup + thead tr:first-child td,
 table thead:first-child tr:first-child th,
 table thead:first-child tr:first-child td {
-  border-top: 0; }
+    border-top: 0;
+}
 
 table tbody + tbody {
-  border-top: 2px solid #efefef; }
+    border-top: 2px solid #efefef;
+}
 
 table table table {
-  background-color: #fff; }
+    background-color: #fff;
+}
 
 table tbody > tr:nth-child(odd) > td,
 table tbody > tr:nth-child(odd) > th {
-  background-color: #f6f6f6; }
+    background-color: #f6f6f6;
+}
 
 table.plain tbody > tr:nth-child(odd) > td,
 table.plain tbody > tr:nth-child(odd) > th {
-  background: transparent; }
+    background: transparent;
+}
 
 li {
-  margin-left: 30px; }
+    margin-left: 30px;
+}
 
 ul li {
-  list-style-type: none; }
+    list-style-type: none;
+}
 
 .bult {
-  display: inline;
-  float: left;
-  padding-top: 7px; }
+    display: inline;
+    float: left;
+    padding-top: 7px;
+}
 
 /* ==========================================================================
    3. Utilities - These things get used a lot
    ========================================================================== */
 /* Hides shit */
 .hidden {
-  text-indent: -9999px;
-  visibility: hidden;
-  display: none; }
+    text-indent: -9999px;
+    visibility: hidden;
+    display: none;
+}
 
 /* Creates a responsive wrapper that makes our content scale nicely */
 .inner {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 0 auto; }
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0 auto;
+}
 
 /* Centres vertically yo. (IE8+) */
 .vertical {
-  display: table-cell;
-  vertical-align: middle; }
+    display: table-cell;
+    vertical-align: middle;
+}
 
 /* ==========================================================================
    4. General - The main styles for the the theme
    ========================================================================== */
 /* Big cover image on the home page */
 #site-head {
-  position: relative;
-  display: table;
-  width: 100%;
-  height: 100%;
-  margin-bottom: 0rem;
-  text-align: center;
-  color: white;
-  background: white no-repeat center center;
+    position: relative;
+    display: table;
+    width: 100%;
+    height: 100%;
+    margin-bottom: 0rem;
+    text-align: center;
+    color: white;
+    background: white no-repeat center center;
     /* background: #0099cc no-repeat center center; */
-  background-size: cover; }
+    background-size: cover;
+}
 
 #blog-logo img {
-  display: block;
-  max-height: 100px;
-  width: auto;
-  margin: 0 auto;
-  line-height: 0; }
+    display: block;
+    max-height: 100px;
+    width: auto;
+    margin: 0 auto;
+    line-height: 0;
+}
 
 #back {
     color: #fff;
-  position: fixed;
-  top: 8px;
-  left: 8px;
-  padding: 6px;
-  font-size: 16px; }
+    position: fixed;
+    top: 8px;
+    left: 8px;
+    padding: 6px;
+    font-size: 16px;
+}
 
 .blog-title {
     color: #ff4260;
-  margin: 10px 0 10px 0;
-  font-size: 5rem;
-  letter-spacing: -1px; }
+    margin: 10px 0 10px 0;
+    font-size: 5rem;
+    letter-spacing: -1px;
+}
 
 .blog-description {
     color: #fff;
-  margin: 0;
-  font-size: 1.8rem;
-  line-height: 1.5em;
-  font-weight: 500;
-  font-family: "Times New Roman", serif;
-  letter-spacing: 0;
+    margin: 0;
+    font-size: 1.8rem;
+    line-height: 1.5em;
+    font-weight: 500;
+    font-family: 'Raleway', sans-serif;
+    letter-spacing: 0;
 }
 
 .post-holder {
-  width: 100%;
-  height: 100%;
-  background: #fff;
-  position: relative; }
+    width: 100%;
+    height: 100%;
+    background: #fff;
+    position: relative;
+}
 
 .oneOff {
-  background: #dbc8a7;
-  color: #fff; }
+    background: #dbc8a7;
+    color: #fff;
+}
 
 /* Every post, on every page, gets this style on its <article> tag */
 .post {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 0rem auto;
-  padding-bottom: 4rem;
-  padding-top: 4rem;
-  height: 70%;
-  word-break: break-word;
-  hyphens: auto; }
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 0rem auto;
+    padding-bottom: 4rem;
+    padding-top: 4rem;
+    height: 70%;
+    hyphens: auto;
+}
 
 /* Add a little circle in the middle of the border-bottom on our .post
    just for the lolz and stylepoints. */
 .fixed-nav {
-  display: none;
-  opacity: 1;
-  position: fixed;
-  top: 40px;
-  left: 2%;
-  z-index: 99999;
-  font-family: "Impact", sans-serif;
-  text-transform: uppercase;
-  font-size: 1.5rem;
-  line-height: 130%;
-  font-weight: bold; }
+    display: none;
+    opacity: 1;
+    position: fixed;
+    top: 40px;
+    left: 2%;
+    z-index: 99999;
+    font-family: 'Raleway', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    line-height: 130%;
+    font-weight: bold;
+}
 
 a.fn-item {
-  display: block;
-  cursor: pointer;
-  opacity: 0.7; }
+    display: block;
+    cursor: pointer;
+    opacity: 0.7;
+}
 
 .white {
-  color: white; }
+    color: white;
+}
 
 a.fn-item:hover {
-  color: #df1441; }
+    color: #df1441;
+}
 
 a.fn-item.active {
-  color: #df1441;
-  opacity: 1; }
+    color: #df1441;
+    opacity: 1;
+}
 
 .post-after {
-  position: absolute;
-  bottom: -40px;
-  right: 6%;
-  z-index: 1;
-  width: 0;
-  height: 0;
-  border-left: 60px solid transparent;
-  border-right: 60px solid transparent;
-  border-top: 50px solid #f2efe8;
-  border-radius: 25px; }
+    position: absolute;
+    bottom: -40px;
+    right: 6%;
+    z-index: 1;
+    width: 0;
+    height: 0;
+    border-left: 60px solid transparent;
+    border-right: 60px solid transparent;
+    border-top: 50px solid #f2efe8;
+    border-radius: 25px;
+}
 
 .post-title {
-  margin: 0; }
+    margin: 0;
+}
 
 .post-title a {
-  text-decoration: none; }
+    text-decoration: none;
+}
 
 .post-excerpt p {
-  margin: 1.6rem 0 0 0;
-  font-size: 0.9em;
-  line-height: 1.6em; }
+    margin: 1.6rem 0 0 0;
+    font-size: 0.9em;
+    line-height: 1.6em;
+}
 
 .post-meta {
-  display: inline-block;
-  margin: 0 0 5px 0;
-  font-family: "Impact", sans-serif;
-  font-size: 1.5rem;
-  color: #9EABB3; }
+    display: inline-block;
+    margin: 0 0 5px 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.5rem;
+    color: #9EABB3;
+}
 
 .post-meta a {
-  color: #9EABB3;
-  text-decoration: none; }
+    color: #9EABB3;
+    text-decoration: none;
+}
 
 .post-meta a:hover {
-  text-decoration: underline; }
+    text-decoration: underline;
+}
 
 .user-meta {
-  position: relative;
-  padding: 0.3rem 40px 0 100px;
-  min-height: 77px; }
+    position: relative;
+    padding: 0.3rem 40px 0 100px;
+    min-height: 77px;
+}
 
 .user-image {
-  position: absolute;
-  top: 0;
-  left: 0; }
+    position: absolute;
+    top: 0;
+    left: 0;
+}
 
 .user-name {
-  display: block;
-  font-weight: bold; }
+    display: block;
+    font-weight: bold;
+}
 
 .user-bio {
-  display: block;
-  max-width: 440px;
-  font-size: 1.4rem;
-  line-height: 1.5em; }
+    display: block;
+    max-width: 440px;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
 
 .publish-meta {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 4.3rem 0 4rem 0;
-  text-align: right; }
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 4.3rem 0 4rem 0;
+    text-align: right;
+}
 
 .publish-heading {
-  display: block;
-  font-weight: bold; }
+    display: block;
+    font-weight: bold;
+}
 
 .publish-date {
-  display: block;
-  font-size: 1.4rem;
-  line-height: 1.5em; }
+    display: block;
+    font-size: 1.4rem;
+    line-height: 1.5em;
+}
 
 /* ==========================================================================
    5. Single Post - When you click on an individual post
    ========================================================================== */
 /* Tweak the .post wrapper style */
 .post-template .post {
-  margin-top: 0;
-  border-bottom: none;
-  padding-bottom: 0; }
+    margin-top: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+}
 
 /* Kill that stylish little circle that was on the border, too */
 .post-template .post:after {
-  display: none; }
+    display: none;
+}
 
 /* Insert some mad padding up in the header for better spacing */
 .post-template .post-header {
-  padding: 60px 0; }
+    padding: 60px 0;
+}
 
 /* Keep large images within the bounds of the post-width */
 .post-content img {
-  display: block;
-  max-width: 100%;
-  margin: 0 auto; }
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;
+}
 
 /* The author credit area after the post */
 .post-footer {
-  position: relative;
-  margin: 4rem 0 0 0;
-  padding: 4rem 0 0 0;
-  border-top: #EBF2F6 1px solid; }
+    position: relative;
+    margin: 4rem 0 0 0;
+    padding: 4rem 0 0 0;
+    border-top: #EBF2F6 1px solid;
+}
 
 .post-footer h4 {
-  font-size: 1.8rem;
-  margin: 0; }
+    font-size: 1.8rem;
+    margin: 0;
+}
 
 .post-footer p {
-  margin: 1rem 0;
-  font-size: 1.4rem;
-  line-height: 1.6em; }
+    margin: 1rem 0;
+    font-size: 1.4rem;
+    line-height: 1.6em;
+}
 
 /* Create some space to the right for the share links */
 .post-footer .author {
-  margin-right: 180px; }
+    margin-right: 180px;
+}
 
 /* Drop the share links in the space to the right.
    Doing it like this means it's easier for the author bio
    to be flexible at smaller screen sizes while the share
    links remain at a fixed width the whole time */
 .post-footer .share {
-  position: absolute;
-  top: 4rem;
-  right: 0;
-  width: 140px; }
+    position: absolute;
+    top: 4rem;
+    right: 0;
+    width: 140px;
+}
 
 .post-footer .share a {
-  font-size: 1.8rem;
-  display: inline-block;
-  margin: 1.4rem 1.6rem 1.6rem 0;
-  color: #BBC7CC; }
+    font-size: 1.8rem;
+    display: inline-block;
+    margin: 1.4rem 1.6rem 1.6rem 0;
+    color: #BBC7CC;
+}
 
 .post-footer .share a:hover {
-  color: #50585D; }
+    color: #50585D;
+}
 
 /* ==========================================================================
    6. Third Party Elements - Embeds from other services
    ========================================================================== */
 /* Github */
 .gist table {
-  margin: 0;
-  font-size: 1.4rem; }
+    margin: 0;
+    font-size: 1.4rem;
+}
 
 .gist .line-number {
-  min-width: 25px;
-  font-size: 1.1rem; }
+    min-width: 25px;
+    font-size: 1.1rem;
+}
 
 /* ==========================================================================
    7. Pagination - Tools to let you flick between pages
    ========================================================================== */
 /* The main wrapper for our pagination links */
 .pagination {
-  position: relative;
-  width: 80%;
-  max-width: 700px;
-  margin: 4rem auto;
-  font-family: "Impact", sans-serif;
-  font-size: 1.3rem;
-  color: #9EABB3;
-  text-align: center; }
+    position: relative;
+    width: 80%;
+    max-width: 700px;
+    margin: 4rem auto;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    color: #9EABB3;
+    text-align: center;
+}
 
 .pagination a {
-  color: #9EABB3; }
+    color: #9EABB3;
+}
 
 /* Push the previous/next links out to the left/right */
 .older-posts,
 .newer-posts {
-  position: absolute;
-  display: inline-block;
-  padding: 0 15px;
-  border: #EBF2F6 2px solid;
-  text-decoration: none;
-  border-radius: 30px;
-  transition: border ease 0.3s; }
+    position: absolute;
+    display: inline-block;
+    padding: 0 15px;
+    border: #EBF2F6 2px solid;
+    text-decoration: none;
+    border-radius: 30px;
+    transition: border ease 0.3s;
+}
 
 .older-posts {
-  right: 0; }
+    right: 0;
+}
 
 .page-number {
-  display: inline-block;
-  padding: 2px 0; }
+    display: inline-block;
+    padding: 2px 0;
+}
 
 .newer-posts {
-  left: 0; }
+    left: 0;
+}
 
 .older-posts:hover,
 .newer-posts:hover {
-  border-color: #9EABB3; }
+    border-color: #9EABB3;
+}
 
 /* ==========================================================================
    8. Footer - The bottom of every page
    ========================================================================== */
 .site-footer {
-  position: relative;
-  margin: 0rem 0 0 0;
-  padding: 1rem 0;
-  font-family: "Impact", sans-serif;
-  font-size: 1.3rem;
-  line-height: 1.5em;
-  color: #BBC7CC;
-  text-align: center;
-  background: #22343A; }
+    position: relative;
+    margin: 0rem 0 0 0;
+    padding: 1rem 0;
+    font-family: 'Raleway', sans-serif;
+    font-size: 1.3rem;
+    line-height: 1.5em;
+    color: #BBC7CC;
+    text-align: center;
+    background: #22343A;
+}
 
 .site-footer a {
-  color: #BBC7CC;
-  text-decoration: underline; }
+    color: #BBC7CC;
+    text-decoration: underline;
+}
 
 .site-footer a:hover {
-  color: #50585D; }
+    color: #50585D;
+}
 
 /* The subscribe icon on the footer */
 .subscribe {
-  width: 28px;
-  height: 28px;
-  position: absolute;
-  top: -14px;
-  left: 50%;
-  margin-left: -15px;
-  border: #EBF2F6 1px solid;
-  text-align: center;
-  line-height: 2.4rem;
-  border-radius: 50px;
-  background: #fff;
-  transition: box-shadow 0.5s; }
+    width: 28px;
+    height: 28px;
+    position: absolute;
+    top: -14px;
+    left: 50%;
+    margin-left: -15px;
+    border: #EBF2F6 1px solid;
+    text-align: center;
+    line-height: 2.4rem;
+    border-radius: 50px;
+    background: #fff;
+    transition: box-shadow 0.5s;
+}
 
 /* The RSS icon, inserted via icon font */
 .subscribe:before {
-  color: #D2DEE3;
-  font-size: 10px;
-  position: absolute;
-  top: 2px;
-  left: 9px;
-  font-weight: bold;
-  transition: color 0.5s ease; }
+    color: #D2DEE3;
+    font-size: 10px;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    font-weight: bold;
+    transition: color 0.5s ease;
+}
 
 /* Add a box shadow to on hover */
 .subscribe:hover {
-  box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
-  transition: box-shadow 0.25s; }
+    box-shadow: rgba(0, 0, 0, 0.05) 0 0 0 3px;
+    transition: box-shadow 0.25s;
+}
 
 .subscribe:hover:before {
-  color: #50585D; }
+    color: #50585D;
+}
 
 /* CSS tooltip saying "Subscribe!" - initially hidden */
 .tooltip {
-  opacity: 0;
-  display: inline-block;
-  padding: 4px 8px 5px 8px;
-  position: absolute;
-  top: -23px;
-  left: -23px;
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 1.1rem;
-  font-weight: bold;
-  line-height: 1em;
-  text-align: center;
-  background: #50585D;
-  border-radius: 20px;
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
-  transition: opacity 0.3s ease, top 0.3s ease; }
+    opacity: 0;
+    display: inline-block;
+    padding: 4px 8px 5px 8px;
+    position: absolute;
+    top: -23px;
+    left: -23px;
+    color: rgba(255, 255, 255, 0.9);
+    font-size: 1.1rem;
+    font-weight: bold;
+    line-height: 1em;
+    text-align: center;
+    background: #50585D;
+    border-radius: 20px;
+    box-shadow: 0 1px 4px rgba(0, 0, 0, 0.1);
+    transition: opacity 0.3s ease, top 0.3s ease;
+}
 
 /* The little chiclet arrow under the tooltip, pointing down */
 .tooltip:after {
-  content: "";
-  border-width: 5px 5px 0 5px;
-  border-style: solid;
-  border-color: #50585D transparent;
-  display: block;
-  position: absolute;
-  bottom: -4px;
-  left: 50%;
-  margin-left: -5px;
-  z-index: 220;
-  width: 0; }
+    content: "";
+    border-width: 5px 5px 0 5px;
+    border-style: solid;
+    border-color: #50585D transparent;
+    display: block;
+    position: absolute;
+    bottom: -4px;
+    left: 50%;
+    margin-left: -5px;
+    z-index: 220;
+    width: 0;
+}
 
 /* On hover, show the tooltip! */
 .subscribe:hover .tooltip {
-  opacity: 1;
-  top: -33px; }
+    opacity: 1;
+    top: -33px;
+}
 
 /* ==========================================================================
    9. Media Queries - Smaller than 1130px
    ========================================================================== */
 @media only screen and (max-width: 1130px) {
-  .fixed-nav {
-    opacity: 1;
-    position: fixed;
-    top: 0px;
-    left: 0px;
-    z-index: 99999;
-    background: #f2efe8;
-    width: 100%;
-    text-align: center;
-    padding: 4px; }
+    .fixed-nav {
+        opacity: 1;
+        position: fixed;
+        top: 0px;
+        left: 0px;
+        z-index: 99999;
+        background: #f2efe8;
+        width: 100%;
+        text-align: center;
+        padding: 4px;
+    }
 
-  a.fn-item {
-    display: inline;
-    margin-left: 10px; }
+    a.fn-item {
+        display: inline;
+        margin-left: 10px;
+    }
 
-  blockquote {
-    margin-left: 0; }
+    blockquote {
+        margin-left: 0;
+    }
 
-  .post-holder {
-    padding-top: 20px; }
+    .post-holder {
+        padding-top: 20px;
+    }
 
-  #site-head {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-    min-height: 240px;
-    padding: 15% 0;
-    height: 100%;
-    margin-bottom: 0rem; }
+    #site-head {
+        -webkit-box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        box-sizing: border-box;
+        min-height: 240px;
+        padding: 15% 0;
+        height: 100%;
+        margin-bottom: 0rem;
+    }
 
-  .blog-title {
-    font-size: 4rem;
-    letter-spacing: -1px; }
+    .blog-title {
+        font-size: 4rem;
+        letter-spacing: -1px;
+    }
 
-  .blog-description {
-    font-size: 1.7rem;
-    line-height: 1.5em; }
+    .blog-description {
+        font-size: 1.7rem;
+        line-height: 1.5em;
+    }
 
-  .post {
-    font-size: 0.9em;
-    line-height: 1.6em; }
+    .post {
+        font-size: 0.9em;
+        line-height: 1.6em;
+    }
 
-  .post-template .post {
-    padding-bottom: 1rem; }
+    .post-template .post {
+        padding-bottom: 1rem;
+    }
 
-  .post-template .post-header {
-    padding: 40px 0; }
+    .post-template .post-header {
+        padding: 40px 0;
+    }
 
-  h1 {
-    font-size: 4.8rem;
-    text-indent: -2px; }
+    h1 {
+        font-size: 4.8rem;
+        text-indent: -2px;
+    }
 
-  h2 {
-    font-size: 3.8rem; }
+    h2 {
+        font-size: 3.8rem;
+    }
 
-  h3 {
-    font-size: 3.3rem; }
+    h3 {
+        font-size: 3.3rem;
+    }
 
-  h4 {
-    font-size: 2.8rem; } }
+    h4 {
+        font-size: 2.8rem;
+    }
+}
+
 /* ==========================================================================
    10. Media Queries - Smaller than 500px
    ========================================================================== */
 @media only screen and (max-width: 500px) {
-  .fixed-nav {
-    display: none; }
+    .fixed-nav {
+        display: none;
+    }
 
-  .post-holder {
-    padding-top: 20px; }
+    .post-holder {
+        padding-top: 20px;
+    }
 
-  #blog-logo img {
-    max-height: 80px; }
+    #blog-logo img {
+        max-height: 80px;
+    }
 
-  .inner,
-  .pagination {
-    width: auto;
-    margin-left: 16px;
-    margin-right: 16px; }
+    .inner,
+    .pagination {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+    }
 
-  .post {
-    width: auto;
-    margin-left: 16px;
-    margin-right: 16px;
-    font-size: 0.8em;
-    line-height: 1.6em; }
+    .post {
+        width: auto;
+        margin-left: 16px;
+        margin-right: 16px;
+        font-size: 0.8em;
+        line-height: 1.6em;
+    }
 
-  #site-head {
-    padding: 10% 0;
-    height: 65%; }
+    #site-head {
+        padding: 10% 0;
+        height: 65%;
+    }
 
-  #header-arrow {
-    display: none; }
+    #header-arrow {
+        display: none;
+    }
 
-  a.btn {
-    margin-top: 10px; }
+    a.btn {
+        margin-top: 10px;
+    }
 
-  .blog-title {
-    font-size: 3rem; }
+    .blog-title {
+        font-size: 3rem;
+    }
 
-  .blog-description {
-    font-size: 1.5rem; }
+    .blog-description {
+        font-size: 1.5rem;
+    }
 
-  h1, h2 {
-    font-size: 3rem;
-    line-height: 1.1em;
-    letter-spacing: -1px; }
+    h1, h2 {
+        font-size: 3rem;
+        line-height: 1.1em;
+        letter-spacing: -1px;
+    }
 
-  h3 {
-    font-size: 2.8rem; }
+    h3 {
+        font-size: 2.8rem;
+    }
 
-  h4 {
-    font-size: 2.3rem; }
+    h4 {
+        font-size: 2.3rem;
+    }
 
-  .post-template .post {
-    padding-bottom: 0; }
+    .post-template .post {
+        padding-bottom: 0;
+    }
 
-  .post-template .post-header {
-    padding: 30px 0; }
+    .post-template .post-header {
+        padding: 30px 0;
+    }
 
-  .post-meta {
-    font-size: 1.3rem; }
+    .post-meta {
+        font-size: 1.3rem;
+    }
 
-  .post-footer {
-    padding: 4rem 0;
-    text-align: center; }
+    .post-footer {
+        padding: 4rem 0;
+        text-align: center;
+    }
 
-  .post-footer .author {
-    margin: 0 0 2rem 0;
-    padding: 0 0 1.6rem 0;
-    border-bottom: #EBF2F6 1px dashed; }
+    .post-footer .author {
+        margin: 0 0 2rem 0;
+        padding: 0 0 1.6rem 0;
+        border-bottom: #EBF2F6 1px dashed;
+    }
 
-  .post-footer .share {
-    position: static;
-    width: auto; }
+    .post-footer .share {
+        position: static;
+        width: auto;
+    }
 
-  .post-footer .share a {
-    margin: 1.4rem 0.8rem 0 0.8rem; }
+    .post-footer .share a {
+        margin: 1.4rem 0.8rem 0 0.8rem;
+    }
 
-  .older-posts,
-  .newer-posts {
-    position: static;
-    margin: 10px 0; }
+    .older-posts,
+    .newer-posts {
+        position: static;
+        margin: 10px 0;
+    }
 
-  .page-number {
-    display: block; }
+    .page-number {
+        display: block;
+    }
 
-  .site-footer {
-    /*margin-top: 0.8rem;*/
-    font-size: 1.1rem; } }
+    .site-footer {
+        /*margin-top: 0.8rem;*/
+        font-size: 1.1rem;
+    }
+}
+
 /* ==========================================================================
    End of file. Media queries should be the last thing here. Do not add stuff
    below this point, or it will probably fuck everything up.
@@ -2589,7 +3293,7 @@ a.fn-item.active {
     border-spacing: 25px;
 }
 
-.row  {
+.row {
     display: table-row;
 }
 
@@ -2598,20 +3302,21 @@ a.fn-item.active {
     width: 150px;
     text-align: center;
     vertical-align: top;
-    padding:15px;
+    padding: 15px;
     text-decoration: none;
     line-height: 1.1em;
 }
 
 .cell .picture-wrapper {
-  width: 150px;
-  height: 150px;
-  margin-bottom: 10px;
-  background: #fff;
+    width: 150px;
+    height: 150px;
+    margin-bottom: 10px;
+    background: #fff;
 }
-.cell img{
-  margin-bottom: 10px;
-  vertical-align: middle;
+
+.cell img {
+    margin-bottom: 10px;
+    vertical-align: middle;
 }
 
 
