@@ -7,7 +7,7 @@ theme = "hugoscroll"
 [Params]
   github = "VigoTech"
   twitter = "vigotechallianc"
-  email = "vigotechalliance@gmail.com"
+  email = "alliance@vigotech.org"
   description = "Os grupos de tecnoloxía de Vigo facemos piña para promover a tecnoloxía na cidade"
   cover = "/images/porto_low.jpg"
   logo = "/images/logo.jpg"
