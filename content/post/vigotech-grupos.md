@@ -27,7 +27,7 @@ class="post first"
         </a>
     </div>
     <div class="cell">
-        <a href="http://www.meetup.com/GDGVigo">
+        <a href="https://www.meetup.com/GDGVigo">
             <div class="picture-wrapper">
                 <img src="/images/gdg_vigo.png" alt="GDG Vigo">
             </div>
