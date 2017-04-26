@@ -99,13 +99,5 @@ class="post first"
             VigoLabs
         </a>
     </div>
-    <div class="cell">
-        <a href="https://www.meetup.com/Meetup-de-WordPress-en-Vigo/">
-            <div class="picture-wrapper">
-                <img src="/images/logo.png" class="Wordpress en Vigo">
-            </div>
-            WordPress en Vigo
-        </a>
-    </div>
 </div>
 </div>
