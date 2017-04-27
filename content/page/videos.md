@@ -1,7 +1,7 @@
 +++
-date = "2017-04-27T12:34:59+02:00"
+date = "2017-04-27T16:54:24+02:00"
 draft = false
-title = "Videos"
+title = "Charlas"
 type = "page"
 weight = 1
 +++

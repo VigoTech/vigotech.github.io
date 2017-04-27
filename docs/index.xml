@@ -38,5 +38,15 @@
       <description> </description>
     </item>
     
+    <item>
+      <title>Charlas</title>
+      <link>https://vigotech.github.io/post/vigotech-videos/</link>
+      <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-videos/</guid>
+      <description> ## Título 1   ## Título 2   
+## Título 3   ## Título 3     Todas </description>
+    </item>
+    
   </channel>
 </rss>

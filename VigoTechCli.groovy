@@ -19,6 +19,8 @@ class VigoTechCli {
             VigoLabs: 'UCBuC6QDQm4U60KV5QPED-eQ',
             ]
 
+    final static def talks = []
+
     static def clearFile(String file) {
         PrintWriter writer = new PrintWriter(file)
         writer.print("")
@@ -29,6 +31,8 @@ class VigoTechCli {
         def env = System.getenv()
         def token = env['YOUTUBE_TOKEN']
 
+        // Generate "Charlas" page
+
         clearFile('content/page/videos.md')
         def page = new File('content/page/videos.md')
 
@@ -38,7 +42,7 @@ class VigoTechCli {
         page << """+++
 date = "$now"
 draft = false
-title = "Videos"
+title = "Charlas"
 type = "page"
 weight = 1
 +++
@@ -60,7 +64,7 @@ weight = 1
                     ])
 
             assert resp.status == 200
-            //println prettyPrint(toJson(resp.data))
+            // println prettyPrint(toJson(resp.data))
             assert resp.data.pageInfo.totalResults < 50: "Some entries could be missed."
 
             page << lineSeparator << lineSeparator
@@ -69,10 +73,39 @@ weight = 1
             resp.data.items.each() {
                 if (it.id.kind == 'youtube#video') {
                     page << "- [$it.snippet.title](https://www.youtube.com/watch?v=$it.id.videoId)" << lineSeparator
+                    talks << [title: it.snippet.title, id: it.id.videoId, channel: channelName, date: it.snippet.publishedAt]
                     // println it.snippet.description
                 }
             }
+
         }
 
+        // Generate landing page
+
+        clearFile('content/post/vigotech-charlas.md')
+        def landingPage = new File('content/post/vigotech-charlas.md')
+
+        landingPage << """+++
+date = "$now"
+draft = false
+title = "Charlas"
+weight = 102
+type = "post"
+class="post last"
+
++++
+"""
+
+
+        talks.sort{a, b -> b.date.compareTo(a.date)}[0..2].each{
+            landingPage << "$it.channel - [$it.title](https://www.youtube.com/watch?v=$it.id)" << lineSeparator << lineSeparator
+            landingPage << "<iframe width=\"560\" height=\"315\" src=\"https://www.youtube.com/embed/$it.id\" frameborder=\"0\" allowfullscreen></iframe>"
+            landingPage << lineSeparator
+            landingPage << lineSeparator
+        }
+
+        landingPage << lineSeparator
+
+        landingPage << '*[Pincha aquí para ver todas as charlas](./page/videos/)*'
     }
 }
