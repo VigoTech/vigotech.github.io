@@ -2,6 +2,11 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>https://vigotech.github.io/page/videos/</loc>
+    <lastmod>2017-04-27T12:34:59+02:00</lastmod>
+  </url>
+  
+  <url>
     <loc>https://vigotech.github.io/post/vigotech-grupos/</loc>
     <lastmod>2017-04-14T16:52:11+02:00</lastmod>
   </url>
@@ -13,6 +18,12 @@
   
   <url>
     <loc>https://vigotech.github.io/categories/</loc>
+    <priority>0</priority>
+  </url>
+  
+  <url>
+    <loc>https://vigotech.github.io/page/</loc>
+    <lastmod>2017-04-27T12:34:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
@@ -29,7 +40,7 @@
   
   <url>
     <loc>https://vigotech.github.io/</loc>
-    <lastmod>2017-04-14T16:52:11+02:00</lastmod>
+    <lastmod>2017-04-27T12:34:59+02:00</lastmod>
     <priority>0</priority>
   </url>
   
