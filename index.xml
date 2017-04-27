@@ -50,5 +50,15 @@
  Pincha aquí para ver todas as charlas</description>
     </item>
     
+    <item>
+      <title>Chat</title>
+      <link>https://vigotech.github.io/post/vigotech-slack/</link>
+      <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-slack/</guid>
+      <description>¡Únete o noso chat introducindo o teu correo!
+ </description>
+    </item>
+    
   </channel>
 </rss>
