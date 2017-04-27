@@ -31,12 +31,14 @@
     
     <item>
       <title>Charlas</title>
-      <link>https://vigotech.github.io/post/vigotech-videos/</link>
-      <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
+      <link>https://vigotech.github.io/post/vigotech-charlas/</link>
+      <pubDate>Thu, 27 Apr 2017 16:54:24 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/post/vigotech-videos/</guid>
-      <description> ## Título 1   ## Título 2   
-## Título 3   ## Título 3     Todas </description>
+      <guid>https://vigotech.github.io/post/vigotech-charlas/</guid>
+      <description>PythonVigo - APIS de Machine Learning: como usarlas desde Python. Por David de la Iglesia.
+ PythonVigo - Codenamize: presentación de la librería. Por José Juan Montes.
+ VigoLabs - #9 - Introdución á tecnoloxía LiDAR
+ Pincha aquí para ver todas as charlas</description>
     </item>
     
   </channel>
