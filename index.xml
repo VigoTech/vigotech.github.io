@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Vigo Tech Alliance</title>
+    <link>https://vigotech.github.io/</link>
+    <description>Recent content on Vigo Tech Alliance</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>gl-es</language>
+    <lastBuildDate>Thu, 27 Apr 2017 21:34:31 +0200</lastBuildDate>
+    
+	<atom:link href="https://vigotech.github.io/index.xml" rel="self" type="application/rss+xml" />
+    
+    
+    <item>
+      <title>Charlas</title>
+      <link>https://vigotech.github.io/page/videos/</link>
+      <pubDate>Thu, 27 Apr 2017 21:34:31 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/page/videos/</guid>
+      <description>AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #1 - &amp;ldquo;Web Components&amp;rdquo;  PHPVigo  Meetup #12: &amp;ldquo;Performance blackfire.io&amp;rdquo; Meetup #12: &amp;ldquo;Gestionar un WP con 250k pv diarias&amp;rdquo; 2017 03 22 21 26 38 Resque: Workers Asíncronos (Sergio Carracedo) Métodos mágicos (Rolando Caldas Sánchez) Zend Certified Engineer (Orestes Carracedo) Conectar a MySQL correctamente (Jose Antonio González López) Blackfire.io: Mide tu performance (Ruben Gonzalez) Jenkins: Deja ya de hacerlo a mano!</description>
+    </item>
+    
+    <item>
+      <title>Grupos</title>
+      <link>https://vigotech.github.io/post/vigotech-grupos/</link>
+      <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-grupos/</guid>
+      <description> Agile Vigo    CodeSign Project    GDG Vigo     Grupo de Usuarios de Joomla de Vigo    JavascriptVigo    PHPVigo     PythonVigo    SysAdmin Galicia    VigoJUG     VigoLabs     </description>
+    </item>
+    
+    <item>
+      <title>Calendario</title>
+      <link>https://vigotech.github.io/post/vigotech-calendario/</link>
+      <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-calendario/</guid>
+      <description> </description>
+    </item>
+    
+    <item>
+      <title>Charlas</title>
+      <link>https://vigotech.github.io/post/vigotech-charlas/</link>
+      <pubDate>Thu, 27 Apr 2017 21:34:31 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-charlas/</guid>
+      <description>PythonVigo - APIS de Machine Learning: como usarlas desde Python. Por David de la Iglesia.
+ PythonVigo - Codenamize: presentación de la librería. Por José Juan Montes.
+ VigoLabs - #9 - Introdución á tecnoloxía LiDAR
+ Pincha aquí para ver todas as charlas</description>
+    </item>
+    
+    <item>
+      <title>Chat</title>
+      <link>https://vigotech.github.io/post/vigotech-slack/</link>
+      <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-slack/</guid>
+      <description>Aberto a todo o mundo, é o punto de encontro virtual de todos os grupos e un bo sitio para facer un pouco de networking:
+
+ Recibe unha invitación exclusiva clickando aquí  </description>
+    </item>
+    
+  </channel>
+</rss>
