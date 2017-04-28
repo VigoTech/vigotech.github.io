@@ -8,8 +8,12 @@ class="post last"
 
 +++
 
-¡Únete o noso chat introducindo o teu correo! 
+Aberto a todo o mundo, é o punto de encontro virtual de todos os grupos e un bo sitio para facer un pouco de networking: 
 
+<a href="https://vigotechalliance.slack.com">
+![Slack](images/slack.png)
+</a>
 
-<iframe width='560px' height='550px' style='overflow: hidden; overflow-y: hidden; overflow-x: hidden;' scrolling='no' frameborder='0' src="https://slackin-vigotech.herokuapp.com/"></iframe>
+* [Recibe unha invitación exclusiva clickando aquí](https://slackin-vigotech.herokuapp.com)
+
 
