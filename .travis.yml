@@ -3,7 +3,7 @@ go:
 - 1.7.1
 env:
   global:
-  - SSH_KEY="id_rsa"
+  - SSH_KEY="travis_key"
   - GIT_NAME="VigoTech Alliance"
   - GIT_EMAIL="vigotechalliance@gmail.com"
   - SOURCE_DIR="docs"
