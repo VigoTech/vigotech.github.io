@@ -14,6 +14,6 @@ Aberto a todo o mundo, é o punto de encontro virtual de todos os grupos e un bo
 ![Slack](images/slack.png)
 </a>
 
-* [Recibe unha invitación exclusiva clickando aquí](https://slackin-vigotech.herokuapp.com)
+* [Recibe unha invitación no teu correo clickando aquí](https://slackin-vigotech.herokuapp.com)
 
 
