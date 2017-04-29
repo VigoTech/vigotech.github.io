@@ -1,25 +1,19 @@
 language: go
-
 go:
-    - "1.7.1"
-
+- 1.7.1
 env:
-    global:
-        - SSH_KEY="id_rsa"
-        - GIT_NAME="VigoTech Alliance"
-        - GIT_EMAIL="vigotechalliance@gmail.com"
-        - SOURCE_DIR="docs"
-        - DEPLOY_BRANCH="source"
-
+  global:
+  - SSH_KEY="id_rsa"
+  - GIT_NAME="VigoTech Alliance"
+  - GIT_EMAIL="vigotechalliance@gmail.com"
+  - SOURCE_DIR="docs"
+  - DEPLOY_BRANCH="source"
 before_install:
-    - openssl aes-256-cbc -K $encrypted_5badef0aa7c9_key -iv $encrypted_5badef0aa7c9_iv -in id_rsa.enc -out id_rsa -d
-
+- openssl aes-256-cbc -K $encrypted_35b54c54cbb7_key -iv $encrypted_35b54c54cbb7_iv -in travis_key.enc -out travis_key -d
 before_script:
-    - git clone --branch v2 https://github.com/go-yaml/yaml $GOPATH/src/gopkg.in/yaml.v2
-    - go get -u -v github.com/spf13/hugo
-
+- git clone --branch v2 https://github.com/go-yaml/yaml $GOPATH/src/gopkg.in/yaml.v2
+- go get -u -v github.com/spf13/hugo
 script:
-    - hugo
-
+- hugo
 after_success:
-    - ./scripts/deploy.sh
+- ./scripts/deploy.sh
