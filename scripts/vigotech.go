@@ -15,8 +15,6 @@ import (
 	"github.com/tidwall/gjson"
 )
 
-// TODO: Update Travis file
-
 var videosMD = "content/page/videos.md"
 var videosNoYoutube = "scripts/videosNoYoutube.txt"
 var videosLanding = "content/post/vigotech-charlas.md"
