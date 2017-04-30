@@ -1,23 +1,26 @@
 +++
-date = "2017-04-27T21:34:31+02:00"
+date = "2017-04-30T13:39:01+02:00"
 draft = false
 title = "Charlas"
 type = "page"
 weight = 1
 +++
 
+Charlas gravadas polos distintos grupos:
 ----
 
-
 ### [AgileVigo](https://www.youtube.com/channel/UC4NkKB1iCLN9Nb3s8ydFc0w)
+
 - [Emisión en directo de Agile Vigo](https://www.youtube.com/watch?v=7l_B1EKnQg8)
 
 
 ### [JavascriptVigo](https://www.youtube.com/channel/UCjFplxtEs0XtunTn-n0LUtQ)
+
 - [Meetup #1 - "Web Components"](https://www.youtube.com/watch?v=_Y8XBJ56Z1s)
 
 
 ### [PHPVigo](https://www.youtube.com/channel/UCzcSOwRc7bfKs9jPehJRNxQ)
+
 - [Meetup #12: "Performance blackfire.io"](https://www.youtube.com/watch?v=TuGZWmsf-Mk)
 - [Meetup #12: "Gestionar un WP con 250k pv diarias"](https://www.youtube.com/watch?v=wyLUeXr7v_M)
 - [2017 03 22 21 26 38](https://www.youtube.com/watch?v=ylWJ3n6HJXY)
@@ -46,6 +49,7 @@ weight = 1
 
 
 ### [PythonVigo](https://www.youtube.com/channel/UCTUXabChakosnupWEnz4xTA)
+
 - [APIS de Machine Learning: como usarlas desde Python. Por David de la Iglesia.](https://www.youtube.com/watch?v=WrL5H0Tmq-w)
 - [Codenamize: presentación de la librería. Por José Juan Montes.](https://www.youtube.com/watch?v=Q9c0dQTEyc8)
 - [PythonVigo - David de la Iglesia](https://www.youtube.com/watch?v=hjx-lqLlrhw)
@@ -70,11 +74,13 @@ weight = 1
 
 
 ### [VigoJUG](https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g)
+
 - ["De Groovy... e Sancho Panza" por Antón Rodríguez de Optare Solutions 30 min.](https://www.youtube.com/watch?v=smG2P6Esvnc)
 - [Make Java Great Again! por @tomasalmeida de Netcentric. 30 min.](https://www.youtube.com/watch?v=PKqTlj38X7M)
 
 
 ### [VigoLabs](https://www.youtube.com/channel/UCBuC6QDQm4U60KV5QPED-eQ)
+
 - [#9 - Introdución á tecnoloxía LiDAR](https://www.youtube.com/watch?v=x6wgM2WFX44)
 - [#10 - Introdución ó deseño naval](https://www.youtube.com/watch?v=gkqyxUtIWbY)
 - [2017 04 03 20 25 43](https://www.youtube.com/watch?v=CJ7x8KKpG8o)
@@ -93,6 +99,4 @@ weight = 1
  - [2017022301 - Automatizacion para todos](https://replay.teltek.es/video/58bf2b9fa7bc2847008b4667)
  - [2017022302 - Trucos configurando Nginx con PHP](https://replay.teltek.es/video/58bf2baba7bc283e008b468b)
  - [2017012601 - Contenerización de servicios en producción con Docker](https://replay.teltek.es/video/58af67a9a7bc2842008b4569)
- 
- 
- 
+
