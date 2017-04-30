@@ -136,9 +136,10 @@ a.btn:hover {
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
-}
-#header-arrow:hover {
-    opacity: 0.9;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 h1 a, h2 a, h3 a,
@@ -376,7 +377,7 @@ ul li {
     margin-bottom: 0rem;
     text-align: center;
     color: $header-font-color;
-    background: rgb(0, 153, 204) no-repeat center center;
+    background: $primary-color no-repeat center center;
     background-size: cover;
 }
 
@@ -404,6 +405,7 @@ ul li {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
+    color: $white-color;
 }
 
 .blog-description {
@@ -420,6 +422,30 @@ ul li {
     height: 100%;
     background: $primary-color;
     position: relative;
+
+
+
+
+    h1.post-title {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+
+
+    &:nth-child(even) {
+        background: $white-color;
+    }
+
+
+    &#grupos {
+
+        .group-title {
+            display: block;
+            text-align: center;
+            font-size: 12px;
+        }
+    }
 }
 .oneOff{
         background: $secondary-color;

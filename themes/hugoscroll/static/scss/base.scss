@@ -1,4 +1,5 @@
 @import 'bourbon/bourbon';
+@import '_fontface';
 @import 'font-awesome/font-awesome.scss';
 
 @import 'reset.scss';
@@ -13,5 +14,5 @@
 // ------------------------------
 // MEDIA QUERIES
 // ------------------------------
-
 @import 'media-queries.scss';
+
