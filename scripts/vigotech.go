@@ -15,10 +15,9 @@ import (
 	"github.com/tidwall/gjson"
 )
 
-// TODO: move to JSON files with content?
 // TODO: clear files auto-generated
-// TOOD: Update Travis file
 // TODO: update README
+// TODO: Update Travis file
 
 var videosMD = "content/page/videos.md"
 var videosNoYoutube = "scripts/videosNoYoutube.txt"
