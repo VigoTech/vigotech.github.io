@@ -4,6 +4,7 @@ draft = false
 title = "Proxectos"
 type = "page"
 weight = 1
+publishdate = false
 +++
 
 ----
@@ -23,7 +24,7 @@ weight = 1
 
 ---
 
-### Web?
+### Web
 ---
 
 <div class="github-card" data-user="VigoTech" data-repo="vigotech.github.io"></div>

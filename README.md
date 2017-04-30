@@ -24,7 +24,37 @@ hugo server
 
 Dirache unha URL que podes abrir no navegador. Según fagas cambios, actualizanse no navegador de forma automática (a maior parte das veces).
 
-## Xeración automática de contidos 
+## Engadir proxectos
+
+Se queres que un proxecto de código aberto apareza na web, só tes que facer o seguinte:
+
+- Segue os pasos da sección previa: Traballar na web.
+- Abre no teu editor favorito o archivo `content/page/proxectos.md`.
+- Engade unha nova "github-card" baixo a sección (linguaxe) correspondente.
+
+A sintaxe para engadir unha nova "github-card" é moi sinxela:
+
+```html
+<div class="github-card" data-user="USUARIO" data-repo="REPOSITORIO"></div>
+```
+
+Substituíndo `USUARIO` e `REPOSITORIO` polos nomes do proxecto que queiras engadir.
+
+Se tes algunha dúbida podes fixarte nas "github-cards" xa existentes.
+
+- Se non existe unha sección coa linguaxe do teu proxecto, engádea:
+
+```markdown
+### Nome da linguaxe
+---
+Espazo para as "github-cards"
+---
+```
+
+- Unha ver remates de engadir os proxectos desexados, comproba o resultado localmente e inicia
+o Pull Request.
+
+## Xeración automática de contidos
 
 A parte dos videos xenérase automáticamente. Aínda non está integrado co despliegue... polo de agora faino @antonmry a man (fan falta credenciais propias de Google Cloud) e despóis o fara Travis.
 
