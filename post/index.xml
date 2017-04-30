@@ -38,7 +38,18 @@
       <description>PythonVigo - APIS de Machine Learning: como usarlas desde Python. Por David de la Iglesia.
  PythonVigo - Codenamize: presentación de la librería. Por José Juan Montes.
  VigoLabs - #9 - Introdución á tecnoloxía LiDAR
- Pincha aquí para ver todas as charlas</description>
+ Preme aquí para ver tódalas charlas</description>
+    </item>
+    
+    <item>
+      <title>Proxectos</title>
+      <link>https://vigotech.github.io/post/vigotech-proxectos/</link>
+      <pubDate>Sat, 29 Apr 2017 12:23:24 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/post/vigotech-proxectos/</guid>
+      <description>Proxectos de código aberto creados por xente da comunidade. Anímate a colaborar!
+   Preme aquí para ver tódolos proxectos
+ </description>
     </item>
     
     <item>
