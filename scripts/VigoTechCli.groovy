@@ -1,10 +1,11 @@
-import java.time.ZonedDateTime
-import java.time.format.DateTimeFormatter
-
 @Grab('org.codehaus.groovy.modules.http-builder:http-builder:0.7')
 
+import java.time.ZonedDateTime
+import java.time.format.DateTimeFormatter
 import static groovy.json.JsonOutput.*
 import groovyx.net.http.RESTClient
+
+// This is scripts is migrated to vigotech.go. Don't use it!
 
 class VigoTechCli {
 
@@ -64,7 +65,7 @@ weight = 1
                     ])
 
             assert resp.status == 200
-            // println prettyPrint(toJson(resp.data))
+            //println prettyPrint(toJson(resp.data))
             assert resp.data.pageInfo.totalResults < 50: "Some entries could be missed."
 
             page << lineSeparator << lineSeparator
