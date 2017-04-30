@@ -20,4 +20,4 @@ VigoLabs - [#9 - Introdución á tecnoloxía LiDAR](https://www.youtube.com/watc
 <iframe width="560" height="315" src="https://www.youtube.com/embed/x6wgM2WFX44" frameborder="0" allowfullscreen></iframe>
 
 
-*[Pincha aquí para ver todas as charlas](./page/videos/)*
+*[Preme aquí para ver tódalas charlas](./page/videos/)*
