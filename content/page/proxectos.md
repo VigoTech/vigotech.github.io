@@ -1,29 +1,34 @@
 +++
-date = "2017-04-30T13:39:01+02:00"
+date = "2017-04-30T15:38:03+02:00"
 draft = false
 title = "Proxectos"
 type = "page"
 weight = 1
 +++
 
-Proxectos de código aberto creados por xente da comunidade:
 ----
+Proxectos de código aberto creados por xente da comunidade:
 
-<div class="github-card" data-user="vigojug" data-repo="reto"></div>
+<div class="container">
 
+<div class="row">
 
-<div class="github-card" data-user="daavoo" data-repo="pyntcloud"></div>
+<div class="cell-card"><div class="github-card" data-user="vigojug" data-repo="reto"></div></div>
 
+<div class="cell-card"><div class="github-card" data-user="daavoo" data-repo="pyntcloud"></div></div>
+</div>
+<div class="row">
 
-<div class="github-card" data-user="VigoTech" data-repo="vigotech.github.io"></div>
+<div class="cell-card"><div class="github-card" data-user="VigoTech" data-repo="vigotech.github.io"></div></div>
 
+<div class="cell-card"><div class="github-card" data-user="vigojug" data-repo="vigojug.github.io"></div></div>
+</div>
+<div class="row">
 
-<div class="github-card" data-user="vigojug" data-repo="vigojug.github.io"></div>
+<div class="cell-card"><div class="github-card" data-user="antonmry" data-repo="leanmanager"></div></div>
 
-
-<div class="github-card" data-user="antonmry" data-repo="leanmanager"></div>
-
-
-<div class="github-card" data-user="galibots" data-repo="bot-daily-meeting"></div>
+<div class="cell-card"><div class="github-card" data-user="galibots" data-repo="bot-daily-meeting"></div></div>
+</div>
+</div>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>"

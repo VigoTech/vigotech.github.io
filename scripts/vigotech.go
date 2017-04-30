@@ -1,6 +1,7 @@
 package main
 
 import (
+	"encoding/json"
 	"fmt"
 	"io/ioutil"
 	"log"
@@ -16,6 +17,7 @@ import (
 
 // TODO: move to JSON files with content?
 // TODO: clear files auto-generated
+// TOOD: Update Travis file
 // TODO: update README
 
 var videosMD = "content/page/videos.md"
@@ -23,35 +25,15 @@ var videosNoYoutube = "scripts/videosNoYoutube.txt"
 var videosLanding = "content/post/vigotech-charlas.md"
 var projectsMD = "content/page/proxectos.md"
 var projectsLanding = "content/post/vigotech-proxectos.md"
+var channelJSON = "scripts/channels.json"
+var projectsJSON = "scripts/projects.json"
 
-var channels = []struct {
-	channelID, channelName string
-}{
-	{
-		channelName: "AgileVigo",
-		channelID:   "UC4NkKB1iCLN9Nb3s8ydFc0w",
-	},
-	{
-		channelName: "JavascriptVigo",
-		channelID:   "UCjFplxtEs0XtunTn-n0LUtQ",
-	},
-	{
-		channelName: "PHPVigo",
-		channelID:   "UCzcSOwRc7bfKs9jPehJRNxQ",
-	},
-	{
-		channelName: "PythonVigo",
-		channelID:   "UCTUXabChakosnupWEnz4xTA",
-	},
-	{
-		channelName: "VigoJUG",
-		channelID:   "UCNOihTnorv6dZDANaPXgx_g",
-	},
-	{
-		channelName: "VigoLabs",
-		channelID:   "UCBuC6QDQm4U60KV5QPED-eQ",
-	},
+type channelType []struct {
+	ChannelName string `json:"channelName"`
+	ChannelID   string `json:"channelID"`
 }
+
+var channels = channelType{}
 
 type video struct {
 	title, videoID, channel, publishedAt string
@@ -73,41 +55,41 @@ func (slice videosType) Swap(i, j int) {
 
 var videos = videosType{}
 
-var projects = []struct {
-	user, repo string
-}{
-	{
-		user: "vigojug",
-		repo: "reto",
-	},
-	{
-		user: "daavoo",
-		repo: "pyntcloud",
-	},
-	{
-		user: "VigoTech",
-		repo: "vigotech.github.io",
-	},
-	{
-		user: "vigojug",
-		repo: "vigojug.github.io",
-	},
-	{
-		user: "antonmry",
-		repo: "leanmanager",
-	},
-	{
-		user: "galibots",
-		repo: "bot-daily-meeting",
-	},
+type projectsType []struct {
+	User string `json:"user"`
+	Repo string `json:"repo"`
 }
+
+var projects = projectsType{}
 
 func main() {
 
 	token := os.Getenv("YOUTUBE_TOKEN")
 	now := time.Now().Format(time.RFC3339)
 
-	// Prepare file output
+	// Read JSON channels
+	c, err6 := os.Open(channelJSON)
+	if err6 != nil {
+		log.Fatal("Not able to open ", channelJSON)
+	}
+
+	jsonParser := json.NewDecoder(c)
+	if err6 = jsonParser.Decode(&channels); err6 != nil {
+		log.Fatal("Parsing channels JSONfile", err6.Error())
+	}
+
+	// Read JSON channels
+	c1, err7 := os.Open(projectsJSON)
+	if err7 != nil {
+		log.Fatal("Not able to open ", projectsJSON)
+	}
+
+	jsonParser = json.NewDecoder(c1)
+	if err7 = jsonParser.Decode(&projects); err7 != nil {
+		log.Fatal("Parsing projects JSON file", err7.Error())
+	}
+
+	// Prepare Videos Markdown page
 	_ = os.Truncate(videosMD, 0)
 	var file, err = os.OpenFile(videosMD, os.O_RDWR, 0644)
 	if err != nil {
@@ -123,8 +105,10 @@ type = "page"
 weight = 1
 +++
 
+----
 Charlas gravadas polos distintos grupos:
-----`
+
+`
 
 	file.WriteString(strings.Replace(s, "$now", now, 1))
 
@@ -132,7 +116,7 @@ Charlas gravadas polos distintos grupos:
 		// Processing YouTube Requests
 		url := fmt.Sprintf("https://www.googleapis.com/youtube/v3/search?"+
 			"key=%s&channelId=%s&part=snippet,id&order=date&maxResults=50",
-			token, c.channelID)
+			token, c.ChannelID)
 
 		req, err := http.NewRequest("GET", url, nil)
 		if err != nil {
@@ -164,8 +148,8 @@ Charlas gravadas polos distintos grupos:
 		}
 		s1 := fmt.Sprintf(
 			"\n\n### [%s](https://www.youtube.com/channel/%s)\n\n",
-			c.channelName,
-			c.channelID)
+			c.ChannelName,
+			c.ChannelID)
 		file.WriteString(s1)
 
 		r := gjson.Get(record, "items")
@@ -190,7 +174,7 @@ Charlas gravadas polos distintos grupos:
 			videos = append(videos, video{
 				title:       title,
 				videoID:     videoID,
-				channel:     c.channelName,
+				channel:     c.ChannelName,
 				publishedAt: publishedAt,
 			})
 		}
@@ -269,21 +253,34 @@ type = "page"
 weight = 1
 +++
 
-Proxectos de código aberto creados por xente da comunidade:
 ----
+Proxectos de código aberto creados por xente da comunidade:
+
 `
 
 	fileProjects.WriteString(strings.Replace(s, "$now", now, 1))
 
-	for _, v := range projects {
+	fileProjects.WriteString("<div class=\"container\">\n\n")
 
-		s = fmt.Sprintf("\n<div class=\"github-card\" data-user=\"%s\" "+
-			"data-repo=\"%s\"></div>\n\n",
-			v.user,
-			v.repo)
+	for i, v := range projects {
+
+		if i%2 == 0 {
+			fileProjects.WriteString("<div class=\"row\">\n")
+		}
+
+		s = fmt.Sprintf("\n<div class=\"cell-card\">"+
+			"<div class=\"github-card\" data-user=\"%s\" "+
+			"data-repo=\"%s\"></div></div>\n",
+			v.User,
+			v.Repo)
 
 		fileProjects.WriteString(s)
+
+		if i%2 == 1 || len(projects)-1 == i {
+			fileProjects.WriteString("</div>\n")
+		}
 	}
+	fileProjects.WriteString("</div>\n\n")
 
 	fileProjects.WriteString("<script src=\"" +
 		"//cdn.jsdelivr.net/github-cards/latest/widget.js\"></script>\"")
@@ -314,20 +311,33 @@ Proxectos de código aberto creados por xente da comunidade:
 	rand.Seed(time.Now().Unix())
 	random := rand.Int()
 
-	for i := 0; i < 3; i++ {
+	fileProjectsLanding.WriteString("<div class=\"container\">\n\n")
+
+	for i := 0; i < 6; i++ {
+
+		if i%2 == 0 {
+			fileProjectsLanding.WriteString("<div class=\"row\">\n")
+		}
 
 		n := (random + i) % len(projects)
-		s = fmt.Sprintf("\n<div class=\"github-card\" data-user=\"%s\" "+
-			"data-repo=\"%s\"></div>\n\n",
-			projects[n].user,
-			projects[n].repo)
+		s = fmt.Sprintf("\n<div class=\"cell-card\">"+
+			"<div class=\"github-card\" data-user=\"%s\" "+
+			"data-repo=\"%s\"></div></div>\n",
+			projects[n].User,
+			projects[n].Repo)
 
 		fileProjectsLanding.WriteString(s)
+
+		if i%2 == 1 {
+			fileProjectsLanding.WriteString("</div>\n")
+		}
 	}
+
+	fileProjectsLanding.WriteString("</div>\n\n")
 
 	s = `
 
-* [Preme aquí para ver tódalos proxectos](./page/proxectos/)
+* [Preme aquí para ver tódolos proxectos](./page/proxectos/)
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 `

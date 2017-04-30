@@ -1,13 +1,15 @@
 +++
-date = "2017-04-30T13:39:01+02:00"
+date = "2017-04-30T15:38:03+02:00"
 draft = false
 title = "Charlas"
 type = "page"
 weight = 1
 +++
 
-Charlas gravadas polos distintos grupos:
 ----
+Charlas gravadas polos distintos grupos:
+
+
 
 ### [AgileVigo](https://www.youtube.com/channel/UC4NkKB1iCLN9Nb3s8ydFc0w)
 

@@ -3319,4 +3319,11 @@ a.fn-item.active {
     vertical-align: middle;
 }
 
+.cell-card {
+    display: table-cell;
+    text-align: center;
+    vertical-align: top;
+    text-decoration: none;
+    line-height: 1.1em;
+}
 
