@@ -25,3 +25,11 @@ _testmain.go
 .idea/
 website.iml
 *.iml
+
+# VigoTech
+
+docs/
+content/page/proxectos.md
+content/page/videos.md
+content/post/vigotech-charlas.md
+content/post/vigotech-proxectos.md
