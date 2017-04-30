@@ -19,6 +19,10 @@ Na carpeta do repositorio executa:
 
 ```bash
 git checkout source
+git update-index --assume-unchanged content/page/proxectos.md
+git update-index --assume-unchanged content/page/videos.md
+git update-index --assume-unchanged content/post/vigotech-proxectos.md
+git update-index --assume-unchanged content/post/vigotech-charlas.md
 hugo server
 ```
 
@@ -26,7 +30,22 @@ Dirache unha URL que podes abrir no navegador. Según fagas cambios, actualizans
 
 ## Xeración automática de contidos 
 
-A parte dos videos xenérase automáticamente. Aínda non está integrado co despliegue... polo de agora faino @antonmry a man (fan falta credenciais propias de Google Cloud) e despóis o fara Travis.
+A parte dos videos xenérase automáticamente (fan falta credenciais propias de Google Cloud). Tamén a parte dos proxectos.
+
+A configuración está na carpeta scripts (channels.json e projects.json) e o script que teñe toda a lóxica é `vigotech.go`.
+
+### Añadir un video
+
+Os vídeos de YouTube se xeneran automáticamente con frecuencia diaria. Se o teu canal non está dado de alta, fai unha PR añadindo o novo canal o ficheiro `scripts/channels.json`.
+
+Se non é un canal de YouTube, terás que añadilo cada vez creando una PR o ficheiro `scripts/scripts/videosNoYoutube.txt`
+
+### Añadir un proxecto
+
+Os proxectos se xeneran automáticamente a partir dun arquivo JSON. Desta forma, é doado mostrar aleatoriamente (frecuencia diaria) proxectos aleatorios na páxina principal. 
+
+Se queres añadir algún, fai un PR añadindo o proxecto o ficheiro `scripts/projects.json`.
+
 
 ## Despliegue Automático
 

@@ -15,8 +15,6 @@ import (
 	"github.com/tidwall/gjson"
 )
 
-// TODO: clear files auto-generated
-// TODO: update README
 // TODO: Update Travis file
 
 var videosMD = "content/page/videos.md"
