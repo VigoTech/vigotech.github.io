@@ -8,7 +8,8 @@ class="post last"
 
 +++
 
-<iframe src="gcal.html" style="border: 0" width="800" height="700" frameborder="0" scrolling="no"></iframe>
-
+<div class="embed-responsive embed-responsive-4by3">
+<iframe src="gcal.html" style="border: 0"  class="embed-responsive-item" frameborder="0" scrolling="no"></iframe>
+</div>
 
 

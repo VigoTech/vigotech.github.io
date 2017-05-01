@@ -1,4 +1,5 @@
 /* ==========================================================================
+/* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
 
@@ -420,7 +421,7 @@ ul li {
 .post-holder {
     width:100%;
     height: 100%;
-    background: $primary-color;
+    background: $white-color;
     position: relative;
 
 
@@ -433,23 +434,48 @@ ul li {
     }
 
 
-    &:nth-child(even) {
-        background: $white-color;
-    }
 
 
-    &#grupos {
 
-        .group-title {
-            display: block;
-            text-align: center;
-            font-size: 12px;
+
+}
+
+.post {
+
+    &.groups {
+        .group {
+            a {
+                display: block;
+                margin-bottom: 50px;
+
+                .picture-wrapper {
+                    margin-bottom: 20px;
+                    position: relative;
+                    img {
+                        margin: auto;
+                    }
+
+                    .logo {
+                        display: block;
+                        position: abolute;
+                        @include vertical-align();
+                    }
+                }
+
+                .group-title {
+                    display: block;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 1.1em;
+                }
+            }
         }
     }
 }
+
 .oneOff{
-        background: $secondary-color;
-        color: $secondary-font-color;
+        background: $primary-color;
+        color: $white-color;
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
