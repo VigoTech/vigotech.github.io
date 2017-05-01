@@ -33,5 +33,10 @@
     "user": "Soundphy",
     "repo": "soundphy",
     "tag": "python"
+  },
+  {
+    "user": "sergiocarracedo",
+    "repo": "ug-obs-background",
+    "tag": "javascript"
   }
 ]
