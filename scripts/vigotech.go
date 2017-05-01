@@ -203,6 +203,9 @@ class="post last"
 A maioría de charlas está gravadas e dispoñibles para o seu visionado.
 Están son as tres últimas:
 
+<div class="container-fluid">
+    <div class="row">
+
 `
 	fileLanding.WriteString(strings.Replace(s, "$now", now, 1))
 
@@ -215,11 +218,11 @@ Están son as tres últimas:
 			v.videoID,
 			v.channel)
 
-		fileLanding.WriteString(s)
+		//fileLanding.WriteString(s)
 
-		s = fmt.Sprintf("<iframe width=\"560\" height=\"315\" "+
+		s = fmt.Sprintf("<div class="col-xs-12 col-sm-6><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item"+
 			" src=\"https://www.youtube.com/embed/%s\" "+
-			"frameborder=\"0\" allowfullscreen></iframe>\n",
+			"frameborder=\"0\" allowfullscreen></iframe></div></div>\n",
 			v.videoID)
 
 		fileLanding.WriteString(s)
@@ -240,7 +243,12 @@ Están son as tres últimas:
 	}
 	defer fileProjects.Close()
 
-	s = `+++
+
+
+s = `
+</div>
+</div>
+	+++
 date = "$now"
 draft = false
 title = "Proxectos"

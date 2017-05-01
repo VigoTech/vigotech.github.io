@@ -5,20 +5,22 @@ $gray:              #CCCCCC;
 $gray-dark:         #999999;
 $gray-darker:       #666666;
 $gray-darkest:      #333333;
+$black-color:       #000;
+$white-color:       #FFF;
 
 $green:             #156F78;
 $purple:            #493252;
 $red:               #E25440;
 $slate:             #3D4260;
 
-$primary-color:     #f2efe8;
+$primary-color:     #ff4260;
 $secondary-color:   #5BA4E5;
 
 $link-color:        #df1441;
 $hover-color:       darken($link-color, 5%);
 
-$sans-font:         'Impact', sans-serif;
-$serif-font:        'Times New Roman', serif;
+$sans-font:         'Raleway', Arial sans-serif;
+$serif-font:        $sans-font; //'Times New Roman', serif;
 $monospace-font : 'Lucida Console', monospace, sans-serif;
 
 $header-font-color: white;

@@ -31,6 +31,13 @@ var $post = $('.post'),
             remove: false
         });
 
+        $('.group').matchHeight({
+            byRow: false,
+            property: 'height',
+            target: null,
+            remove: false
+        });
+
 
 
         $postholder.each(function (e) {
