@@ -220,8 +220,8 @@ Están son as tres últimas:
 
 		//fileLanding.WriteString(s)
 
-		s = fmt.Sprintf("<div class=\"col-xs-12 col-sm-6><div class=\"embed-responsive " +
-            " embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" " +
+		s = fmt.Sprintf("<div class=\"col-xs-12 col-sm-6><div class=\"embed-responsive "+
+			" embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" "+
 			" src=\"https://www.youtube.com/embed/%s\" "+
 			"frameborder=\"0\" allowfullscreen></iframe></div></div>\n",
 			v.videoID)
@@ -232,8 +232,10 @@ Están son as tres últimas:
 			break
 		}
 	}
+	s = "\n\n</div></div>\n\n"
+	fileLanding.WriteString(s)
 
-	s = "\n\n* [Preme aquí para ver tódalas charlas](./page/videos/)"
+	s = "* [Preme aquí para ver tódalas charlas](./page/videos/)"
 	fileLanding.WriteString(s)
 
 	// Prepare Proxectos file output
@@ -244,12 +246,7 @@ Están son as tres últimas:
 	}
 	defer fileProjects.Close()
 
-
-
-s = `
-</div>
-</div>
-	+++
+	s = `+++
 date = "$now"
 draft = false
 title = "Proxectos"
