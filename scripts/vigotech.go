@@ -284,7 +284,7 @@ Proxectos de código aberto creados por xente da comunidade:
 	fileProjects.WriteString("</div>\n\n")
 
 	fileProjects.WriteString("<script src=\"" +
-		"//cdn.jsdelivr.net/github-cards/latest/widget.js\"></script>\"")
+		"//cdn.jsdelivr.net/github-cards/latest/widget.js\"></script>")
 
 	// Update the projects landing page
 	_ = os.Truncate(projectsLanding, 0)
