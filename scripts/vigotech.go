@@ -220,7 +220,8 @@ Están son as tres últimas:
 
 		//fileLanding.WriteString(s)
 
-		s = fmt.Sprintf("<div class="col-xs-12 col-sm-6><div class="embed-responsive embed-responsive-16by9"><iframe class="embed-responsive-item"+
+		s = fmt.Sprintf("<div class=\"col-xs-12 col-sm-6><div class=\"embed-responsive " +
+            " embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" " +
 			" src=\"https://www.youtube.com/embed/%s\" "+
 			"frameborder=\"0\" allowfullscreen></iframe></div></div>\n",
 			v.videoID)
