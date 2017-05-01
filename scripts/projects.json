@@ -1,0 +1,37 @@
+[
+  {
+    "user": "vigojug",
+    "repo": "reto",
+    "tag": "java"
+  },
+  {
+    "user": "daavoo",
+    "repo": "pyntcloud",
+    "tag": "python"
+  },
+  {
+    "user": "VigoTech",
+    "repo": "vigotech.github.io",
+    "tag": "web"
+  },
+  {
+    "user": "vigojug",
+    "repo": "vigojug.github.io",
+    "tag": "web"
+  },
+  {
+    "user": "antonmry",
+    "repo": "leanmanager",
+    "tag": "go"
+  },
+  {
+    "user": "galibots",
+    "repo": "bot-daily-meeting",
+    "tag": "java"
+  },
+  {
+    "user": "Soundphy",
+    "repo": "soundphy",
+    "tag": "python"
+  }
+]
