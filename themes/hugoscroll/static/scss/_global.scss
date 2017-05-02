@@ -441,12 +441,32 @@ ul li {
 }
 
 .post {
+    .view-more {
+        display: block;
+        text-align: center;
+        a {
+            display: inline-block;;
+            background: $primary-color;
+            padding: 5px 10px;
+            text-align: center;
+            color: $white-color;
+            font-size: 16px;
+            line-height: 1.1em;
+
+            &:hover {
+                color: $white-color;
+                text-decoration: none;
+                background: $black-color;
+            }
+        }
+    }
 
     &.groups {
         .group {
-            a {
+            margin-bottom: 50px;
+            > a {
                 display: block;
-                margin-bottom: 50px;
+
 
                 .picture-wrapper {
                     margin-bottom: 20px;
@@ -457,7 +477,6 @@ ul li {
 
                     .logo {
                         display: block;
-                        position: abolute;
                         @include vertical-align();
                     }
                 }
@@ -469,13 +488,40 @@ ul li {
                     line-height: 1.1em;
                 }
             }
+
+            .social {
+                text-align: center;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+    &.talks {
+        .video {
+            margin-bottom: 30px;
+        }
+    }
+
+    &.projects {
+        .github-card {
+            margin-bottom: 30px;
         }
     }
 }
 
 .oneOff{
-        background: $primary-color;
-        color: $white-color;
+    background: $primary-color;
+    color: $white-color;
+
+    .view-more {
+        a {
+            background: $white-color;
+            color: $primary-color;
+        }
+    }
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -512,6 +558,8 @@ a.fn-item {
     display: block;
     cursor: pointer;
     opacity: 0.7;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
 }
 .white {
     color: white;
