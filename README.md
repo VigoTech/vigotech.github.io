@@ -30,35 +30,6 @@ hugo server
 
 Dirache unha URL que podes abrir no navegador. Según fagas cambios, actualizanse no navegador de forma automática (a maior parte das veces).
 
-### SETUP xeración automática
-
-Hai unha serie de requisitos extra para poder traballar localmente coa xeración automática de contidos 
-
-- Ter [go](https://github.com/golang/go) instalado.
-- Ter [gjson](https://github.com/tidwall/gjson) instalado.
-- Dispor dunha API KEY de Google e ter a [API de Youtube habilitada](https://developers.google.com/youtube/v3/getting-started).
-
-Hai incluido un script que pode ser de utilidade para aqueles que non traballaron nunca con go:
-
-```bash
-# VERSION - OS - ARCH are optional
-# Default: 1.8.1 - linux - amd64
-bash scripts/quick_go_setup.sh VERSION OS ARCH
-```
-
-Isto instalará e/ou testeará go no teu sistema ademáis de engadir as dependecias.
-
-Unha vez instalados go e as dependencias, crea unha variable de entorno coa túa API KEY de Google:
-
-```bash
-export YOUTUBE_TOKEN=123caramba
-```
-
-E finalmente executa o script vigotech.go:
-
-```bash
-go run scripts/vigotech.go
-```
 
 ## Xeración automática de contidos
 
@@ -78,6 +49,35 @@ Os proxectos se xeneran automáticamente a partir dun arquivo JSON. Desta forma,
 
 Se queres añadir algún, fai un PR añadindo o proxecto o ficheiro `scripts/projects.json`.
 
+### SETUP xeración automática
+
+Hai unha serie de requisitos extra para poder traballar localmente coa xeración automática de contidos 
+
+- Ter [go](https://github.com/golang/go) instalado.
+- Ter [gjson](https://github.com/tidwall/gjson) instalado.
+- Dispor dunha API KEY de Google e ter a [API de Youtube habilitada](https://developers.google.com/youtube/v3/getting-started).
+
+Hai incluido un script para Linux/MAC que pode ser de utilidade para aqueles que non traballaron nunca con Go:
+
+```bash
+# VERSION - OS - ARCH are optional
+# Default: 1.8.1 - linux - amd64
+bash scripts/quick_go_setup.sh VERSION OS ARCH
+```
+
+Isto instalará e/ou testeará Go no teu sistema ademáis de engadir as dependecias.
+
+Unha vez instalados Go e as dependencias, crea unha variable de entorno coa túa API KEY de Google:
+
+```bash
+export YOUTUBE_TOKEN=123caramba
+```
+
+E finalmente executa o script `vigotech.go`:
+
+```bash
+go run scripts/vigotech.go
+```
 
 ## Despliegue Automático
 
