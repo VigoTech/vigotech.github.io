@@ -1,4 +1,5 @@
 /* ==========================================================================
+/* ==========================================================================
    2. General - Setting up some base styles
    ========================================================================== */
 
@@ -136,9 +137,10 @@ a.btn:hover {
     transition: all ease 0.3s;
     -webkit-transition: all ease 0.3s;
     -moz-transition: all ease 0.3s;
-}
-#header-arrow:hover {
-    opacity: 0.9;
+
+    &:hover {
+        opacity: 0.9;
+    }
 }
 
 h1 a, h2 a, h3 a,
@@ -376,7 +378,7 @@ ul li {
     margin-bottom: 0rem;
     text-align: center;
     color: $header-font-color;
-    background: rgb(0, 153, 204) no-repeat center center;
+    background: $primary-color no-repeat center center;
     background-size: cover;
 }
 
@@ -404,6 +406,7 @@ ul li {
     margin: 10px 0 10px 0;
     font-size: 5rem;
     letter-spacing: -1px;
+    color: $white-color;
 }
 
 .blog-description {
@@ -418,12 +421,128 @@ ul li {
 .post-holder {
     width:100%;
     height: 100%;
-    background: $primary-color;
+    background: $white-color;
     position: relative;
+
+
+
+
+    h1.post-title {
+        text-align: center;
+        text-transform: capitalize;
+        margin-bottom: 30px;
+    }
+
+
+
+
+
+
 }
+
+.post {
+    .view-more {
+        display: block;
+        text-align: center;
+        a {
+            display: inline-block;;
+            background: $primary-color;
+            padding: 5px 10px;
+            text-align: center;
+            color: $white-color;
+            font-size: 16px;
+            line-height: 1.1em;
+
+            &:hover {
+                color: $white-color;
+                text-decoration: none;
+                background: $black-color;
+            }
+        }
+    }
+
+    &.groups {
+        .group {
+            margin-bottom: 50px;
+            > a {
+                display: block;
+
+
+                .picture-wrapper {
+                    margin-bottom: 20px;
+                    position: relative;
+                    img {
+                        margin: auto;
+                    }
+
+                    .logo {
+                        display: block;
+                        @include vertical-align();
+                    }
+                }
+
+                .group-title {
+                    display: block;
+                    text-align: center;
+                    font-size: 18px;
+                    line-height: 1.1em;
+                }
+            }
+
+            .social {
+                text-align: center;
+                a {
+                    text-decoration: none;
+                }
+            }
+        }
+    }
+
+
+    &.talks {
+        .video {
+            margin-bottom: 30px;
+        }
+    }
+
+    &.projects {
+        .col-xs-12, .github-card {
+            margin-bottom: 30px;
+        }
+    }
+
+    &.post-single {
+        header {
+            background: $primary-color;
+            padding: 30px 60px 30px 30px;
+            color: $white-color;
+            position: relative;
+
+            .back {
+                position: absolute;
+                right: 30px;
+                top: 50px;
+            }
+        }
+        h1 {
+        }
+
+        hr {
+            display: none;
+        }
+    }
+}
+
 .oneOff{
-        background: $secondary-color;
-        color: $secondary-font-color;
+    background: $primary-color;
+    color: $white-color;
+
+    .view-more {
+        a {
+            background: $white-color;
+            color: $primary-color;
+        }
+    }
 }
 
 /* Every post, on every page, gets this style on its <article> tag */
@@ -460,6 +579,8 @@ a.fn-item {
     display: block;
     cursor: pointer;
     opacity: 0.7;
+    text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+
 }
 .white {
     color: white;

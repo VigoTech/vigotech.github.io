@@ -6,7 +6,7 @@
     <description>Recent content on Vigo Tech Alliance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>gl-es</language>
-    <lastBuildDate>Tue, 02 May 2017 09:11:05 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 02 May 2017 12:16:13 +0000</lastBuildDate>
     
 	<atom:link href="https://vigotech.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Charlas</title>
       <link>https://vigotech.github.io/page/videos/</link>
-      <pubDate>Tue, 02 May 2017 09:11:05 +0000</pubDate>
+      <pubDate>Tue, 02 May 2017 12:16:13 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/videos/</guid>
       <description>Charlas gravadas polos distintos grupos:
@@ -24,11 +24,11 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #1 - &amp;l
     <item>
       <title>Proxectos</title>
       <link>https://vigotech.github.io/page/proxectos/</link>
-      <pubDate>Tue, 02 May 2017 09:11:05 +0000</pubDate>
+      <pubDate>Tue, 02 May 2017 12:16:13 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/proxectos/</guid>
       <description>Proxectos de código aberto creados por xente da comunidade:
-            &amp;ldquo;</description>
+              </description>
     </item>
     
     <item>
@@ -37,7 +37,7 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #1 - &amp;l
       <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
       
       <guid>https://vigotech.github.io/post/vigotech-grupos/</guid>
-      <description> Agile Vigo    CodeSign Project    GDG Vigo     Grupo de Usuarios de Joomla de Vigo    JavascriptVigo    PHPVigo     PythonVigo    SysAdmin Galicia    VigoJUG     VigoLabs     </description>
+      <description> Agile Vigo              CodeSign Project              GDG Vigo          Grupo de Usuarios de Joomla de Vigo          JavascriptVigo          PHPVigo              PythonVigo            SysAdmin Galicia           VigoJUG              VigoLabs               </description>
     </item>
     
     <item>
@@ -46,28 +46,28 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #1 - &amp;l
       <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
       
       <guid>https://vigotech.github.io/post/vigotech-calendario/</guid>
-      <description> </description>
+      <description>  </description>
     </item>
     
     <item>
       <title>Charlas</title>
       <link>https://vigotech.github.io/post/vigotech-charlas/</link>
-      <pubDate>Tue, 02 May 2017 09:11:05 +0000</pubDate>
+      <pubDate>Tue, 02 May 2017 12:16:13 +0000</pubDate>
       
       <guid>https://vigotech.github.io/post/vigotech-charlas/</guid>
-      <description>A maioría de charlas está gravadas e dispoñibles para o seu visionado. Están son as tres últimas:
- APIS de Machine Learning: como usarlas desde Python. Por David de la Iglesia. (PythonVigo)  Codenamize: presentación de la librería. Por José Juan Montes. (PythonVigo)  #9 - Introdución á tecnoloxía LiDAR (VigoLabs) 
- Preme aquí para ver tódalas charlas
-  </description>
+      <description>A maioría de charlas está gravadas e dispoñibles para o seu visionado. Están son as catro últimas:
+    
+Preme aquí para ver tódalas charlas</description>
     </item>
     
     <item>
       <title>Proxectos</title>
       <link>https://vigotech.github.io/post/vigotech-proxectos/</link>
-      <pubDate>Tue, 02 May 2017 09:11:05 +0000</pubDate>
+      <pubDate>Tue, 02 May 2017 12:16:13 +0000</pubDate>
       
       <guid>https://vigotech.github.io/post/vigotech-proxectos/</guid>
-      <description>Proxectos de código aberto creados por xente da comunidade:            Preme aquí para ver tódolos proxectos   </description>
+      <description>Proxectos de código aberto creados por xente da comunidade:           Preme aquí para ver tódolos proxectos 
+ </description>
     </item>
     
     <item>
@@ -78,7 +78,7 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #1 - &amp;l
       <guid>https://vigotech.github.io/post/vigotech-slack/</guid>
       <description>Aberto a todo o mundo, é o punto de encontro virtual de todos os grupos e un bo sitio para facer un pouco de networking:
 
- Recibe unha invitación no teu correo clickando aquí  </description>
+Recibe unha invitación no teu correo clickando aquí</description>
     </item>
     
   </channel>
