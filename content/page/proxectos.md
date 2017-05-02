@@ -4,36 +4,37 @@ draft = false
 title = "Proxectos"
 type = "page"
 weight = 1
+class="post projects"
 +++
 
 ----
 Proxectos de código aberto creados por xente da comunidade:
 
-<div class="container">
+<div class="container-fluid">
 
 <div class="row">
 
-<div class="cell-card"><div class="github-card" data-user="vigojug" data-repo="reto"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="vigojug" data-repo="reto"></div></div>
 
-<div class="cell-card"><div class="github-card" data-user="daavoo" data-repo="pyntcloud"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="daavoo" data-repo="pyntcloud"></div></div>
 </div>
 <div class="row">
 
-<div class="cell-card"><div class="github-card" data-user="VigoTech" data-repo="vigotech.github.io"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="VigoTech" data-repo="vigotech.github.io"></div></div>
 
-<div class="cell-card"><div class="github-card" data-user="vigojug" data-repo="vigojug.github.io"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="vigojug" data-repo="vigojug.github.io"></div></div>
 </div>
 <div class="row">
 
-<div class="cell-card"><div class="github-card" data-user="antonmry" data-repo="leanmanager"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="antonmry" data-repo="leanmanager"></div></div>
 
-<div class="cell-card"><div class="github-card" data-user="galibots" data-repo="bot-daily-meeting"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="galibots" data-repo="bot-daily-meeting"></div></div>
 </div>
 <div class="row">
 
-<div class="cell-card"><div class="github-card" data-user="Soundphy" data-repo="soundphy"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="Soundphy" data-repo="soundphy"></div></div>
 
-<div class="cell-card"><div class="github-card" data-user="sergiocarracedo" data-repo="ug-obs-background"></div></div>
+<div class="col-xs-12 col-sm-6"><div class="github-card" data-width="100%" data-user="sergiocarracedo" data-repo="ug-obs-background"></div></div>
 </div>
 </div>
 

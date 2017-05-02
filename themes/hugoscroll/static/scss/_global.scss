@@ -506,8 +506,29 @@ ul li {
     }
 
     &.projects {
-        .github-card {
+        .col-xs-12, .github-card {
             margin-bottom: 30px;
+        }
+    }
+
+    &.post-single {
+        header {
+            background: $primary-color;
+            padding: 30px 60px 30px 30px;
+            color: $white-color;
+            position: relative;
+
+            .back {
+                position: absolute;
+                right: 30px;
+                top: 50px;
+            }
+        }
+        h1 {
+        }
+
+        hr {
+            display: none;
         }
     }
 }

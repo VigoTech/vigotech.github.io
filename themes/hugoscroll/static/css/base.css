@@ -2812,8 +2812,19 @@ ul li {
       text-decoration: none; }
 .post.talks .video {
   margin-bottom: 30px; }
-.post.projects .github-card {
+.post.projects .col-xs-12, .post.projects .github-card {
   margin-bottom: 30px; }
+.post.post-single header {
+  background: #ff4260;
+  padding: 30px 60px 30px 30px;
+  color: #FFF;
+  position: relative; }
+  .post.post-single header .back {
+    position: absolute;
+    right: 30px;
+    top: 50px; }
+.post.post-single hr {
+  display: none; }
 
 .oneOff {
   background: #ff4260;

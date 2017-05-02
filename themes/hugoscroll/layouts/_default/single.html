@@ -2,9 +2,13 @@
     <body>
         <div class="content-wrapper">
             <div class="content-wrapper__inner">
-                <div class="post">
-                    <h1>{{ .Title }}</h1>
-                    <span class="post-date">{{ .Date.Format "Mon, Jan 2, 2006" }}</span>
+                <div class="post-single {{ if .Params.class }}{{ .Params.class }}{{ else }}post{{ end }}">
+                    <header>
+                        <h1>{{ .Title }}</h1>
+                        <a href="/" class="back">
+                            <i class="fa fa-arrow-left"></i>
+                        </a>
+                    </header>
                     {{ .Content }}
                 </div>
             </div>
