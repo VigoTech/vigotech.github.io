@@ -265,7 +265,7 @@ Proxectos de código aberto creados por xente da comunidade:
 
 	fileProjects.WriteString(strings.Replace(s, "$now", now, 1))
 
-	fileProjects.WriteString("<div class=\"container\">\n\n")
+	fileProjects.WriteString("<div class=\"container-fluid\">\n\n")
 
 	for i, v := range projects {
 
@@ -273,9 +273,9 @@ Proxectos de código aberto creados por xente da comunidade:
 			fileProjects.WriteString("<div class=\"row\">\n")
 		}
 
-		s = fmt.Sprintf("\n<div class=\"cell-card\">"+
+		s = fmt.Sprintf("\n<div class=\"col-xs-12 col-sm-6\">"+
 			"<div class=\"github-card\" data-user=\"%s\" "+
-			"data-repo=\"%s\"></div></div>\n",
+			"data-repo=\"%s\" data-width=\"100%%\"></div></div>\n",
 			v.User,
 			v.Repo)
 
