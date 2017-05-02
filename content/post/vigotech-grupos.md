@@ -18,6 +18,20 @@ class="post first groups"
                 <span class="group-title hidden-xs">
                     Agile Vigo
                 </span>
+                <div class="social">
+                    <a href="https://www.agilevigo.com/">
+                        <i class="fa fa-web"></i>
+                    </a>
+                    <a href="https://twitter.com/agilevigo">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                    <a href="https://www.meetup.com/es-ES/agile-vigo/">
+                        <i class="fa fa-meetup"></i>
+                    </a>
+                    <a href="https://github.com/agileVigo">
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
             </a>
         </div>
         <div class="col-xs-6 col-sm-6 col-md-4 group">
