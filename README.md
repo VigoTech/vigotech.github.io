@@ -8,6 +8,8 @@ Este repositorio contén a páxina web de VigoTech Alliance.
 
 A web está feita usando [Hugo](https://gohugo.io/). O que fai é coller os ficheiros markdown da carpeta `content` e o tema da carpeta `themes` e xenera unha web estática en `docs`.
 
+### SETUP básica
+
 Se queres contribuir:
 
 - Instala Hugo: https://gohugo.io/overview/installing/
@@ -28,9 +30,39 @@ hugo server
 
 Dirache unha URL que podes abrir no navegador. Según fagas cambios, actualizanse no navegador de forma automática (a maior parte das veces).
 
-## Xeración automática de contidos 
+### SETUP xeración automática
 
-A parte dos videos xenérase automáticamente (fan falta credenciais propias de Google Cloud). Tamén a parte dos proxectos.
+Hai unha serie de requisitos extra para poder traballar localmente coa xeración automática de contidos 
+
+- Ter [go](https://github.com/golang/go) instalado.
+- Ter [gjson](https://github.com/tidwall/gjson) instalado.
+- Dispor dunha API KEY de Google e ter a [API de Youtube habilitada](https://developers.google.com/youtube/v3/getting-started).
+
+Hai incluido un script que pode ser de utilidade para aqueles que non traballaron nunca con go:
+
+```bash
+# VERSION - OS - ARCH are optional
+# Default: 1.8.1 - linux - amd64
+bash scripts/quick_go_setup.sh VERSION OS ARCH
+```
+
+Isto instalará e/ou testeará go no teu sistema ademáis de engadir as dependecias.
+
+Unha vez instalados go e as dependencias, crea unha variable de entorno coa túa API KEY de Google:
+
+```bash
+export YOUTUBE_TOKEN=123caramba
+```
+
+E finalmente executa o script vigotech.go:
+
+```bash
+go run scripts/vigotech.go
+```
+
+## Xeración automática de contidos
+
+A parte dos videos xenérase automáticamente (fan falta credenciais propias de Google Cloud, ver o link de enrriba). Tamén a parte dos proxectos.
 
 A configuración está na carpeta scripts (channels.json e projects.json) e o script que teñe toda a lóxica é `vigotech.go`.
 
@@ -42,7 +74,7 @@ Se non é un canal de YouTube, terás que añadilo cada vez creando una PR o fic
 
 ### Añadir un proxecto
 
-Os proxectos se xeneran automáticamente a partir dun arquivo JSON. Desta forma, é doado mostrar aleatoriamente (frecuencia diaria) proxectos aleatorios na páxina principal. 
+Os proxectos se xeneran automáticamente a partir dun arquivo JSON. Desta forma, é doado mostrar aleatoriamente (frecuencia diaria) proxectos aleatorios na páxina principal.
 
 Se queres añadir algún, fai un PR añadindo o proxecto o ficheiro `scripts/projects.json`.
 
