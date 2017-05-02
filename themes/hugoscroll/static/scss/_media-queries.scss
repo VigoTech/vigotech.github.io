@@ -1,7 +1,6 @@
 /* ==========================================================================
    9. Media Queries - Smaller than 1130px
    ========================================================================== */
-
 @media only screen and (max-width: 1130px) {
     .fixed-nav {
         opacity: 1;
@@ -119,6 +118,8 @@
     a.btn {
         margin-top: 10px;
     }
+
+
 
     .blog-title {
         font-size: 3rem;
