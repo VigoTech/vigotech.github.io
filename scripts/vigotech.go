@@ -196,12 +196,12 @@ draft = false
 title = "Charlas"
 weight = 102
 type = "post"
-class="post last"
+class="post last talks"
 
 +++
 
 A maioría de charlas está gravadas e dispoñibles para o seu visionado.
-Están son as tres últimas:
+Están son as catro últimas:
 
 <div class="container-fluid">
     <div class="row">
@@ -220,22 +220,26 @@ Están son as tres últimas:
 
 		//fileLanding.WriteString(s)
 
-		s = fmt.Sprintf("<div class=\"col-xs-12 col-sm-6><div class=\"embed-responsive "+
-			" embed-responsive-16by9\"><iframe class=\"embed-responsive-item\" "+
+		s = fmt.Sprintf("<div class=\"col-xs-12 col-sm-6 video\">"+
+			"<div class=\"embed-responsive "+
+			" embed-responsive-16by9\"><iframe class=\"embed-responsive-item\""+
 			" src=\"https://www.youtube.com/embed/%s\" "+
 			"frameborder=\"0\" allowfullscreen></iframe></div></div>\n",
 			v.videoID)
 
 		fileLanding.WriteString(s)
 
-		if i == 2 {
+		if i == 3 {
 			break
 		}
 	}
 	s = "\n\n</div></div>\n\n"
 	fileLanding.WriteString(s)
 
-	s = "* [Preme aquí para ver tódalas charlas](./page/videos/)"
+	s = `<span class="view-more">
+[Preme aquí para ver tódalas charlas](./page/videos/)
+</span>`
+
 	fileLanding.WriteString(s)
 
 	// Prepare Proxectos file output
@@ -301,7 +305,7 @@ draft = false
 title = "Proxectos"
 weight = 103
 type = "post"
-class="post last"
+class="post last projects"
 
 +++
 
@@ -312,7 +316,7 @@ Proxectos de código aberto creados por xente da comunidade:
 	rand.Seed(time.Now().Unix())
 	random := rand.Int()
 
-	fileProjectsLanding.WriteString("<div class=\"container\">\n\n")
+	fileProjectsLanding.WriteString("<div class=\"container-fluid\">\n\n")
 
 	for i := 0; i < 6; i++ {
 
@@ -321,9 +325,9 @@ Proxectos de código aberto creados por xente da comunidade:
 		}
 
 		n := (random + i) % len(projects)
-		s = fmt.Sprintf("\n<div class=\"cell-card\">"+
+		s = fmt.Sprintf("\n<div class=\"col-xs-12 col-sm-6\">"+
 			"<div class=\"github-card\" data-user=\"%s\" "+
-			"data-repo=\"%s\"></div></div>\n",
+			"data-repo=\"%s\" data-width=\"100%%\"></div></div>\n",
 			projects[n].User,
 			projects[n].Repo)
 
@@ -337,8 +341,9 @@ Proxectos de código aberto creados por xente da comunidade:
 	fileProjectsLanding.WriteString("</div>\n\n")
 
 	s = `
-
-* [Preme aquí para ver tódolos proxectos](./page/proxectos/)
+<span class="view-more">
+[Preme aquí para ver tódolos proxectos](./page/proxectos/)
+</span>
 
 <script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
 `
