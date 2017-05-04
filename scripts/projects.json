@@ -38,5 +38,15 @@
     "user": "sergiocarracedo",
     "repo": "ug-obs-background",
     "tag": "javascript"
+  },
+  {
+    "user": "ivannieto",
+    "repo": "webpack-intro-jsvigo",
+    "tag": "javascript"
+  },
+  {
+    "user": "JavaScriptVigo",
+    "repo": "meetups",
+    "tag": "meetups"
   }
 ]
