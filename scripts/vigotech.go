@@ -13,25 +13,42 @@ import (
 	"time"
 
 	"github.com/tidwall/gjson"
+	"errors"
+	"text/template"
 )
 
-var videosMD = "content/page/videos.md"
-var videosNoYoutube = "scripts/videosNoYoutube.txt"
-var videosLanding = "content/post/vigotech-charlas.md"
-var projectsMD = "content/page/proxectos.md"
-var projectsLanding = "content/post/vigotech-proxectos.md"
+// TODO:
+// Separate in functions
+// Add templates
+// Add comments
+// Check govet and others
+// Update README
+// Add test
+
+// Configuration files
 var channelJSON = "scripts/channels.json"
 var projectsJSON = "scripts/projects.json"
 
+// Output files
+var videosPage = "content/page/videos.md"
+var videosLandingPage = "content/post/vigotech-charlas.md"
+var projectsPage = "content/page/proxectos.md"
+var projectsLandingPage = "content/post/vigotech-proxectos.md"
+
+// Template files
+var videosTemplate = "scripts/templates/videos.tmpl"
+var projectsTemplate = "scripts/templates/proxectos.tmpl"
+var videosLandingTemplate = "scripts/templates/vigotech-charlas.tmpl"
+var projectsLandingTemplate = "scripts/templates/vigotech-proxectos.tmpl"
+
+// Youtube video types
 type channelType []struct {
 	ChannelName string `json:"channelName"`
 	ChannelID   string `json:"channelID"`
 }
 
-var channels = channelType{}
-
 type video struct {
-	title, videoID, channel, publishedAt string
+	title, videoID, channelID, channelName, publishedAt string
 }
 
 type videosType []video
@@ -48,149 +65,175 @@ func (slice videosType) Swap(i, j int) {
 	slice[i], slice[j] = slice[j], slice[i]
 }
 
-var videos = videosType{}
+type videoList struct {
+	Date   string
+	Videos videosType
+}
 
+// Github projects types
 type projectsType []struct {
 	User string `json:"user"`
 	Repo string `json:"repo"`
 }
 
-var projects = projectsType{}
+//TODO
+func generateVideosPage(videos videosType) (err error) {
+
+	config := videoList{
+		Date:   time.Now().Format(time.RFC3339),
+		Videos: videos,
+	}
+
+	t, err := template.ParseFiles(videosTemplate)
+	if err != nil {
+		return err
+	}
+
+	f, err := os.Create(videosPage)
+	if err != nil {
+		return err
+	}
+	defer f.Close()
+
+	err = t.Execute(f, config)
+	if err != nil {
+		return err
+	}
+
+	return nil
+}
+
+//TODO
+func generateLandingVideosPage() {
+}
+
+// TODO
+func generateProjectsPage() {
+}
+
+// TODO
+func generateProjectsLandingPage() {
+}
+
+func loadVideosConfig() (channels channelType, err error) {
+
+	c, err := os.Open(channelJSON)
+	if err != nil {
+		return nil, err
+	}
+
+	jsonParser := json.NewDecoder(c)
+	if err = jsonParser.Decode(&channels); err != nil {
+		return nil, err
+	}
+
+	return channels, nil
+}
+
+func loadProjectsConfig() (projects projectsType, err error) {
+
+	c, err := os.Open(projectsJSON)
+	if err != nil {
+		return nil, err
+	}
+
+	jsonParser := json.NewDecoder(c)
+	if err = jsonParser.Decode(&projects); err != nil {
+		return nil, err
+	}
+
+	return projects, nil
+}
+
+// Processing YouTube Requests
+func getVideosByChannelID(token, channelID string) (result string, err error) {
+
+	url := fmt.Sprintf("https://www.googleapis.com/youtube/v3/search?"+
+		"key=%s&channelId=%s&part=snippet,id&order=date&maxResults=50",
+		token, channelID)
+
+	req, err := http.NewRequest("GET", url, nil)
+	if err != nil {
+		log.Fatal("NewRequest: ", err)
+		return
+	}
+
+	client := &http.Client{}
+
+	resp, err := client.Do(req)
+	if err != nil {
+		return "", err
+	}
+
+	defer resp.Body.Close()
+
+	if resp.StatusCode != 200 {
+		return "", errors.New("YouTube response is: " + string(resp.StatusCode))
+	}
+
+	bodyBytes, _ := ioutil.ReadAll(resp.Body)
+
+	result = string(bodyBytes)
+
+	totalResults := gjson.Get(result, "pageInfo.totalResults")
+
+	if totalResults.Int() > 49 {
+		return "", errors.New("Returned 50 videos, we could loose records")
+	}
+	return result, nil
+}
 
 func main() {
 
 	token := os.Getenv("YOUTUBE_TOKEN")
+
+	// TODO: delete
 	now := time.Now().Format(time.RFC3339)
 
-	// Read JSON channels
-	c, err6 := os.Open(channelJSON)
-	if err6 != nil {
-		log.Fatal("Not able to open ", channelJSON)
-	}
-
-	jsonParser := json.NewDecoder(c)
-	if err6 = jsonParser.Decode(&channels); err6 != nil {
-		log.Fatal("Parsing channels JSONfile", err6.Error())
-	}
-
-	// Read JSON channels
-	c1, err7 := os.Open(projectsJSON)
-	if err7 != nil {
-		log.Fatal("Not able to open ", projectsJSON)
-	}
-
-	jsonParser = json.NewDecoder(c1)
-	if err7 = jsonParser.Decode(&projects); err7 != nil {
-		log.Fatal("Parsing projects JSON file", err7.Error())
-	}
-
-	// Prepare Videos Markdown page
-	_ = os.Truncate(videosMD, 0)
-	var file, err = os.OpenFile(videosMD, os.O_RDWR, 0644)
+	channels, err := loadVideosConfig()
 	if err != nil {
-		log.Fatal("Not able to open ", videosMD)
+		log.Fatal("Error processing YouTube configuration: ", err)
 	}
-	defer file.Close()
 
-	s := `+++
-date = "$now"
-draft = false
-title = "Charlas"
-type = "page"
-weight = 1
-+++
-
-----
-Charlas gravadas polos distintos grupos:
-
-`
-
-	file.WriteString(strings.Replace(s, "$now", now, 1))
+	var videos = videosType{}
 
 	for _, c := range channels {
-		// Processing YouTube Requests
-		url := fmt.Sprintf("https://www.googleapis.com/youtube/v3/search?"+
-			"key=%s&channelId=%s&part=snippet,id&order=date&maxResults=50",
-			token, c.ChannelID)
 
-		req, err := http.NewRequest("GET", url, nil)
-		if err != nil {
-			log.Fatal("NewRequest: ", err)
-			return
-		}
-
-		client := &http.Client{}
-
-		resp, err := client.Do(req)
-		if err != nil {
-			log.Fatal("Do: ", err)
-			return
-		}
-
-		defer resp.Body.Close()
-
-		if resp.StatusCode != 200 {
-			log.Fatal("YouTube response is: ", resp.StatusCode)
-		}
-
-		bodyBytes, _ := ioutil.ReadAll(resp.Body)
-		record := string(bodyBytes)
-
-		totalResults := gjson.Get(record, "pageInfo.totalResults")
-
-		if totalResults.Int() > 49 {
-			log.Fatal("Returned 50 videos, we could loose records")
-		}
-		s1 := fmt.Sprintf(
-			"\n\n### [%s](https://www.youtube.com/channel/%s)\n\n",
-			c.ChannelName,
-			c.ChannelID)
-		file.WriteString(s1)
+		var record string
+		record, err = getVideosByChannelID(token, c.ChannelID)
 
 		r := gjson.Get(record, "items")
 		for _, item := range r.Array() {
 
-			kind := gjson.Get(item.String(), "id.kind")
-
-			if kind.String() != "youtube#video" {
+			if gjson.Get(item.String(), "id.kind").String() != "youtube#video" {
 				continue
 			}
 
-			title := gjson.Get(item.String(), "snippet.title").String()
-			videoID := gjson.Get(item.String(), "id.videoId").String()
-			publishedAt := gjson.Get(
-				item.String(),
-				"snippet.publishedAt").String()
-
-			s2 := fmt.Sprintf("- [%s](https://www.youtube.com/watch?v=%s)\n",
-				title, videoID)
-			file.WriteString(s2)
-
 			videos = append(videos, video{
-				title:       title,
-				videoID:     videoID,
-				channel:     c.ChannelName,
-				publishedAt: publishedAt,
+				title:       gjson.Get(item.String(), "snippet.title").String(),
+				videoID:     gjson.Get(item.String(), "id.videoId").String(),
+				channelID:   c.ChannelID,
+				channelName: c.ChannelName,
+				publishedAt: gjson.Get(item.String(), "snippet.publishedAt").
+					String(),
 			})
 		}
 	}
 
-	// Add videos which aren't hosted in YouTube
-	dat, err := ioutil.ReadFile(videosNoYoutube)
+	err = generateVideosPage(videos)
 	if err != nil {
-		log.Fatal("Not able to open ", videosNoYoutube)
+		log.Fatal("Error generating Videos page: ", err)
 	}
-	file.WriteString(string(dat))
 
 	// Update the videos landing page
-	_ = os.Truncate(videosLanding, 0)
-	var fileLanding, err3 = os.OpenFile(videosLanding, os.O_RDWR, 0644)
+	_ = os.Truncate(videosLandingPage, 0)
+	var fileLanding, err3 = os.OpenFile(videosLandingPage, os.O_RDWR, 0644)
 	if err3 != nil {
-		log.Fatal("Not able to open ", videosLanding)
+		log.Fatal("Not able to open ", videosLandingPage)
 	}
 	defer fileLanding.Close()
 
-	s = `+++
+	s := `+++
 date = "$now"
 draft = false
 title = "Charlas"
@@ -216,7 +259,7 @@ Están son as catro últimas:
 		s = fmt.Sprintf("* [%s](https://www.youtube.com/watch?v=%s) (%s)\n",
 			v.title,
 			v.videoID,
-			v.channel)
+			v.channelName)
 
 		//fileLanding.WriteString(s)
 
@@ -243,10 +286,15 @@ Están son as catro últimas:
 	fileLanding.WriteString(s)
 
 	// Prepare Proxectos file output
-	_ = os.Truncate(projectsMD, 0)
-	var fileProjects, err4 = os.OpenFile(projectsMD, os.O_RDWR, 0644)
+	projects, err := loadProjectsConfig()
+	if err != nil {
+		log.Fatal("Error processing Projects configuration: ", err)
+	}
+
+	_ = os.Truncate(projectsPage, 0)
+	var fileProjects, err4 = os.OpenFile(projectsPage, os.O_RDWR, 0644)
 	if err4 != nil {
-		log.Fatal("Not able to open ", projectsMD)
+		log.Fatal("Not able to open ", projectsPage)
 	}
 	defer fileProjects.Close()
 
@@ -291,11 +339,11 @@ Proxectos de código aberto creados por xente da comunidade:
 		"//cdn.jsdelivr.net/github-cards/latest/widget.js\"></script>")
 
 	// Update the projects landing page
-	_ = os.Truncate(projectsLanding, 0)
+	_ = os.Truncate(projectsLandingPage, 0)
 	var fileProjectsLanding, err5 = os.OpenFile(
-		projectsLanding, os.O_RDWR, 0644)
+		projectsLandingPage, os.O_RDWR, 0644)
 	if err5 != nil {
-		log.Fatal("Not able to open ", projectsLanding)
+		log.Fatal("Not able to open ", projectsLandingPage)
 	}
 	defer fileProjectsLanding.Close()
 

@@ -27,3 +27,6 @@ cd ~
 
 echo -e "\nINSTALLING DEPENDENCIES\n"
 go get -u github.com/tidwall/gjson
+go get -u github.com/spf13/hugo
+
+
