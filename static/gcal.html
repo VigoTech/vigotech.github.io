@@ -1,78 +1,94 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset='utf-8' />
-<link href='css/fullcalendar.min.css' rel='stylesheet' />
-<link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print' />
-<script src='js/lib/moment.min.js'></script>
-<script src='js/lib/jquery.min.js'></script>
-<script src='js/fullcalendar.min.js'></script>
-<script src='js/gcal.min.js'></script>
-<script>
+    <meta charset='utf-8'/>
+    <link href='css/fullcalendar.min.css' rel='stylesheet'/>
+    <link href='css/fullcalendar.vigotech.css' rel='stylesheet'/>
+    <link href='css/fullcalendar.print.min.css' rel='stylesheet' media='print'/>
+    <script src='js/lib/moment.min.js'></script>
+    <script src='js/lib/jquery.min.js'></script>
+    <script src='js/fullcalendar.min.js'></script>
+    <script src='js/gcal.min.js'></script>
+    <script src='js/locale-all.js'></script>
 
-	$(document).ready(function() {
+    <script>
 
-		$('#calendar').fullCalendar({
+        $(document).ready(function () {
 
-			header: {
-				left: 'prev,next today',
-				center: 'title',
-				right: 'month,listYear'
-			},
+            $('#calendar').fullCalendar({
 
-			displayEventTime: false, // don't show the time column in list view
+                header: {
+                    left: 'prev,next today',
+                    center: 'title',
+                    right: 'month,agendaWeek,listMonth'
+                },
 
-			// THIS KEY WON'T WORK IN PRODUCTION!!!
-			// To make your own Google API key, follow the directions here:
-			// http://fullcalendar.io/docs/google_calendar/
-			googleCalendarApiKey: 'AIzaSyD0RDcErlth3OiJPyunH3dovUDK1KTh4rA',
+                displayEventTime: false, // don't show the time column in list view
 
-			events: 'orestes.io_fj8ev1vakdnl8l8o6jeljhof1s@group.calendar.google.com',
+                googleCalendarApiKey: 'AIzaSyD0RDcErlth3OiJPyunH3dovUDK1KTh4rA',
 
-			eventClick: function(event) {
-				// opens events in a popup window
-				window.open(event.url, 'gcalevent', 'width=700,height=600');
-				return false;
-			},
+                events: 'orestes.io_fj8ev1vakdnl8l8o6jeljhof1s@group.calendar.google.com',
 
-			loading: function(bool) {
-				$('#loading').toggle(bool);
-			}
+                locale: 'gl',
 
-		});
+                eventClick: function (event) {
+                    // opens events in a popup window
+                    window.open(event.url, 'gcalevent', 'width=700,height=600');
+                    return false;
+                },
 
-	});
+                loading: function (bool) {
+                    $('#loading').toggle(bool);
+                    if (!bool) {
+                        resizeCalendar();
+                    }
+                },
+                windowResize: function(view) {
+                    resizeCalendar();
+                },
+            });
 
-</script>
-<style>
 
-	body {
-        background-color: #ffffff;
-		margin: 40px 10px;
-		padding: 0;
-		font-family: "Lucida Grande",Helvetica,Arial,Verdana,sans-serif;
-		font-size: 14px;
-	}
 
-	#loading {
-		display: none;
-		position: absolute;
-		top: 10px;
-		right: 10px;
-	}
+        });
 
-	#calendar {
-		max-width: 900px;
-		margin: 0 auto;
-	}
+        function resizeCalendar() {
+            console.log($(window).width())
+            if ($(window).width() < 600) {
+                $('#calendar').fullCalendar('changeView', 'listMonth');
+            }
+        }
 
-</style>
+    </script>
+    <style>
+
+        body {
+            background-color: #ffffff;
+            margin: 40px 10px;
+            padding: 0;
+            font-family: "Lucida Grande", Helvetica, Arial, Verdana, sans-serif;
+            font-size: 14px;
+        }
+
+        #loading {
+            display: none;
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #calendar {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+    </style>
 </head>
 <body>
 
-	<div id='loading'>loading...</div>
+<div id='loading'>loading...</div>
 
-	<div id='calendar'></div>
+<div id='calendar'></div>
 
 </body>
 </html>

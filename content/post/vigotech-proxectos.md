@@ -36,4 +36,4 @@ Proxectos de código aberto creados por xente da comunidade:
 [Preme aquí para ver tódolos proxectos](./page/proxectos/)
 </span>
 
-<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js"></script>
+<script src="//cdn.jsdelivr.net/github-cards/latest/widget.js?bugfix"></script>
