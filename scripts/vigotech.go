@@ -301,7 +301,7 @@ Proxectos de código aberto creados por xente da comunidade:
 
 	s = `+++
 date = "$now"
-draft = true
+draft = false
 title = "Proxectos"
 weight = 103
 type = "post"
