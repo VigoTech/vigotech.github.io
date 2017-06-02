@@ -1,0 +1,55 @@
+body {
+  margin: 10px !important;
+
+}
+* {
+  font-family: $sans-font;
+}
+
+.fc-event {
+  background: $primary-color;
+  border:0;
+  font-family: $sans-font;
+
+  .fc-title {
+    font-size: 14px;
+    padding: 2px 5px;
+    display: block;
+    white-space: normal;
+    font-weight: bold;
+  }
+}
+
+.fc-event-dot {
+  background: $primary-color;
+}
+
+.fc-list-item-title {
+  font-size: 18px;
+}
+
+.fc-list-heading-main {
+  font-size: 12px;
+}
+
+.fc {
+  td {
+    &.fc-today {
+      background: lighten($primary-color, 30%);
+    }
+  }
+
+  th {
+    &.fc-day-header {
+      padding: 5px 10px;
+      background: $primary-color;
+      color: $white-color;
+    }
+  }
+
+  td {
+    &.fc-sun {
+      background: $gray-light;
+    }
+  }
+}
