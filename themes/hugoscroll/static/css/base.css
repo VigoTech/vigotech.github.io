@@ -2785,31 +2785,37 @@ ul li {
       color: #FFF;
       text-decoration: none;
       background: #000; }
-.post.groups .group {
-  margin-bottom: 50px; }
-  .post.groups .group > a {
-    display: block; }
-    .post.groups .group > a .picture-wrapper {
-      margin-bottom: 20px;
-      position: relative; }
-      .post.groups .group > a .picture-wrapper img {
-        margin: auto; }
-      .post.groups .group > a .picture-wrapper .logo {
+.post.groups {
+  max-width: 100%;
+  width: 100%; }
+  .post.groups .group {
+    margin-bottom: 50px; }
+    .post.groups .group > a {
+      display: block; }
+      .post.groups .group > a .picture-wrapper {
+        margin-bottom: 20px;
+        position: relative; }
+        .post.groups .group > a .picture-wrapper img {
+          margin: auto;
+          max-width: 160px; }
+        .post.groups .group > a .picture-wrapper .logo {
+          display: block;
+          left: 0;
+          right: 0;
+          top: 50%;
+          position: absolute;
+          -webkit-transform: translateY(-50%);
+          -ms-transform: translateY(-50%);
+          transform: translateY(-50%); }
+      .post.groups .group > a .group-title {
         display: block;
-        top: 50%;
-        position: absolute;
-        -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-        transform: translateY(-50%); }
-    .post.groups .group > a .group-title {
-      display: block;
-      text-align: center;
-      font-size: 18px;
-      line-height: 1.1em; }
-  .post.groups .group .social {
-    text-align: center; }
-    .post.groups .group .social a {
-      text-decoration: none; }
+        text-align: center;
+        font-size: 18px;
+        line-height: 1.1em; }
+    .post.groups .group .social {
+      text-align: center; }
+      .post.groups .group .social a {
+        text-decoration: none; }
 .post.talks .video {
   margin-bottom: 30px; }
 .post.projects .col-xs-12, .post.projects .github-card {
