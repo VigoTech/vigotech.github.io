@@ -462,6 +462,9 @@ ul li {
     }
 
     &.groups {
+        max-width: 100%;
+        width: 100%;
+
         .group {
             margin-bottom: 50px;
             > a {
@@ -473,10 +476,13 @@ ul li {
                     position: relative;
                     img {
                         margin: auto;
+                        max-width: 160px;
                     }
 
                     .logo {
                         display: block;
+                        left: 0;
+                        right: 0;
                         @include vertical-align();
                     }
                 }
