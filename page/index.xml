@@ -6,15 +6,27 @@
     <description>Recent content in Pages on Vigo Tech Alliance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>gl-es</language>
-    <lastBuildDate>Sat, 30 Sep 2017 10:47:44 +0000</lastBuildDate>
+    <lastBuildDate>Sun, 01 Oct 2017 21:29:21 +0200</lastBuildDate>
     
 	<atom:link href="https://vigotech.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
+      <title>O reto</title>
+      <link>https://vigotech.github.io/page/reto/</link>
+      <pubDate>Sun, 01 Oct 2017 21:29:21 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/page/reto/</guid>
+      <description>O reto é un exercicio de programación curto (uns 30 minutos) que se propón o principio do mes (de Outubro a Maio, inclusive).
+Se queres participar pero tes dubidas, contacta no canal #reto no Slack da VigoTech Alliance e terás axuda da organización.
+Normas  O reto pódese resolver en calquera linguaxe ou forma. A finalidade é didáctica, non competitiva.
+ As solucións se enviarán en formato Pull Request o repositorio do VigoTech.</description>
+    </item>
+    
+    <item>
       <title>Charlas</title>
       <link>https://vigotech.github.io/page/videos/</link>
-      <pubDate>Sat, 30 Sep 2017 10:47:44 +0000</pubDate>
+      <pubDate>Sun, 01 Oct 2017 16:38:39 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/videos/</guid>
       <description>Charlas gravadas polos distintos grupos:
@@ -24,7 +36,7 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #2 - Introd
     <item>
       <title>Proxectos</title>
       <link>https://vigotech.github.io/page/proxectos/</link>
-      <pubDate>Sat, 30 Sep 2017 10:47:44 +0000</pubDate>
+      <pubDate>Sun, 01 Oct 2017 16:38:39 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/proxectos/</guid>
       <description>Proxectos de código aberto creados por xente da comunidade:
