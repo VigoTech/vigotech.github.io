@@ -6,10 +6,30 @@
     <description>Recent content in Pages on Vigo Tech Alliance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>gl-es</language>
-    <lastBuildDate>Sun, 01 Oct 2017 21:29:21 +0200</lastBuildDate>
+    <lastBuildDate>Tue, 03 Oct 2017 10:47:57 +0000</lastBuildDate>
     
 	<atom:link href="https://vigotech.github.io/page/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>Charlas</title>
+      <link>https://vigotech.github.io/page/videos/</link>
+      <pubDate>Tue, 03 Oct 2017 10:47:57 +0000</pubDate>
+      
+      <guid>https://vigotech.github.io/page/videos/</guid>
+      <description>Charlas gravadas polos distintos grupos:
+AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #4 Introducción a Firebase3 Meetup #2 - Introducción a Webpack2 y casos de uso reales. Meetup #1 - &amp;ldquo;Web Components&amp;rdquo;  PHPVigo  Encabezados HTTP de seguridade @rocasan_ Filter Input (@rolando_caldas) Double Extension Attack (@sergiocarracedo) CSS Grid Layout: El futuro ya está aquí PHP Traits (Carlos Goce) UUID en PHP (Félix Gómez) 2017 04 26 21 44 12 Shame on you PHP!</description>
+    </item>
+    
+    <item>
+      <title>Proxectos</title>
+      <link>https://vigotech.github.io/page/proxectos/</link>
+      <pubDate>Tue, 03 Oct 2017 10:47:57 +0000</pubDate>
+      
+      <guid>https://vigotech.github.io/page/proxectos/</guid>
+      <description>Proxectos de código aberto creados por xente da comunidade:
+           </description>
+    </item>
     
     <item>
       <title>O reto</title>
@@ -21,26 +41,6 @@
 Se queres participar pero tes dubidas, contacta no canal #reto no Slack da VigoTech Alliance e terás axuda da organización.
 Normas  O reto pódese resolver en calquera linguaxe ou forma. A finalidade é didáctica, non competitiva.
  As solucións se enviarán en formato Pull Request o repositorio do VigoTech.</description>
-    </item>
-    
-    <item>
-      <title>Charlas</title>
-      <link>https://vigotech.github.io/page/videos/</link>
-      <pubDate>Sun, 01 Oct 2017 16:47:26 +0000</pubDate>
-      
-      <guid>https://vigotech.github.io/page/videos/</guid>
-      <description>Charlas gravadas polos distintos grupos:
-AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #2 - Introducción a Webpack2 y casos de uso reales. Meetup #1 - &amp;ldquo;Web Components&amp;rdquo;  PHPVigo  CSS Grid Layout: El futuro ya está aquí PHP Traits (Carlos Goce) UUID en PHP (Félix Gómez) 2017 04 26 21 44 12 Shame on you PHP!! (Sergio Carracedo) Métodos mágicos II (Rolando Caldas) Meetup #12: &amp;ldquo;Performance blackfire.</description>
-    </item>
-    
-    <item>
-      <title>Proxectos</title>
-      <link>https://vigotech.github.io/page/proxectos/</link>
-      <pubDate>Sun, 01 Oct 2017 16:47:26 +0000</pubDate>
-      
-      <guid>https://vigotech.github.io/page/proxectos/</guid>
-      <description>Proxectos de código aberto creados por xente da comunidade:
-           </description>
     </item>
     
   </channel>
