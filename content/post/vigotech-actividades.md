@@ -1,6 +1,6 @@
 +++
 date = "2017-10-01T21:29:21+02:00"
-draft = false
+draft = true
 title = "Actividades"
 weight = 103
 type = "post"
