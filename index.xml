@@ -6,7 +6,7 @@
     <description>Recent content on Vigo Tech Alliance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>gl-es</language>
-    <lastBuildDate>Wed, 17 Jan 2018 11:42:37 +0000</lastBuildDate>
+    <lastBuildDate>Thu, 18 Jan 2018 10:39:34 +0000</lastBuildDate>
     
 	<atom:link href="https://vigotech.github.io/index.xml" rel="self" type="application/rss+xml" />
     
@@ -14,7 +14,7 @@
     <item>
       <title>Charlas</title>
       <link>https://vigotech.github.io/page/videos/</link>
-      <pubDate>Wed, 17 Jan 2018 11:42:37 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2018 10:39:34 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/videos/</guid>
       <description>Charlas gravadas polos distintos grupos:
@@ -24,11 +24,21 @@ AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Meetup #4 Introduc
     <item>
       <title>Proxectos</title>
       <link>https://vigotech.github.io/page/proxectos/</link>
-      <pubDate>Wed, 17 Jan 2018 11:42:37 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2018 10:39:34 +0000</pubDate>
       
       <guid>https://vigotech.github.io/page/proxectos/</guid>
       <description>Proxectos de código aberto creados por xente da comunidade:
            </description>
+    </item>
+    
+    <item>
+      <title>Normas difusión</title>
+      <link>https://vigotech.github.io/page/difusion/</link>
+      <pubDate>Wed, 10 Jan 2018 21:29:21 +0200</pubDate>
+      
+      <guid>https://vigotech.github.io/page/difusion/</guid>
+      <description>Esta páxina recolle as normas básicas na utilización das ferramentas de difusión da VigoTech.
+Twitter  A conta de Twitter soamente seguirá os grupos de VigoTech. O RT dos chíos (tweets en Inglés) dos grupos pertencentes a VigoTech pode facerse directamente sempre e cando o chío teña relación con Vigo. Cada grupo fará RT dos seus chíos: https://help.twitter.com/en/using-twitter/tweetdeck-teams Para escribir un chío directamente ou facer un RT de algo que non cumpra o anterior, primeiro hai que mandar un correo a organizadores@vigotech.</description>
     </item>
     
     <item>
@@ -64,7 +74,7 @@ Normas  O reto pódese resolver en calquera linguaxe ou forma. A finalidade é d
     <item>
       <title>Charlas</title>
       <link>https://vigotech.github.io/post/vigotech-charlas/</link>
-      <pubDate>Wed, 17 Jan 2018 11:42:37 +0000</pubDate>
+      <pubDate>Thu, 18 Jan 2018 10:39:34 +0000</pubDate>
       
       <guid>https://vigotech.github.io/post/vigotech-charlas/</guid>
       <description>A maioría de charlas está gravadas e dispoñibles para o seu visionado. Están son as catro últimas:
