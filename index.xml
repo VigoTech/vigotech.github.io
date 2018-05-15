@@ -2,51 +2,51 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Vigo Tech Alliance</title>
-    <link>https://vigotech.github.io/</link>
+    <link>https://vigotech.org/</link>
     <description>Recent content on Vigo Tech Alliance</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>gl-es</language>
-    <lastBuildDate>Mon, 14 May 2018 12:45:09 +0000</lastBuildDate>
+    <lastBuildDate>Tue, 15 May 2018 06:03:49 +0000</lastBuildDate>
     
-	<atom:link href="https://vigotech.github.io/index.xml" rel="self" type="application/rss+xml" />
+	<atom:link href="https://vigotech.org/index.xml" rel="self" type="application/rss+xml" />
     
     
     <item>
       <title>Charlas</title>
-      <link>https://vigotech.github.io/page/videos/</link>
-      <pubDate>Mon, 14 May 2018 12:45:09 +0000</pubDate>
+      <link>https://vigotech.org/page/videos/</link>
+      <pubDate>Tue, 15 May 2018 06:03:49 +0000</pubDate>
       
-      <guid>https://vigotech.github.io/page/videos/</guid>
+      <guid>https://vigotech.org/page/videos/</guid>
       <description>Charlas gravadas polos distintos grupos:
 AgileVigo  Emisión en directo de Agile Vigo  JavascriptVigo  Ionic 2 Meetup #4 Introducción a Firebase3 Meetup #2 - Introducción a Webpack2 y casos de uso reales. Meetup #1 - &amp;ldquo;Web Components&amp;rdquo;  PHPVigo  Testing &amp;amp;&amp;amp; Pizza - Álvaro Gómez (@lito_ordes) Novedades PHP 7.2 con Raúl Araya Symfony 4 con David Negreira Facturascripts 2018 técnico Rolando Caldas - Password Hash Meetup #15: ¡No sin Composer!</description>
     </item>
     
     <item>
       <title>Proxectos</title>
-      <link>https://vigotech.github.io/page/proxectos/</link>
-      <pubDate>Mon, 14 May 2018 12:45:09 +0000</pubDate>
+      <link>https://vigotech.org/page/proxectos/</link>
+      <pubDate>Tue, 15 May 2018 06:03:49 +0000</pubDate>
       
-      <guid>https://vigotech.github.io/page/proxectos/</guid>
+      <guid>https://vigotech.org/page/proxectos/</guid>
       <description>Proxectos de código aberto creados por xente da comunidade:
            </description>
     </item>
     
     <item>
       <title>Normas difusión</title>
-      <link>https://vigotech.github.io/page/difusion/</link>
+      <link>https://vigotech.org/page/difusion/</link>
       <pubDate>Wed, 10 Jan 2018 21:29:21 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/page/difusion/</guid>
+      <guid>https://vigotech.org/page/difusion/</guid>
       <description>Esta páxina recolle as normas básicas na utilización das ferramentas de difusión da VigoTech.
 Twitter  A conta de Twitter soamente seguirá os grupos de VigoTech. O RT dos chíos (tweets en Inglés) dos grupos pertencentes a VigoTech pode facerse directamente sempre e cando o chío teña relación con Vigo. Cada grupo fará RT dos seus chíos: https://help.twitter.com/en/using-twitter/tweetdeck-teams Para escribir un chío directamente ou facer un RT de algo que non cumpra o anterior, primeiro hai que mandar un correo a organizadores@vigotech.</description>
     </item>
     
     <item>
       <title>O reto</title>
-      <link>https://vigotech.github.io/page/reto/</link>
+      <link>https://vigotech.org/page/reto/</link>
       <pubDate>Sun, 01 Oct 2017 21:29:21 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/page/reto/</guid>
+      <guid>https://vigotech.org/page/reto/</guid>
       <description>O reto é un exercicio de programación curto (uns 30 minutos) que se propón o principio do mes (de Outubro a Maio, inclusive).
 Se queres participar pero tes dubidas, contacta no canal #reto no Slack da VigoTech Alliance e terás axuda da organización.
 Normas  O reto pódese resolver en calquera linguaxe ou forma. A finalidade é didáctica, non competitiva.
@@ -55,28 +55,28 @@ Normas  O reto pódese resolver en calquera linguaxe ou forma. A finalidade é d
     
     <item>
       <title>Grupos</title>
-      <link>https://vigotech.github.io/post/vigotech-grupos/</link>
+      <link>https://vigotech.org/post/vigotech-grupos/</link>
       <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/post/vigotech-grupos/</guid>
+      <guid>https://vigotech.org/post/vigotech-grupos/</guid>
       <description> Agile Vigo              A Industriosa              GALPon            GalsTech          GDG Vigo            Grupo de Usuarios de Joomla de Vigo              JavascriptVigo            PHPVigo                PythonVigo              Seo Galicia            SysAdmin Galicia          UX Galicia            Vigo Brain          VigoJUG                 </description>
     </item>
     
     <item>
       <title>Calendario</title>
-      <link>https://vigotech.github.io/post/vigotech-calendario/</link>
+      <link>https://vigotech.org/post/vigotech-calendario/</link>
       <pubDate>Thu, 13 Apr 2017 16:52:11 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/post/vigotech-calendario/</guid>
+      <guid>https://vigotech.org/post/vigotech-calendario/</guid>
       <description>  </description>
     </item>
     
     <item>
       <title>Charlas</title>
-      <link>https://vigotech.github.io/post/vigotech-charlas/</link>
-      <pubDate>Mon, 14 May 2018 12:45:09 +0000</pubDate>
+      <link>https://vigotech.org/post/vigotech-charlas/</link>
+      <pubDate>Tue, 15 May 2018 06:03:49 +0000</pubDate>
       
-      <guid>https://vigotech.github.io/post/vigotech-charlas/</guid>
+      <guid>https://vigotech.org/post/vigotech-charlas/</guid>
       <description>A maioría de charlas está gravadas e dispoñibles para o seu visionado. Están son as catro últimas:
     
 Preme aquí para ver tódalas charlas</description>
@@ -84,10 +84,10 @@ Preme aquí para ver tódalas charlas</description>
     
     <item>
       <title>Chat</title>
-      <link>https://vigotech.github.io/post/vigotech-slack/</link>
+      <link>https://vigotech.org/post/vigotech-slack/</link>
       <pubDate>Fri, 14 Apr 2017 16:52:11 +0200</pubDate>
       
-      <guid>https://vigotech.github.io/post/vigotech-slack/</guid>
+      <guid>https://vigotech.org/post/vigotech-slack/</guid>
       <description>Aberto a todo o mundo, é o punto de encontro virtual de todos os grupos e un bo sitio para facer un pouco de networking:
 
 Recibe unha invitación no teu correo clickando aquí</description>
