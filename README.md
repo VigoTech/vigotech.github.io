@@ -2,7 +2,13 @@
 
 # Introducción
 
-Este repositorio contén a páxina web de VigoTech Alliance.
+Este repositorio contén a páxina web de VigoTech Alliance e algúns documentos de relevancia:
+
+- [Manifesto VigoTech Alliance](content/page/manifesto.md)
+- [Código de conducta](content/page/codigoconducta.md)
+- [Condicións de entrada a VigoTech](content/page/condicionsentrada.md)
+- [Normas difusión](content/page/difusion.md)
+
 
 ## Traballar na web
 
