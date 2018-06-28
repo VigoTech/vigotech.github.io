@@ -151,6 +151,16 @@
         "linkedin": "https://www.linkedin.com/organization/11056204",
         "youtube": "https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g"
       }
+    },
+    "vigowordpress": {
+      "name": "VigoWordpress",
+      "logo": "http://vigotech.org/images/vigowordpress.png",
+      "links": {
+        "mail": "wpmeetupvigo@gmail.com",
+        "meetup": "https://www.meetup.com/es-ES/Vigo-WordPress-Meetup/",
+        "twitter": "https://twitter.com/wp_vigo",
+        "youtube": "https://www.youtube.com/channel/UCuipENHgKAhr1VgK59156Tw"
+      }
     }
   }
 }
