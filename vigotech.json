@@ -152,6 +152,14 @@
         "youtube": "https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g"
       }
     },
+    "wppontevedra": {
+      "name": "WordpressPontevedra",
+      "logo": "http://vigotech.org/images/wordpress-pontevedra.png",
+      "links": {
+        "meetup": "https://www.meetup.com/es-ES/Pontevedra-WordPress-Meetup/",
+        "twitter": "https://twitter.com/wppontevedra"
+      }
+    },
     "vigowordpress": {
       "name": "VigoWordpress",
       "logo": "http://vigotech.org/images/vigowordpress.png",
