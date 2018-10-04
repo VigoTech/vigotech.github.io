@@ -131,6 +131,14 @@
         "twitter": "https://twitter.com/uxgalicia/"
       }
     },
+    "vigoadg": {
+      "name": "Vigo Android Developer Group",
+      "logo": "http://vigotech.org/images/vigoadg.png",
+      "links": {
+        "twitter": "https://twitter.com/VigoADG",
+        "meetup": "https://www.meetup.com/Vigo-Android-Developer-Group/"
+      }
+    },
     "vigobrain": {
       "name": "Vigo Brain",
       "logo": "http://vigotech.org/images/vigobrain.png",
