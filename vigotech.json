@@ -29,6 +29,16 @@
         "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A"
       }
     },
+    "blockchaingal": {
+      "name": "Blockchain.gal Vigo",
+      "logo": "http://vigotech.org/images/blockchaingal.png",
+      "links": {
+        "web": "https://blockchain.gal",
+        "twitter": "https://twitter.com/blockchain_gal",
+        "meetup": "https://www.meetup.com/es-ES/blockchain_gal_vigo",
+        "github": "https://github.com/blockchain-gal"
+      }
+    },
     "codesign": {
       "name": "CodeSign Project",
       "logo": "http://vigotech.org/images/codesign.png",
