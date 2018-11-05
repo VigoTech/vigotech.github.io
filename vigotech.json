@@ -134,7 +134,15 @@
       ]
     },
     {
-      "key": "vigobrain",
+    "vigoadg": {
+      "name": "Vigo Android Developer Group",
+      "logo": "http://vigotech.org/images/vigoadg.png",
+      "links": {
+        "twitter": "https://twitter.com/VigoADG",
+        "meetup": "https://www.meetup.com/Vigo-Android-Developer-Group/"
+      }
+    },
+    "vigobrain": {
       "name": "Vigo Brain",
       "logo": "http://vigotech.org/images/vigobrain.png",
       "links": [
@@ -143,18 +151,36 @@
         {"key": "twitter", "url": "https://twitter.com/vigobrain/"}
       ]
     },
-    {
+    "vigojug": {
       "key": "vigojug",
       "name": "VigoJUG",
       "logo": "http://vigotech.org/images/vigojug.jpg",
-      "links": [
-        {"key": "web", "url": "http://www.vigojug.org/" },
-        {"key": "github", "url": "https://github.com/vigobrain/"},
-        {"key": "meetup", "url": "https://www.meetup.com/es-ES/Vigo-JUG/"},
-        {"key": "twitter", "url": "https://twitter.com/vigojug/"},
-        {"key": "linkedin", "url": "https://www.linkedin.com/organization/11056204"},
-        {"key": "youtube", "url": "https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g"}
-      ]
+      "links": {
+        "web": "http://www.vigojug.org/",
+        "github": "https://github.com/vigojug/",
+        "meetup": "https://www.meetup.com/es-ES/Vigo-JUG/",
+        "twitter": "https://twitter.com/vigojug/",
+        "linkedin": "https://www.linkedin.com/organization/11056204",
+        "youtube": "https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g"
+      }
+    },
+    "wppontevedra": {
+      "name": "WordpressPontevedra",
+      "logo": "http://vigotech.org/images/wordpress-pontevedra.png",
+      "links": {
+        "meetup": "https://www.meetup.com/es-ES/Pontevedra-WordPress-Meetup/",
+        "twitter": "https://twitter.com/wppontevedra"
+      }
+    },
+    "vigowordpress": {
+      "name": "VigoWordpress",
+      "logo": "http://vigotech.org/images/vigowordpress.png",
+      "links": {
+        "mail": "wpmeetupvigo@gmail.com",
+        "meetup": "https://www.meetup.com/es-ES/Vigo-WordPress-Meetup/",
+        "twitter": "https://twitter.com/wp_vigo",
+        "youtube": "https://www.youtube.com/channel/UCuipENHgKAhr1VgK59156Tw"
+      }
     }
   ]
 }
