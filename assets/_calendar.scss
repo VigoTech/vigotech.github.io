@@ -1,0 +1,26 @@
+#calendar {
+  text-align: center;
+
+  .embed-responsive {
+    display: block;
+    margin: 0 auto 2rem auto;
+    width: 80%;
+    max-width: 1200px;
+    word-break: break-word;
+
+
+    @include box-shadow(0, 0, 30px, rgba($black, 0.5));
+
+    @include media($xs) {
+      width: 100%;
+      padding-bottom: 100%;
+    }
+
+    &, .embed-responsive-item {
+      @include media($xs) {
+      }
+    }
+
+
+  }
+}

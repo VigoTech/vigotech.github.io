@@ -1,0 +1,36 @@
+.btn {
+  display: inline-block;
+  background: $primary-color;
+  padding: 5px 10px;
+  text-align: center;
+  color: $white;
+  font-size: 16px;
+  line-height: 1.1em;
+  text-decoration: none;
+
+  @include transition(all, .2s);
+
+  &:hover {
+    color: $white;
+    text-decoration: none;
+    background: $black;
+  }
+
+  &.btn-white {
+    background: $white;
+    color: $black;
+    &:hover {
+      background: $black;
+      color: $white;
+    }
+  }
+
+  &.btn-block {
+    display: block;
+  }
+
+  &.btn-lg {
+    font-size: 20px;
+    padding: 10px 15px;
+  }
+}

@@ -1,0 +1,26 @@
+.vigotech-member {
+  .vigotech-next-event {
+    i {
+      @include fade-animation(1s);
+    }
+  }
+
+  .logo-wrapper {
+    text-align: center;
+
+    .logo-content {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+
+
+  .vigotech-next-event {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
+

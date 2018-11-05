@@ -1,0 +1,101 @@
+#cover {
+  background: $primary-color url(/bg.jpg) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+  z-index: 1000;
+  position: relative;
+
+  .content-wrapper {
+    min-height: 100vh;
+  }
+  .content {
+    //@include vertical-align();
+  }
+
+  .logo {
+    margin: 0 auto 40px auto;
+    width: 200px;
+    display: block;
+  }
+  h1, h2 {
+    color: $white;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 80px;
+    margin: 0 auto 40px auto;
+    @include media($xs) {
+      font-size: 50px;
+    }
+  }
+
+  h2 {
+    font-size: 35px;
+    max-width: 600px;
+    margin: auto;
+
+    @include media($xs) {
+      font-size: 25px;
+    }
+  }
+
+  .down-wrapper {
+    text-align: center;
+    .down {
+      @include transition(all, .2s);
+      color: rgba($white, .5);
+      font-size: 80px;
+      &:hover {
+        color: rgba($white, 1);
+        @include scale(1.2);
+      }
+    }
+  }
+
+  .vigotech-next-event {
+    max-width: 600px;
+    background: $white;
+    padding: 15px;
+    margin: 30px auto;
+    h4 {
+      margin-bottom: 5px;
+      strong {
+        color: $primary-color
+      }
+    }
+
+    .wrapper {
+      display: flex;
+    }
+
+    .logo-wrapper {
+      width: 70px;
+      position: relative;
+      .member-logo {
+        max-width: 100%;
+      }
+    }
+    .next-event-content {
+      padding: 10px 0 0 15px;
+      color: $black;
+
+      h5, h6 {
+        font-size: 16px;
+      }
+
+      a {
+        text-decoration: none;
+        color: $black;
+
+        h6 {
+          color: #666;
+        }
+
+        strong {
+          color: $primary-color;
+        }
+      }
+    }
+  }
+}
