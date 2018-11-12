@@ -25,4 +25,4 @@ deploy:
   target-branch: gh-pages
   local-dir: dist
   on:
-    branch: master
+    branch: source
