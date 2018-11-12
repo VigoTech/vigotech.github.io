@@ -40,7 +40,6 @@
     name: 'CalendarSection',
     computed: {
       baseUrl () {
-        console.log(process)
         return process.env.baseUrl
       }
     }

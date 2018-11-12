@@ -1,10 +1,8 @@
 const fs = require('fs')
 const path = require('path')
 
-
 module.exports = {
   getSlugs (post, index) {
-    console.log('post', post)
     let slug = post.substr(0, post.lastIndexOf('.md'));
     return `/post/${slug}`
   },

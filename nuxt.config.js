@@ -7,13 +7,12 @@ const markdownFiles = markdown.getFiles()
 
 const routerBase = process.env.DEPLOY_ENV === 'GH_PAGES' ? {
   router: {
-    base: '/vigotech.github.io-nuxt/',
-    baseUrl: 'https://sergiocarracedo.github.io/vigotech.github.io-nuxt/'
+    base: '/',
+    baseUrl: 'https://vigotech.org/'
   }
 } : {
   router: {
     base: '/',
-    //baseUrl: 'http://localhost:3000/'
   }
 }
 

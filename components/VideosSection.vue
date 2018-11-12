@@ -63,9 +63,6 @@
       recentVideos() {
         return this.$store.getters.recentVideos
       }
-    },
-    methods: {
-
     }
   }
 </script>
