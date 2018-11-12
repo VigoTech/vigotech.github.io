@@ -1,0 +1,26 @@
+#conversation {
+  .section-content {
+    p {
+      font-size: 25px;
+      margin: 0 auto 1em auto;
+      max-width: 600px;
+    }
+  }
+
+  .social {
+    text-align: center;
+    margin-bottom: 40px;
+
+    a {
+      color: $white;
+      @include transition(all, .2s);
+
+      &:hover {
+        @include scale(1.2);
+      }
+    }
+  }
+  .col {
+    margin-bottom: 40px;
+  }
+}

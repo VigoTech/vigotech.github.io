@@ -1,0 +1,51 @@
+#menu {
+  position: fixed;
+  top: 10px;
+  left: 30px;
+
+  @media (max-width: 1800px) {
+    display: none;
+  }
+
+
+  .logo {
+    margin-bottom: 20px;
+    display: block;
+    width: 80px;
+
+    svg {
+
+    }
+  }
+  ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+
+    li {
+      margin-bottom: 7px;
+      padding: 0;
+    }
+
+    a {
+      font-size: 25px;
+      text-transform: uppercase;
+      color: $black;
+      font-weight: 600;
+      text-decoration: none;
+      @include transition(all, .2s);
+
+
+
+      &.active,
+      &:hover {
+        color: $primary-color;
+        text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
+      }
+      &:hover {
+      }
+    }
+  }
+}

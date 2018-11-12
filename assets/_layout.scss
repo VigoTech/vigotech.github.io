@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
+body {
+  background: $white;
+  font-family: $primary-font;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-weight: 200;
+}
+
+html {
+  font-family: 'Raleway', sans-serif, Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  word-spacing: 1px;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+
+  *,
+  *:before,
+  *:after {
+    box-sizing: border-box;
+    margin: 0;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+
+.page-section {
+  padding: 40px 15px;
+  color: $black;
+  h2.section-title {
+    text-align: center;
+    font-size: 50px;
+    margin: 10px 0 35px 0;
+    padding: 10px 15px;
+    background: $white;
+
+    @include media ($xs) {
+      font-size: 30px;
+    }
+  }
+
+  &.red-bg {
+    background: $primary-color;
+    color: $white;
+    h2.section-title {
+      background: $primary-color;
+    }
+  }
+
+  .section-content {
+    &.section-content-center {
+      text-align: center;
+    }
+
+    p {
+      margin-bottom: 1.4em;
+    }
+  }
+}
+
+.page-header {
+  padding: 10px 15px;
+  background: $primary-color;
+  color: $white;
+  margin-bottom: 80px;
+
+  @include media ($xs) {
+    margin-bottom: 50px;
+  }
+
+  h1.page-title {
+    text-align: center;
+    font-size: 45px;
+    padding: 15px 15px 0 15px;
+
+    @include media ($xs) {
+      font-size: 25px;
+      line-height: 1.1em;
+      padding-top: 5px;
+    }
+  }
+}
+
+.wrap {
+  box-sizing: border-box;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.layout {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+// Embeds responsive
+//
+// Credit: Nicolas Gallagher and SUIT CSS.
+
+.embed-responsive {
+  position: relative;
+  display: block;
+  height: 0;
+  padding: 0;
+  overflow: hidden;
+
+  .video-js,
+  .embed-responsive-item,
+  iframe,
+  embed,
+  object,
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+  }
+}
+
+// Modifier class for 16:9 aspect ratio
+.embed-responsive-16by9 {
+  padding-bottom: 56.25%;
+}
+
+// Modifier class for 4:3 aspect ratio
+.embed-responsive-4by3 {
+  padding-bottom: 75%;
+}
+
+
+#page-footer {
+  background: $gray;
+  text-align: center;
+  padding: 15px;
+  color: $light-gray;
+}
+
+
+@include media($xs) {
+  .container-fluid {
+    padding: 0;
+  }
+}
