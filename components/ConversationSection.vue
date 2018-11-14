@@ -54,7 +54,7 @@
                 <p>
                   <a
                     href="https://slackin-vigotech.herokuapp.com/"
-                    class="btn btn-white"
+                    class="btn"
                   >
                     Consegue unha invitación no teu correo clickando aquí
                   </a>
