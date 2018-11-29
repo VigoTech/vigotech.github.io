@@ -19,8 +19,8 @@
 
             <no-ssr>
               <VigotechNextEvent
-                v-if="nextEventGroup.nextEvent"
-                :next-event-group="nextEventGroup"
+                v-if="nextEvents"
+                :next-events="nextEvents"
               />
             </no-ssr>
 
@@ -48,10 +48,10 @@
       VigotechNextEvent
     },
     props: {
-      nextEventGroup: {
-        type: [Object],
+      nextEvents: {
+        type: [Array],
         required: false,
-        default: () => {return {}}
+        default: () => {return []}
       }
     }
   }

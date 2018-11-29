@@ -50,6 +50,43 @@ export const getters = {
       return {}
     }
   },
+  nextEvents(state, getters) {
+    try {
+      const nextEventGroup = getters.nextEventGroup
+
+      if (nextEventGroup === {}) {
+        return {};
+      } else {
+        let groupsByNextEvent = state.vigotechStructure.members
+
+        let groupNextEvents = []
+
+        for (let groupKey in groupsByNextEvent) {
+          let group = groupsByNextEvent[groupKey]
+          try {
+
+            if (group.nextEvent.date === undefined) {
+              continue
+            }
+
+            const date = new Date(group.nextEvent.date)
+            const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+
+            const now = new Date(nextEventGroup.nextEvent.date)
+            const nowString = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
+
+            if (dateString === nowString) {
+              groupNextEvents.push(group)
+            }
+          }
+          catch (e) {
+          }
+        }
+        return groupNextEvents;
+      }
+    } catch (e) {
+    }
+  },
   recentVideos(state) {
     const videos = {}
 

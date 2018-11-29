@@ -1,12 +1,16 @@
 <template>
   <div class="vigotech-next-event">
     <h4>
-      <i class="fa fa-calendar" /> Vindeiro evento
+      <i class="fa fa-calendar" />
+      <span v-if="nextEvents.length == 1">Vindeiro evento</span>
+      <span v-else>Vindeiros eventos</span>
     </h4>
 
-
-
-    <div class="wrapper">
+    <div
+      v-for="(nextEventGroup, key) in nextEvents"
+      :key="key"
+      class="wrapper"
+    >
       <div class="logo-wrapper">
         <a :href="nextEventGroup.nextEvent.url">
           <img
@@ -20,7 +24,7 @@
         <a :href="nextEventGroup.nextEvent.url">
           <h6>{{ nextEventGroup.name }}</h6>
           <h5>{{ nextEventGroup.nextEvent.title }}</h5>
-          <strong>{{ eventDate }}</strong>
+          <strong>{{ eventDate(nextEventGroup.nextEvent.date) }}</strong>
           <span class="btn">
             Máis info
           </span>
@@ -34,15 +38,15 @@
   import moment from 'moment'
   export default {
     props: {
-      nextEventGroup: {
-        type: [Object],
+      nextEvents: {
+        type: [Array],
         required: false,
-        default: () => {return {}}
+        default: () => {return []}
       }
     },
-    computed: {
-      eventDate () {
-        return moment(this.nextEventGroup.nextEvent.date).format('dddd, D MMMM YYYY HH:mm')
+    methods: {
+      eventDate(date) {
+        return moment(date).format('dddd, D MMMM YYYY HH:mm')
       }
     }
   }

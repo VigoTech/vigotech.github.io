@@ -1,7 +1,7 @@
 <template>
   <div>
     <CoverSection
-      :next-event-group="nextEventGroup"
+      :next-events="nextEvents"
       class="page-section"
     />
     <VigotechMembersSection
@@ -58,7 +58,10 @@
       },
       nextEventGroup() {
         return this.$store.getters.nextEventGroup
-s      }
+s     },
+      nextEvents() {
+        return this.$store.getters.nextEvents
+      }
     },
     watch: {
       vigotechStructureStore(newValue, oldValue) {
