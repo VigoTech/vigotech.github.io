@@ -19,7 +19,7 @@
 
             <no-ssr>
               <VigotechNextEvent
-                v-if="nextEvents"
+                v-if="nextEvents.length > 0"
                 :next-events="nextEvents"
               />
             </no-ssr>

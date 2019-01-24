@@ -16,7 +16,7 @@
           class="embed-responsive  embed-responsive-16by9"
         >
           <iframe
-            :src="`//www.youtube.com/embed/${video.id}`"
+            :src="`//www.youtube-nocookie.com/embed/${video.id}`"
             class="embed-responsive-item"
             frameborder="0"
             allowfullscreen=""

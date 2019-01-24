@@ -74,6 +74,7 @@
                 Tweets by VigoTech Alliance
               </a>
               <script
+                v-if="cookieStatus"
                 async
                 src="https://platform.twitter.com/widgets.js"
                 charset="utf-8" />
@@ -87,6 +88,11 @@
 
 <script>
   export default {
-    name: 'ConversationSection'
+    name: 'ConversationSection',
+    computed: {
+      cookieStatus() {
+        return this.$store.state.cookieStatus
+      }
+    }
   }
 </script>

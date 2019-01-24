@@ -2,12 +2,16 @@
 export const state = () => ({
   vigotechStructure: {
     members: {}
-  }
+  },
+  cookieStatus: false
 })
 
 export const mutations = {
   loadData (state, payload) {
     state.vigotechStructure = payload
+  },
+  setCookieStatus (state, payload) {
+    state.cookieStatus = payload
   }
 }
 
