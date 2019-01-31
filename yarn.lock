@@ -6928,6 +6928,10 @@ timsort@^0.3.0:
   version "0.3.0"
   resolved "https://registry.yarnpkg.com/timsort/-/timsort-0.3.0.tgz#405411a8e7e6339fe64db9a234de11dc31e02bd4"
 
+tiny-cookie@^2.1.2:
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/tiny-cookie/-/tiny-cookie-2.3.1.tgz#f0ea9fa194f2aed631dcd5e69ac0d6587be928c8"
+
 tmp@0.0.x, tmp@^0.0.33:
   version "0.0.33"
   resolved "https://registry.yarnpkg.com/tmp/-/tmp-0.0.33.tgz#6d34335889768d21b2bcda0aa277ced3b1bfadf9"
@@ -7362,6 +7366,16 @@ vm-browserify@0.0.4:
   resolved "https://registry.yarnpkg.com/vm-browserify/-/vm-browserify-0.0.4.tgz#5d7ea45bbef9e4a6ff65f95438e0a87c357d5a73"
   dependencies:
     indexof "0.0.1"
+
+vue-analytics@^5.16.2:
+  version "5.16.2"
+  resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.16.2.tgz#37724aeec71bb830b1cf2d52a969cf190ef120c1"
+
+vue-cookie-accept-decline@^5.1.0:
+  version "5.1.0"
+  resolved "https://registry.yarnpkg.com/vue-cookie-accept-decline/-/vue-cookie-accept-decline-5.1.0.tgz#68ba13987eb934a897e4fb0be4f34162ceda2988"
+  dependencies:
+    tiny-cookie "^2.1.2"
 
 vue-eslint-parser@^2.0.3:
   version "2.0.3"
