@@ -1,12 +1,16 @@
 {
   "name": "VigoTech Alliance",
-  "logo": "https://github.com/VigoTech/Design-elements/blob/master/01%20IDENTIDAD%20CORPORATIVA/01%20EXPORT/PNG/Logo%20VIGOTECH_claim-es-horizontal-fondo-blanco.png?raw=true",
+  "logo": "https://github.com/VigoTech/Design-elements/blob/master/01%20IDENTIDAD%20CORPORATIVA/01%20EXPORT/PNG/Logo%20VIGOTECH_avatar_redondo.png?raw=true",
   "sticker": "http://hexb.in/hexagons/vigotech.png",
   "links": {
     "web": "https://vigotech.org/",
     "twitter": "http://twitter.com/vigotechallianc",
     "mail": "alliance@vigotech.org",
     "github": "https://github.com/VigoTech"
+  },
+  "events": {
+    "type": "eventbrite",
+    "eventbriteid": "17365087639"
   },
   "members": {
     "agilevigo": {
