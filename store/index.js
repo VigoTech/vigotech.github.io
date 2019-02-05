@@ -101,7 +101,6 @@ export const getters = {
         return groupNextEvents;
       }
     } catch (e) {
-      console.log(e)
     }
   },
   recentVideos(state) {
