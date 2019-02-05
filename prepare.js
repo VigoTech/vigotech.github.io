@@ -10,13 +10,30 @@ const JSON_SCHEMA = 'static/vigotech-schema.json'
 
 
 function getNextEvents(membersData) {
+  // Get root next events
+  let eventsSource = membersData.events || {
+    type: null
+  }
+
+  if (eventsSource.type !== null) {
+    console.log(`    · Getting upcoming events json for ${colors.green(membersData.name)} from ${colors.underline(eventsSource.type)}`);
+    membersData.nextEvent = memberEvents.getNextEvent(eventsSource)
+  } else {
+    console.log(`    · Skipping upcoming events for ${colors.green(membersData.members[group].name)}: No source specified`);
+  }
+  // return membersData
+
+  // Get members next events
   for (let group in membersData.members) {
     let eventsSource = membersData.members[group].events || {
       type: null
     }
-
-    console.log(`      Getting upcoming events json for ${colors.green(membersData.members[group].name)} from ${colors.underline(eventsSource.type)}`);
-    membersData.members[group].nextEvent = memberEvents.getNextEvent(eventsSource)
+    if (eventsSource.type !== null) {
+      console.log(`    · Getting upcoming events json for ${colors.green(membersData.members[group].name)} from ${colors.underline(eventsSource.type)}`);
+      membersData.members[group].nextEvent = memberEvents.getNextEvent(eventsSource)
+    } else {
+      console.log(`    · Skipping upcoming events for ${colors.green(membersData.members[group].name)}: No source specified`);
+    }
   }
   return membersData
 }
@@ -40,16 +57,17 @@ async function getMembersVideos(membersData) {
 
     for (let videosSourcesKey in videosSources) {
       const videoSource = videosSources[videosSourcesKey]
-      console.log(`      Getting member videos for ${colors.green(membersData.members[group].name)} from ${colors.underline(videoSource.type)}`);
+      console.log(`    · Getting member videos for ${colors.green(membersData.members[group].name)} from ${colors.underline(videoSource.type)}`);
       const data = await memberVideos.getVideos(videoSource, 6)
       membersData.members[group].videolist = data
 
       if (data.length == 0) {
-        console.log(`          ${colors.yellow(`No videos found`)}`)
+        console.log(`        ${colors.yellow(`No videos found`)}`)
       }
       else {
-        console.log(`          ${colors.cyan(`Imported ${data.length} videos`)}`)
+        console.log(`        ${colors.cyan(`Imported ${data.length} videos`)}`)
       }
+      console.log();
     }
   }
   return membersData
@@ -89,10 +107,13 @@ validateJsonFile(data);
 
 
 
-console.log(
-  `${colors.inverse("Preparing json files")}`
-);
+console.log(`${colors.inverse("Preparing json files")}`);
+console.log(`${colors.bold("  Import next events")}`);
 data = getNextEvents(data)
+console.log();
+console.log();
+
+console.log(`${colors.bold("  Import videos")}`);
 getMembersVideos(data)
   .then(data => {
     saveJsonFile(data)

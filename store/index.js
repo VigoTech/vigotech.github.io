@@ -2,12 +2,16 @@
 export const state = () => ({
   vigotechStructure: {
     members: {}
-  }
+  },
+  cookieStatus: false
 })
 
 export const mutations = {
   loadData (state, payload) {
     state.vigotechStructure = payload
+  },
+  setCookieStatus (state, payload) {
+    state.cookieStatus = payload
   }
 }
 
@@ -22,9 +26,19 @@ export const actions = {
 
 
 export const getters = {
-  nextEventGroup(state) {
-    let groupsByNextEvent = state.vigotechStructure.members
+  membersAndRoot(state) {
+    const vigotechStructure = JSON.parse(JSON.stringify(state.vigotechStructure))
 
+    // Insert Vigotech (Root) as member
+    const vigotechStructureFull = vigotechStructure.members
+    vigotechStructureFull['root'] = vigotechStructure
+    vigotechStructureFull['root'].members = null;
+
+    return vigotechStructureFull;
+
+  },
+  nextEventGroup(state) {
+    let groupsByNextEvent = getters.membersAndRoot(state)
     let groupNextEvent = {
       nextEvent: {
         date: 9999999999999
@@ -43,6 +57,8 @@ export const getters = {
       catch (e) {
       }
     }
+
+
     if (groupNextEvent.nextEvent.date < 9999999999999) {
       return groupNextEvent
     }
@@ -57,8 +73,7 @@ export const getters = {
       if (nextEventGroup === {}) {
         return {};
       } else {
-        let groupsByNextEvent = state.vigotechStructure.members
-
+        let groupsByNextEvent = getters.membersAndRoot
         let groupNextEvents = []
 
         for (let groupKey in groupsByNextEvent) {
@@ -80,11 +95,13 @@ export const getters = {
             }
           }
           catch (e) {
+
           }
         }
         return groupNextEvents;
       }
     } catch (e) {
+      console.log(e)
     }
   },
   recentVideos(state) {

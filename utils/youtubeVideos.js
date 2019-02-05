@@ -1,9 +1,6 @@
 const request = require("sync-request")
 const { google} = require('googleapis');
 
-
-
-
 module.exports = {
   async getChannelVideos(videos, maxresults) {
     if (!videos.channel_id) {

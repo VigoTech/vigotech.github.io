@@ -68,7 +68,9 @@ module.exports = {
     { src: '~/plugins/sticky.js', ssr: false },
     { src: '~/plugins/moment.js'},
     { src: '~/plugins/localStorage.js', ssr: false },
-    { src: '~/plugins/nuxt-video-player-plugin.js', ssr: false }
+    { src: '~/plugins/nuxt-video-player-plugin.js', ssr: false },
+    { src: '~/plugins/cookies.js', ssr: false },
+    { src: '~/plugins/ga.js', ssr: false }
   ],
 
   /*
