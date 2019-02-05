@@ -60,7 +60,6 @@
         return this.$store.getters.nextEventGroup
 s     },
       nextEvents() {
-        console.log('next events: ', this.$store.getters.nextEvents);
         return this.$store.getters.nextEvents
       }
     },
