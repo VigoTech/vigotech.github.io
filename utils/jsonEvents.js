@@ -9,7 +9,7 @@ module.exports = {
         return data
       }
     } catch (e) {
-
+      console.log(e)
     }
 
     return {}

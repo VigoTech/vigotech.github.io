@@ -55,6 +55,7 @@ export const getters = {
         }
       }
       catch (e) {
+        console.log(e)
       }
     }
 
@@ -95,7 +96,7 @@ export const getters = {
             }
           }
           catch (e) {
-
+            console.log(e)
           }
         }
         return groupNextEvents;
