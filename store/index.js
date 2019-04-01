@@ -48,10 +48,15 @@ export const getters = {
     for (let groupKey in groupsByNextEvent) {
       let group = groupsByNextEvent[groupKey]
       try {
+        if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
+          continue
+        }
+
         let date = group.nextEvent.date
 
         if (date > new Date().getTime() && date < groupNextEvent.nextEvent.date) {
           groupNextEvent = group
+
         }
       }
       catch (e) {
@@ -68,6 +73,7 @@ export const getters = {
     }
   },
   nextEvents(state, getters) {
+
     try {
       const nextEventGroup = getters.nextEventGroup
 
@@ -80,8 +86,7 @@ export const getters = {
         for (let groupKey in groupsByNextEvent) {
           let group = groupsByNextEvent[groupKey]
           try {
-
-            if (group.nextEvent.date === undefined) {
+            if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
               continue
             }
 

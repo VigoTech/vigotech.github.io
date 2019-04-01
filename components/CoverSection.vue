@@ -17,12 +17,10 @@
               Os grupos de tecnoloxía de Vigo facemos piña para promover a tecnoloxía na cidade
             </h2>
 
-            <no-ssr>
-              <VigotechNextEvent
-                v-if="nextEvents.length > 0"
-                :next-events="nextEvents"
-              />
-            </no-ssr>
+            <VigotechNextEvent
+              v-if="nextEvents.length > 0"
+              :next-events="nextEvents"
+            />
 
             <div class="down-wrapper">
               <a
@@ -51,7 +49,7 @@
       nextEvents: {
         type: [Array],
         required: false,
-        default: () => {return []}
+        default: () => []
       }
     }
   }

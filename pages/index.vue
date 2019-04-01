@@ -1,7 +1,7 @@
 <template>
   <div>
     <CoverSection
-      :next-events="nextEvents"
+      :next-events="(nextEvents || nextEventsStatic)"
       class="page-section"
     />
     <VigotechMembersSection
@@ -19,8 +19,6 @@
     />
 
     <ConversationSection class="page-section"/>
-
-
   </div>
 </template>
 
@@ -30,7 +28,7 @@
   import CalendarSection from '../components/CalendarSection'
   import ConversationSection from '../components/ConversationSection'
   import VideosSection from '../components/VideosSection'
-  import VigotechStructureStatic from '../static/vigotech'
+  import VigotechStructureStatic from '../static/vigotech-generated'
   import VigotechDocsSection from '../components/VigotechDocsSection'
 
   export default {
@@ -47,7 +45,8 @@
         vigotechStructure: {
           members: {}
         },
-        docs: []
+        docs: [],
+        nextEventsStatic: []
       }
     },
     computed: {
@@ -71,15 +70,17 @@ s     },
       }
     },
     mounted() {
-      this.$store.dispatch('loadData');
+      this.$store.dispatch('loadData')
 
       if ($nuxt.$route.hash) {
         this.scrollToHash()
       }
     },
     async asyncData(context) {
+      context.app.store.commit('loadData', VigotechStructureStatic)
       return {
         vigotechStructure: VigotechStructureStatic,
+        nextEventsStatic: context.app.store.getters.nextEvents
       }
     },
     methods: {
