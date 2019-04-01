@@ -1,14 +1,20 @@
+import VigotechFriends from '../static/friends'
+import VigotechStructure from '../static/vigotech-generated'
 
 export const state = () => ({
   vigotechStructure: {
     members: {}
   },
+  friends: {},
   cookieStatus: false
 })
 
 export const mutations = {
   loadData (state, payload) {
     state.vigotechStructure = payload
+  },
+  loadFriends (state, payload) {
+    state.friends = payload
   },
   setCookieStatus (state, payload) {
     state.cookieStatus = payload
@@ -17,10 +23,10 @@ export const mutations = {
 
 export const actions = {
   loadData (store) {
-    this.$axios.get(process.env.VIGOTECH_MEMBERS_SOURCE_GENERATED)
-      .then(response => {
-        store.commit('loadData', response.data)
-      })
+    return store.commit('loadData', VigotechStructure)
+  },
+  loadFriends (store) {
+    return store.commit('loadFriends', VigotechFriends)
   }
 }
 
