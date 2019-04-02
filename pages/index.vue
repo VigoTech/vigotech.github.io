@@ -22,7 +22,7 @@
 
     <FriendsSection
       :friends="vigotechFriends"
-      class="page-section"
+      class="page-section red-bg"
     />
   </div>
 </template>

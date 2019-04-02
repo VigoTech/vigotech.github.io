@@ -15,11 +15,11 @@
           </h2>
         </div>
       </div>
-      <div class="row">
+      <div class="row center-xs">
         <div
           v-for="(friend, key) in friends"
           :key="key"
-          class="col-xs-12 col-sm-3 col-lg-2"
+          class="col-xs-4 col-sm-3 col-md-2 col-lg-1"
         >
           <Friend :friend="friend" />
         </div>

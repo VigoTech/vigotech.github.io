@@ -5,18 +5,18 @@
     "link" : "http://compostelatech.org/"
   },
   "copenhagencomminities": {
-    "name": "Copenhagen.community",
-    "logo": "/friends/madridtech.jpg",
+    "name": "Copenhagen Community",
+    "logo": "/friends/copenhagen.jpg",
     "link": "https://copenhagen.community/"
-  },
-  "madridtechalliance": {
-    "name": "Madrid Tech Alliance",
-    "logo": "/friends/madridtech.jpg",
-    "link": "https://twitter.com/madridtechall?lang=es"
   },
   "riojatech" : {
     "name": "La Rioja Tech",
     "logo": "/friends/riojatech.png",
     "link": "http://www.lariojatech.org/"
+  },
+  "madridtechalliance": {
+    "name": "Madrid Tech Alliance",
+    "logo": "/friends/madridtech.jpg",
+    "link": "https://twitter.com/madridtechall?lang=es"
   }
 }

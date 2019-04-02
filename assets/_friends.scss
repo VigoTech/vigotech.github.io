@@ -1,5 +1,6 @@
 .vigotech-friend {
-  margin-bottom: 50px;
+  margin-bottom: 30px;
+
   .logo-wrapper {
     text-align: center;
 
@@ -12,14 +13,19 @@
   .name {
     display: block;
     text-align: center;
-    font-size: 15px;
+    font-size: 10px;
     line-height: 1.1em;
     margin: 0 0 7px 0;
     font-weight: normal;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
   }
 
   .logo-wrapper {
-    margin-bottom: 20px;
+    margin-bottom: 5px;
     position: relative;
     .square-bg {
       width: 160px;

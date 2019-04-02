@@ -49,6 +49,14 @@
           Únete a conversa
         </a>
       </li>
+      <li>
+        <a
+          href="./#friends"
+          @click="handleMenuLink('#friends', $event)"
+        >
+          Os nosos amigos
+        </a>
+      </li>
 
     </ul>
   </nav>
