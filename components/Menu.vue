@@ -49,7 +49,7 @@
           Únete a conversa
         </a>
       </li>
-      <li>
+      <li v-if="Object.keys(vigotechFriends).length > 0">
         <a
           href="./#friends"
           @click="handleMenuLink('#friends', $event)"
@@ -65,6 +65,11 @@
 <script>
   export default {
     name: 'Menu',
+    computed: {
+      vigotechFriends() {
+        return this.$store.state.friends
+      }
+    },
     methods: {
       handleMenuLink(hash, event) {
         const path = $nuxt.$route.path

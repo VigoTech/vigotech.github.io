@@ -21,6 +21,7 @@
     <ConversationSection class="page-section"/>
 
     <FriendsSection
+      v-if="Object.keys(vigotechFriends).length > 0"
       :friends="vigotechFriends"
       class="page-section red-bg"
     />
