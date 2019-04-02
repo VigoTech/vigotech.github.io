@@ -6,7 +6,8 @@
   "additionalProperties": false,
   "required": [
     "name",
-    "logo"
+    "logo",
+    "link"
   ],
   "properties": {
     "name": {
