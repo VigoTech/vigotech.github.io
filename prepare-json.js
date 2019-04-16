@@ -1,76 +1,88 @@
-const request = require("sync-request")
 const dotenv = require('dotenv').config()
-const memberEvents = require('./utils/memberEvents')
-const memberVideos = require('./utils/memberVideos')
 const colors = require("colors")
-const fs = require("fs")
+const fs = require('fs')
+const { Events, Videos, Source } = require('metagroup-schema-tools')
+const moment = require('moment')
+const SOURCE_JSON = process.env.VIGOTECH_MEMBERS_SOURCE_FILE
 const GENERATED_JSON = 'static/vigotech-generated.json'
-const Validator = require('jsonschema').Validator;
 const JSON_SCHEMA = 'static/vigotech-schema.json'
 
 
-function getNextEvents(membersData) {
-  // Get root next events
-  let eventsSource = membersData.events || {
-    type: null
-  }
 
-  if (eventsSource.type !== null) {
-    console.log(`    · Getting upcoming events json for ${colors.green(membersData.name)} from ${colors.underline(eventsSource.type)}`);
-    membersData.nextEvent = memberEvents.getNextEvent(eventsSource)
-  } else {
-    console.log(`    · Skipping upcoming events for ${colors.green(membersData.members[group].name)}: No source specified`);
-  }
-  // return membersData
+
+function eventDate(date) {
+  return moment(date).format('dddd, D MMMM YYYY HH:mm')
+}
+
+function getNextEvents(data) {
+
+  const eventEmitter = Events.getEventsEmitter()
+
+  eventEmitter.on('getNextFromSourceInit', (source, options) => {
+    console.log(`    · Getting upcoming events json for ${colors.green(options.member.name)} from ${colors.underline(source.type)}`);
+  })
+
+  eventEmitter.on('getNextFromSourceCompleted', (nextEvents, options) => {
+    if (nextEvents.length === 0) {
+      console.log(`        ${colors.yellow(`No upcoming events found`)}`)
+    } else {
+      const nextEvent = nextEvents[0]
+      console.log(`        ${colors.cyan(`Upcoming event found:`)} ${colors.blue(`${colors.bold(`${nextEvent.title}`)} ${eventDate(nextEvent.date)}`)}`)
+    }
+    console.log();
+  })
+
+  // Get root group next events
+  const rootNextEvents = Events.getGroupNextEvents(data.events, {
+    eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
+    member: data
+  })
+  data.nextEvent = rootNextEvents[0]
+
 
   // Get members next events
-  for (let group in membersData.members) {
-    let eventsSource = membersData.members[group].events || {
-      type: null
-    }
-    if (eventsSource.type !== null) {
-      console.log(`    · Getting upcoming events json for ${colors.green(membersData.members[group].name)} from ${colors.underline(eventsSource.type)}`);
-      membersData.members[group].nextEvent = memberEvents.getNextEvent(eventsSource)
-    } else {
-      console.log(`    · Skipping upcoming events for ${colors.green(membersData.members[group].name)}: No source specified`);
-    }
+  for(let memberKey in data.members) {
+    const member = data.members[memberKey]
+    const membersNextEvents = Events.getGroupNextEvents(member.events, {
+      eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
+      member: member
+    })
+    data.members[memberKey].nextEvent = membersNextEvents[0]
   }
-  return membersData
+
+  return data
 }
 
-function getMembersInfo() {
-  const source = process.env.VIGOTECH_MEMBERS_SOURCE_FILE
-  console.log(`   Getting members json from ${colors.underline(source)}`);
-  try {
-    const res = fs.readFileSync(source, 'utf8')
-    return JSON.parse(res)
-  } catch(e) {
-    console.log(
-      `${colors.red.inverse(e)}`
-    );
-  }
-}
 
 async function getMembersVideos(membersData) {
-  for (let group in membersData.members) {
-    let videosSources = membersData.members[group].videos || {}
 
-    for (let videosSourcesKey in videosSources) {
-      const videoSource = videosSources[videosSourcesKey]
-      console.log(`    · Getting member videos for ${colors.green(membersData.members[group].name)} from ${colors.underline(videoSource.type)}`);
-      const data = await memberVideos.getVideos(videoSource, 6)
-      membersData.members[group].videolist = data
+  const eventEmitter = Videos.getEventsEmitter()
 
-      if (data.length == 0) {
-        console.log(`        ${colors.yellow(`No videos found`)}`)
-      }
-      else {
-        console.log(`        ${colors.cyan(`Imported ${data.length} videos`)}`)
-      }
-      console.log();
+  eventEmitter.on('getVideosFromSourceInit', (source, options) => {
+    console.log(`    · Getting member videos for ${colors.green(options.member.name)} from ${colors.underline(source.type)}`);
+  })
+
+  eventEmitter.on('getVideosFromSourceCompleted', (videos, options) => {
+    if (videos.length == 0) {
+      console.log(`        ${colors.yellow(`No videos found`)}`)
     }
+    else {
+      console.log(`        ${colors.cyan(`Imported ${videos.length} videos`)}`)
+    }
+    console.log();
+  })
+
+
+  // Get members videos
+  for(let memberKey in data.members) {
+    const member = data.members[memberKey]
+    data.members[memberKey].videoList = await Videos.getGroupVideos(member.videos, 6, {
+      youtubeApiKey: process.env.YOUTUBE_API_KEY,
+      member: member
+    })
   }
-  return membersData
+
+  return data
 }
 
 function saveJsonFile(data) {
@@ -78,41 +90,58 @@ function saveJsonFile(data) {
   console.log(`  ${colors.inverse(`Saving ${colors.yellow(`${GENERATED_JSON}`)}`)}`);
 }
 
-function validateJsonFile(data) {
-  const v = new Validator();
-  console.log(`   Getting json schema from ${colors.underline(JSON_SCHEMA)}`);
-  try {
-    const schema = fs.readFileSync(JSON_SCHEMA, 'utf8')
-    return JSON.parse(schema)
-  } catch(e) {
-    console.log(
-      `${colors.red.inverse(e)}`
-    );
-    process.exit(1)
-  }
 
-  console.log(v.validate(data, schema))
 
+
+
+
+
+
+
+// Read and parse source data
+console.log(`${colors.inverse("Getting vigotech.json file")}`);
+console.log(`   Getting members json from ${colors.underline(SOURCE_JSON)}`)
+let data = {}
+try {
+  const dataRaw = fs.readFileSync(SOURCE_JSON, 'utf8')
+  data = JSON.parse(dataRaw)
+} catch(e) {
+  console.log(`${colors.red.inverse(e)}`);
+  process.exit(1)
 }
 
-console.log(
-  `${colors.inverse("Getting vigotech.json file")}`
-);
-let data = getMembersInfo()
+// Validate data schema
+console.log(`${colors.inverse("Validate vigotech.json file")}`);
+console.log(`   Getting json schema from ${colors.underline(JSON_SCHEMA)}`);
+let schema = {}
+try {
+  const schemaRaw = fs.readFileSync(JSON_SCHEMA, 'utf8')
+  schema = JSON.parse(schemaRaw)
+} catch(e) {
+  console.log(`${colors.red.inverse(e)}`);
+  process.exit(1)
+}
+const validationResult = Source.validate(data, schema)
 
-console.log(
-  `${colors.inverse("Validate vigotech.json file")}`
-);
-validateJsonFile(data);
+if (validationResult.errors.length > 0) {
+  console.log(`${colors.red.inverse('Error validating source data')}`);
+  console.log(typeof validationResult.errors)
+  validationResult.errors.forEach( (error) => {
+    console.log(`  ${colors.red(error.property + ' ' + error.message)}`)
+    console.log(error.instance)
+  })
+  process.exit(1);
+}
+console.log(`   ${colors.green.inverse('OK')}`);
 
-
-
+// Import events
 console.log(`${colors.inverse("Preparing json files")}`);
 console.log(`${colors.bold("  Import next events")}`);
 data = getNextEvents(data)
 console.log();
 console.log();
 
+//Import videos
 console.log(`${colors.bold("  Import videos")}`);
 getMembersVideos(data)
   .then(data => {

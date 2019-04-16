@@ -4577,6 +4577,10 @@ merge-source-map@^1.1.0:
   dependencies:
     source-map "^0.6.1"
 
+metagroup-schema-tools@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/metagroup-schema-tools/-/metagroup-schema-tools-1.0.0.tgz#5e78cad26fd57189d4aa3856e2809e7956f43f18"
+
 methods@~1.1.2:
   version "1.1.2"
   resolved "https://registry.yarnpkg.com/methods/-/methods-1.1.2.tgz#5529a4d67654134edcc5266656835b0f851afcee"

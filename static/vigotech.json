@@ -22,10 +22,12 @@
         "meetup": "https://www.meetup.com/es-ES/agile-vigo/",
         "github": "https://github.com/agileVigo"
       },
-      "events": {
-        "type": "meetup",
-        "meetupid": "agilevigo"
-      }
+      "events": [
+        {
+          "type": "meetup",
+          "meetupid": "agile-vigo"
+        }
+      ]
     },
     "aindustriosa": {
       "name": "A Industriosa",
@@ -79,7 +81,7 @@
       },
       "events": {
         "type": "meetup",
-        "meetupid": "galstech_"
+        "meetupid": "galstech"
       }
     },
     "gdgvigo": {
@@ -90,10 +92,12 @@
         "meetup": "https://www.meetup.com/es-ES/GDGVigo/?chapter_analytics_code=UA-73757047-1",
         "youtube": "https://www.youtube.com/user/GDGVigo"
       },
-      "events": {
-        "type": "meetup",
-        "meetupid": "GDGVigo"
-      },
+      "events": [
+        {
+          "type": "meetup",
+          "meetupid": "GDGVigo"
+        }
+      ],
       "videos": [
         {
           "type": "youtube",

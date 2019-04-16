@@ -1,4 +1,26 @@
 #videos {
+  .anchor {
+    display: block;
+    position: relative;
+    top: -130px;
+    visibility: hidden;
+  }
+  .group-anchors {
+    display: flex;
+    margin-bottom: 50px;
+    .group-anchor {
+      display: flex;
+      width: 60px;
+      height: 60px;
+      margin: 5px;
+      align-items: center;
+      justify-content: center;
+      img {
+        max-width: 100%;
+      }
+    }
+  }
+
   .group {
     margin-bottom: 60px;
   }
