@@ -22,7 +22,7 @@
       "description": "Sticker image url"
     },
     "links": {
-      "type": "array",
+      "type": "object",
       "description": "Alliance site and social links",
       "items": {
         "type": "object",
@@ -43,8 +43,40 @@
         }
       }
     },
+    "events": {
+      "type": [
+        "object",
+        "array"
+      ],
+      "description": "Events data source",
+      "items": {
+        "type": "object",
+        "description": "Event data source",
+        "required": [
+          "type"
+        ],
+        "properties": {
+          "type": {
+            "type": "string",
+            "description": "Data source type allowed values (meetup, eventbrite, json)"
+          },
+          "meetupid": {
+            "type": "string",
+            "description": "Meetup id"
+          },
+          "eventbriteid": {
+            "type": "string",
+            "description": "Eventbrite id"
+          },
+          "source": {
+            "type": "string",
+            "description": "Source URL"
+          }
+        }
+      }
+    },
     "members": {
-      "type": "array",
+      "type": ["array", "object"],
       "description": "Alliance members",
       "items": {
         "type": "object",
@@ -72,7 +104,7 @@
             "description": "Sticker image url"
           },
           "links": {
-            "type": "array",
+            "type": "object",
             "description": "Alliance site and social links",
             "items": {
               "type": "object",
@@ -94,7 +126,7 @@
             }
           },
           "events": {
-            "type": "object",
+            "type": ["object", "array"],
             "description": "Events data source",
             "items": {
               "type": "object",
@@ -105,11 +137,15 @@
               "properties": {
                 "type": {
                   "type": "string",
-                  "description": "Data source type allowed values (meetup, json)"
+                  "description": "Data source type allowed values (meetup, eventbrite, json)"
                 },
                 "meetupid": {
                   "type": "string",
                   "description": "Meetup id"
+                },
+                "eventbriteid": {
+                  "type": "string",
+                  "description": "Eventbrite id"
                 },
                 "source": {
                   "type": "string",

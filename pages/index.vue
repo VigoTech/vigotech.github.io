@@ -20,7 +20,11 @@
 
     <ConversationSection class="page-section"/>
 
-
+    <FriendsSection
+      v-if="Object.keys(vigotechFriends).length > 0"
+      :friends="vigotechFriends"
+      class="page-section red-bg"
+    />
   </div>
 </template>
 
@@ -30,8 +34,8 @@
   import CalendarSection from '../components/CalendarSection'
   import ConversationSection from '../components/ConversationSection'
   import VideosSection from '../components/VideosSection'
-  import VigotechStructureStatic from '../static/vigotech'
   import VigotechDocsSection from '../components/VigotechDocsSection'
+  import FriendsSection from '../components/FriendsSection'
 
   export default {
     components: {
@@ -40,20 +44,18 @@
       ConversationSection,
       CoverSection,
       VigotechMembersSection,
-      CalendarSection
+      CalendarSection,
+      FriendsSection
+
     },
     data() {
       return {
-        vigotechStructure: {
-          members: {}
-        },
-        docs: []
+        docs: [],
+        nextEventsStatic: [],
       }
     },
     computed: {
-      vigotechStructureStore() {
-        // Need separate Store value from data value, because of SSR.
-        // asyncData copy values to data and don'y allow to use computed directly
+      vigotechStructure() {
         return this.$store.state.vigotechStructure
       },
       nextEventGroup() {
@@ -61,28 +63,24 @@
 s     },
       nextEvents() {
         return this.$store.getters.nextEvents
-      }
-    },
-    watch: {
-      vigotechStructureStore(newValue, oldValue) {
-        // Need separate Store value from data value, because of SSR.
-        // asyncData copy values to data and don'y allow to use computed directly
-        this.vigotechStructure = newValue
+      },
+      vigotechFriends() {
+        return this.$store.state.friends
       }
     },
     mounted() {
-      this.$store.dispatch('loadData');
-
       if ($nuxt.$route.hash) {
         this.scrollToHash()
       }
     },
-    async asyncData(context) {
-      return {
-        vigotechStructure: VigotechStructureStatic,
-      }
+    serverPrefetch () {
+      return this.fetchData()
     },
     methods: {
+      fetchData () {
+        this.$store.dispatch('loadData')
+        return this.$store.dispatch('loadFriends')
+      },
       scrollToHash () {
         var hash = $nuxt.$route.hash
         this.$nextTick(() => {

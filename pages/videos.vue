@@ -3,6 +3,23 @@
     <PageHeader title="Charlas en video" />
 
     <section id="videos">
+
+      <div class="wrap container-fluid group-anchors">
+        <a
+          v-for="(group, groupkey) in videosByGroup"
+          :href="`/videos#${groupkey}`"
+          :key="groupkey"
+          class="group-anchor"
+        >
+          <img
+            :src="group.logo"
+            :alt="group.name"
+            class="member-logo"
+          >
+        </a>
+      </div>
+
+
       <div class="wrap container-fluid">
         <div class="row">
           <div class="col-xs-12 content-wrapper">
@@ -12,7 +29,10 @@
                 :key="groupkey"
                 class="group"
               >
-
+                <a
+                  :name="groupkey"
+                  class="anchor"
+                />
                 <header class="group-header">
                   <div class="logo-wrapper">
                     <img
@@ -60,7 +80,6 @@
 
 <script>
   import PageHeader from '../components/PageHeader'
-  import VigotechStructureStatic from '../static/vigotech-generated'
   import VigotechVideoPlayer from "../components/VigotechVideoPlayer";
 
   export default {
@@ -69,19 +88,14 @@
       PageHeader
     },
     data() {
-      return {
-        vigotechStructure: {
-          members: {}
-        }
-
-      }
+      return {}
     },
     computed: {
       videosByGroup () {
         const groups = []
 
         for(let groupKey in this.vigotechStructure.members) {
-          let group = this.vigotechStructure.members[groupKey]
+          let group = JSON.parse(JSON.stringify(this.vigotechStructure.members[groupKey]))
           const videos = []
 
           for(let videoKey in group.videolist) {
@@ -101,17 +115,20 @@
           }
         }
         return groups
-      }
+      },
+      vigotechStructure() {
+        return this.$store.state.vigotechStructure
+      },
     },
     mounted() {
     },
-    async asyncData(context) {
-      // let { data } = await context.$axios.get(process.env.VIGOTECH_MEMBERS_SOURCE_GENERATED_FILE)
-      const data = VigotechStructureStatic
-      return {
-        vigotechStructure: data
+    serverPrefetch () {
+      return this.fetchData()
+    },
+    methods: {
+      fetchData() {
+        return this.$store.dispatch('loadData')
       }
     }
-
   }
 </script>

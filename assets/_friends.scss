@@ -1,0 +1,49 @@
+.vigotech-friend {
+  margin-bottom: 30px;
+
+  .logo-wrapper {
+    text-align: center;
+
+    .logo-content {
+      display: inline-block;
+      position: relative;
+    }
+  }
+
+  .name {
+    display: block;
+    text-align: center;
+    font-size: 10px;
+    line-height: 1.1em;
+    margin: 0 0 7px 0;
+    font-weight: normal;
+
+    a {
+      color: $white;
+      text-decoration: none;
+    }
+  }
+
+  .logo-wrapper {
+    margin-bottom: 5px;
+    position: relative;
+    .square-bg {
+      width: 160px;
+      max-width: 100%;
+      height: auto;
+    }
+    .logo {
+      max-width: 160px;
+      width: 100%;
+      display: block;
+      left: 0;
+      right: 0;
+      top: 50%;
+      margin: auto;
+      position: absolute;
+      -webkit-transform: translateY(-50%);
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+  }
+}
