@@ -26,6 +26,9 @@ function getNextEvents(data) {
     if (nextEvents.length === 0) {
       console.log(`        ${colors.yellow(`No upcoming events found`)}`)
     } else {
+      if (nextEvents.length === undefined) {
+        nextEvents = [nextEvents]
+      }
       const nextEvent = nextEvents[0]
       console.log(`        ${colors.cyan(`Upcoming event found:`)} ${colors.blue(`${colors.bold(`${nextEvent.title}`)} ${eventDate(nextEvent.date)}`)}`)
     }
