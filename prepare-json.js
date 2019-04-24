@@ -29,11 +29,13 @@ function getNextEvents(data) {
       if (nextEvents.length === undefined) {
         nextEvents = [nextEvents]
       }
+
       const nextEvent = nextEvents[0]
       console.log(`        ${colors.cyan(`Upcoming event found:`)} ${colors.blue(`${colors.bold(`${nextEvent.title}`)} ${eventDate(nextEvent.date)}`)}`)
     }
     console.log();
   })
+
 
   // Get root group next events
   const rootNextEvents = Events.getGroupNextEvents(data.events, {
