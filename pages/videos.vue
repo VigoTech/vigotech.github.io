@@ -7,7 +7,7 @@
       <div class="wrap container-fluid group-anchors">
         <a
           v-for="(group, groupkey) in videosByGroup"
-          :href="`/videos#${groupkey}`"
+          :href="`/videos#group-${group.key}`"
           :key="groupkey"
           class="group-anchor"
         >
@@ -30,7 +30,7 @@
                 class="group"
               >
                 <a
-                  :name="groupkey"
+                  :name="`group-${group.key}`"
                   class="anchor"
                 />
                 <header class="group-header">
@@ -48,7 +48,7 @@
 
                 <div class="row">
                   <article
-                    v-for="(video, key) in group.videolist"
+                    v-for="(video, key) in group.videoList"
                     :key="key"
                     class="col-xs-12 col-sm-6 col-md-4 video"
                   >
@@ -98,8 +98,9 @@
           let group = JSON.parse(JSON.stringify(this.vigotechStructure.members[groupKey]))
           const videos = []
 
-          for(let videoKey in group.videolist) {
-            let video = group.videolist[videoKey]
+
+          for(let videoKey in group.videoList) {
+            let video = group.videoList[videoKey]
             videos[video.pubDate] = video
           }
 
@@ -110,7 +111,8 @@
           });
 
           if (Object.keys(videosSortedByDate).length > 0) {
-            group.videolist = videosSortedByDate
+            group.videoList = videosSortedByDate
+            group.key = groupKey
             groups.push(group);
           }
         }
