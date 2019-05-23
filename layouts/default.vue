@@ -24,22 +24,18 @@
       @status="onCookieStatus"
       @clicked-accept="onCookieClickedAccept"
     >
-      <!-- Optional -->
       <div slot="postponeContent">
         &times;
       </div>
 
-      <!-- Optional -->
       <div slot="message">
         Empregamos cookies propias e de terceiros para mellorar a experiencia de usuario. <router-link to="/post/legal">Saber máis</router-link>
       </div>
 
-      <!-- Optional -->
       <div slot="declineContent">
         Non acepto
       </div>
 
-      <!-- Optional -->
       <div slot="acceptContent">
         Ok, adiante
       </div>
