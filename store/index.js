@@ -121,8 +121,8 @@ export const getters = {
     for(let groupKey in state.vigotechStructure.members) {
       let group = state.vigotechStructure.members[groupKey]
 
-      for(let videoKey in group.videolist) {
-        let video = group.videolist[videoKey]
+      for(let videoKey in group.videoList) {
+        let video = group.videoList[videoKey]
         videos[video.pubDate] = video
       }
     }

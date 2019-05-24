@@ -4,6 +4,7 @@
       :next-events="nextEvents"
       class="page-section"
     />
+
     <VigotechMembersSection
       :vigotech-structure="vigotechStructure"
       class="page-section"
