@@ -12,7 +12,8 @@
     margin-bottom: 40px;
 
     a {
-      color: $white;
+      color: $black;
+      margin: 0 10px 10px 10px;
       @include transition(all, .2s);
 
       &:hover {

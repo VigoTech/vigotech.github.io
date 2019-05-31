@@ -52,7 +52,7 @@ function getNextEvents(data) {
       eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
       member: member
     })
-    
+
     data.members[memberKey].nextEvent = membersNextEvents[0]
 
   }
