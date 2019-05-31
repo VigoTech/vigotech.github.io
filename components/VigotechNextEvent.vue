@@ -11,6 +11,7 @@
       :key="key"
       class="wrapper"
     >
+
       <div class="logo-wrapper">
         <a :href="nextEventGroup.nextEvent.url">
           <img

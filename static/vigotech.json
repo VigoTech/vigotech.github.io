@@ -148,10 +148,16 @@
         "github": "https://github.com/phpvigo",
         "youtube": "https://www.youtube.com/c/phpvigo"
       },
-      "events": {
-        "type": "meetup",
-        "meetupid": "phpvigo"
-      },
+      "events": [
+        {
+          "type": "meetup",
+          "meetupid": "phpvigo"
+        },
+        {
+          "type": "json",
+          "source": "https://www.phpvigo.com/events.json"
+        }
+      ],
       "videos": [
         {
           "type": "youtube",
