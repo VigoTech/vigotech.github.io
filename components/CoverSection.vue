@@ -16,7 +16,6 @@
             <h2>
               Os grupos de tecnoloxía de Vigo facemos piña para promover a tecnoloxía na cidade
             </h2>
-
             <VigotechNextEvent
               v-if="nextEvents.length > 0"
               :next-events="nextEvents"
