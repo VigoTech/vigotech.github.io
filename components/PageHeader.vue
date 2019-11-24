@@ -3,22 +3,22 @@
     v-sticky
     :z-index="100"
     :sticky-top="100"
-    class="page-header container-fluid"
+    class="page-header"
   >
-    <div class="page-header-content row">
-      <div class="col-xs-3">
-        <a href="/">
-          <img
-            src="logo.png"
-            alt="Vigotech Alliance"
-          >
-        </a>
-      </div>
-      <div class="col-xs-8">
-        <h1 class="page-title">
-          {{ title }}
-        </h1>
-      </div>
+    <div class="page-header-content">
+      <a
+        href="/"
+        class="logo"
+      >
+        <img
+          src="logo.png"
+          alt="Vigotech Alliance"
+        >
+      </a>
+      <div class="spacer" />
+      <h1 class="page-title">
+        {{ title }}
+      </h1>
     </div>
   </header>
 </template>

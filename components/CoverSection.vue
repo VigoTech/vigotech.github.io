@@ -3,7 +3,7 @@
     <div class="wrap container-fluid">
       <div class="row">
         <div class="col-xs-12 content-wrapper">
-          <div class="content">
+          <div class="content box">
             <img
               src="logo_white.jpg"
               alt="Vigo Tech Alliance"

@@ -56,6 +56,7 @@
                       :video="video"
                       :prefer-external="true"
                       :show-titles="true"
+                      class="box"
                     />
                   </article>
                 </div>
@@ -121,16 +122,6 @@
       vigotechStructure() {
         return this.$store.state.vigotechStructure
       },
-    },
-    mounted() {
-    },
-    serverPrefetch () {
-      return this.fetchData()
-    },
-    methods: {
-      fetchData() {
-        return this.$store.dispatch('loadData')
-      }
     }
   }
 </script>

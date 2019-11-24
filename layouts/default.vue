@@ -3,13 +3,25 @@
     <nuxt/>
     <Menu />
     <footer id="page-footer">
-      <p>Tema personalizado pola empresa local Opsou.</p>
       <a
         href="https://vigotech.org"
         class="vigotech-claim vigotech-dark"
       >
         Feito con <i class="vt-pinecone" /> en <strong>Vigo</strong>
       </a>
+
+      <div class="spacer" />
+      <div class="social">
+        <a
+          v-for="(item, index) in $store.state.config.social"
+          :key="index"
+          :href="item.link"
+          :title="item.title"
+        >
+          <i :class="`${item.icon}`" />
+        </a>
+      </div>
+
     </footer>
 
     <vue-cookie-accept-decline
@@ -60,7 +72,16 @@
       onCookieClickedAccept() {
 
       },
-
+    },
+    serverPrefetch () {
+      return this.fetchData()
+    },
+    methods: {
+      async fetchData () {
+        await this.$store.dispatch('loadConfig')
+        await this.$store.dispatch('loadData')
+        return this.$store.dispatch('loadFriends')
+      }
     }
   }
 </script>

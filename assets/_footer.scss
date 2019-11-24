@@ -1,0 +1,31 @@
+#page-footer {
+  background: $gray;
+  text-align: center;
+  padding: 15px;
+  color: $light-gray;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9998;
+
+  .social {
+    margin: 10px;
+
+    a {
+      color: $white;
+      margin: 0 3px;
+
+      i {
+        font-size: 26px;
+      }
+    }
+  }
+
+  @include media($xs) {
+    padding: 15px 10px;
+  }
+}
