@@ -1,3 +1,13 @@
+@include media($xs) {
+  .vigotech-member-list {
+    &.row {
+      margin: 0;
+    }
+  }
+}
+
+
+
 .vigotech-member {
   .vigotech-next-event {
     i {

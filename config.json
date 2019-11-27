@@ -1,0 +1,25 @@
+{
+  "social": [
+    {
+      "icon": "fa fa-twitter",
+      "link": "https://twitter.com/vigotechallianc",
+      "name": "Twitter"
+    },
+    {
+      "icon": "fa fa-telegram",
+      "link": "https://t.me/vigotech",
+      "name": "Telegram"
+    },
+    {
+      "icon": "fa fa-envelope-o",
+      "link": "mailto:alliance@vigotech.org",
+      "name": "Email alliance@vigotech.org"
+    },
+    {
+      "icon": "fa fa-github",
+      "link": "https://github.com/VigoTech",
+      "name": "Github"
+    }
+
+  ]
+}

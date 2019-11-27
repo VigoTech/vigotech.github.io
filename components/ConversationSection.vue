@@ -16,24 +16,12 @@
 
           <div class="social">
             <a
-              href="http://twitter.com/vigotechallianc"
-              title="Twitter"
+              v-for="(item, index) in $store.state.config.social"
+              :key="index"
+              :href="item.link"
+              :title="item.title"
             >
-              <i class="fa fa-twitter fa-2x" />
-            </a>
-
-            <a
-              href="mailto:alliance@vigotech.org"
-              title="Email alliance@vigotech.org"
-            >
-              <i class="fa fa-envelope-o fa-2x" />
-            </a>
-
-            <a
-              href="https://github.com/VigoTech"
-              title="GitHub"
-            >
-              <i class="fa fa-github fa-2x" />
+              <i :class="`${item.icon} fa-2x`" />
             </a>
           </div>
 

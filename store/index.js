@@ -1,12 +1,14 @@
 import VigotechFriends from '../static/friends'
 import VigotechStructure from '../static/vigotech-generated'
+import Config from '../config'
 
 export const state = () => ({
   vigotechStructure: {
     members: {}
   },
   friends: {},
-  cookieStatus: false
+  cookieStatus: false,
+  config: {}
 })
 
 export const mutations = {
@@ -15,6 +17,9 @@ export const mutations = {
   },
   loadFriends (state, payload) {
     state.friends = payload
+  },
+  loadConfig (state, payload) {
+    state.config = payload
   },
   setCookieStatus (state, payload) {
     state.cookieStatus = payload
@@ -27,6 +32,9 @@ export const actions = {
   },
   loadFriends (store) {
     return store.commit('loadFriends', VigotechFriends)
+  },
+  loadConfig (store) {
+    return store.commit('loadConfig', Config)
   }
 }
 

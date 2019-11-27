@@ -4,7 +4,7 @@ body {
   background: $white;
   font-family: $primary-font;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 0 30px 0;
   margin: 0;
   font-weight: 200;
 }
@@ -73,19 +73,35 @@ img {
   color: $white;
   margin-bottom: 80px;
 
-  @include media ($xs) {
-    margin-bottom: 50px;
+  .page-header-content {
+    align-items: center;
+    display: flex;
+  }
+
+  .logo {
+    padding-left: 20px;
+  }
+
+  .spacer {
+    flex: 1;
   }
 
   h1.page-title {
     text-align: center;
     font-size: 45px;
-    padding: 15px 15px 0 15px;
+    padding: 0 15px;
 
     @include media ($xs) {
-      font-size: 25px;
+      font-size: 20px;
       line-height: 1.1em;
-      padding-top: 5px;
+    }
+  }
+
+  @include media ($xs) {
+    margin-bottom: 0;
+    .logo {
+      padding-left: 0;
+      width: 50px;
     }
   }
 }
@@ -140,17 +156,16 @@ img {
 }
 
 
-#page-footer {
-  background: $gray;
-  text-align: center;
-  padding: 15px;
-  color: $light-gray;
-}
-
 
 @include media($xs) {
   .container-fluid {
     padding: 0;
+  }
+
+  .page-header-content {
+    &.row {
+      margin: 0;
+    }
   }
 }
 

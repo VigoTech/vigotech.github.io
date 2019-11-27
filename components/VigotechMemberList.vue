@@ -1,13 +1,17 @@
 <template>
   <div class="vigotech-member-list row">
-    <vigotech-member
+    <div
       v-for="(member, key) in members"
-      :member="member"
       :key="key"
-      :next-event="member.nextEvent"
-      show-next-event
       class="col-xs-6 col-sm-4 col-md-3"
-    />
+    >
+      <vigotech-member
+        :member="member"
+        :next-event="member.nextEvent"
+        show-next-event
+        class="box"
+      />
+    </div>
   </div>
 </template>
 

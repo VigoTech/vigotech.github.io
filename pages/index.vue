@@ -74,14 +74,7 @@ s     },
         this.scrollToHash()
       }
     },
-    serverPrefetch () {
-      return this.fetchData()
-    },
     methods: {
-      fetchData () {
-        this.$store.dispatch('loadData')
-        return this.$store.dispatch('loadFriends')
-      },
       scrollToHash () {
         var hash = $nuxt.$route.hash
         this.$nextTick(() => {

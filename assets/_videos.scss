@@ -20,6 +20,11 @@
       }
     }
   }
+  .wrap {
+    > .row {
+      margin: 0;
+    }
+  }
 
   .group {
     margin-bottom: 60px;
@@ -42,6 +47,10 @@
       &:hover {
         text-decoration: underline;
       }
+    }
+    h3 {
+      margin-top: 7px;
+      margin-bottom: 7px;
     }
   }
 
