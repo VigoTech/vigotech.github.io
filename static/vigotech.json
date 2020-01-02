@@ -242,19 +242,6 @@
         "meetupid": "Vigo-Android-Developer-Group"
       }
     },
-    "vigobrain": {
-      "name": "Vigo Brain",
-      "logo": "https://vigotech.org/images/vigobrain.png",
-      "links": {
-        "github": "https://github.com/vigobrain/",
-        "meetup": "https://www.meetup.com/es-ES/VigoBrain/",
-        "twitter": "https://twitter.com/vigobrain/"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "VigoBrain"
-      }
-    },
     "vigojug": {
       "name": "VigoJUG",
       "logo": "https://vigotech.org/images/vigojug.jpg",
