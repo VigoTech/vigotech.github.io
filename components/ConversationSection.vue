@@ -10,7 +10,7 @@
             class="section-title"
           >
             <div>
-              Únete a conversa
+              Únete á conversa
             </div>
           </h2>
 
@@ -44,7 +44,7 @@
                     href="https://slackin-vigotech.herokuapp.com/"
                     class="btn"
                   >
-                    Consegue unha invitación no teu correo clickando aquí
+                    Consegue unha invitación no teu correo premendo aquí
                   </a>
                 </p>
               </div>
