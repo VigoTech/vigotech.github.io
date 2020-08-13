@@ -1,109 +1,112 @@
-Nuestra web, como otras muchas, utiliza cookies que permitirán mejorar su experiencia como usuario y en cumplimiento de la LSSI (LEY 34/2002, de 11 de julio, de servicios de la sociedad de la información y de comercio electrónico), vamos a informarle sobre que son, cuales utilizamos en nuestra web, como eliminarlas y le pediremos el consentimiento para su uso.
+A nosa web, como outras moitas, utiliza cookies que permitirán mellorar a súa experiencia como usuario e en cumprimento da  LSSI (LEI 34/2002, do 11 de xullo, de servizos da sociedade da información e de comercio electrónico), imos informarlle sobre que son, cales utilizamos na nosa web, cómo eliminalas e pedirémoslle o consentimento para o seu uso.
 
 ## INFORMACIÓN
-### ¿Qué son las cookies?
-Son pequeños archivos de texto que se descargan e instalan en su ordenador o en su móvil a través de su navegador (Internet Explorer, Firefox, Chrome, Safari…) o a través de una aplicación Flash. Las cookies permiten que las webs le “recuerden”, ya sea durante una visita (mediante las llamadas “cookies de sesión”) o durante varias visitas (mediante las llamadas “cookies persistentes”) y almacenen información sobre sus preferencias para ofrecerle una experiencia personalizada, más fácil y más rápida. Solamente el servidor que la instaló podrá leer su contenido, que por otra parte, será anónimo. Aunque se instalen en su disco duro, al ser solo texto, no son capaces por sí mismas de acceder a
-información personal de su ordenador, ni a trasmitir virus, tan solo rastrean la navegación sobre un sitio web. A continuación le explicamos cuales son las cookies según su función:
+### Que son as cookies?
 
-## COOKIES SEGÚN EL PLAZO DE TIEMPO
+Son pequenos arquivos de texto que se descargan e instalan no seu ordenador ou no seu móbil a través do seu navegador (Internet  Explorer, Firefox,  Chrome, Safari…) ou a través dunha aplicación Flash. As cookies permiten que as webs lle “lembren”, xa sexa durante unha visita (mediante as chamadas “cookies de sesión”) ou durante varias visitas (mediante as chamadas “cookies persistentes”) e almacenen información sobre as súas preferencias para ofrecerlle unha experiencia personalizada, máis fácil e máis rápida. Soamente o servidor que a instalou poderá ler o seu contido, que por outra banda, será anónimo. Aínda que se instalen no seu disco duro, ao ser só texto, non son capaces por si mesmas de acceder a información
+persoal do seu computador, nin a transmitir virus, tan só rastrexan a navegación sobre un sitio web. A continuación explicámoslle cales son as  cookies segundo a súa función:
+
+## COOKIES SEGUNDO O PRAZO DE TEMPO
 
 ### COOKIES DE SESIÓN
-Son cookies diseñadas para recabar y almacenar datos mientras el usuario accede a una página web. Se suelen emplear para almacenar información que solo interesa conservar para la prestación del servicio solicitado por el usuario en una sola ocasión.
+Son cookies deseñadas para solicitar e almacenar datos mentres o usuario accede a unha páxina web. Adóitanse empregar para almacenar información que só interesa conservar para a prestación do servizo solicitado polo usuario nunha soa ocasión.
 
 ### COOKIES PERSISTENTES
-Son un tipo de cookies en el que los datos siguen almacenados en el terminal y a los que se puede acceder y tratar durante un periodo definido por el responsable de la cookie, y que puede ir de unos minutos a varios años.
+Son un tipo de cookies no que os datos seguen almacenados no terminal e aos que se pode acceder e tratar durante un período definido polo responsable da cookie, e que pode ir duns minutos a varios anos.
 
-## COOKIES SEGÚN LA ENTIDAD QUE LAS GESTIONE
+## COOKIES SEGUNDO A ENTIDADE QUE AS XESTIONE
 
 ### COOKIES PROPIAS 
-Son las creadas por el responsable de la página web.
+Son as creadas polo responsable da páxina web.
 
-### COOKIES DE TERCEROS
-Son las creadas y gestionas por otras entidades, como prestadores de servicios publicitarios, de personalización o análisis, estos terceros nos pueden reportar datos anónimos.
+### COOKIES DE TERCEIROS
+Son as creadas e xestionas por outras entidades, como prestadores de servizos publicitarios, de personalización ou análise, estes terceiros pódennos reportar datos anónimos.
 
-## COOKIES SEGÚN FINALIDAD
+## COOKIES SEGUNDO FINALIDADE
 
 ### COOKIES TÉCNICAS
-Son aquéllas que permiten al usuario la navegación a través de una página web,plataforma o aplicación y la utilización de las diferentes opciones o servicios que en ella existan como, por ejemplo, controlar el tráfico y la comunicación de datos, identificar la sesión, acceder a partes de acceso restringido, recordar los elementos que integran un pedido, realizar el proceso de compra de un pedido, realizar la solicitud de inscripción o participación en un evento, utilizar elementos de seguridad durante la navegación, almacenar contenidos para la difusión de videos o sonido o compartir contenidos a través de redes sociales
+Son aquelas que permiten ao usuario a navegación a través dunha páxina web, plataforma ou aplicación e a utilización das diferentes opcións ou servizos que nela existan como, por exemplo, controlar o tráfico e a comunicación de datos, identificar a sesión, acceder a partes de acceso restrinxido, lembrar os elementos que integran un pedido, realizar o proceso de compra dun pedido, realizar a solicitude de inscrición ou participación nun evento, utilizar elementos de seguridade durante a navegación, almacenar contidos para a difusión de vídeos ou son ou compartir contidos a través de redes sociais.
 
 ### COOKIES DE PERSONALIZACIÓN
-Son aquéllas que permiten al usuario acceder al servicio con algunas características de carácter general predefinidas en función de una serie de criterios en el terminal del usuario como por ejemplo serian el idioma, el tipo de navegador a través del cual accede al servicio, la configuración regional desde donde accede al servicio, etc.
+Son aquelas que permiten ao usuario acceder ao servizo con algunhas características de carácter xeral predefinidas en función dunha serie de criterios no terminal do usuario por exemplo serian o idioma, o tipo de navegador a través do cal accede ao servizo, a configuración rexional desde onde accede ao servizo, etc.
 
-### COOKIES DE ANÁLISIS
-Son aquéllas que permiten al responsable de las mismas, el seguimiento y análisis del comportamiento de los usuarios de los sitios web a los que están vinculadas. La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los usuarios de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los usuarios del servicio.
+### COOKIES DE ANÁLISE
+Son aquelas que permiten ao responsable das mesmas, o seguimento e análise do comportamento dos usuarios dos sitios web aos que están vinculadas. A información recollida mediante este tipo de  cookies utilízase na medición da actividade dos sitios web, aplicación ou plataforma e para a elaboración de perfís de navegación dos usuarios dos devanditos sitios, aplicacións e plataformas, co fin de introducir melloras en función da análise dos datos de uso que fan os usuarios do servizo.
 
 ### COOKIES PUBLICITARIAS
-Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado en base a criterios como el contenido editado o la frecuencia en la que se muestran los anuncios.
+Son aquelas que permiten a xestión, da forma máis eficaz posible, dos espazos publicitarios que, no seu caso, o editor incluíse nunha páxina web, aplicación ou plataforma desde a que presta o servizo solicitado en base a criterios como o contido editado ou a frecuencia na que se mostran os anuncios.
 
-### COOKIES DE PUBLICIDAD COMPORTAMENTAL
-Son aquéllas que permiten la gestión, de la forma más eficaz posible, de los espacios publicitarios que, en su caso, el editor haya incluido en una página web, aplicación o plataforma desde la que presta el servicio solicitado. Estas cookies almacenan información del comportamiento de los usuarios obtenida a través de la observación continuada de sus hábitos de navegación, lo que permite desarrollar un perfil específico para mostrar publicidad en función del mismo.
+
+### COOKIES DE PUBLICIDADE COMPORTAMENTAL
+Son aquelas que permiten a xestión, da forma máis eficaz posible, dos espazos publicitarios que, no seu caso, o editor incluíse nunha páxina web, aplicación ou plataforma desde a que presta o servizo solicitado. Estas  cookies almacenan información do comportamento dos usuarios obtida a través da observación continuada dos seus hábitos de navegación, o que permite desenvolver un perfil específico para mostrar publicidade en función do mesmo.
 
  
 
  
 
-## ¿Qué tipo de cookies utilizamos ?
-A continuación te definimos las funciones y el tipo de cookies que utilizamos en http://www.vigotech.org y su finalidad:
+## Que tipo de cookies utilizamos?
+A continuación definímosche as funcións e o tipo de  cookies que utilizamos en http://www.vigotech.org e a súa finalidade:
 
  
 
 ### COOKIES PROPIAS
 
-### COOKIES DE TERCEROS
+### COOKIES DE TERCEIROS
 
-#### Google Analitycs:
+#### Google Analytics:
 
-Tipo: Cookie analítica de terceros utilizadas por nosotros y por Google
-[Más Información](https://developers.google.com/analytics/devguides/collection/analyticsjs):
-Definición: Las Cookies analíticas son aquéllas que permiten al responsable de las mismas, el seguimiento y análisis del comportamiento de los usuarios de los sitios web a los que están vinculadas.
-Finalidad: La información recogida mediante este tipo de cookies se utiliza en la medición de la actividad de los sitios web, aplicación o plataforma y para la elaboración de perfiles de navegación de los usuarios de dichos sitios, aplicaciones y plataformas, con el fin de introducir mejoras en función del análisis de los datos de uso que hacen los usuarios del servicio. 
+Tipo:  Cookie analítica de terceiros utilizadas por nós e por Google
+[Máis Información](https://developers.google.com/analytics/devguides/collection/analyticsjs):
+Definición: As cookies analíticas son aquelas que permiten ao responsable das mesmas, o seguimento e análise do comportamento dos usuarios dos sitios web aos que están vinculadas.
+ Finalidade: A información recollida mediante este tipo de cookies utilízase na medición da actividade dos sitios web, aplicación ou plataforma e para a elaboración de perfís de navegación dos usuarios dos devanditos sitios, aplicacións e plataformas, co fin de introducir melloras en función da análise dos datos de uso que fan os usuarios do servizo. 
 Cookies: 
 _utma: 
-Finalidad: Registra la fecha de la primera y última vez que el usuario visito el sitio web.
-Expira: 2 años
+Finalidade: Rexistra a data da primeira e última vez que o usuario visito o sitio web.
+Expira: 2 anos
 _utmb:
-Finalidad: Calcula el tiempo que dura la visita de un usuario almacenando el momento que entro en la página
+Finalidade: Calcula o tempo que dura a visita dun usuario almacenando o momento que entro na páxina
 Expira: 30 minutos
 _utmc:
-Finalidad: Calcula el tiempo que dura la visita de un usuario almacenando el momento que sale de la página.
+Finalidade: Calcula o tempo que dura a visita dun usuario almacenando o momento que sae da páxina.
 Expira: Al finalizar la sesión
 _utmz:
-Finalidad: Mantiene un seguimiento de donde proviene el visitante, que motor de búsqueda se utilizó, en que enlace hizo click, que palabras claves utilizo y desde en qué lugar del mundo se accedió a la página.
+Finalidade: Mantén un seguimento de onde provén o visitante, que motor de procura utilizouse, en que ligazón fixo clic, que palabras craves utilizo e desde en que lugar do mundo accedeuse á páxina.
 Expira: 6 meses
 _ga.js:
-Finalidad: cookies de origen para: determinar el dominio que se medirá, distinguir a los usuarios únicos, recordar el número y la duración de las visitas anteriores, recordar la información de las fuentes de tráfico, determinar el inicio y el fin de una sesión, recordar el valor de las variables personalizadas de visitante. 
-Expira: 2 años
+Finalidade: Cookies de orixe para: determinar o dominio que se medirá, distinguir aos usuarios únicos, lembrar o número e a duración das visitas anteriores, lembrar a información das fontes de tráfico, determinar o inicio e o fin dunha sesión, lembrar o valor das variables personalizadas de visitante.
+
+Expira: 2 anos
 _ga:
-Finalidad: Se utiliza para distinguir a los usuarios 
-Expira: 2 años
+Finalidade: Utilízase para distinguir aos usuarios
+Expira: 2 anos
 
 
 [TWITTER]
  
 
-## Revocación del consentimiento:
-Si más adelante decides revocar el consentimiento  configurar tu navegador para que rechace las cookies y también deberás borrar elhistorial para eliminar las ya instaladas.
+## Revogación do consentimento
+Se máis adiante decides revogar o consentimento configurar o teu navegador para que rexeite as cookies e tamén deberás borrar o historial para eliminar as xa instaladas.
 
-Si por cualquier motivo decides que no quieres que se instalen las cookies en tu ordenador tenemos obligación de informarte sobre cómo hacerlo y para ello deberás configurar tu navegador. A continuación te facilitamos los enlaces para la configuración de las cookies en los principales navegadores.
+Se por calquera motivo decides que non queres que se instalen as cookies no teu ordenador temos obriga de informarche sobre como facelo e para iso deberás configurar o teu navegador. A continuación facilitámosche as ligazóns para a configuración das cookies nos principais navegadores.
 
-## Desactivación de las cookies.
-A continuación te facilitamos los enlaces con la información necesaria para desactivar las cookies de los navegadores más utilizados:
+## Desactivación das cookies.
+A continuación facilitámosche as ligazóns coa información necesaria para desactivar as  cookies dos navegadores máis utilizados:
 
 Internet Explorer Más información
-Firefox Más Información
-Chrome Más información
-Opera Más información
-Safari Más información
-Safari para IOS Más información
-Chrome para Android Más Información
-Enlaces: Cuando enlaza con noticias o vídeos externos a nuestra web, la página enlazada puede contener otras cookies y deberá visitar su propia política de cookies para ajustar la configuración, ya que son completamente ajenas a nosotros.
+Firefox Máis Información
+Chrome Máis información
+Opera Máis información
+Safari Máis información
+Safari para IOS Máis información
+Chrome para Android Máis Información
+Ligazóns: Cando enlaza con noticias ou vídeos externos á nosa web, a páxina enlazada pode conter outras  cookies e deberá visitar a súa propia política de  cookies para axustar a configuración, xa que son completamente alleas a nós.
 
-Si quiere eliminar la publicidad originada por las cookies de tercera parte, también tiene la opción de instalar en su navegador un plugin como Adblock, que bloquee los anuncios.
+Se quere eliminar a publicidade orixinada polas cookies de terceira parte, tamén ten a opción de instalar no seu navegador un  plugin como  Adblock, que bloquee os anuncios.
 
-También puedes aplicar la extensión “Ghostery” a su navegador y bloquear individualmente aquellas cookies, plugins y widgest que no le interesen.
+Tamén podes aplicar a extensión “Ghostery” ao seu navegador e bloquear individualmente aquelas cookies, plugins e widgets que non lle interesen.
 
-En cualquier caso recomendamos hacer una limpieza del historial de navegación y de las cookies de su ordenador de manera sistemática.
+En calquera caso recomendamos facer unha limpeza do historial de navegación e das cookies do seu computador de maneira sistemática.
 
-Tambien puedes obtener más información en: http://www.youronlinechoices.com/es/
+Tamén podes obter máis información en: http://www.youronlinechoices.com/es/
 
-Por último, puede gestionar las cookies instaladas por Adobe Flash Player desde la web de Adobe. Las cookies de terceros podrán ser modificadas, implementadas o anuladas por ellos mismos sin que nos lo notifiquen, por lo que no podemos hacernos responsables de que la información esté perfectamente actualizada en todo momento según la ley establece. No obstante para ofrecerle un mejor servicio de información hemos enlazado las políticas de cookies y privacidad de estos terceros con la finalidad de que se puedan consultar en cualquier momento en su versión más actualizada y por nuestra parte iremos revisándola periódicamente para actualizar nuestros textos.
+Por último, pode xestionar as cookies instaladas por Adobe Flash Player desde a web de Adobe. As cookies de terceiros poderán ser modificadas, implementadas ou anuladas por eles mesmos sen que nolo notifiquen, polo que non podemos facernos responsables de que a información estea perfectamente actualizada en todo momento segundo a lei establece. Con todo para ofrecerlle un mellor servizo de información enlazamos as políticas de  cookies e privacidade destes terceiros coa finalidade de que se poidan consultar en calquera momento na súa versión máis actualizada e pola nosa banda iremos revisándoa periodicamente para actualizar os nosos textos.
