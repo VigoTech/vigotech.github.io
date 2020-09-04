@@ -49,7 +49,7 @@
     "googleapis": "^34.0.0",
     "jsonschema": "^1.2.4",
     "metagroup-schema-tools": "^1.0.7",
-    "node-sass": "^4.9.4",
+    "node-sass": "^4.13.1",
     "nodemon": "^1.11.0",
     "rss-parser": "^3.5.2",
     "sass-loader": "^7.1.0",
