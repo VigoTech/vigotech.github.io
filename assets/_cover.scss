@@ -104,5 +104,27 @@
         }
       }
     }
+
+    &.vigotech-next-event-active {
+      padding: 10px;
+      border: 10px solid $primary-color;
+      animation-duration: 1.2s;
+      animation-iteration-count: infinite;
+      animation-name: highlightBorder;
+    }
+  }
+}
+
+@keyframes highlightBorder {
+  0% {
+    border-color: $black;
+  }
+
+  50% {
+    border-color: $primary-color;
+  }
+
+  100% {
+    border-color: $black;
   }
 }
