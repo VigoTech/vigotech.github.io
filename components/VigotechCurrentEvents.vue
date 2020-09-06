@@ -1,9 +1,9 @@
 <template>
-  <div class="vigotech-next-event">
+  <div class="vigotech-next-event vigotech-next-event-active">
     <h4>
       <i class="fa fa-calendar" />
-      <span v-if="nextEventsGroups.length == 1">Vindeiro evento</span>
-      <span v-else>Vindeiros eventos</span>
+      <span v-if="nextEventsGroups.length == 1">Evento activo</span>
+      <span v-else>Eventos en curso</span>
     </h4>
 
     <div

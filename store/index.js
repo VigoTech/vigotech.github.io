@@ -65,7 +65,6 @@ export const getters = {
         if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
           continue
         }
-
         let date = group.nextEvent.date
 
         if (date > new Date().getTime() && date < groupNextEvent.nextEvent.date) {
@@ -87,9 +86,9 @@ export const getters = {
     }
   },
   nextEvents(state, getters) {
-
     try {
       const nextEventGroup = getters.nextEventGroup
+
 
       if (nextEventGroup === {}) {
         return {};

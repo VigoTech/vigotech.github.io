@@ -1,7 +1,7 @@
 <template>
   <div>
     <CoverSection
-      :next-events="nextEvents"
+      :next-events-groups="nextEventsGroup"
       class="page-section"
     />
 
@@ -62,7 +62,7 @@
       nextEventGroup() {
         return this.$store.getters.nextEventGroup
 s     },
-      nextEvents() {
+      nextEventsGroup() {
         return this.$store.getters.nextEvents
       },
       vigotechFriends() {
