@@ -251,7 +251,7 @@
         "meetup": "https://www.meetup.com/es-ES/Vigo-JUG/",
         "twitter": "https://twitter.com/vigojug/",
         "linkedin": "https://www.linkedin.com/organization/11056204",
-        "youtube": "https://www.youtube.com/channel/UCNOihTnorv6dZDANaPXgx_g"
+        "youtube": "https://www.youtube.com/channel/UCYSy-eQm6Q02o7WiR6JTqJg"
       },
       "events": {
         "type": "meetup",
@@ -261,6 +261,10 @@
         {
           "type": "youtube",
           "channel_id": "UCNOihTnorv6dZDANaPXgx_g"
+        },
+        {
+          "type": "youtube",
+          "channel_id": "UCYSy-eQm6Q02o7WiR6JTqJg"
         }
       ]
     },
