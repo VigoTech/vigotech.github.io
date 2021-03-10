@@ -1,0 +1,26 @@
+{
+  "title": "VigoTech Alliance manual event JSON schema",
+  "type": "object",
+  "description": "",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "additionalProperties": false,
+  "required": [
+    "title",
+    "date",
+    "url"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "description": "Eventname"
+    },
+    "date": {
+      "type": "numeric",
+      "description": "Unix timestamp event datetime"
+    },
+    "url": {
+      "type": "string",
+      "description": "Event URL"
+    }
+  }
+}
