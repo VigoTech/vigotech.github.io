@@ -51,7 +51,7 @@
     "google-auth-library": "^7.1.0",
     "googleapis": "^74.2.0",
     "jsonschema": "^1.2.4",
-    "metagroup-schema-tools": "^1.0.7",
+    "metagroup-schema-tools": "^1.0.8",
     "node-sass": "^6.0.0",
     "nodemon": "^2.0.7",
     "rss-parser": "^3.5.2",
