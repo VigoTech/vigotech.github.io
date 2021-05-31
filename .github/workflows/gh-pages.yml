@@ -32,11 +32,15 @@ jobs:
           VIGOTECH_MEMBERS_SOURCE_GENERATED_FILE: static/vigotech-generated.json
           VIGOTECH_FRIENDS_SOURCE: /friends.json
           MEETUP_API_BASE: 'http://api.meetup.com'
-          GA: 'UA-98368785-1'
           EVENTBRITE_OAUTH_TOKEN: ${{ secrets.EVENTBRITE_OAUTH_TOKEN }}
           YOUTUBE_API_KEY: ${{ secrets.YOUTUBE_API_KEY }}
       - name: Build
         run: yarn generate:gh-pages
+        env:
+          GA: 'UA-98368785-1'
+          VIGOTECH_FRIENDS_SOURCE: /friends.json
+          VIGOTECH_MEMBERS_SOURCE_GENERATED: /vigotech-generated.json
+          VIGOTECH_MEMBERS_SOURCE: /vigotech.json
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v3
         with:
