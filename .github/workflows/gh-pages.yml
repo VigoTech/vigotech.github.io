@@ -1,6 +1,8 @@
 name: GH-pages
 
 on:
+  schedule:
+    - cron: "* 16 * * *"
   push:
     branches:
       - source
