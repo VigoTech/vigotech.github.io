@@ -44,12 +44,13 @@
 
 
     <div
-      v-if="video.player== 'teltek'"
+      v-if="video.player == 'teltek'"
       class="embed-responsive  embed-responsive-16by9"
     >
       <iframe
-        :src="`https://replay.teltek.es/videoplayer/${video.id}?autostart=false`"
+        :src="`https://replay.teltek.es/iframe/${video.id}`"
         class="embed-responsive-item"
+        allowfullscreen
         frameborder="0"
       />
       <h3 v-if="showTitles">{{ pubDate(video.pubDate) }}</h3>
