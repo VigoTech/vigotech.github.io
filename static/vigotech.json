@@ -111,12 +111,7 @@
       "links": {
         "web": "https://www.joomlavigo.es/",
         "twitter": "https://twitter.com/JoomlaVigo",
-        "facebook": "https://www.facebook.com/JoomlaVigo/",
-        "meetup": "https://www.meetup.com/es-ES/Grupo-de-Usuarios-de-Joomla-de-Vigo/"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Grupo-de-Usuarios-de-Joomla-de-Vigo"
+        "facebook": "https://www.facebook.com/JoomlaVigo/"
       }
     },
     "jsvigo": {
