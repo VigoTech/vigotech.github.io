@@ -61,6 +61,9 @@
     components: {
       Menu
     },
+    serverPrefetch () {
+      return this.fetchData()
+    },
     methods: {
       onCookieStatus(status) {
         this.$store.commit('setCookieStatus', status);
@@ -69,14 +72,7 @@
           this.$ga.page(this.$router);
         }
       },
-      onCookieClickedAccept() {
-
-      },
-    },
-    serverPrefetch () {
-      return this.fetchData()
-    },
-    methods: {
+      onCookieClickedAccept() {},
       async fetchData () {
         await this.$store.dispatch('loadConfig')
         await this.$store.dispatch('loadData')

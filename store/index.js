@@ -65,7 +65,6 @@ export const getters = {
         if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
           continue
         }
-
         let date = group.nextEvent.date
 
         if (date > new Date().getTime() && date < groupNextEvent.nextEvent.date) {
@@ -86,10 +85,10 @@ export const getters = {
       return {}
     }
   },
-  nextEvents(state, getters) {
-
+  nextEvents (state, getters) {
     try {
       const nextEventGroup = getters.nextEventGroup
+
 
       if (nextEventGroup === {}) {
         return {};
@@ -119,6 +118,81 @@ export const getters = {
           }
         }
         return groupNextEvents;
+      }
+    } catch (e) {
+    }
+  },
+  activeEventGroup (state) {
+    let groupsByNextEvent = getters.membersAndRoot(state)
+    let groupNextEvent = {
+      nextEvent: {
+        date: 9999999999999
+      }
+    }
+
+    for (let groupKey in groupsByNextEvent) {
+      let group = groupsByNextEvent[groupKey]
+      try {
+        if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
+          continue
+        }
+        let date = group.nextEvent.date
+
+        if (
+          date < +new Date() &&
+          (date + 3600000) > +new Date() &&
+          date < groupNextEvent.nextEvent.date
+        ) {
+          groupNextEvent = group
+
+        }
+      }
+      catch (e) {
+        console.log(e)
+      }
+    }
+
+
+    if (groupNextEvent.nextEvent.date < 9999999999999) {
+      return groupNextEvent
+    }
+    else {
+      return {}
+    }
+  },
+  activeEvents(state, getters) {
+    try {
+      const activeEventGroup = getters.activeEventGroup
+
+      if (activeEventGroup === {}) {
+        return {};
+      } else {
+        let groupsByActiveEvent = getters.membersAndRoot
+        let groupActiveEvents = []
+
+        for (let groupKey in groupsByActiveEvent) {
+          let group = groupsByActiveEvent[groupKey]
+          try {
+            if (group.nextEvent === undefined || group.nextEvent.date === undefined) {
+              continue
+            }
+
+            const date = new Date(group.nextEvent.date)
+            const dateString = `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+
+            const now = new Date(activeEventGroup.nextEvent.date)
+            const nowString = `${now.getFullYear()}-${now.getMonth()}-${now.getDate()}`
+
+            if (dateString === nowString) {
+              groupActiveEvents.push(group)
+            }
+          }
+          catch (e) {
+            console.log(e)
+          }
+        }
+
+        return groupActiveEvents;
       }
     } catch (e) {
     }
