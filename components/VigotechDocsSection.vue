@@ -21,7 +21,7 @@
                   href="https://github.com/VigoTech/documentos/blob/master/manifiesto.md"
                   class="btn btn-block btn-lg"
                 >
-                  Manifiesto
+                  Manifesto
                 </a>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col">
@@ -37,7 +37,7 @@
                   href="https://github.com/VigoTech/documentos/blob/master/condicionsentrada.md"
                   class="btn btn-block btn-lg"
                 >
-                  Cóndicions de entrada
+                  Condicións de entrada
                 </a>
               </div>
               <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3 col">

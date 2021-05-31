@@ -1,6 +1,6 @@
 <template>
   <div>
-    <PageHeader title="Charlas en video" />
+    <PageHeader title="Charlas en vídeo" />
 
     <section id="videos">
 
@@ -68,7 +68,7 @@
                   :href="`https://www.youtube.com/channel/${videoSource.channel_id}`"
                   class="btn"
                 >
-                  Ver todos os videos do grupo
+                  Ver todos os vídeos do grupo
                 </a>
               </section>
             </div>

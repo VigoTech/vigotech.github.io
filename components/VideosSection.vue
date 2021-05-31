@@ -10,12 +10,12 @@
             class="section-title"
           >
             <div>
-              Charlas en video
+              Charlas en vídeo
             </div>
           </h2>
 
           <div class="section-content section-content-center">
-            <p>A maioría de charlas está gravadas e dispoñibles para o seu visionado.</p>
+            <p>A maioría de charlas están gravadas e dispoñibles para o seu visionamento.</p>
 
             <div class="row">
               <div
