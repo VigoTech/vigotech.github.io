@@ -61,15 +61,16 @@
                   </article>
                 </div>
 
-                <a
-                  v-for="(videoSource, key) in group.videos"
-                  v-if="videoSource.type == 'youtube'"
-                  :key="key"
-                  :href="`https://www.youtube.com/channel/${videoSource.channel_id}`"
-                  class="btn"
-                >
-                  Ver todos os vídeos do grupo
-                </a>
+                <template v-for="(videoSource, key) in group.videos" >
+                  <a
+                    v-if="videoSource.type == 'youtube'"
+                    :key="`youtube-${key}`"
+                    :href="`https://www.youtube.com/channel/${videoSource.channel_id}`"
+                    class="btn"
+                  >
+                    Ver todos os vídeos do grupo
+                  </a>
+                </template>
               </section>
             </div>
           </div>

@@ -111,12 +111,7 @@
       "links": {
         "web": "https://www.joomlavigo.es/",
         "twitter": "https://twitter.com/JoomlaVigo",
-        "facebook": "https://www.facebook.com/JoomlaVigo/",
-        "meetup": "https://www.meetup.com/es-ES/Grupo-de-Usuarios-de-Joomla-de-Vigo/"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Grupo-de-Usuarios-de-Joomla-de-Vigo"
+        "facebook": "https://www.facebook.com/JoomlaVigo/"
       }
     },
     "jsvigo": {
@@ -251,7 +246,9 @@
         "meetup": "https://www.meetup.com/es-ES/Vigo-JUG/",
         "twitter": "https://twitter.com/vigojug/",
         "linkedin": "https://www.linkedin.com/organization/11056204",
-        "youtube": "https://www.youtube.com/channel/UCYSy-eQm6Q02o7WiR6JTqJg"
+        "youtube": "https://www.youtube.com/channel/UCYSy-eQm6Q02o7WiR6JTqJg",
+        "ivoox": "https://www.ivoox.com/podcast-laretasgeek_sq_f1939875_1.html",
+        "spotify": "https://open.spotify.com/show/2iMpr5Kos3j5YuqB6HfYWL"
       },
       "events": {
         "type": "meetup",
