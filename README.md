@@ -10,8 +10,8 @@ $ yarn install
 
 # rename .env.example to .env and edit using your own config
 
-# prepare date to generate website
-$ yarn prepare
+# prepare required static/vigotech-generated.json
+$ yarn run prepare-json
 
 # serve with hot reload at localhost:3000
 $ yarn run dev
