@@ -27,7 +27,7 @@
     "lodash": "^4.17.19",
     "lodash.template": "^4.5.0",
     "mixin-deep": "^2.0.1",
-    "moment": "^2.22.2",
+    "moment": "^2.29.2",
     "nuxt": "^2.15.6",
     "serialize-javascript": "^5.0.1",
     "set-value": "^4.0.0",
