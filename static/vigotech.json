@@ -63,6 +63,18 @@
         "meetupid": "blockchain_gal_vigo"
       }
     },
+    "craftersvigo": {
+      "name": "Crafters Vigo",
+      "logo": "https://vigotech.org/images/craftersVigo.png",
+      "links": {
+        "twitter": "https://twitter.com/CraftersVigo",
+        "meetup": "https://www.meetup.com/craftersvigo/"
+      },
+      "events": {
+        "type": "meetup",
+        "meetupid": "craftersvigo"
+      }
+    },
     "galpon": {
       "name": "GALPon",
       "logo": "https://vigotech.org/images/galpon.png",
