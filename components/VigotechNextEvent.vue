@@ -1,5 +1,5 @@
 <template>
-  <div class="vigotech-next-event">
+  <article class="vigotech-next-event">
     <h4>
       <i class="fa fa-calendar" />
       <span v-if="nextEventsGroups.length == 1">Vindeiro evento</span>
@@ -25,14 +25,20 @@
         <a :href="nextEventGroup.nextEvent.url">
           <h6>{{ nextEventGroup.name }}</h6>
           <h5>{{ nextEventGroup.nextEvent.title }}</h5>
-          <strong>{{ eventDate(nextEventGroup.nextEvent.date) }}</strong>
-          <span class="btn">
-            Máis info
-          </span>
+          <footer>
+            <strong>{{ eventDate(nextEventGroup.nextEvent.date) }}</strong>
+            <span class="btn">
+              Máis info
+            </span>
+          </footer>
+
+          <h6 v-if="nextEventGroup.nextEvent.location" class="vigotech-next-event__location">
+            <i class="fa fa-map-pin"></i> {{ nextEventGroup.nextEvent.location }}
+          </h6>
         </a>
       </div>
     </div>
-  </div>
+  </article>
 </template>
 
 <script>

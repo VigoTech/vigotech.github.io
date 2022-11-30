@@ -29,7 +29,7 @@
     },
     computed: {
       fullTitle () {
-        return `${this.nextEvent.title}\n${moment(this.nextEvent.date).format('dddd, D MMMM YYYY HH:mm')}`
+        return `${this.nextEvent.title}\n${moment(this.nextEvent.date).format('dddd, D MMMM YYYY HH:mm')}${this.nextEvent.location ? `\n${this.nextEvent.location}`: ''}`
       }
     }
   }

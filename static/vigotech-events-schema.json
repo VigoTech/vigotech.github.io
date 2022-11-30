@@ -12,15 +12,19 @@
   "properties": {
     "title": {
       "type": "string",
-      "description": "Eventname"
+      "description": "Event name"
     },
     "date": {
-      "type": "numeric",
+      "type": "number",
       "description": "Unix timestamp event datetime"
     },
     "url": {
       "type": "string",
       "description": "Event URL"
+    },
+    "location": {
+      "type": "string",
+      "description": "Where the event will take place"
     }
   }
 }
