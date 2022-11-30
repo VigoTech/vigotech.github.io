@@ -125,25 +125,6 @@
         "facebook": "https://www.facebook.com/JoomlaVigo/"
       }
     },
-    "jsvigo": {
-      "name": "JavascriptVigo",
-      "logo": "https://vigotech.org/images/jsvigo.png",
-      "links": {
-        "meetup": "https://www.meetup.com/es-ES/JavaScriptVigo/",
-        "twitter": "http://twitter.com/JavaScriptVigo/",
-        "youtube": "https://www.youtube.com/channel/UCjFplxtEs0XtunTn-n0LUtQ"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "JavaScriptVigo"
-      },
-      "videos": [
-        {
-          "type": "youtube",
-          "channel_id": "UCjFplxtEs0XtunTn-n0LUtQ"
-        }
-      ]
-    },
     "phpvigo": {
       "name": "PHPVigo",
       "logo": "https://vigotech.org/images/php_vigo.jpg",
