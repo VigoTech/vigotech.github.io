@@ -19,7 +19,7 @@
     "@nuxtjs/axios": "^5.0.0",
     "@nuxtjs/markdownit": "^2.0.0",
     "@nuxtjs/proxy": "^2.1.0",
-    "axios": "0.21.1",
+    "axios": "0.21.2",
     "cross-env": "^7.0.3",
     "eslint-utils": "^3.0.0",
     "flexboxgrid": "^6.3.1",
