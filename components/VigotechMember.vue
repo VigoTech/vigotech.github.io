@@ -4,8 +4,7 @@
     <div class="logo-wrapper">
       <div class="logo-content">
         <img
-          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw==
-  "
+          src="data:image/gif;base64,R0lGODlhAQABAIAAAP///wAAACH5BAEAAAAALAAAAAABAAEAAAICRAEAOw=="
           class="square-bg"
         >
         <img

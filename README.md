@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-$ yarn install
+$ yarn
 
 # rename .env.example to .env and edit using your own config
 
