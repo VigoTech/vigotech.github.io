@@ -79,6 +79,9 @@
       "logo": "https://vigotech.org/images/galpon.png",
       "links": {
         "web": "https://www.galpon.org",
+        "telegram": "https://t.me/galpon",
+        "mastodon": "https://mastodon.gal/@galpon",
+        "matrix": "https://matrix.to/#/#galpon:matrix",
         "twitter": "https://twitter.com/galpon",
         "maillist": "https://www.galpon.org/content/listas-correo-galpon"
       }
