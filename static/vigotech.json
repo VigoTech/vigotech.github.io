@@ -120,9 +120,7 @@
       "name": "Grupo de Usuarios de Joomla de Vigo",
       "logo": "https://vigotech.org/images/joomla_vigo.png",
       "links": {
-        "web": "https://www.joomlavigo.es/",
-        "twitter": "https://twitter.com/JoomlaVigo",
-        "facebook": "https://www.facebook.com/JoomlaVigo/"
+        "web": "https://www.joomlavigo.es/"
       }
     },
     "phpvigo": {
