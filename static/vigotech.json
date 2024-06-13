@@ -203,19 +203,6 @@
       ]
 
     },
-    "uxgalicia": {
-      "name": "UX Galicia",
-      "logo": "https://vigotech.org/images/ux_gal.jpg",
-      "links": {
-        "web": "http://www.uxgalicia.com/",
-        "meetup": "https://www.meetup.com/es-ES/Experiencia-de-Usuario-Meetup/",
-        "twitter": "https://twitter.com/uxgalicia/"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Experiencia-de-Usuario-Meetup"
-      }
-    },
     "vigoadg": {
       "name": "Vigo Android Developer Group",
       "logo": "https://vigotech.org/images/vigoadg.jpg",
