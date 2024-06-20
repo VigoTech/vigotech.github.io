@@ -41,7 +41,7 @@
 
                 <p>
                   <a
-                    href="https://slackin-vigotech.herokuapp.com/"
+                    href="https://join.slack.com/t/vigotechalliance/shared_invite/zt-7gf7yva8-NXwept0hujWdc3W4S2B8TQ"
                     class="btn"
                   >
                     Consegue unha invitación no teu correo premendo aquí
