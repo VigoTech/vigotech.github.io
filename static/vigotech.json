@@ -62,6 +62,15 @@
         "meetupid": "blockchain_gal_vigo"
       }
     },
+    "cloudnativegalicia": {
+      "name": "Cloud Native Galicia",
+      "logo": "https://cloudnativegalicia.es/wp-content/uploads/2024/08/cncfgalicia4.jpg",
+      "links": {
+        "web": "https://cloudnativegalicia.es/",
+        "twitter": "https://x.com/cloudnativegal",
+        "linkedin": "https://www.linkedin.com/company/104357067",
+        "cncf": "https://community.cncf.io/cloud-native-galicia/"
+    },
     "craftersvigo": {
       "name": "Crafters Vigo",
       "logo": "https://vigotech.org/images/craftersVigo.png",
