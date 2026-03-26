@@ -18,7 +18,8 @@ export const homeConversationT = {
     },
     slack: {
       workspace: 'https://vigotechalliance.slack.com',
-      invite: 'https://slackin-vigotech.herokuapp.com/',
+      invite:
+        'https://join.slack.com/t/vigotechalliance/shared_invite/zt-7gf7yva8-NXwept0hujWdc3W4S2B8TQ',
     },
   },
 } as const
