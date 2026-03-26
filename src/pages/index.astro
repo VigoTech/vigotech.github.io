@@ -5,6 +5,7 @@ import DocumentsSection from '../components/home/DocumentsSection.astro'
 import FriendsSection from '../components/home/FriendsSection.astro'
 import GroupsSection from '../components/home/GroupsSection.astro'
 import HeroSection from '../components/home/HeroSection.astro'
+import CalendarSection from '../components/home/CalendarSection.astro'
 import ConversationSection from '../components/home/ConversationSection.astro'
 import VideosSection from '../components/home/VideosSection.astro'
 import BaseLayout from '../layouts/BaseLayout.astro'
@@ -31,6 +32,7 @@ const recentVideos = getRecentVideos(videos, 3)
 >
   <HeroSection featuredGroups={featuredGroups} totalGroups={groups.length} upcomingEvents={upcomingEvents} />
   <GroupsSection groups={sortedGroups} />
+  <CalendarSection />
   <VideosSection videos={recentVideos} />
   <ConversationSection />
   <DocumentsSection docs={docs} />
