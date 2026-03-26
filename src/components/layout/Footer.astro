@@ -1,0 +1,42 @@
+---
+import Logo from '../../assets/logo.svg'
+import { LANG } from '../../i18n/config'
+import { footerT } from '../../i18n/footer'
+import { withBase } from '../../lib/base-path'
+
+const t = footerT[LANG]
+---
+
+<footer
+  class="mt-20 border-t border-[#d9e4e9]/20 bg-[#eaf5fa] dark:bg-slate-950"
+>
+  <div class="flex w-full flex-col items-center px-8 py-12">
+    <a href={withBase('/')} class="text-primary mb-5">
+      <Logo class="h-7 w-auto sm:h-8" aria-label={t.brand} role="img" />
+    </a>
+    <div class="mb-10 flex flex-wrap justify-center gap-7">
+      <a
+        class="text-xs uppercase tracking-[0.16em] text-slate-500 underline-offset-4 transition-opacity hover:underline"
+        href={withBase('/codigo-conduta')}
+      >
+        {t.links.codeOfConduct}
+      </a>
+      <a
+        class="text-xs uppercase tracking-[0.16em] text-slate-500 underline-offset-4 transition-opacity hover:underline"
+        href={withBase('/condicions-entrada')}
+      >
+        {t.links.conditions}
+      </a>
+      <a
+        class="text-xs uppercase tracking-[0.16em] text-slate-500 underline-offset-4 transition-opacity hover:underline"
+        href={withBase('/codigo-conduta-slack')}
+      >
+        {t.links.slackPolicy}
+      </a>
+    </div>
+    <p class="text-xs uppercase tracking-[0.16em] text-slate-500">
+      &copy; 2017-{new Date().getFullYear()}
+      {t.copyright}
+    </p>
+  </div>
+</footer>

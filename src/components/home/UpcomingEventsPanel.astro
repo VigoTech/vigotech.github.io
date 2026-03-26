@@ -1,0 +1,82 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LANG } from '../../i18n/config'
+import { homeHeroT } from '../../i18n/home-hero'
+import UpcomingEventCard from './upcoming-event-card/UpcomingEventCard.astro'
+
+type Props = {
+  upcomingEvents: Array<CollectionEntry<'events'>>
+}
+
+const { upcomingEvents } = Astro.props
+const t = homeHeroT[LANG]
+
+const nowWithBuffer = Date.now() - 2 * 60 * 60 * 1000
+const activeUpcomingEvents = upcomingEvents.filter(
+  (event) => event.data.date >= nowWithBuffer,
+)
+---
+
+{
+  activeUpcomingEvents.length > 0 && (
+    <aside
+      class="col-span-12 h-full lg:col-span-5 lg:block lg:pt-8"
+      data-upcoming-events-panel
+      data-buffer-ms="7200000"
+    >
+      <div class="flex h-[32rem] flex-col overflow-hidden rounded-xl bg-white/25 p-5 text-ink backdrop-blur-xl">
+        <div class="mb-4 flex items-center justify-between">
+          <p class="text-xs font-semibold tracking-[0.14em] text-ink-contrast uppercase">
+            {t.upcomingEvents} ({activeUpcomingEvents.length})
+          </p>
+        </div>
+        <div class="flex flex-1 flex-col gap-3 overflow-y-auto pr-1">
+          {activeUpcomingEvents.map((event) => (
+            <div data-event-card data-event-date={event.data.date}>
+              <UpcomingEventCard event={event} />
+            </div>
+          ))}
+        </div>
+      </div>
+    </aside>
+  )
+}
+
+<script is:inline>
+  ;(() => {
+    const panel = document.querySelector('[data-upcoming-events-panel]')
+    if (!panel) {
+      return
+    }
+
+    const bufferMs = Number(panel.getAttribute('data-buffer-ms') || '7200000')
+
+    const refresh = () => {
+      const now = Date.now() - bufferMs
+      const cards = Array.from(panel.querySelectorAll('[data-event-card]'))
+      let visible = 0
+
+      cards.forEach((card) => {
+        const date = Number(card.getAttribute('data-event-date') || '0')
+        const show = Number.isFinite(date) && date >= now
+        card.classList.toggle('hidden', !show)
+        if (show) {
+          visible += 1
+        }
+      })
+
+      if (visible === 0) {
+        panel.remove()
+      }
+    }
+
+    refresh()
+    const interval = window.setInterval(refresh, 60_000)
+    window.addEventListener(
+      'beforeunload',
+      () => window.clearInterval(interval),
+      { once: true },
+    )
+  })()
+</script>

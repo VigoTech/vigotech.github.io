@@ -1,0 +1,47 @@
+---
+import { withBase } from '../../lib/base-path'
+
+type Props = {
+  src: string | null
+  name: string
+  sizeClass?: string
+  class?: string
+  fallbackClass?: string
+}
+
+const {
+  src,
+  name,
+  sizeClass = 'size-10',
+  class: customClass = '',
+  fallbackClass = 'text-xs font-semibold text-[var(--ink)]',
+} = Astro.props
+
+const initials = name
+  .split(/\s+/)
+  .filter(Boolean)
+  .slice(0, 2)
+  .map((part) => part[0])
+  .join('')
+  .toUpperCase()
+
+const resolvedSrc = src ? withBase(src) : null
+---
+
+{
+  resolvedSrc ? (
+    <img
+      src={resolvedSrc}
+      alt={name}
+      loading="lazy"
+      class={`vt-squircle ${sizeClass} border border-[var(--line)] bg-white object-cover ${customClass}`}
+    />
+  ) : (
+    <div
+      class={`vt-squircle ${sizeClass} flex items-center justify-center border border-[var(--line)] bg-[var(--bg-elevated)] ${fallbackClass} ${customClass}`}
+      aria-label={name}
+    >
+      {initials || 'VT'}
+    </div>
+  )
+}

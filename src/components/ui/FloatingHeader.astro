@@ -1,0 +1,412 @@
+---
+type FilterOption = {
+  id: string
+  label: string
+}
+
+type Props = {
+  eyebrow?: string
+  title: string
+  searchPlaceholder?: string
+  filters?: FilterOption[]
+  activeFilterId?: string
+  searchValue?: string
+  threshold?: number
+  eventName?: string
+  showControls?: boolean
+}
+
+const {
+  eyebrow,
+  title,
+  searchPlaceholder = '',
+  filters = [],
+  activeFilterId = '',
+  searchValue = '',
+  threshold = 0,
+  eventName,
+  showControls = true,
+} = Astro.props
+
+const escapeHtml = (value: string): string =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+
+const renderMarkdownInline = (value: string): string =>
+  escapeHtml(value).replace(
+    /\*\*(.+?)\*\*/g,
+    '<span class="italic text-primary">$1</span>',
+  )
+
+const titleHtml = renderMarkdownInline(title)
+---
+
+<div
+  data-sticky-filters
+  data-sticky-event={eventName}
+  data-sticky-threshold={threshold}
+  class="vt-sticky-host mb-6"
+>
+  <div data-sticky-base class="vt-sticky-base">
+    <div
+      data-sticky-shell
+      data-has-controls={showControls ? 'true' : 'false'}
+      data-scrolled="false"
+      class="vt-sticky-shell"
+    >
+      <div class="vt-sticky-content">
+        <div class="vt-sticky-heading">
+          {
+            eyebrow && (
+              <span class="font-headline text-xs font-bold tracking-[0.14em] text-primary uppercase">
+                {eyebrow}
+              </span>
+            )
+          }
+          <h1
+            class="mt-2 font-headline text-4xl tracking-tight text-ink sm:text-5xl"
+            set:html={titleHtml}
+          />
+        </div>
+
+        {
+          showControls ? (
+            <div class="vt-sticky-controls" data-controls-expanded="false">
+              <div class="vt-sticky-controls-top flex items-center gap-3">
+                <h2
+                  class="vt-sticky-compact-title font-headline tracking-tight text-ink"
+                  set:html={titleHtml}
+                />
+
+                <button
+                  type="button"
+                  class="vt-sticky-controls-toggle ml-auto inline-flex items-center gap-2 rounded-full bg-[var(--bg-panel)] px-4 font-headline text-sm font-bold text-ink shadow-[0_16px_24px_-20px_rgba(0,0,0,.45)] lg:hidden"
+                  data-sticky-controls-toggle
+                  aria-expanded="false"
+                >
+                  <span>Filtros</span>
+                  <span
+                    class="material-symbols-outlined text-[1.1rem]"
+                    data-sticky-controls-icon
+                  >
+                    tune
+                  </span>
+                </button>
+              </div>
+
+              <div class="vt-sticky-controls-panel">
+                <div class="vt-filter-scroll-wrap">
+                  <div class="vt-filter-list" data-sticky-filter-list>
+                    {filters.map((filter) => {
+                      const active = filter.id === activeFilterId
+
+                      return (
+                        <button
+                          class={`vt-filter-chip cursor-pointer rounded-full px-4 font-headline text-sm font-bold whitespace-nowrap ${
+                            active
+                              ? 'bg-primary text-white shadow-lg shadow-primary/20'
+                              : 'bg-[var(--bg-panel)] text-ink-soft'
+                          }`}
+                          data-filter-id={filter.id}
+                          data-active={active ? 'true' : 'false'}
+                          type="button"
+                        >
+                          {filter.label}
+                        </button>
+                      )
+                    })}
+                  </div>
+                </div>
+
+                <div class="relative w-full lg:ml-auto lg:max-w-[320px]">
+                  <span class="material-symbols-outlined pointer-events-none absolute top-1/2 left-4 -translate-y-1/2 text-ink-soft">
+                    search
+                  </span>
+                  <input
+                    data-sticky-search
+                    type="search"
+                    value={searchValue}
+                    placeholder={searchPlaceholder}
+                    class="vt-filter-input w-full rounded-full bg-[var(--bg-panel)] pr-5 pl-12 text-ink placeholder:text-ink-soft focus:ring-2 focus:ring-primary/20 focus:outline-none"
+                  />
+                </div>
+              </div>
+            </div>
+          ) : (
+            <div class="vt-sticky-title-bar">
+              <h2
+                class="vt-sticky-compact-title font-headline tracking-tight text-ink"
+                set:html={titleHtml}
+              />
+            </div>
+          )
+        }
+      </div>
+    </div>
+  </div>
+
+  <div
+    data-sticky-floating-slot
+    class="vt-sticky-floating-slot"
+    aria-hidden="true"
+  >
+  </div>
+</div>
+
+<script is:inline>
+  ;(() => {
+    const bindHost = (host) => {
+      if (!(host instanceof HTMLElement)) {
+        return
+      }
+
+      if (host.dataset.floatingHeaderBound === 'true') {
+        return
+      }
+
+      const base = host.querySelector('[data-sticky-base]')
+      const baseShell = host.querySelector(
+        '[data-sticky-base] [data-sticky-shell]',
+      )
+      const floatingSlot = host.querySelector('[data-sticky-floating-slot]')
+      const eventName = host.dataset.stickyEvent
+
+      if (
+        !(base instanceof HTMLElement) ||
+        !(baseShell instanceof HTMLElement) ||
+        !(floatingSlot instanceof HTMLElement)
+      ) {
+        return
+      }
+
+      const floating = baseShell.cloneNode(true)
+      if (!(floating instanceof HTMLElement)) {
+        return
+      }
+
+      floating.setAttribute('data-floating', 'true')
+      floating.dataset.scrolled = 'false'
+      floating.classList.add('vt-sticky-shell-floating')
+      floatingSlot.replaceChildren(floating)
+
+      const configuredThreshold = Number(host.dataset.stickyThreshold || '0')
+      const hasControls = floating.dataset.hasControls === 'true'
+      const controls = floating.querySelector('.vt-sticky-controls')
+      const controlsToggle = floating.querySelector(
+        '[data-sticky-controls-toggle]',
+      )
+      const controlsIcon = floating.querySelector('[data-sticky-controls-icon]')
+      const buttons = Array.from(floating.querySelectorAll('[data-filter-id]'))
+      const search = floating.querySelector('[data-sticky-search]')
+      const pageContent = document.querySelector('[data-page-content]')
+
+      if (
+        hasControls &&
+        (!(search instanceof HTMLInputElement) || buttons.length === 0)
+      ) {
+        return
+      }
+
+      let activeFilterId =
+        buttons
+          .find((button) => button.getAttribute('data-active') === 'true')
+          ?.getAttribute('data-filter-id') ||
+        buttons[0]?.getAttribute('data-filter-id') ||
+        ''
+      let stickyTicking = false
+      let stickyStart = 0
+      let mobileExpanded = false
+
+      const syncControlsState = () => {
+        if (!(controls instanceof HTMLElement)) {
+          return
+        }
+
+        const narrow = window.innerWidth < 1024
+        const expanded = !narrow || mobileExpanded
+        controls.dataset.controlsExpanded = expanded ? 'true' : 'false'
+        floating.dataset.controlsExpanded =
+          narrow && mobileExpanded ? 'true' : 'false'
+        pageContent?.removeAttribute('data-overlay-blocked')
+
+        if (controlsToggle instanceof HTMLButtonElement) {
+          controlsToggle.setAttribute(
+            'aria-expanded',
+            expanded ? 'true' : 'false',
+          )
+        }
+
+        if (controlsIcon instanceof HTMLElement) {
+          controlsIcon.textContent = narrow && mobileExpanded ? 'close' : 'tune'
+        }
+      }
+
+      const syncFloatingGeometry = () => {
+        const rect = base.getBoundingClientRect()
+        floating.style.left = `${Math.round(rect.left)}px`
+        floating.style.width = `${Math.round(rect.width)}px`
+      }
+
+      const updateBaseHeight = () => {
+        const height = Math.round(baseShell.getBoundingClientRect().height)
+        stickyStart = Math.round(
+          base.getBoundingClientRect().top + window.scrollY,
+        )
+        base.style.height = `${height}px`
+        syncFloatingGeometry()
+      }
+
+      const syncButtons = () => {
+        if (!hasControls) {
+          return
+        }
+
+        buttons.forEach((button) => {
+          const selected =
+            button.getAttribute('data-filter-id') === activeFilterId
+          button.setAttribute('data-active', selected ? 'true' : 'false')
+          button.classList.toggle('bg-primary', selected)
+          button.classList.toggle('text-white', selected)
+          button.classList.toggle('shadow-lg', selected)
+          button.classList.toggle('shadow-primary/20', selected)
+          button.classList.toggle('bg-[var(--bg-panel)]', !selected)
+          button.classList.toggle('text-[var(--ink-soft)]', !selected)
+        })
+      }
+
+      const emitChange = () => {
+        if (!hasControls || !eventName) {
+          return
+        }
+
+        syncButtons()
+
+        host.dispatchEvent(
+          new CustomEvent(eventName, {
+            bubbles: true,
+            detail: {
+              activeFilterId,
+              searchValue:
+                search instanceof HTMLInputElement ? search.value.trim() : '',
+            },
+          }),
+        )
+      }
+
+      const syncSticky = () => {
+        const stickyTop = window.innerWidth < 640 ? 86 : 96
+        const scrolled =
+          configuredThreshold > 0
+            ? window.scrollY > configuredThreshold
+            : window.scrollY >= stickyStart - stickyTop
+
+        floating.dataset.scrolled = scrolled ? 'true' : 'false'
+        syncFloatingGeometry()
+      }
+
+      const onScroll = () => {
+        if (stickyTicking) {
+          return
+        }
+
+        stickyTicking = true
+        window.requestAnimationFrame(() => {
+          syncSticky()
+          stickyTicking = false
+        })
+      }
+
+      const resizeObserver = new ResizeObserver(() => {
+        updateBaseHeight()
+        syncControlsState()
+        syncSticky()
+      })
+
+      const closeMobileFilters = () => {
+        mobileExpanded = false
+        syncControlsState()
+        updateBaseHeight()
+        syncSticky()
+      }
+
+      resizeObserver.observe(document.body)
+      resizeObserver.observe(base)
+      resizeObserver.observe(baseShell)
+
+      if (hasControls) {
+        buttons.forEach((button) => {
+          button.addEventListener('click', () => {
+            activeFilterId =
+              button.getAttribute('data-filter-id') || activeFilterId
+            emitChange()
+          })
+        })
+
+        search.addEventListener('input', emitChange)
+
+        if (controlsToggle instanceof HTMLButtonElement) {
+          controlsToggle.addEventListener('click', () => {
+            mobileExpanded = !mobileExpanded
+            syncControlsState()
+            updateBaseHeight()
+            syncSticky()
+          })
+        }
+      }
+
+      if (hasControls) {
+        host.addEventListener('vt:sticky-filters-sync', (event) => {
+          const detail = event.detail || {}
+
+          if (
+            typeof detail.activeFilterId === 'string' &&
+            detail.activeFilterId.length > 0
+          ) {
+            activeFilterId = detail.activeFilterId
+          }
+
+          if (
+            typeof detail.searchValue === 'string' &&
+            search instanceof HTMLInputElement
+          ) {
+            search.value = detail.searchValue
+          }
+
+          emitChange()
+        })
+      }
+
+      window.addEventListener('scroll', onScroll, { passive: true })
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 1024) {
+          closeMobileFilters()
+          return
+        }
+
+        updateBaseHeight()
+        syncControlsState()
+        syncSticky()
+      })
+
+      syncControlsState()
+      updateBaseHeight()
+      syncButtons()
+      syncSticky()
+      emitChange()
+
+      host.dataset.floatingHeaderBound = 'true'
+    }
+
+    const setup = () => {
+      document
+        .querySelectorAll('[data-sticky-filters]')
+        .forEach((element) => bindHost(element))
+    }
+
+    setup()
+  })()
+</script>

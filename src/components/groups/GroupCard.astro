@@ -1,0 +1,84 @@
+---
+import type { CollectionEntry } from 'astro:content'
+import { Icon } from 'astro-icon/components'
+
+import { LANG } from '../../i18n/config'
+import { groupsT } from '../../i18n/groups'
+import { withBase } from '../../lib/base-path'
+import { getGroupSocialLinks } from '../../lib/vigotech/socials'
+import GroupLogo from '../ui/GroupLogo.astro'
+
+type Props = {
+  group: CollectionEntry<'groups'>
+  compact?: boolean
+  showStatus?: boolean
+}
+
+const { group, compact = false, showStatus = false } = Astro.props
+const t = groupsT[LANG]
+const cardPadding = compact ? 'p-4' : 'p-6'
+const socialLinks = getGroupSocialLinks(group.data.links)
+const cardWidth = 'w-full'
+---
+
+<article class={`relative overflow-hidden rounded-2xl bg-[var(--bg-panel)] ${cardPadding} h-full ${cardWidth}`}>
+  {
+    showStatus &&
+      (group.data.inactive ? (
+        <span class='absolute top-0 right-0 inline-flex min-w-24 justify-center rounded-tr-2xl rounded-bl-2xl bg-slate-200 px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] text-slate-600 uppercase'>
+          {t.inactive}
+        </span>
+      ) : (
+        <span class='absolute top-0 right-0 inline-flex min-w-24 justify-center rounded-tr-2xl rounded-bl-2xl bg-emerald-100 px-3 py-1.5 text-[10px] font-bold tracking-[0.1em] text-emerald-700 uppercase'>
+          {t.active}
+        </span>
+      ))
+  }
+
+  <div class='mb-4'>
+    <div class='flex items-start gap-3'>
+      <GroupLogo
+        src={group.data.logo}
+        name={group.data.name}
+        sizeClass='size-12'
+        fallbackClass='text-xs font-semibold text-[var(--ink)]'
+      />
+
+      <div>
+        <h3 class='font-headline text-xl tracking-tight'>{group.data.name}</h3>
+        <p class='text-xs tracking-[0.14em] uppercase text-[var(--ink-soft)]'>
+          {group.data.videoCount > 0
+            ? `${group.data.videoCount} ${t.videosLabel}`
+            : t.communityLabel}
+        </p>
+        {
+          group.data.hasVideos && (
+              <a
+              href={withBase(`/videos?group=${encodeURIComponent(group.id)}`)}
+              class='mt-1 inline-block text-xs font-semibold text-primary'
+            >
+              {t.viewVideos}
+            </a>
+          )
+        }
+      </div>
+    </div>
+
+  </div>
+
+  <div class='flex flex-wrap gap-2'>
+    {socialLinks.map((item) => (
+        <a
+          class='inline-flex items-center gap-1.5 rounded-full bg-[var(--bg-elevated)] px-3 py-1 text-xs text-[var(--ink-soft)] transition-colors hover:text-primary'
+          href={item.href}
+          target='_blank'
+          rel='noreferrer'
+          aria-label={`${group.data.name} - ${item.label}`}
+        >
+          <Icon name={item.icon} class='h-3.5 w-3.5' />
+          <span>{item.label}</span>
+        </a>
+      ))}
+  </div>
+
+</article>

@@ -1,90 +1,70 @@
-# vigotech.github.io
+# VigoTech Website (Astro)
 
-> VigoTech Alliance Website
+This project is the Astro migration of the VigoTech website.
 
-## Build Setup
+## Commands
 
-``` bash
-# install dependencies
-$ yarn
+| Command                 | Action                                   |
+| ----------------------- | ---------------------------------------- |
+| `pnpm install`          | Install dependencies                     |
+| `pnpm dev`              | Start local dev server                   |
+| `pnpm dev --mockEvents` | Start dev with synthetic upcoming events |
+| `pnpm generate:data`    | Refresh `public/vigotech-generated.json` |
+| `pnpm check`            | Run Astro checks                         |
+| `pnpm build`            | Type-check and build static site         |
 
-# rename .env.example to .env and edit using your own config
+## Data source
 
-# prepare required static/vigotech-generated.json
-$ yarn run prepare-json
+By default, the site reads source files from `public/`:
 
-# serve with hot reload at localhost:3000
-$ yarn run dev
+- `public/vigotech.json`
+- `public/vigotech-generated.json`
+- `public/friends.json`
 
-# generate static project
-$ yarn run generate
-```
+Run `pnpm generate:data` to rebuild `public/vigotech-generated.json` from
+`public/vigotech.json` using the legacy VigoTech source fetchers.
 
-## Instruccións para engadir información
+## Environment variables
 
-En primeiro lugar para engadir ou editar un membro o grupo, debe modificarse únicamente *static/vigotech.json*
-Este fichero ten un *schema* no fichero *static/vigotech-schema.json* cando se xere a parte de front mediante ```yarn prepare``` este validarase polo que debe asegurarse que estea correcto.
+- `VIGOTECH_MOCK_EVENTS`
+  - Used in development to generate synthetic upcoming events when real events are not available.
+  - Automatically set by `pnpm dev --mockEvents`.
 
-A estructura dun membro (como exemplo collemos un existente) é:
+- `VIGOTECH_CONFIG_DATA_DIR`
+  - Optional override for local source JSON directory.
+  - Default: `public`.
+  - Used for `vigotech.json` and `friends.json`.
 
-```
-"aindustriosa": {
-      "name": "A Industriosa",
-      "logo": "https://vigotech.org/images/aindustriosa.png",
-      "links": {
-        "web": "https://aindustriosa.org/",
-        "twitter": "https://twitter.com/aindustriosa",
-        "meetup": "https://www.meetup.com/es-ES/AIndustriosa/",
-        "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "AIndustriosa"
-      },
-      "videos": [
-        {
-          "type": "youtube",
-          "channel_id": "UC9DPKfcLiNd7SEU-QLlIG7A"
-        }
-      ]
-    }
-```
+- `PUBLIC_BASE_PATH`
+  - Optional base path for subpath deployments.
+  - Example: `PUBLIC_BASE_PATH=vigotech-astro` produces URLs under `/vigotech-astro/`.
+  - Leave empty for root deployments.
 
-O apartado *events* pode ter duas formas
+- `PUBLIC_NOINDEX`
+  - Optional search-engine opt-out for non-production deployments.
+  - Set to `true` to emit `<meta name="robots" content="noindex, nofollow">` on every page.
+  - Recommended for temporary test deployments.
 
-* Para eventos que se extraen mediante a api de Meetup
-```
-"events": {
-  "type": "meetup",
-  "meetupid": "AIndustriosa"
-}
-```
-* Para eventos que se extraen mediante a api de Eventbrite
-```
-"events": {
-  "type": "eventbrite",
-  "eventbriteid": "17365087639"
-}
-```
-* Ou para eventos extraido dun json externo
-```
-"events": {
-  "type": "json",
-  "source": "https://www.python-vigo.es/events.json"
-},
-```
+- `VIGOTECH_GENERATED_DATA_DIR`
+  - Optional override for generated JSON directory.
+  - Default: `public`.
+  - Used only for `vigotech-generated.json`.
 
+- `EVENTBRITE_OAUTH_TOKEN`
+  - Optional token used while generating upcoming events from Eventbrite.
+  - Used by `pnpm generate:data` and the Pages workflow.
 
-Coa forma
-```
-{
-    "title": "Reunión del Grupo el 18/11/2018",
-    "date": 1542569580000,
-    "url": "https://www.python-vigo.es/posts/reunion-del-grupo-el-20181018/"
-}
+- `YOUTUBE_API_KEY`
+  - Optional API key used while generating `videoList` entries from YouTube.
+  - Used by `pnpm generate:data` and the Pages workflow.
 
-```
+- `GOOGLE_CALENDAR_API_KEY`
+  - Used by `/api/calendar.json` to fetch events from VigoTech public Google Calendar.
+  - If omitted, the Axenda block still renders and keeps the iCal download link, but no live events are shown.
 
+## Group status
 
+- Group active/inactive is now manual.
+- Set `inactive: true` in source data for archived groups.
 
-
+Copy `.env.example` to `.env` and customize values for local work.

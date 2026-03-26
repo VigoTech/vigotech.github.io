@@ -1,0 +1,655 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>VigoTech Alliance | The Editorial Node</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'on-primary-fixed-variant': '#920028',
+              'on-secondary-fixed': '#161d1f',
+              'on-secondary': '#ffffff',
+              outline: '#8d7071',
+              'inverse-on-surface': '#e7f3f7',
+              'surface-variant': '#d9e4e9',
+              'on-tertiary-fixed': '#2e1500',
+              'on-tertiary-fixed-variant': '#6d3a00',
+              'inverse-primary': '#ffb3b6',
+              secondary: '#586062',
+              'inverse-surface': '#283236',
+              'primary-fixed': '#ffdada',
+              'on-tertiary-container': '#fffbff',
+              'tertiary-container': '#af6100',
+              'secondary-container': '#dae1e3',
+              'on-background': '#131d21',
+              'surface-bright': '#f1fbff',
+              'primary-fixed-dim': '#ffb3b6',
+              'primary-container': '#d33b51',
+              'error-container': '#ffdad6',
+              'surface-container-lowest': '#ffffff',
+              'tertiary-fixed': '#ffdcc2',
+              'on-error-container': '#93000a',
+              'surface-tint': '#b4223d',
+              'on-error': '#ffffff',
+              'outline-variant': '#e1bebf',
+              'tertiary-fixed-dim': '#ffb77a',
+              'on-surface-variant': '#594041',
+              'surface-dim': '#d1dce0',
+              surface: '#f1fbff',
+              'secondary-fixed-dim': '#c1c8ca',
+              'on-secondary-fixed-variant': '#41484a',
+              'on-primary-container': '#fffbff',
+              'on-primary-fixed': '#40000c',
+              'surface-container': '#e4f0f4',
+              tertiary: '#8b4c00',
+              'on-surface': '#131d21',
+              'surface-container-high': '#dfeaef',
+              background: '#f1fbff',
+              'on-secondary-container': '#5d6466',
+              'secondary-fixed': '#dde4e6',
+              'surface-container-highest': '#d9e4e9',
+              'surface-container-low': '#eaf5fa',
+              'on-tertiary': '#ffffff',
+              'on-primary': '#ffffff',
+              error: '#ba1a1a',
+              primary: '#b11f3b',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Space Grotesk'],
+            },
+            borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+          },
+        },
+      }
+    </script>
+    <style>
+      .glass-nav {
+        backdrop-filter: blur(20px);
+        -webkit-backdrop-filter: blur(20px);
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+      .primary-gradient {
+        background: linear-gradient(135deg, #b11f3b 0%, #d33b51 100%);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface font-body selection:bg-primary-container selection:text-on-primary-container"
+  >
+    <!-- Top Navigation Bar -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#f1fbff]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_32px_32px_-4px_rgba(232,74,95,0.06)]"
+    >
+      <div class="flex justify-between items-center px-12 py-6 max-w-[1920px] mx-auto">
+        <div class="text-2xl font-black text-[#e84a5f] tracking-tighter font-headline">
+          VigoTech Alliance
+        </div>
+        <div class="hidden md:flex items-center gap-10">
+          <a
+            class="text-slate-600 dark:text-slate-400 font-medium font-headline hover:text-[#e84a5f] transition-colors duration-300"
+            href="#"
+            >Groups</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 font-medium font-headline hover:text-[#e84a5f] transition-colors duration-300"
+            href="#"
+            >Calendar</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 font-medium font-headline hover:text-[#e84a5f] transition-colors duration-300"
+            href="#"
+            >Videos</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 font-medium font-headline hover:text-[#e84a5f] transition-colors duration-300"
+            href="#"
+            >About</a
+          >
+          <a
+            class="text-slate-600 dark:text-slate-400 font-medium font-headline hover:text-[#e84a5f] transition-colors duration-300"
+            href="#"
+            >Join</a
+          >
+        </div>
+        <div class="flex items-center gap-6">
+          <button
+            class="material-symbols-outlined text-on-surface-variant hover:text-primary transition-colors cursor-pointer"
+            data-icon="search"
+          >
+            search
+          </button>
+          <button
+            class="primary-gradient text-white px-8 py-3 rounded-md font-headline font-bold scale-95 active:scale-90 transition-transform shadow-[0_32px_32px_-4px_rgba(232,74,95,0.06)]"
+          >
+            Get Involved
+          </button>
+        </div>
+      </div>
+    </nav>
+    <main class="pt-32">
+      <!-- Hero Section -->
+      <section class="relative px-12 mb-32 overflow-hidden">
+        <div class="max-w-[1600px] mx-auto grid grid-cols-12 items-end gap-12">
+          <div class="col-span-12 lg:col-span-8">
+            <h1
+              class="font-headline text-8xl font-bold tracking-tighter leading-[0.9] text-on-surface mb-8"
+            >
+              The Technical <br />
+              <span class="text-primary italic">Pulse</span> of Galicia.
+            </h1>
+            <p class="text-xl text-on-surface-variant max-w-2xl leading-relaxed mb-12">
+              A federated ecosystem of developer communities, hackers, and innovators. We bridge
+              technical precision with human-centric connection to showcase the local movement.
+            </p>
+            <div class="flex items-center gap-8">
+              <button
+                class="primary-gradient text-white px-10 py-5 rounded-md font-headline font-bold text-lg hover:translate-y-[-2px] transition-all shadow-xl"
+              >
+                Explore Ecosystem
+              </button>
+              <div class="flex -space-x-4">
+                <div
+                  class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-surface-container-highest"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="portrait of a software developer in a modern tech office setting with soft natural light"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDsqefpaLhQUocSL9tmg12HoHWRJCOXPas_R0f7fLULDkwBhowqIcMTFIeOvx9ZOPT8esECIBxobsuFm27TQZIuqHSLCBJPMrnNdLKitUxpr9LIEesiXWDTqRyJHs-1UHGnRVXCBycEqF_hfkzXa6vGDZI0OoVohGu47j-XxJ_QSvTO1vdjlZaYusgc0qwqoRasszaGkTeU_oWkNryNb-IUZUz7F5H8CCHQQ711Vcq-0GOwSk66JCJjwTDGq3QtsXRe6q-v5xNoLgLD"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-surface-container-highest"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="professional woman smiling in a creative workspace with vibrant colors"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBWcdEEj4ev7C8VGfeO-vG1IVTfKwhTg8aeZgosf2lIZcWdEyC75M0ml_M80Rb7W1iNhZIhLyA1ip7BGLInKgQ_7oD9oSq2KB-Rw6mt40nXiqS8Q0u85K8gw_QPxSgosdr8mCoYgxGRo7dECQlC68HyLWjGf_4kFQ29wJJMkIVz24RJqzTYsYYH-JGOKfEf5Prm_ItG4DMpfKd1PWtLtsSWLPQ3m1MDMTkUheexvQVfF2pbjHUORas4Skeemf2eWYdNrjODrPghzZKm"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 rounded-full border-4 border-surface overflow-hidden bg-surface-container-highest"
+                >
+                  <img
+                    class="w-full h-full object-cover"
+                    data-alt="young tech professional in a collaborative environment with warm studio lighting"
+                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuBfHPTXRGej6QP5F_UlEYPwri6q-siqyawd1Yfjmq61tUnO1GaWqTnHhZIUDFS1WT9hcTwu1c_5gtAt7INMhZGvQ35BFzEG25bIo1IYjzfx--7-j9BwIbQFUK4GLIFUcXa9xB27HTNZUfDyngQlrcHAjfhAEQ0gQ52BHwfTMdtInvnb2Ic-d8DiBidqkNKRhH_sj-z7eZBUdtmLHOJ5fLqHM8nmHHAiiFSup3yhbEL_Ovtb_p7A8LYkSI65KAV5QA2EvNa7NrUCfNjc"
+                  />
+                </div>
+                <div
+                  class="w-12 h-12 rounded-full border-4 border-surface flex items-center justify-center bg-primary text-white text-xs font-bold"
+                >
+                  +4k
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-span-12 lg:col-span-4 h-full hidden lg:block">
+            <div
+              class="aspect-[3/4] bg-surface-container-low rounded-xl relative overflow-hidden p-8 flex flex-col justify-between"
+            >
+              <div class="material-symbols-outlined text-6xl text-primary/20" data-icon="hub">
+                hub
+              </div>
+              <div>
+                <span class="font-mono text-sm uppercase tracking-widest text-primary mb-2 block"
+                  >Status: Active</span
+                >
+                <h3 class="font-headline text-3xl font-bold leading-none mb-4">
+                  15+ Member Communities
+                </h3>
+                <p class="text-sm text-on-surface-variant">
+                  Connecting Python, JavaScript, DevOps, and UI experts under one unified banner.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Upcoming Events Section -->
+      <section class="bg-surface-container-low py-32 px-12">
+        <div class="max-w-[1600px] mx-auto">
+          <div class="flex justify-between items-baseline mb-16">
+            <h2 class="font-headline text-5xl font-bold tracking-tight">Upcoming Events</h2>
+            <a
+              class="font-headline font-semibold text-primary flex items-center gap-2 hover:underline"
+              href="#"
+            >
+              View Calendar <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
+            <!-- Event Card 1 -->
+            <div
+              class="bg-surface-container-lowest p-10 pt-16 rounded-xl hover:bg-surface-container-highest transition-all group flex flex-col h-full"
+            >
+              <div class="flex justify-between items-start mb-12">
+                <div
+                  class="w-16 h-16 bg-surface-container flex items-center justify-center rounded-lg"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl" data-icon="terminal"
+                    >terminal</span
+                  >
+                </div>
+                <div class="text-right">
+                  <span class="block font-headline font-bold text-2xl">24</span>
+                  <span
+                    class="block font-headline text-sm text-on-surface-variant uppercase tracking-widest"
+                    >Oct</span
+                  >
+                </div>
+              </div>
+              <h3
+                class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors"
+              >
+                Rust in Production: Lessons Learned
+              </h3>
+              <div class="mt-auto space-y-3">
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                  <span class="text-sm font-medium">Rust Vigo</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="schedule"
+                    >schedule</span
+                  >
+                  <span class="text-sm font-medium">19:00 - 21:00 CEST</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="location_on"
+                    >location_on</span
+                  >
+                  <span class="text-sm font-medium">MARCO Museum, 2nd Floor</span>
+                </div>
+              </div>
+              <div class="mt-10 pt-6 border-t border-outline-variant/15">
+                <a
+                  class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs"
+                  href="#"
+                  >RSVP Now <span class="material-symbols-outlined text-xs">open_in_new</span></a
+                >
+              </div>
+            </div>
+            <!-- Event Card 2 -->
+            <div
+              class="bg-surface-container-lowest p-10 pt-16 rounded-xl hover:bg-surface-container-highest transition-all group flex flex-col h-full"
+            >
+              <div class="flex justify-between items-start mb-12">
+                <div
+                  class="w-16 h-16 bg-surface-container flex items-center justify-center rounded-lg"
+                >
+                  <span
+                    class="material-symbols-outlined text-primary text-3xl"
+                    data-icon="architecture"
+                    >architecture</span
+                  >
+                </div>
+                <div class="text-right">
+                  <span class="block font-headline font-bold text-2xl">28</span>
+                  <span
+                    class="block font-headline text-sm text-on-surface-variant uppercase tracking-widest"
+                    >Oct</span
+                  >
+                </div>
+              </div>
+              <h3
+                class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors"
+              >
+                Design Systems for Scale
+              </h3>
+              <div class="mt-auto space-y-3">
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                  <span class="text-sm font-medium">UI/UX Vigo</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="schedule"
+                    >schedule</span
+                  >
+                  <span class="text-sm font-medium">18:30 - 20:30 CEST</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="location_on"
+                    >location_on</span
+                  >
+                  <span class="text-sm font-medium">Impact Hub Vigo</span>
+                </div>
+              </div>
+              <div class="mt-10 pt-6 border-t border-outline-variant/15">
+                <a
+                  class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs"
+                  href="#"
+                  >RSVP Now <span class="material-symbols-outlined text-xs">open_in_new</span></a
+                >
+              </div>
+            </div>
+            <!-- Event Card 3 -->
+            <div
+              class="bg-surface-container-lowest p-10 pt-16 rounded-xl hover:bg-surface-container-highest transition-all group flex flex-col h-full"
+            >
+              <div class="flex justify-between items-start mb-12">
+                <div
+                  class="w-16 h-16 bg-surface-container flex items-center justify-center rounded-lg"
+                >
+                  <span class="material-symbols-outlined text-primary text-3xl" data-icon="cloud"
+                    >cloud</span
+                  >
+                </div>
+                <div class="text-right">
+                  <span class="block font-headline font-bold text-2xl">02</span>
+                  <span
+                    class="block font-headline text-sm text-on-surface-variant uppercase tracking-widest"
+                    >Nov</span
+                  >
+                </div>
+              </div>
+              <h3
+                class="font-headline text-2xl font-bold mb-4 group-hover:text-primary transition-colors"
+              >
+                Serverless Deep Dive
+              </h3>
+              <div class="mt-auto space-y-3">
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="group">group</span>
+                  <span class="text-sm font-medium">GDG Vigo</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="schedule"
+                    >schedule</span
+                  >
+                  <span class="text-sm font-medium">10:00 - 13:00 CEST</span>
+                </div>
+                <div class="flex items-center gap-3 text-on-surface-variant">
+                  <span class="material-symbols-outlined text-sm" data-icon="location_on"
+                    >location_on</span
+                  >
+                  <span class="text-sm font-medium">Online Stream</span>
+                </div>
+              </div>
+              <div class="mt-10 pt-6 border-t border-outline-variant/15">
+                <a
+                  class="inline-flex items-center gap-2 text-primary font-bold uppercase tracking-wider text-xs"
+                  href="#"
+                  >Get Link <span class="material-symbols-outlined text-xs">open_in_new</span></a
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Active Communities Section -->
+      <section class="py-32 px-12">
+        <div class="max-w-[1600px] mx-auto">
+          <div class="grid grid-cols-12 gap-12 items-start">
+            <div class="col-span-12 lg:col-span-4 lg:sticky lg:top-40">
+              <h2 class="font-headline text-5xl font-bold tracking-tight mb-8">
+                Active Communities
+              </h2>
+              <p class="text-on-surface-variant leading-relaxed mb-12">
+                Our alliance is composed of diverse technical groups sharing knowledge and driving
+                innovation across the northwest coast. Discover your tribe.
+              </p>
+              <div class="p-8 bg-primary/5 rounded-xl border-l-4 border-primary">
+                <h4 class="font-headline font-bold mb-2">Want to list your group?</h4>
+                <p class="text-sm text-on-surface-variant mb-6">
+                  Join the alliance and help us grow the local developer ecosystem together.
+                </p>
+                <button
+                  class="font-headline font-bold text-primary hover:text-primary-container flex items-center gap-2"
+                >
+                  Apply for membership <span class="material-symbols-outlined">add</span>
+                </button>
+              </div>
+            </div>
+            <div class="col-span-12 lg:col-span-8">
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Group Card 1 -->
+                <div
+                  class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-highest transition-all"
+                >
+                  <div class="flex items-center gap-6 mb-8">
+                    <div
+                      class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-3xl" data-icon="code">code</span>
+                    </div>
+                    <div>
+                      <h3 class="font-headline text-xl font-bold">Python Vigo</h3>
+                      <p class="text-xs text-on-surface-variant font-mono">1.2k Members</p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mb-8 line-clamp-2">
+                    The most active Python community in Galicia, hosting monthly meetups and
+                    workshops.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+                    </a>
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="public"
+                        >public</span
+                      >
+                    </a>
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="alternate_email"
+                        >alternate_email</span
+                      >
+                    </a>
+                  </div>
+                </div>
+                <!-- Group Card 2 -->
+                <div
+                  class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-highest transition-all"
+                >
+                  <div class="flex items-center gap-6 mb-8">
+                    <div
+                      class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-3xl" data-icon="javascript"
+                        >javascript</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-headline text-xl font-bold">VigoJS</h3>
+                      <p class="text-xs text-on-surface-variant font-mono">850 Members</p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mb-8 line-clamp-2">
+                    Focusing on modern JavaScript frameworks, web standards, and high-performance
+                    frontend.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+                    </a>
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="public"
+                        >public</span
+                      >
+                    </a>
+                  </div>
+                </div>
+                <!-- Group Card 3 -->
+                <div
+                  class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-highest transition-all"
+                >
+                  <div class="flex items-center gap-6 mb-8">
+                    <div
+                      class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-3xl" data-icon="security"
+                        >security</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-headline text-xl font-bold">HackersVigo</h3>
+                      <p class="text-xs text-on-surface-variant font-mono">540 Members</p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mb-8 line-clamp-2">
+                    Cybersecurity enthusiasts sharing tools, techniques, and organizing CTF events.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+                    </a>
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="chat">chat</span>
+                    </a>
+                  </div>
+                </div>
+                <!-- Group Card 4 -->
+                <div
+                  class="bg-surface-container-low p-8 rounded-xl hover:bg-surface-container-highest transition-all"
+                >
+                  <div class="flex items-center gap-6 mb-8">
+                    <div
+                      class="w-16 h-16 rounded-full bg-surface-container-highest flex items-center justify-center text-primary"
+                    >
+                      <span class="material-symbols-outlined text-3xl" data-icon="brush"
+                        >brush</span
+                      >
+                    </div>
+                    <div>
+                      <h3 class="font-headline text-xl font-bold">UI/UX Vigo</h3>
+                      <p class="text-xs text-on-surface-variant font-mono">720 Members</p>
+                    </div>
+                  </div>
+                  <p class="text-sm text-on-surface-variant mb-8 line-clamp-2">
+                    Where design meets engineering. Discussing product design, research, and user
+                    experience.
+                  </p>
+                  <div class="flex items-center gap-4">
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="link">link</span>
+                    </a>
+                    <a
+                      class="w-10 h-10 rounded-full bg-white/50 flex items-center justify-center hover:bg-primary hover:text-white transition-all"
+                      href="#"
+                    >
+                      <span class="material-symbols-outlined text-sm" data-icon="alternate_email"
+                        >alternate_email</span
+                      >
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Newsletter / CTA -->
+      <section class="px-12 mb-32">
+        <div
+          class="max-w-[1600px] mx-auto bg-on-background p-20 rounded-2xl relative overflow-hidden"
+        >
+          <div
+            class="absolute top-0 right-0 w-1/2 h-full primary-gradient opacity-10 blur-[100px] rounded-full translate-x-1/2 -translate-y-1/2"
+          ></div>
+          <div class="relative z-10 flex flex-col items-center text-center">
+            <h2
+              class="font-headline text-6xl font-bold text-white tracking-tighter mb-8 leading-none"
+            >
+              Stay in the Loop
+            </h2>
+            <p class="text-surface-variant text-lg max-w-xl mb-12">
+              Get monthly updates about all community events, new video releases, and job
+              opportunities within the VigoTech network.
+            </p>
+            <form class="flex w-full max-w-lg gap-4">
+              <input
+                class="flex-1 bg-surface-container-highest/10 border-none text-white px-6 py-4 rounded-md focus:ring-2 focus:ring-primary placeholder:text-slate-500"
+                placeholder="Enter your email"
+                type="email"
+              />
+              <button
+                class="primary-gradient text-white px-10 py-4 rounded-md font-headline font-bold"
+              >
+                Subscribe
+              </button>
+            </form>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- Footer -->
+    <footer class="w-full mt-auto bg-[#eaf5fa] dark:bg-slate-950 border-t border-[#d9e4e9]/15">
+      <div class="flex flex-col items-center py-12 px-8 w-full">
+        <div class="font-['Space_Grotesk'] text-[#e84a5f] font-bold text-2xl mb-8">
+          VigoTech Alliance
+        </div>
+        <div class="flex flex-wrap justify-center gap-8 mb-12">
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:underline decoration-[#e84a5f] underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+            href="#"
+            >Privacy Policy</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:underline decoration-[#e84a5f] underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+            href="#"
+            >Code of Conduct</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:underline decoration-[#e84a5f] underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+            href="#"
+            >Open Source</a
+          >
+          <a
+            class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500 hover:underline decoration-[#e84a5f] underline-offset-4 transition-opacity opacity-80 hover:opacity-100"
+            href="#"
+            >Contact</a
+          >
+        </div>
+        <p class="font-['Inter'] text-xs uppercase tracking-widest text-slate-500">
+          © 2024 VigoTech Alliance. Built for the ecosystem.
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>

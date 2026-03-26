@@ -1,0 +1,73 @@
+<canvas
+  id='conversation-shader-canvas'
+  aria-hidden='true'
+  style='position:absolute;inset:0;width:100%;height:100%;display:block;pointer-events:none;'
+></canvas>
+
+<script>
+  import { createRendererFromJSON } from 'shaders/core'
+
+  async function initShader() {
+    const canvas = document.getElementById('conversation-shader-canvas')
+    if (!canvas || !(canvas instanceof HTMLCanvasElement)) {
+      return
+    }
+
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      return
+    }
+
+    const renderer = createRendererFromJSON({
+      components: [
+        {
+          type: 'SolidColor',
+          id: 'bg',
+          props: {
+            color: '#111a20',
+          },
+        },
+        {
+          type: 'FloatingParticles',
+          id: 'particles',
+          props: {
+            color: '#ff4f6d',
+            count: 56,
+            size: 0.04,
+            speed: 0.23,
+            opacity: 0.45,
+          },
+        },
+        {
+          type: 'FilmGrain',
+          id: 'grain',
+          props: {
+            strength: 0.06,
+          },
+        },
+      ],
+    })
+
+    await renderer.initialize(canvas)
+
+    let active = true
+    const loop = async () => {
+      if (!active) {
+        return
+      }
+      await renderer.renderFrame()
+      requestAnimationFrame(loop)
+    }
+    requestAnimationFrame(loop)
+
+    const cleanup = () => {
+      active = false
+      renderer.dispose()
+      window.removeEventListener('beforeunload', cleanup)
+    }
+    window.addEventListener('beforeunload', cleanup)
+  }
+
+  initShader().catch(() => {
+    // Progressive enhancement only
+  })
+</script>

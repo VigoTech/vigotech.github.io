@@ -1,0 +1,12 @@
+---
+import { getCollection } from 'astro:content'
+
+import GroupsBrowser from '../components/groups/GroupsBrowser.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+
+const groups = [...(await getCollection('groups'))].sort((a, b) => a.data.name.localeCompare(b.data.name, 'gl'))
+---
+
+<BaseLayout title='VigoTech Groups' description='Directorio de comunidades tecnicas de VigoTech'>
+  <GroupsBrowser groups={groups} />
+</BaseLayout>

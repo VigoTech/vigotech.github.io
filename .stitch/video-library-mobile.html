@@ -1,0 +1,500 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Video Library | The Editorial Node</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600;700&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'on-primary-container': '#fffbff',
+              'on-tertiary-fixed-variant': '#6d3a00',
+              'surface-dim': '#d1dce0',
+              'on-tertiary-fixed': '#2e1500',
+              'on-surface-variant': '#594041',
+              'on-primary': '#ffffff',
+              'surface-container-low': '#eaf5fa',
+              'surface-container-high': '#dfeaef',
+              'secondary-fixed-dim': '#c1c8ca',
+              error: '#ba1a1a',
+              background: '#f1fbff',
+              'surface-bright': '#f1fbff',
+              'on-primary-fixed-variant': '#920028',
+              'primary-container': '#d33b51',
+              'on-secondary': '#ffffff',
+              'surface-container-highest': '#d9e4e9',
+              'outline-variant': '#e1bebf',
+              'secondary-container': '#dae1e3',
+              'on-error': '#ffffff',
+              tertiary: '#8b4c00',
+              'primary-fixed': '#ffdada',
+              'on-secondary-fixed-variant': '#41484a',
+              'inverse-primary': '#ffb3b6',
+              'surface-container-lowest': '#ffffff',
+              'on-surface': '#131d21',
+              'error-container': '#ffdad6',
+              'secondary-fixed': '#dde4e6',
+              'tertiary-fixed-dim': '#ffb77a',
+              'on-tertiary': '#ffffff',
+              'primary-fixed-dim': '#ffb3b6',
+              'tertiary-container': '#af6100',
+              'tertiary-fixed': '#ffdcc2',
+              outline: '#8d7071',
+              'surface-tint': '#b4223d',
+              'inverse-surface': '#283236',
+              'surface-container': '#e4f0f4',
+              surface: '#f1fbff',
+              'on-secondary-container': '#5d6466',
+              'inverse-on-surface': '#e7f3f7',
+              'on-error-container': '#93000a',
+              'on-secondary-fixed': '#161d1f',
+              'surface-variant': '#d9e4e9',
+              'on-primary-fixed': '#40000c',
+              primary: '#b11f3b',
+              'on-tertiary-container': '#fffbff',
+              secondary: '#586062',
+              'on-background': '#131d21',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Space Grotesk'],
+            },
+            borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f1fbff;
+        color: #131d21;
+      }
+      .font-headline {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface pb-32">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#f1fbff]/80 backdrop-blur-xl shadow-[0_32px_32px_-4px_rgba(232,74,95,0.06)]"
+    >
+      <div class="flex justify-between items-center px-6 py-4 max-w-7xl mx-auto">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-[#e84a5f]">menu</span>
+          <h1 class="font-headline font-bold tracking-tight text-2xl text-[#e84a5f] italic">
+            The Editorial Node
+          </h1>
+        </div>
+        <div
+          class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden"
+        >
+          <img
+            alt="Community Profile"
+            class="w-full h-full object-cover"
+            data-alt="Close-up portrait of a professional developer in a bright office setting with soft natural light"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuD0S_soX3s6yfgV4Bhj_6de59piC70RdWgv61fYKz9OnzKoxFiDKV95-zGF8tFDheI8zAhXGcmJPyljqi7J3xLIk3r0US0wzRpTqB3gmUPcWUEC8zQDlJHIlBaNuDFEgxn07SImrKg-0mm6989zoUm77AYZwY6Xc7fJAyM8XPwJciRoNlIGWXEyujXZYP5ah9GBzPJ60P-adRtLVaBlxXC6f4VvT0TZXPKeXUZ7N6RxCY7-djudq_SEJ7jXvb5Gx7VCeoXqfs3ZvwnW"
+          />
+        </div>
+      </div>
+    </header>
+    <main class="mt-24 px-6 max-w-7xl mx-auto">
+      <!-- Editorial Header Section -->
+      <section class="mb-12">
+        <span
+          class="font-headline font-bold text-primary tracking-widest text-xs uppercase mb-2 block"
+          >CURATED KNOWLEDGE</span
+        >
+        <h2
+          class="font-headline font-bold text-4xl md:text-5xl text-on-surface leading-tight mb-6 tracking-tight"
+        >
+          Video Library <span class="text-primary">.</span>
+        </h2>
+        <!-- Search & Filters -->
+        <div class="space-y-6">
+          <!-- Search Bar -->
+          <div class="relative group">
+            <div class="absolute inset-y-0 left-4 flex items-center pointer-events-none">
+              <span class="material-symbols-outlined text-outline">search</span>
+            </div>
+            <input
+              class="w-full bg-surface-container-highest border-none rounded-full py-4 pl-12 pr-6 focus:ring-2 focus:ring-primary/20 text-on-surface placeholder:text-outline transition-all duration-300"
+              placeholder="Search archives by title..."
+              type="text"
+            />
+          </div>
+          <!-- Horizontal Filter Chips -->
+          <div class="flex gap-3 overflow-x-auto pb-2 no-scrollbar">
+            <button
+              class="bg-primary text-on-primary px-6 py-2 rounded-full font-headline font-bold text-sm whitespace-nowrap shadow-lg shadow-primary/20 active:scale-95 transition-all"
+            >
+              All Groups
+            </button>
+            <button
+              class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-headline font-medium text-sm whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all"
+            >
+              PythonVigo
+            </button>
+            <button
+              class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-headline font-medium text-sm whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all"
+            >
+              VigoJS
+            </button>
+            <button
+              class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-headline font-medium text-sm whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all"
+            >
+              PHPVigo
+            </button>
+            <button
+              class="bg-surface-container-highest text-on-surface-variant px-6 py-2 rounded-full font-headline font-medium text-sm whitespace-nowrap hover:bg-surface-container-high active:scale-95 transition-all"
+            >
+              AgileVigo
+            </button>
+          </div>
+          <!-- Secondary Filter Row -->
+          <div class="flex items-center justify-between">
+            <div class="flex items-center gap-2 text-on-surface-variant">
+              <span class="material-symbols-outlined text-sm">calendar_month</span>
+              <span class="text-xs font-bold font-headline uppercase tracking-widest"
+                >Sort by Date</span
+              >
+            </div>
+            <div class="flex gap-2">
+              <button class="p-2 rounded-lg bg-surface-container-low text-primary">
+                <span class="material-symbols-outlined">filter_list</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Video Card Grid -->
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1 -->
+        <div
+          class="group relative bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2"
+        >
+          <div class="aspect-video relative overflow-hidden">
+            <img
+              alt="Coding Video"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              data-alt="Cinematic shot of a computer screen showing complex lines of code in a dark room with neon blue and pink ambient light"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuD4wDXf-VhQE9gR9MxDrEOn7yIxcrhPMDuJkDL5DaSGgA6ikgV_96NO0j8pzhuu1k7kBuigzg0EUJ3Jru_11Qg8gNhY4YzGqC-2hlZtcZLXxvnE-DR0evQDcJG5qBN9EUQ5qAR4sgtIVdwgCuEkHQPhgr4AQWe7sx_xx4xoJ0IErd0_yrcZq7jo5ObGDPMNderu0mg-cEQvv-rTJIQuK-4H0hqyqzkF87YOkr5ANn94VNhg3zspB6IfLt5M7Wj0f7OhLOxFLLFoXwpZ"
+            />
+            <div
+              class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center border border-white/30 transition-transform duration-300 group-hover:scale-110"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-3xl"
+                  style="font-variation-settings: 'FILL' 1"
+                  >play_arrow</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute bottom-4 right-4 bg-on-surface/80 backdrop-blur-md text-white px-3 py-1 rounded-lg text-[10px] font-mono tracking-tighter uppercase"
+            >
+              45:22
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 rounded-full bg-white p-1 shadow-sm">
+                <img
+                  alt="VigoJS Logo"
+                  class="w-full h-full object-contain"
+                  data-alt="Abstract minimalist logo with geometric shapes in bright yellow and black representing a modern tech stack"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuCzB8G7n_nRJTTJCZhxl1C6Dy06eeRyhrZ9ZKI8YIy21sPuL38ny-E2Y54frfsJjufXs6PUBt2depy3FMYXy6BHHpvjJRexdVPM34G13CeWLwsDFwcyfOLfMQFNnUnwi6Pw8GV7ma1ZKI8maAOT0-pvSWBs44cSOLlfZDl-v_4gNkL408Jkg9nEftuOgpcc2ZWEUnOCn4E8HMpI40XXU5gLA0ImqDPAEIiNK6NObT10962anzeDYvVP8D1ItViJREGnLc3IyBXP_uxu"
+                />
+              </div>
+              <span class="font-headline font-bold text-xs text-primary uppercase tracking-widest"
+                >VigoJS</span
+              >
+            </div>
+            <h3
+              class="font-headline font-bold text-xl text-on-surface leading-snug mb-4 group-hover:text-primary transition-colors"
+            >
+              Mastering React Server Components in 2024
+            </h3>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-outline font-medium">Oct 12, 2023</span>
+              <button
+                class="flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn"
+              >
+                WATCH NOW
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 2 -->
+        <div
+          class="group relative bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2"
+        >
+          <div class="aspect-video relative overflow-hidden">
+            <img
+              alt="Python Video"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              data-alt="Digital representation of complex data flows and networks in deep emerald and black color scheme with glowing particles"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuARwJxgF2gYJlKS9SL18U5XLXf2W8Js6JyiFqwh2KhPq5SZobW0R7jlxU1kyXvZ-JQ3vA_Vujnl1QBeUHCUW_gSEQpdOSIDgGk4LvS46rWvfbK9dlxZ9oQex2b9MMb-_k8P4ht1ygA947zf0sG5gVuJSI0KPkyj8MXLARCQFDr2Upn6aZVNBHok1UIecuX8UVVFv6tuCR8NCAD-oQ3h749aGbyTaDIB7HPwy9P1RhNCy-zr_BMpR10GsyqNX7WYXKpw0JpXdGyrSJsQ"
+            />
+            <div
+              class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center border border-white/30 transition-transform duration-300 group-hover:scale-110"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-3xl"
+                  style="font-variation-settings: 'FILL' 1"
+                  >play_arrow</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute bottom-4 right-4 bg-on-surface/80 backdrop-blur-md text-white px-3 py-1 rounded-lg text-[10px] font-mono tracking-tighter uppercase"
+            >
+              1:12:05
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 rounded-full bg-white p-1 shadow-sm">
+                <img
+                  alt="PythonVigo Logo"
+                  class="w-full h-full object-contain"
+                  data-alt="Minimalist python icon with clean vector lines and a professional blue and gold color palette"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuChglmUSM6upoqATNXpXmZQHcT_pIQcPQ9DYNJaeyZ1mPNIrtWuM70bupo0ucSE7V49m4QtFwuaKTvBXl1CFeVdamF82dQg5CyowNef3ch6J_hi21TDXbOcmdH3_JrbHZg5ga3RvAbj7gkN3cxKNN91SqRGBNzyNlX4jcQqsmcbtiwVq98NWkrEMxBHpRXTuHAvH9aaq0QTmkkNmsIMuE8vRbmCtarKeL-hm_P3FepDr0enM9wlHPbK-eEZTa_6H6lrfEBAaSl0hJ6i"
+                />
+              </div>
+              <span class="font-headline font-bold text-xs text-primary uppercase tracking-widest"
+                >PythonVigo</span
+              >
+            </div>
+            <h3
+              class="font-headline font-bold text-xl text-on-surface leading-snug mb-4 group-hover:text-primary transition-colors"
+            >
+              Advanced Asyncio Patterns for Production
+            </h3>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-outline font-medium">Sep 28, 2023</span>
+              <button
+                class="flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn"
+              >
+                WATCH NOW
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+        <!-- Card 3 -->
+        <div
+          class="group relative bg-surface-container-low rounded-[2rem] overflow-hidden transition-all duration-500 hover:shadow-2xl hover:shadow-primary/5 hover:-translate-y-2"
+        >
+          <div class="aspect-video relative overflow-hidden">
+            <img
+              alt="PHPVigo Video"
+              class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
+              data-alt="Macro photography of server rack status lights glowing in a dark data center environment with bokeh effect"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuBZRBmp2IDsL8sEJBPy7FKMG2tadE1rxvOq1qvkKZqUkCbMwoh7zb6MtMoJm2y5yP1rmdJNp1J_xSTGMR7dOyGrZHwQrblujIWtxAWpP5wQ4X2Kic-iiHrZjynu2V441DjCQQNi9Hksjq3aBj1cc11jWCnYwWuvjHm4kE7Xl0ZW3vAhWzrnTdJxeB5Bz4z9vablzPytICt7iDvHpojUlI6wZWG56hFtmFNUVR2HfTWDRRaShWjJdtDtlMvyzhP8NB2EcrTTu7FwzSaq"
+            />
+            <div
+              class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors flex items-center justify-center"
+            >
+              <div
+                class="w-16 h-16 rounded-full bg-white/20 backdrop-blur-xl flex items-center justify-center border border-white/30 transition-transform duration-300 group-hover:scale-110"
+              >
+                <span
+                  class="material-symbols-outlined text-white text-3xl"
+                  style="font-variation-settings: 'FILL' 1"
+                  >play_arrow</span
+                >
+              </div>
+            </div>
+            <div
+              class="absolute bottom-4 right-4 bg-on-surface/80 backdrop-blur-md text-white px-3 py-1 rounded-lg text-[10px] font-mono tracking-tighter uppercase"
+            >
+              38:15
+            </div>
+          </div>
+          <div class="p-8">
+            <div class="flex items-center gap-3 mb-4">
+              <div class="w-8 h-8 rounded-full bg-white p-1 shadow-sm">
+                <img
+                  alt="PHPVigo Logo"
+                  class="w-full h-full object-contain"
+                  data-alt="Abstract emblem featuring an elephant motif with sleek modern curves in deep purple tones"
+                  src="https://lh3.googleusercontent.com/aida-public/AB6AXuBxK4mbhSt_JJIX0MU9zhP7Eb1Yi7s8RqHIecmQ6qSusKmJgUgyMOEU5PvAlAX4G7v9aA0XzQpO_3KYCbxWFtqwJ7buuXrzyb2VpTKWbNJOgC8MNrFP-9DHe6D6sPoyYLvovXTKXa8mIFAVRnUaRDZkiddRByDtJKH7vDtrvmxnL-1zx1J12YWInRVg35A4C9VevOeVz0htoYT0cj9Fr5d47AwsPM17GwNPCl6AjgXRc_Hx7XqBymsIXThwcQhki_Ac4zVymMvFQX4J"
+                />
+              </div>
+              <span class="font-headline font-bold text-xs text-primary uppercase tracking-widest"
+                >PHPVigo</span
+              >
+            </div>
+            <h3
+              class="font-headline font-bold text-xl text-on-surface leading-snug mb-4 group-hover:text-primary transition-colors"
+            >
+              Modern Laravel: Beyond the Basics
+            </h3>
+            <div class="flex items-center justify-between mt-auto">
+              <span class="text-xs text-outline font-medium">Aug 15, 2023</span>
+              <button
+                class="flex items-center gap-2 text-primary font-headline font-bold text-sm group/btn"
+              >
+                WATCH NOW
+                <span
+                  class="material-symbols-outlined text-sm transition-transform group-hover/btn:translate-x-1"
+                  >arrow_forward</span
+                >
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- Featured Collection (Asymmetric/Bento Style) -->
+      <section class="mt-20 mb-12">
+        <h2 class="font-headline font-bold text-2xl text-on-surface mb-8">
+          Featured Workshop Series
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div
+            class="md:col-span-2 bg-on-surface text-white p-10 rounded-[3rem] relative overflow-hidden group"
+          >
+            <div class="relative z-10">
+              <span
+                class="bg-primary px-4 py-1 rounded-full text-[10px] font-headline font-bold tracking-widest uppercase mb-4 inline-block"
+                >INTENSIVE</span
+              >
+              <h3 class="font-headline font-bold text-4xl mb-6 max-w-md">
+                The Architecture of Scalable Microservices
+              </h3>
+              <p class="text-white/60 mb-8 max-w-sm leading-relaxed">
+                A 4-part deep dive into distributed systems, event-sourcing, and kubernetes
+                deployment strategies for high-growth teams.
+              </p>
+              <button
+                class="bg-white text-on-surface px-8 py-4 rounded-xl font-headline font-bold text-sm transition-all hover:bg-primary hover:text-white active:scale-95 shadow-xl shadow-black/20"
+              >
+                ACCESS SERIES
+              </button>
+            </div>
+            <div
+              class="absolute top-0 right-0 w-1/2 h-full opacity-30 pointer-events-none group-hover:opacity-50 transition-opacity"
+            >
+              <img
+                alt="Technology Pattern"
+                class="w-full h-full object-cover grayscale brightness-150"
+                data-alt="Abstract blue digital network and fiber optics glow against a dark tech-focused background with shallow depth of field"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmejZiljuNzvAoXIsb_IKmno9kWYlIFsxJZEE4plSeAFaY9D5EKefWMuc0viXDVuM6gMcHLBLmnwua5BbzIzgC1nqxUFGUO85-EuNQ4XN-NJTQcomI6smNZNGMly1Yndh5mFODNvVxZTE6kJXFwZo0NR7kd-XD49F3d-d3GpGF2ylncLwKq3Lxh46pqPzxsHzYkgPZNwZi2vaTu6nsIk5LqfA4UW1LHNEeI-Ly7I9cb4SaR-wHnXIO-aV0eG508fYyqD37QtH0iPQI"
+              />
+            </div>
+          </div>
+          <div
+            class="bg-primary-container p-10 rounded-[3rem] text-on-primary-container flex flex-col justify-between group cursor-pointer hover:shadow-2xl hover:shadow-primary/20 transition-all"
+          >
+            <span class="material-symbols-outlined text-4xl mb-8">auto_awesome</span>
+            <div>
+              <h3 class="font-headline font-bold text-2xl mb-2">New: AI Ethics in Coding</h3>
+              <p class="text-white/70 text-sm leading-relaxed mb-6">
+                Navigating the gray areas of copilot and generative models in professional dev
+                workflows.
+              </p>
+              <span
+                class="font-headline font-bold text-xs uppercase tracking-widest border-b-2 border-white/30 pb-1"
+                >Listen to Panel</span
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- BottomNavBar -->
+    <nav
+      class="fixed bottom-0 left-0 w-full flex justify-around items-center px-4 pb-6 pt-2 bg-[#f1fbff]/80 dark:bg-slate-950/80 backdrop-blur-xl z-50 rounded-t-3xl shadow-[0_-12px_40px_rgba(0,0,0,0.08)]"
+    >
+      <a
+        class="flex flex-col items-center justify-center bg-[#e84a5f] text-white rounded-2xl p-3 transform -translate-y-2 transition-all shadow-lg"
+        href="#"
+      >
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1"
+          >video_library</span
+        >
+        <span class="font-headline text-[11px] font-semibold uppercase tracking-widest mt-1"
+          >Library</span
+        >
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-[#eaf5fa] rounded-xl transition-all active:scale-90"
+        href="#"
+      >
+        <span class="material-symbols-outlined">groups</span>
+        <span class="font-headline text-[11px] font-semibold uppercase tracking-widest mt-1"
+          >Groups</span
+        >
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-[#eaf5fa] rounded-xl transition-all active:scale-90"
+        href="#"
+      >
+        <span class="material-symbols-outlined">calendar_month</span>
+        <span class="font-headline text-[11px] font-semibold uppercase tracking-widest mt-1"
+          >Events</span
+        >
+      </a>
+      <a
+        class="flex flex-col items-center justify-center text-slate-400 p-2 hover:bg-[#eaf5fa] rounded-xl transition-all active:scale-90"
+        href="#"
+      >
+        <span class="material-symbols-outlined">person</span>
+        <span class="font-headline text-[11px] font-semibold uppercase tracking-widest mt-1"
+          >Profile</span
+        >
+      </a>
+    </nav>
+    <!-- Contextual FAB (Hidden on detail-heavy scrolls but relevant for library) -->
+    <button
+      class="fixed right-6 bottom-28 w-14 h-14 bg-primary text-white rounded-2xl shadow-2xl flex items-center justify-center hover:rotate-12 transition-transform active:scale-90 z-40"
+    >
+      <span class="material-symbols-outlined text-2xl">upload</span>
+    </button>
+  </body>
+</html>

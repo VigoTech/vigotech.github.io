@@ -1,0 +1,611 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Groups Directory | VigoTech Pulse</title>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=JetBrains+Mono&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+        background-color: #f1fbff;
+      }
+      .font-headline {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+      .font-mono {
+        font-family: 'JetBrains Mono', monospace;
+      }
+
+      .glass-nav {
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+      }
+    </style>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'surface-container-low': '#eaf5fa',
+              'surface-container-highest': '#d9e4e9',
+              'on-tertiary-container': '#fffbff',
+              outline: '#8d7071',
+              'on-surface-variant': '#594041',
+              'outline-variant': '#e1bebf',
+              'surface-container-high': '#dfeaef',
+              secondary: '#586062',
+              'primary-container': '#d33b51',
+              'on-secondary-fixed': '#161d1f',
+              tertiary: '#8b4c00',
+              background: '#f1fbff',
+              'primary-fixed': '#ffdada',
+              'inverse-primary': '#ffb3b6',
+              'tertiary-fixed-dim': '#ffb77a',
+              'on-secondary-container': '#5d6466',
+              'on-background': '#131d21',
+              'on-primary-fixed': '#40000c',
+              'inverse-on-surface': '#e7f3f7',
+              'on-surface': '#131d21',
+              'on-error-container': '#93000a',
+              'secondary-container': '#dae1e3',
+              'on-secondary-fixed-variant': '#41484a',
+              'on-primary-fixed-variant': '#920028',
+              'on-tertiary-fixed': '#2e1500',
+              'on-error': '#ffffff',
+              primary: '#b11f3b',
+              surface: '#f1fbff',
+              'on-secondary': '#ffffff',
+              error: '#ba1a1a',
+              'on-primary': '#ffffff',
+              'on-tertiary': '#ffffff',
+              'surface-container-lowest': '#ffffff',
+              'surface-container': '#e4f0f4',
+              'inverse-surface': '#283236',
+              'on-tertiary-fixed-variant': '#6d3a00',
+              'on-primary-container': '#fffbff',
+              'secondary-fixed': '#dde4e6',
+              'tertiary-container': '#af6100',
+              'tertiary-fixed': '#ffdcc2',
+              'surface-variant': '#d9e4e9',
+              'secondary-fixed-dim': '#c1c8ca',
+              'primary-fixed-dim': '#ffb3b6',
+              'error-container': '#ffdad6',
+              'surface-tint': '#b4223d',
+              'surface-dim': '#d1dce0',
+              'surface-bright': '#f1fbff',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Space Grotesk'],
+            },
+            borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+          },
+        },
+      }
+    </script>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body class="bg-surface text-on-surface min-h-screen">
+    <!-- TopAppBar -->
+    <header
+      class="fixed top-0 w-full z-50 bg-[#f1fbff]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_32px_32px_-4px_rgba(232,74,95,0.06)]"
+    >
+      <div class="flex justify-between items-center px-6 py-4 w-full max-w-7xl mx-auto">
+        <div class="flex items-center gap-4">
+          <span class="material-symbols-outlined text-slate-600">menu</span>
+          <h1 class="text-2xl font-bold tracking-tighter text-[#e84a5f] font-headline">
+            VigoTech Pulse
+          </h1>
+        </div>
+        <div class="flex items-center gap-6">
+          <nav class="hidden md:flex gap-8 font-headline font-bold tracking-tight">
+            <a class="text-slate-600 hover:opacity-80 transition-opacity" href="#">Home</a>
+            <a class="text-[#e84a5f]" href="#">Groups</a>
+            <a class="text-slate-600 hover:opacity-80 transition-opacity" href="#">Calendar</a>
+            <a class="text-slate-600 hover:opacity-80 transition-opacity" href="#">Videos</a>
+          </nav>
+          <div
+            class="w-10 h-10 rounded-full bg-surface-container-highest flex items-center justify-center overflow-hidden border-2 border-[#e84a5f]/20"
+          >
+            <img
+              alt="Tech Alliance Logo"
+              data-alt="minimalist geometric logo for tech alliance using circular shapes and vibrant red accents on white background"
+              src="https://lh3.googleusercontent.com/aida-public/AB6AXuDN5CsA4-txQiqzTWreNmiljMW59FiyhJufeOavCscrjI5G8wJ7INb2t8HTHwmk3rLqnVZxO46cVHLyDjV3zSZrhI0acZu1Q-n6TBnLlwkHBk4dHAi3YFXZjHRUCnA08mUi5xkLzPuyxPDlhCJ_DpujGclNrRbiOZC31jAr2SsLwBPbjsFMNlJHnxgnAvHzpq9O9wDziAFzwvdOr0zt8p1RGfY-uw3r0iNU_VrEVFtQFFPPDsQVG7xXxk_9tYR5aBqdJxeKSy6klGfG"
+            />
+          </div>
+        </div>
+      </div>
+    </header>
+    <main class="pt-32 pb-24 px-6 max-w-7xl mx-auto">
+      <!-- Hero & Editorial Intro -->
+      <section class="mb-16">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 items-end">
+          <div class="lg:col-span-8">
+            <span
+              class="font-mono text-xs uppercase tracking-widest text-primary font-bold mb-4 block"
+              >Ecosystem Directory</span
+            >
+            <h2
+              class="text-5xl md:text-7xl font-headline font-bold tracking-tighter text-on-surface leading-none mb-6"
+            >
+              Collective <br />
+              <span class="text-primary-container">Intelligence.</span>
+            </h2>
+            <p class="text-lg text-secondary max-w-xl leading-relaxed">
+              Discover the vibrant nodes of the Vigo technology scene. From niche hardware hackers
+              to large-scale software communities.
+            </p>
+          </div>
+          <div class="lg:col-span-4 flex justify-end">
+            <div class="bg-surface-container-low p-2 rounded-full flex gap-1">
+              <button
+                class="px-6 py-2 rounded-full bg-primary text-white font-headline font-bold text-sm transition-all shadow-lg shadow-primary/20"
+              >
+                Active
+              </button>
+              <button
+                class="px-6 py-2 rounded-full text-secondary font-headline font-bold text-sm hover:bg-surface-container-highest transition-all"
+              >
+                Archived
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- Search & Filter Bar -->
+      <section class="mb-12 sticky top-24 z-40">
+        <div
+          class="bg-surface-container-highest/60 backdrop-blur-md p-4 rounded-full flex flex-col md:flex-row gap-4 items-center shadow-sm"
+        >
+          <div class="relative w-full">
+            <span
+              class="material-symbols-outlined absolute left-4 top-1/2 -translate-y-1/2 text-primary"
+              >search</span
+            >
+            <input
+              class="w-full bg-surface-container-lowest border-none focus:ring-2 focus:ring-primary/20 rounded-full py-4 pl-12 pr-6 text-on-surface font-body placeholder:text-slate-400"
+              placeholder="Search communities by name or stack (React, Python, IoT...)"
+              type="text"
+            />
+          </div>
+          <div class="flex gap-2 overflow-x-auto pb-2 md:pb-0 no-scrollbar w-full md:w-auto">
+            <button
+              class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-lowest text-secondary text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+            >
+              Frontend
+            </button>
+            <button
+              class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-lowest text-secondary text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+            >
+              DevOps
+            </button>
+            <button
+              class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-lowest text-secondary text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+            >
+              Design
+            </button>
+            <button
+              class="whitespace-nowrap px-5 py-2 rounded-full bg-surface-container-lowest text-secondary text-sm font-medium hover:bg-primary hover:text-white transition-colors"
+            >
+              Hardware
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Grid of Cards -->
+      <section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <!-- Card 1: VigoJS -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="VigoJS Logo"
+                data-alt="minimalist typography logo for VigoJS community using bright yellow and black accents on a clean white background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDX8w1dB7W7Dy_sVMmzx8nW3n_4KgKhtPXhsu5oHwx5j4HbrqpOHkvbHhov0VZTWkcg_cpf5WIaAMQq6-obecvo2jJD7OwfZ1HhTrqRFd-cvaomN4U85NGxncPYebXDrWtjawE57QH80cis8BxPlCZOc-22x3P4E7jvZIkISIpeBAxCPIc8MUQ0YvJ9Hfs6_-WnyAwmzE4xGOWssV9zviYeIgsWG4FUydtm1_arTzszXoul8JAQTACTHO7U-yNP0pDNR4X26IRRdGHD"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">VigoJS</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              The heartbeat of the Javascript ecosystem in Galicia. Monthly meetups covering React,
+              Vue, Node, and everything in between.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">language</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">terminal</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">alternate_email</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-primary transition-all"
+            >
+              Join Community
+              <span
+                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Card 2: Python Vigo -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="Python Vigo Logo"
+                data-alt="clean blue and gold python snake logo simplified for digital interface on white background"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuARHcWOJINc-MSmZO4yca6v1UHn0DxD8tBLjdnFoeo6VguUcumJQVsgyrlkUeTa8jz9OYavoFluosgOS9Dv0bTt8rCOqWHIc_SlfBuXgLknL9qonY-TG875bbh85zRRNnTlSvo875cM1bl9IcdJI-r_p2O6dYz_bzpdzqC5nCarCL6HM113p2pdmwAsjjvfSXp48YUoLaA59wqdOOKfP4VMjNqEh4YUweTlDSZ3IkHmath4ZnbhmrUHgYE1Ooloxj-JZ7nBC0OONBdt"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Python Vigo</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              Dedicated to the snake. Data science, automation, and backend engineering enthusiasts
+              gathering to share knowledge.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">language</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">groups</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-primary transition-all"
+            >
+              Join Community
+              <span
+                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Card 3: IoT Galicia -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-slate-200 text-slate-600 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              Dormant
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="IoT Galicia Logo"
+                data-alt="integrated circuit pattern logo with modern digital tech aesthetic in monochromatic slate tones"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuB5swdrRdboEoyiVk4F0kuQgSbXPojUhJm4bIeYiiLswmPbmQYpzo6AV0LLCBKE_kXnppTBYGrplDnGnVXkQR7sPh0p4Sl77DmzLiUA3nt3AEHpcdYMSTo5qlrN2PSVdvSDmV4T1nbBDAUpTHfogzgXwrMF4sEblpul_KDiiMNu4mIJrj5Wz8HwgVdDKVNdMH6w6RnOvm0HBZUgDXtyVvxC9g3LLoCpN6z7qpn3dLyto1wq_ky-LEkr3ys5OajB_IFBx4tsql9XkbUl"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">IoT Galicia</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              Connecting the physical world. Embedded systems, Arduino, Raspberry Pi, and industrial
+              automation discussions.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">terminal</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-slate-400 cursor-not-allowed"
+            >
+              View Archive
+              <span class="material-symbols-outlined text-[18px]">history</span>
+            </button>
+          </div>
+        </div>
+        <!-- Card 4: PHPVigo -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="PHPVigo Logo"
+                data-alt="elegant purple and white php developer community logo featuring clean sans-serif typography"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5T7-rCObVFAhdz_OxktOPjEUxK-eOmEo1eMFk7BjbdIIv9VGJN5rvirEuTditZPmX9cqh3MX51r2iD7glb5FoUPsMhQIWzzcpRtOsg-ZX0KI_WF3Nhce_QtHykmRvtEJjd--s3q_cmNxamq4PGHcbcKU3xg4kzcI87wtreylIF9nwa_IrO-NnBdBigD6TmzcY5E2xFdlMQgNocftCaZHtDSoj7WxaF4R5nfY5R9hxJx6fq26jd6HHiJJulmdN-HZujevlR_LJvNg9"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">PHPVigo</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              The web veterans. Focus on Laravel, Symfony, and modern backend architectures in the
+              PHP universe.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">language</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">forum</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-primary transition-all"
+            >
+              Join Community
+              <span
+                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Card 5: UX Vigo -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="UX Vigo Logo"
+                data-alt="modern minimalist design community logo with vibrant red accents and bold geometric shapes"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCicvV5Q2ytuF1A2no3zf_BiJFpExi6EIXm5CpHfIQuYdq_TvN3lWd9Wr0wlhFdwrLKd2Mq_h5IeVC2MiXMANZAlilIDsfV_ATUuZZxhujMKEHr9y-EJUdQupXYD1hXM6Jrqy8NXp2gXXNn_seumXxYyCrbbe0wgK0tbcqu4Rw7lvKbDMg2A_A4CTK61ly8hNwCLh9N5IduLcb0A8_Bb6zvIeYkcFvER8cZqJ5vtgyOQX4ZY0l1izumRIjBkwjCVmq72Ko2M8zJzyDq"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">UX Vigo</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              Where design meets technology. Exploring accessibility, user psychology, and modern
+              interface trends.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">palette</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">diversity_3</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-primary transition-all"
+            >
+              Join Community
+              <span
+                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+        <!-- Card 6: Agile Vigo -->
+        <div
+          class="group bg-surface-container-low rounded-3xl p-8 hover:bg-surface-container-highest transition-all duration-300 flex flex-col h-full relative overflow-hidden"
+        >
+          <div class="absolute top-0 right-0 p-6">
+            <span
+              class="flex items-center gap-1.5 px-3 py-1 bg-green-100 text-green-700 rounded-full text-[10px] font-bold uppercase tracking-wider"
+            >
+              <span class="w-1.5 h-1.5 rounded-full bg-green-500 animate-pulse"></span> Active
+            </span>
+          </div>
+          <div class="mb-8 flex items-center justify-between">
+            <div
+              class="w-16 h-16 rounded-2xl bg-white shadow-sm flex items-center justify-center overflow-hidden border border-outline-variant/10"
+            >
+              <img
+                alt="Agile Vigo Logo"
+                data-alt="clean circular logo representing agile flow with soft blue and primary red accents on white"
+                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAbqe0ah2AWRKfPTw5XKhvtN7mdN5rpAArJlPI4Y7w7Cy-cywsoD1g8dUHVFvsYGNegVM_U2euOgt0HCocFFd9eIlcX8v0u8Oq5ILWxTOAbwd5r9HBLqMkwmnWt8N7qU36peV06R7CO3s1Fnu0iCYyzUdJDrpuO1_51Tyc9w6YM9WmI51xv_9CavZlh2pr171ne0WVfinlUfk8bQaxUKw-xr8-FS6NHxUy3FoWjgRmMaOHjpPF5uJgzdthLSQ4_uvaGgg-77dhGIxvL"
+              />
+            </div>
+          </div>
+          <div class="flex-grow">
+            <h3 class="text-2xl font-headline font-bold text-on-surface mb-3">Agile Vigo</h3>
+            <p class="text-secondary font-body text-sm leading-relaxed mb-6">
+              Optimizing workflows. Scrum, Kanban, Lean and XP practices discussed by local project
+              leaders and devs.
+            </p>
+          </div>
+          <div
+            class="pt-6 mt-6 flex items-center justify-between border-t border-outline-variant/10"
+          >
+            <div class="flex gap-4">
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">calendar_month</span></a
+              >
+              <a class="text-slate-400 hover:text-primary transition-colors" href="#"
+                ><span class="material-symbols-outlined text-[20px]">alternate_email</span></a
+              >
+            </div>
+            <button
+              class="group/btn flex items-center gap-2 font-headline font-bold text-sm text-primary transition-all"
+            >
+              Join Community
+              <span
+                class="material-symbols-outlined text-[18px] group-hover/btn:translate-x-1 transition-transform"
+                >arrow_forward</span
+              >
+            </button>
+          </div>
+        </div>
+      </section>
+      <!-- Editorial CTA -->
+      <section
+        class="mt-24 bg-primary text-white rounded-[3rem] p-12 md:p-20 relative overflow-hidden shadow-2xl shadow-primary/20"
+      >
+        <div
+          class="absolute -right-20 -top-20 w-96 h-96 bg-primary-container rounded-full opacity-50 blur-[80px]"
+        ></div>
+        <div class="relative z-10 max-w-2xl">
+          <h2
+            class="text-4xl md:text-6xl font-headline font-bold tracking-tighter mb-8 leading-none"
+          >
+            Can't find your node? <br />
+            <span class="opacity-70 italic">Create it.</span>
+          </h2>
+          <p class="text-xl font-body opacity-90 mb-10 leading-relaxed">
+            VigoTech Pulse is built on collaboration. If you have a community or want to start one,
+            we provide the platform and the reach.
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4">
+            <button
+              class="px-10 py-5 bg-white text-primary rounded-full font-headline font-bold text-lg hover:scale-105 transition-transform"
+            >
+              Submit New Group
+            </button>
+            <button
+              class="px-10 py-5 bg-primary-container text-white rounded-full font-headline font-bold text-lg border-2 border-white/20 hover:bg-white/10 transition-colors"
+            >
+              Developer Manifesto
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <!-- BottomNavBar (Mobile Only) -->
+    <footer
+      class="md:hidden fixed bottom-0 w-full rounded-t-3xl z-50 px-4 pb-safe bg-[#f1fbff]/80 dark:bg-slate-900/80 backdrop-blur-xl shadow-[0_-10px_30px_rgba(0,0,0,0.04)]"
+    >
+      <nav class="flex justify-around items-center h-20">
+        <a class="flex flex-col items-center justify-center text-slate-500 p-3" href="#">
+          <span class="material-symbols-outlined">home</span>
+          <span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1"
+            >Home</span
+          >
+        </a>
+        <a
+          class="flex flex-col items-center justify-center bg-gradient-to-tr from-[#b11f3b] to-[#d33b51] text-white rounded-2xl p-3"
+          href="#"
+        >
+          <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1"
+            >group</span
+          >
+          <span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1"
+            >Groups</span
+          >
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-500 p-3" href="#">
+          <span class="material-symbols-outlined">calendar_today</span>
+          <span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1"
+            >Calendar</span
+          >
+        </a>
+        <a class="flex flex-col items-center justify-center text-slate-500 p-3" href="#">
+          <span class="material-symbols-outlined">movie</span>
+          <span class="font-['Inter'] text-[10px] font-medium uppercase tracking-widest mt-1"
+            >Videos</span
+          >
+        </a>
+      </nav>
+    </footer>
+    <!-- FAB for adding new group -->
+    <button
+      class="fixed bottom-8 right-8 w-16 h-16 rounded-2xl bg-primary text-white shadow-2xl flex items-center justify-center hover:scale-110 active:scale-95 transition-all z-40 hidden md:flex"
+    >
+      <span class="material-symbols-outlined text-[32px]">add</span>
+    </button>
+  </body>
+</html>
