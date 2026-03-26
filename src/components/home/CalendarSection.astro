@@ -1,0 +1,409 @@
+---
+import { LANG, LOCALE } from '../../i18n/config'
+import { calendarT } from '../../i18n/calendar'
+
+const t = calendarT[LANG]
+---
+
+<section id='calendar' class='reveal px-2 py-20 sm:px-6' style='--reveal-delay: 90ms;'>
+  <div class='vt-shell'>
+    <header class='mb-6 flex items-end justify-between gap-4'>
+      <div>
+        <h2 class='font-headline text-3xl tracking-tight sm:text-5xl'>{t.heading}</h2>
+        <p class='mt-2 max-w-2xl text-sm text-[var(--ink-soft)] sm:text-base'>{t.lead}</p>
+      </div>
+
+      <div class='flex flex-wrap items-center justify-end gap-2'>
+        <div class='inline-flex items-center gap-1 rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] p-1'>
+          <button data-calendar-view='month' data-active='true' class='cursor-pointer rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white'>
+            {t.viewMonth}
+          </button>
+          <button data-calendar-view='week' class='cursor-pointer rounded-full px-3 py-1 text-xs font-semibold text-[var(--ink-soft)]'>
+            {t.viewWeek}
+          </button>
+        </div>
+
+        <a
+          data-calendar-ics-link
+          href='#'
+          class='inline-flex items-center gap-2 rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-2 text-sm font-semibold text-[var(--ink)] transition-colors hover:text-primary'
+        >
+          <span class='material-symbols-outlined text-base'>download</span>
+          {t.openIcs}
+        </a>
+      </div>
+    </header>
+
+    <div class='rounded-3xl border border-[var(--line)] bg-[var(--bg-panel)] p-4 sm:p-6'>
+      <div class='mx-auto mb-4 flex max-w-[600px] items-center justify-between gap-2'>
+        <button
+          data-calendar-nav='prev'
+          class='cursor-pointer inline-flex size-9 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] text-[var(--ink-soft)] hover:text-primary'
+          aria-label='Mes anterior'
+        >
+          <span class='material-symbols-outlined text-base'>chevron_left</span>
+        </button>
+        <p data-calendar-label class='font-headline text-lg capitalize text-[var(--ink)]'></p>
+        <button
+          data-calendar-nav='next'
+          class='cursor-pointer inline-flex size-9 items-center justify-center rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] text-[var(--ink-soft)] hover:text-primary'
+          aria-label='Mes seguinte'
+        >
+          <span class='material-symbols-outlined text-base'>chevron_right</span>
+        </button>
+      </div>
+
+      <div class='mx-auto mb-4 max-w-[600px] overflow-hidden rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] p-4'>
+        <div class='calendar-grid' data-calendar-grid role='grid' aria-label='Calendario mensual'></div>
+      </div>
+
+      <p class='text-sm text-[var(--ink-soft)]' data-calendar-loading>{t.loading}</p>
+      <p class='hidden text-sm text-[var(--ink-soft)]' data-calendar-error>{t.error}</p>
+
+      <div class='mx-auto mt-4 max-w-[600px] rounded-2xl border border-[var(--line)] bg-[var(--bg-elevated)] p-4'>
+        <p data-calendar-day-label class='font-headline text-lg text-[var(--ink)]'></p>
+        <p class='mt-2 hidden text-sm text-[var(--ink-soft)]' data-calendar-day-empty>{t.empty}</p>
+        <div class='mt-3 space-y-3' data-calendar-day-events></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script is:inline define:vars={{ locale: LOCALE, labels: t }} lang='js'>
+  (() => {
+    const dayEventsContainer = document.querySelector('[data-calendar-day-events]')
+    const dayLabel = document.querySelector('[data-calendar-day-label]')
+    const dayEmpty = document.querySelector('[data-calendar-day-empty]')
+    const loading = document.querySelector('[data-calendar-loading]')
+    const error = document.querySelector('[data-calendar-error]')
+    const icsLink = document.querySelector('[data-calendar-ics-link]')
+    const calendarGrid = document.querySelector('[data-calendar-grid]')
+    const calendarLabel = document.querySelector('[data-calendar-label]')
+    const navButtons = Array.from(document.querySelectorAll('[data-calendar-nav]'))
+    const viewButtons = Array.from(document.querySelectorAll('[data-calendar-view]'))
+    let calendarView = 'month'
+    let loadedEvents = []
+    let displayDate = new Date()
+    let selectedDateKey = ''
+
+    if (!(dayEventsContainer instanceof HTMLElement)) {
+      return
+    }
+
+    const dateFormatter = new Intl.DateTimeFormat(locale, {
+      weekday: 'short',
+      day: '2-digit',
+      month: 'short',
+      year: 'numeric',
+    })
+
+    const monthLabelFormatter = new Intl.DateTimeFormat(locale, {
+      month: 'long',
+      year: 'numeric',
+    })
+
+    const timeFormatter = new Intl.DateTimeFormat(locale, {
+      hour: '2-digit',
+      minute: '2-digit',
+    })
+
+    const weekdayFormatter = new Intl.DateTimeFormat(locale, { weekday: 'short' })
+
+    const getDateKey = (date) => `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
+    const keyToDate = (key) => {
+      const [year, month, day] = key.split('-').map(Number)
+      return new Date(year, month, day)
+    }
+
+    const getEventsByDay = (events) => {
+      const map = new Map()
+      events.forEach((event) => {
+        const date = new Date(event.start)
+        if (Number.isNaN(date.getTime())) {
+          return
+        }
+        const key = getDateKey(date)
+        const list = map.get(key) || []
+        list.push(event)
+        map.set(key, list)
+      })
+
+      map.forEach((value, key) => {
+        map.set(
+          key,
+          value.sort((a, b) => new Date(a.start).getTime() - new Date(b.start).getTime()),
+        )
+      })
+
+      return map
+    }
+
+    const getDefaultSelectedDate = (eventsByDay) => {
+      const month = displayDate.getMonth()
+      const year = displayDate.getFullYear()
+      const keys = [...eventsByDay.keys()].filter((key) => {
+        const date = keyToDate(key)
+        return date.getFullYear() === year && date.getMonth() === month
+      })
+
+      if (keys.length > 0) {
+        return keys.sort()[0]
+      }
+
+      return getDateKey(new Date(year, month, 1))
+    }
+
+    const renderCalendarGrid = (events) => {
+      if (!(calendarGrid instanceof HTMLElement)) {
+        return
+      }
+
+      const baseDate = new Date(displayDate.getFullYear(), displayDate.getMonth(), 1)
+      const mondayOffset = (baseDate.getDay() + 6) % 7
+      const weekStart = new Date(baseDate.getFullYear(), baseDate.getMonth(), baseDate.getDate() - mondayOffset)
+
+      const monthStart = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1)
+      const monthEnd = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0)
+      const monthStartWeekday = (monthStart.getDay() + 6) % 7
+      const monthTotalDays = monthEnd.getDate()
+      const monthTotalCells = Math.ceil((monthStartWeekday + monthTotalDays) / 7) * 7
+      const totalCells = calendarView === 'week' ? 7 : monthTotalCells
+
+      if (calendarLabel instanceof HTMLElement) {
+        calendarLabel.textContent = monthLabelFormatter.format(baseDate)
+      }
+
+      const eventDays = new Set(
+        events
+          .map((event) => new Date(event.start))
+          .filter((date) => !Number.isNaN(date.getTime()))
+          .map((date) => getDateKey(date)),
+      )
+
+      calendarGrid.innerHTML = ''
+
+      for (let i = 0; i < 7; i += 1) {
+        const weekdayDate = new Date(2024, 0, i + 1)
+        const weekday = document.createElement('div')
+        weekday.className =
+          'px-2 py-1 text-center text-[11px] font-semibold tracking-[0.08em] text-[var(--ink-soft)] uppercase'
+        weekday.textContent = weekdayFormatter.format(weekdayDate).replace(/\./g, '')
+        calendarGrid.append(weekday)
+      }
+
+      for (let index = 0; index < totalCells; index += 1) {
+        const dayCell = document.createElement('div')
+        dayCell.className =
+          'calendar-day flex min-h-14 items-center justify-center rounded-lg text-sm text-[var(--ink-soft)]'
+
+        const currentDate =
+          calendarView === 'week'
+            ? new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + index)
+            : new Date(baseDate.getFullYear(), baseDate.getMonth(), index - monthStartWeekday + 1)
+        const inMonth = calendarView === 'week' || currentDate.getMonth() === baseDate.getMonth()
+
+        if (inMonth) {
+          const key = getDateKey(currentDate)
+          dayCell.textContent = String(currentDate.getDate())
+          dayCell.classList.remove('text-[var(--ink-soft)]')
+          dayCell.classList.add('cursor-pointer', 'text-[var(--ink)]')
+
+          dayCell.addEventListener('click', () => {
+            selectedDateKey = key
+            renderCalendarGrid(loadedEvents)
+            renderSelectedDayEvents(loadedEvents)
+          })
+
+          if (eventDays.has(key)) {
+            dayCell.classList.add('bg-primary', 'font-semibold', 'text-white')
+          } else {
+            dayCell.classList.add('bg-[var(--bg-panel)]/65')
+          }
+
+          if (selectedDateKey === key) {
+            dayCell.classList.add('ring-2', 'ring-primary/40', 'ring-offset-2', 'ring-offset-[var(--bg-elevated)]')
+          }
+        } else {
+          dayCell.textContent = ''
+          dayCell.classList.add('opacity-50')
+        }
+
+        calendarGrid.append(dayCell)
+      }
+    }
+
+    const renderSelectedDayEvents = (events) => {
+      const eventsByDay = getEventsByDay(events)
+
+      if (!selectedDateKey) {
+        selectedDateKey = getDefaultSelectedDate(eventsByDay)
+      }
+
+      const selectedDate = keyToDate(selectedDateKey)
+      if (dayLabel instanceof HTMLElement) {
+        dayLabel.textContent = dateFormatter.format(selectedDate).replace(/\./g, '')
+      }
+
+      const items = eventsByDay.get(selectedDateKey) || []
+      dayEventsContainer.innerHTML = ''
+
+      if (dayEmpty instanceof HTMLElement) {
+        dayEmpty.classList.toggle('hidden', items.length > 0)
+      }
+
+      items.forEach((event) => {
+        const card = document.createElement('article')
+        card.className = 'rounded-xl border border-[var(--line)] bg-[var(--bg-panel)] p-3'
+
+        const title = document.createElement('h3')
+        title.className = 'font-headline text-lg leading-tight text-[var(--ink)]'
+        title.textContent = event.title
+        card.append(title)
+
+        const date = document.createElement('p')
+        date.className = 'mt-1 text-xs text-[var(--ink-soft)]'
+        date.textContent = formatDate(event)
+        card.append(date)
+
+        if (event.location) {
+          const location = document.createElement('p')
+          location.className = 'mt-1 text-xs text-[var(--ink-soft)]'
+          location.textContent = `${labels.atLocation} ${event.location}`
+          card.append(location)
+        }
+
+        if (event.htmlLink) {
+          const link = document.createElement('a')
+          link.href = event.htmlLink
+          link.target = '_blank'
+          link.rel = 'noreferrer'
+          link.className =
+            'mt-2 inline-flex items-center gap-1 text-xs font-semibold text-primary underline underline-offset-3'
+          link.textContent = labels.openEvent
+          card.append(link)
+        }
+
+        dayEventsContainer.append(card)
+      })
+    }
+
+    const setVisible = (el, visible) => {
+      if (el instanceof HTMLElement) {
+        el.classList.toggle('hidden', !visible)
+      }
+    }
+
+    const formatDate = (event) => {
+      const startDate = new Date(event.start)
+      if (Number.isNaN(startDate.getTime())) {
+        return ''
+      }
+
+      const dateLabel = dateFormatter.format(startDate).replace(/\./g, '')
+      if (event.allDay) {
+        return `${dateLabel} - ${labels.allDay}`
+      }
+
+      const timeLabel = timeFormatter.format(startDate)
+      return `${dateLabel} - ${labels.at} ${timeLabel}`
+    }
+
+      const loadCalendar = async () => {
+      setVisible(loading, true)
+      setVisible(error, false)
+      setVisible(empty, false)
+
+      try {
+        const response = await fetch('/api/calendar.json', {
+          headers: {
+            accept: 'application/json',
+          },
+        })
+
+        if (!response.ok) {
+          throw new Error(`Calendar request failed: ${response.status}`)
+        }
+
+        const payload = await response.json()
+        const apiEvents = Array.isArray(payload.events) ? payload.events : []
+        const fakeEvents = [
+          {
+            id: 'fake-next-1',
+            title: 'Demo meetup frontend VigoTech',
+            start: new Date().setHours(18, 30, 0, 0),
+            end: null,
+            location: 'Espazo Demo, Vigo',
+            description: null,
+            htmlLink: null,
+            allDay: false,
+          },
+          {
+            id: 'fake-next-2',
+            title: 'Obradoiro aberto de IA',
+            start: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 6, 19, 0).toISOString(),
+            end: null,
+            location: 'A Industriosa',
+            description: null,
+            htmlLink: null,
+            allDay: false,
+          },
+        ]
+        const events = [...apiEvents, ...fakeEvents.map((event) => ({ ...event, start: typeof event.start === 'number' ? new Date(event.start).toISOString() : event.start }))]
+        loadedEvents = events
+
+        selectedDateKey = getDefaultSelectedDate(getEventsByDay(events))
+
+        renderCalendarGrid(events)
+        renderSelectedDayEvents(events)
+
+        if (icsLink instanceof HTMLAnchorElement && typeof payload.icsUrl === 'string') {
+          icsLink.href = payload.icsUrl
+        }
+
+        setVisible(loading, false)
+      } catch {
+        loadedEvents = []
+        selectedDateKey = getDateKey(new Date(displayDate.getFullYear(), displayDate.getMonth(), 1))
+        renderCalendarGrid([])
+        renderSelectedDayEvents([])
+        setVisible(loading, false)
+        setVisible(error, true)
+      }
+    }
+
+    viewButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        calendarView = button.getAttribute('data-calendar-view') || 'month'
+        viewButtons.forEach((item) => {
+          const selected = item.getAttribute('data-calendar-view') === calendarView
+          item.setAttribute('data-active', selected ? 'true' : 'false')
+          item.classList.toggle('bg-primary', selected)
+          item.classList.toggle('text-white', selected)
+          item.classList.toggle('text-[var(--ink-soft)]', !selected)
+        })
+
+        renderCalendarGrid(loadedEvents)
+        renderSelectedDayEvents(loadedEvents)
+      })
+    })
+
+    navButtons.forEach((button) => {
+      button.addEventListener('click', () => {
+        const direction = button.getAttribute('data-calendar-nav')
+        if (direction === 'prev') {
+          displayDate = new Date(displayDate.getFullYear(), displayDate.getMonth() - 1, 1)
+        } else {
+          displayDate = new Date(displayDate.getFullYear(), displayDate.getMonth() + 1, 1)
+        }
+        selectedDateKey = getDateKey(new Date(displayDate.getFullYear(), displayDate.getMonth(), 1))
+        renderCalendarGrid(loadedEvents)
+        renderSelectedDayEvents(loadedEvents)
+      })
+    })
+
+    selectedDateKey = getDateKey(new Date(displayDate.getFullYear(), displayDate.getMonth(), 1))
+    renderCalendarGrid([])
+    renderSelectedDayEvents([])
+    loadCalendar()
+  })()
+</script>

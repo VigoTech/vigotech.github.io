@@ -1,0 +1,38 @@
+---
+import { getCollection } from 'astro:content'
+
+import DocumentsSection from '../components/home/DocumentsSection.astro'
+import FriendsSection from '../components/home/FriendsSection.astro'
+import GroupsSection from '../components/home/GroupsSection.astro'
+import HeroSection from '../components/home/HeroSection.astro'
+import ConversationSection from '../components/home/ConversationSection.astro'
+import VideosSection from '../components/home/VideosSection.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { getRecentVideos, getTopGroupsByLastEvent, getUpcomingEvents } from '../lib/vigotech/selectors'
+
+const groups = await getCollection('groups')
+const events = await getCollection('events')
+const videos = await getCollection('videos')
+const docs = await getCollection('documents')
+const friends = await getCollection('friends')
+
+const sortedGroups = [...groups]
+  .filter((group) => !group.data.inactive)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name, 'gl'))
+const upcomingEvents = getUpcomingEvents(events, 20)
+const featuredGroups = getTopGroupsByLastEvent(groups, events, 3)
+const recentVideos = getRecentVideos(videos, 3)
+---
+
+<BaseLayout
+  title='VigoTech Alliance'
+  description='Comunidades tecnicas federadas en Vigo e Galicia'
+  mainClass='pt-0'
+>
+  <HeroSection featuredGroups={featuredGroups} totalGroups={groups.length} upcomingEvents={upcomingEvents} />
+  <GroupsSection groups={sortedGroups} />
+  <VideosSection videos={recentVideos} />
+  <ConversationSection />
+  <DocumentsSection docs={docs} />
+  <FriendsSection friends={friends} />
+</BaseLayout>

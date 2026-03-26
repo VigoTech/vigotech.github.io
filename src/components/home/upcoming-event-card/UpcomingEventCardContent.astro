@@ -1,0 +1,93 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LOCALE } from '../../../i18n/config'
+import GroupLogo from '../../ui/GroupLogo.astro'
+
+type Props = {
+  event: CollectionEntry<'events'>
+  ctaLabel?: string
+}
+
+const { event, ctaLabel } = Astro.props
+
+const formatMonthShort = (dateValue: number): string =>
+  new Intl.DateTimeFormat(LOCALE, {
+    month: 'short',
+  })
+    .format(new Date(dateValue))
+    .replace(/\./g, '')
+
+const formatTime = (dateValue: number): string =>
+  new Intl.DateTimeFormat(LOCALE, {
+    hour: '2-digit',
+    minute: '2-digit',
+  })
+    .format(new Date(dateValue))
+    .replace(/\./g, '')
+---
+
+<div class="flex items-start justify-between gap-3">
+  <div>
+    <div class="mb-3 flex items-start gap-3">
+      <GroupLogo
+        src={event.data.groupLogo}
+        name={event.data.groupName}
+        sizeClass="size-9"
+        fallbackClass="text-[10px] font-semibold text-[var(--ink)]"
+      />
+
+      <div>
+        <p
+          class="text-[11px] uppercase tracking-[0.12em] text-ink-soft dark:text-ink-soft-contrast"
+        >
+          {event.data.groupName}
+        </p>
+        <h2
+          class="mt-1 text-lg leading-tight font-medium text-ink dark:text-ink-contrast"
+        >
+          {event.data.title}
+        </h2>
+      </div>
+    </div>
+    {
+      event.data.location && (
+        <p class="text-xs text-ink-soft dark:text-ink-soft-contrast">
+          {event.data.location}
+        </p>
+      )
+    }
+  </div>
+
+  <div>
+    <div
+      class="rounded-lg bg-white/40 px-2 py-2 text-center text-ink dark:text-ink-contrast"
+    >
+      <p class="font-headline text-xl font-bold leading-none">
+        {
+          new Intl.DateTimeFormat(LOCALE, {
+            day: '2-digit',
+          }).format(new Date(event.data.date))
+        }
+      </p>
+      <p
+        class="mt-1 text-[10px] uppercase tracking-[0.12em] text-ink dark:text-ink-contrast"
+      >
+        {formatMonthShort(event.data.date)}
+      </p>
+    </div>
+    <p
+      class="mt-1 text-[12px] uppercase tracking-[0.12em] text-ink dark:text-ink-contrast"
+    >
+      {formatTime(event.data.date)}
+    </p>
+  </div>
+</div>
+
+{
+  ctaLabel && (
+    <span class="vt-btn vt-btn-primary vt-btn-sm mt-3 inline-flex">
+      {ctaLabel}
+    </span>
+  )
+}

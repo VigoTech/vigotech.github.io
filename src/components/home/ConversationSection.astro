@@ -1,0 +1,75 @@
+---
+import { Icon } from 'astro-icon/components'
+
+import { LANG } from '../../i18n/config'
+import { homeConversationT } from '../../i18n/home-conversation'
+import { withBase } from '../../lib/base-path'
+import ConversationShader from '../shaders/ConversationShader.astro'
+
+const t = homeConversationT[LANG]
+
+const socialItems = [
+  { key: 'twitter', icon: 'lucide:twitter' },
+  { key: 'telegram', icon: 'lucide:send' },
+  { key: 'email', icon: 'lucide:mail' },
+  { key: 'github', icon: 'lucide:github' },
+] as const
+---
+
+<section class="reveal py-12" style="--reveal-delay: 120ms;">
+  <div
+    class="vt-content-shell relative overflow-hidden rounded-2xl p-10 sm:p-16 bg-gray-900"
+  >
+    <ConversationShader />
+
+    <div class="relative z-10 mx-auto max-w-4xl text-center text-white">
+      <h2 class="font-headline text-4xl tracking-tight sm:text-6xl">
+        {t.heading}
+      </h2>
+      <p class="mt-5 text-sm leading-relaxed text-white/85 sm:text-lg">
+        {t.description}
+      </p>
+
+      <div class="mt-8 flex flex-wrap items-center justify-center gap-3">
+        {
+          socialItems.map((item) => (
+            <a
+              href={t.social[item.key]}
+              target="_blank"
+              rel="noreferrer"
+              class="inline-flex items-center gap-2 rounded-full border border-white/35 bg-white/10 px-4 py-2 text-sm text-white transition-colors hover:bg-white/20"
+            >
+              <Icon name={item.icon} class="h-4 w-4" />
+              {t.links[item.key]}
+            </a>
+          ))
+        }
+      </div>
+
+      <div class="mt-10">
+        <a
+          href={t.slack.workspace}
+          target="_blank"
+          rel="noreferrer"
+          class="inline-flex"
+        >
+          <img
+            src={withBase('/slack.png')}
+            alt="Slack"
+            class="h-12 w-auto rounded-md bg-white/95 p-1"
+            loading="lazy"
+          />
+        </a>
+      </div>
+
+      <a
+        href={t.slack.invite}
+        target="_blank"
+        rel="noreferrer"
+        class="primary-gradient mt-6 inline-flex rounded-md px-6 py-3 font-headline text-sm font-bold text-white"
+      >
+        {t.joinSlack}
+      </a>
+    </div>
+  </div>
+</section>

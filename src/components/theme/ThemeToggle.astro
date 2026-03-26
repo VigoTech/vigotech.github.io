@@ -1,0 +1,64 @@
+---
+import { Icon } from 'astro-icon/components'
+import { LANG } from '../../i18n/config'
+import { themeToggleT } from '../../i18n/theme-toggle'
+
+const t = themeToggleT[LANG]
+---
+
+<button
+  type="button"
+  class="h-10 px-3 py-0 text-xs sm:text-sm cursor-pointer"
+  data-theme-toggle
+  data-label-dark={t.darkMode}
+  data-label-light={t.lightMode}
+  aria-label={t.ariaLabel}
+  title={t.title}
+>
+  <Icon
+    name="lucide:sun"
+    class="hidden h-5 w-5 text-slate-700 dark:block dark:text-slate-200"
+  />
+  <Icon name="lucide:moon" class="block h-5 w-5 text-primary dark:hidden" />
+  <span data-theme-label class="sr-only">{t.darkMode}</span>
+</button>
+
+<script is:inline>
+  ;(() => {
+    const key = 'vigotech-theme'
+
+    const apply = (dark, label, darkLabel, lightLabel) => {
+      document.documentElement.classList.toggle('dark', dark)
+      window.localStorage.setItem(key, dark ? 'dark' : 'light')
+      label.textContent = dark ? lightLabel : darkLabel
+    }
+
+    const setup = () => {
+      const button = document.querySelector('[data-theme-toggle]')
+      const label = button?.querySelector('[data-theme-label]')
+      const darkLabel = button?.getAttribute('data-label-dark') || 'Dark mode'
+      const lightLabel = button?.getAttribute('data-label-light') || 'Light mode'
+
+      if (!(button instanceof HTMLButtonElement) || !(label instanceof HTMLElement)) {
+        return
+      }
+
+      if (button.dataset.themeToggleBound === 'true') {
+        const current = document.documentElement.classList.contains('dark')
+        label.textContent = current ? lightLabel : darkLabel
+        return
+      }
+
+      const current = document.documentElement.classList.contains('dark')
+      label.textContent = current ? lightLabel : darkLabel
+      button.dataset.themeToggleBound = 'true'
+
+      button.addEventListener('click', () => {
+        const dark = !document.documentElement.classList.contains('dark')
+        apply(dark, label, darkLabel, lightLabel)
+      })
+    }
+
+    setup()
+  })()
+</script>

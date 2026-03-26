@@ -1,0 +1,365 @@
+<!doctype html>
+
+<html class="light" lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Code of Conduct | The Editorial Node</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&amp;family=Inter:wght@300;400;500;600&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap"
+      rel="stylesheet"
+    />
+    <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+    <script id="tailwind-config">
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              tertiary: '#8b4c00',
+              'secondary-fixed': '#dde4e6',
+              'error-container': '#ffdad6',
+              'on-secondary-fixed-variant': '#41484a',
+              'surface-container-highest': '#d9e4e9',
+              'on-secondary-container': '#5d6466',
+              'surface-container': '#e4f0f4',
+              'surface-bright': '#f1fbff',
+              'surface-container-high': '#dfeaef',
+              'on-primary-container': '#fffbff',
+              'on-primary-fixed': '#40000c',
+              'inverse-on-surface': '#e7f3f7',
+              'primary-fixed': '#ffdada',
+              'surface-container-lowest': '#ffffff',
+              'primary-container': '#d33b51',
+              outline: '#8d7071',
+              'surface-container-low': '#eaf5fa',
+              'tertiary-container': '#af6100',
+              primary: '#b11f3b',
+              'surface-dim': '#d1dce0',
+              'on-primary-fixed-variant': '#920028',
+              'tertiary-fixed-dim': '#ffb77a',
+              'on-error': '#ffffff',
+              'on-error-container': '#93000a',
+              secondary: '#586062',
+              'on-tertiary-fixed-variant': '#6d3a00',
+              'inverse-primary': '#ffb3b6',
+              surface: '#f1fbff',
+              'on-tertiary': '#ffffff',
+              'tertiary-fixed': '#ffdcc2',
+              'on-tertiary-fixed': '#2e1500',
+              'outline-variant': '#e1bebf',
+              'surface-variant': '#d9e4e9',
+              'inverse-surface': '#283236',
+              error: '#ba1a1a',
+              background: '#f1fbff',
+              'on-surface-variant': '#594041',
+              'secondary-container': '#dae1e3',
+              'secondary-fixed-dim': '#c1c8ca',
+              'on-primary': '#ffffff',
+              'on-surface': '#131d21',
+              'on-background': '#131d21',
+              'primary-fixed-dim': '#ffb3b6',
+              'on-secondary-fixed': '#161d1f',
+              'surface-tint': '#b4223d',
+              'on-secondary': '#ffffff',
+              'on-tertiary-container': '#fffbff',
+            },
+            fontFamily: {
+              headline: ['Space Grotesk'],
+              body: ['Inter'],
+              label: ['Space Grotesk'],
+            },
+            borderRadius: { DEFAULT: '0.125rem', lg: '0.25rem', xl: '0.5rem', full: '0.75rem' },
+          },
+        },
+      }
+    </script>
+    <style>
+      .material-symbols-outlined {
+        font-variation-settings:
+          'FILL' 0,
+          'wght' 400,
+          'GRAD' 0,
+          'opsz' 24;
+        display: inline-block;
+        line-height: 1;
+        text-transform: none;
+        letter-spacing: normal;
+        word-wrap: normal;
+        white-space: nowrap;
+        direction: ltr;
+      }
+      body {
+        font-family: 'Inter', sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      .brand-font {
+        font-family: 'Space Grotesk', sans-serif;
+      }
+
+      /* Custom scroll behavior */
+      html {
+        scroll-behavior: smooth;
+      }
+
+      /* Hide scrollbar for Chrome, Safari and Opera */
+      .no-scrollbar::-webkit-scrollbar {
+        display: none;
+      }
+      .no-scrollbar {
+        -ms-overflow-style: none;
+        scrollbar-width: none;
+      }
+    </style>
+    <style>
+      body {
+        min-height: max(884px, 100dvh);
+      }
+    </style>
+  </head>
+  <body
+    class="bg-surface text-on-surface selection:bg-primary-fixed selection:text-on-primary-fixed"
+  >
+    <!-- Top Navigation Bar (Mobile Viewport) -->
+    <nav
+      class="fixed top-0 w-full z-50 bg-[#f1fbff]/80 backdrop-blur-xl flex justify-between items-center px-6 h-20 shadow-[0_32px_32px_-4px_rgba(0,0,0,0.06)]"
+    >
+      <div class="text-2xl font-bold text-[#e84a5f] brand-font tracking-tight">
+        The Editorial Node
+      </div>
+      <button class="p-2 text-[#e84a5f]">
+        <span class="material-symbols-outlined text-3xl">menu</span>
+      </button>
+    </nav>
+    <main class="pt-28 pb-20 px-6 max-w-2xl mx-auto">
+      <!-- Hero Header Section -->
+      <header class="mb-12">
+        <div
+          class="inline-block px-3 py-1 mb-4 rounded-full bg-surface-container-highest text-[#e84a5f] text-xs font-bold tracking-widest uppercase"
+        >
+          Governance
+        </div>
+        <h1 class="text-5xl font-bold text-on-surface tracking-tight leading-tight mb-6">
+          Conduct <span class="text-[#e84a5f]">Manifesto</span>
+        </h1>
+        <p class="text-secondary text-lg leading-relaxed">
+          Defining the ethical framework for our technical collective. We prioritize humans over
+          machines, and collaboration over competition.
+        </p>
+      </header>
+      <!-- Collapsible Table of Contents -->
+      <section class="mb-12">
+        <details
+          class="group bg-surface-container-low rounded-xl overflow-hidden transition-all duration-300"
+        >
+          <summary class="flex items-center justify-between p-6 cursor-pointer list-none">
+            <div class="flex items-center gap-3">
+              <span class="material-symbols-outlined text-[#e84a5f]">menu_book</span>
+              <span class="font-bold font-headline text-on-surface">Table of Contents</span>
+            </div>
+            <span
+              class="material-symbols-outlined transition-transform duration-300 group-open:rotate-180 text-secondary"
+              >expand_more</span
+            >
+          </summary>
+          <nav class="px-6 pb-6 flex flex-col gap-4">
+            <a
+              class="text-[#e84a5f] font-bold border-l-4 border-[#e84a5f] pl-4 transition-all duration-200"
+              href="#introduction"
+              >Introduction</a
+            >
+            <a
+              class="text-slate-500 pl-5 hover:text-[#e84a5f] transition-colors"
+              href="#core-values"
+              >Core Values</a
+            >
+            <a
+              class="text-slate-500 pl-5 hover:text-[#e84a5f] transition-colors"
+              href="#expected-behavior"
+              >Expected Behavior</a
+            >
+            <a
+              class="text-slate-500 pl-5 hover:text-[#e84a5f] transition-colors"
+              href="#unacceptable"
+              >Unacceptable Behavior</a
+            >
+            <a class="text-slate-500 pl-5 hover:text-[#e84a5f] transition-colors" href="#reporting"
+              >Reporting Guidelines</a
+            >
+          </nav>
+        </details>
+      </section>
+      <!-- Conduct Content -->
+      <article class="space-y-16">
+        <!-- Section 1: Introduction -->
+        <section class="scroll-mt-24" id="introduction">
+          <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span class="text-[#e84a5f]">01.</span> Introduction
+          </h2>
+          <div class="prose prose-slate max-w-none text-secondary leading-relaxed space-y-4">
+            <p>
+              The Editorial Node is committed to providing a harassment-free experience for
+              everyone, regardless of level of experience, gender identity and expression, sexual
+              orientation, disability, personal appearance, body size, race, ethnicity, age,
+              religion, or nationality.
+            </p>
+            <p>
+              This Code of Conduct outlines our expectations for participants within the VigoTech
+              Alliance and the consequences for unacceptable behavior.
+            </p>
+          </div>
+        </section>
+        <!-- Callout: Signature Branding Element -->
+        <div
+          class="relative overflow-hidden rounded-2xl bg-[#e84a5f] p-8 text-on-primary-container shadow-xl"
+        >
+          <div class="absolute -top-12 -right-12 w-48 h-48 bg-white/10 rounded-full blur-3xl"></div>
+          <h3 class="font-headline text-xl font-bold mb-2">Our Digital Ethos</h3>
+          <p class="text-sm opacity-90 leading-relaxed">
+            "We view code as literature and communities as living ecosystems. Respect the craft, but
+            value the creator above all."
+          </p>
+        </div>
+        <!-- Section 2: Core Values -->
+        <section class="scroll-mt-24" id="core-values">
+          <h2 class="text-2xl font-bold mb-8 flex items-center gap-2">
+            <span class="text-[#e84a5f]">02.</span> Core Values
+          </h2>
+          <div class="grid gap-6">
+            <div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-[#e84a5f]">
+              <h4 class="font-bold text-on-surface mb-2">Radical Inclusivity</h4>
+              <p class="text-sm text-secondary">
+                Actively working to welcome and support people of all backgrounds and identities.
+              </p>
+            </div>
+            <div class="p-6 bg-surface-container-low rounded-xl border-l-4 border-[#e84a5f]">
+              <h4 class="font-bold text-on-surface mb-2">Technical Humility</h4>
+              <p class="text-sm text-secondary">
+                Recognizing that there is always something to learn from others, regardless of their
+                seniority.
+              </p>
+            </div>
+          </div>
+        </section>
+        <!-- Image Block (Asymmetric Placement) -->
+        <div class="my-16 -mx-6">
+          <img
+            alt="Community Collaboration"
+            class="w-full h-64 object-cover shadow-2xl"
+            data-alt="Modern office space with creative professionals collaborating around a large wooden table with warm ambient lighting"
+            src="https://lh3.googleusercontent.com/aida-public/AB6AXuDz1igkLg5WqPa2pak3clLfYQ2nhAfr6sqVm7pk6jlgqZ_pBeL0p8E9Aa_WxZpqkD-xTICz7R6Sfwc37p38TAyPNuS5RRmAX5Gzzaw1j4L1pNi8xko8Ly83YtELWE39q_CKFFL6k3Xv4NILUfJDKIDXHNk-AGjEaLP0Cgpc8bzuy6Zi520gWAmGUg1pTzbMLRDs4HvOEtjnE9EwGFurGOztBmlsXKONbDnETU1ADLa7UO7oetnInovmp49KRPZBsmVa0HJcCOQkGxiO"
+          />
+          <div
+            class="p-4 bg-surface-container-highest text-[10px] uppercase tracking-widest text-secondary font-mono"
+          >
+            Node Visual Archive // 2024 / VigoTech
+          </div>
+        </div>
+        <!-- Section 3: Expected Behavior -->
+        <section class="scroll-mt-24" id="expected-behavior">
+          <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span class="text-[#e84a5f]">03.</span> Expected Behavior
+          </h2>
+          <ul class="space-y-6 text-secondary">
+            <li class="flex gap-4">
+              <span class="material-symbols-outlined text-[#e84a5f] shrink-0">check_circle</span>
+              <span
+                >Participate in an authentic and active way. In doing so, you contribute to the
+                health and longevity of this community.</span
+              >
+            </li>
+            <li class="flex gap-4">
+              <span class="material-symbols-outlined text-[#e84a5f] shrink-0">check_circle</span>
+              <span>Exercise consideration and respect in your speech and actions.</span>
+            </li>
+            <li class="flex gap-4">
+              <span class="material-symbols-outlined text-[#e84a5f] shrink-0">check_circle</span>
+              <span>Attempt collaboration before conflict.</span>
+            </li>
+          </ul>
+        </section>
+        <!-- Section 4: Reporting -->
+        <section class="scroll-mt-24 p-8 bg-surface-container-highest rounded-3xl" id="reporting">
+          <h2 class="text-2xl font-bold mb-4">Need to report?</h2>
+          <p class="text-secondary mb-8 leading-relaxed">
+            If you are being harassed, notice that someone else is being harassed, or have any other
+            concerns, please contact the steering committee.
+          </p>
+          <a
+            class="inline-flex items-center gap-2 px-8 py-4 bg-gradient-to-br from-primary to-primary-container text-on-primary font-bold rounded-xl shadow-[0_32px_32px_-4px_rgba(177,31,59,0.15)] active:scale-95 transition-all duration-200"
+            href="#"
+          >
+            <span class="material-symbols-outlined">send</span>
+            Contact Conduct Team
+          </a>
+        </section>
+      </article>
+    </main>
+    <!-- Footer (Mobile Optimized) -->
+    <footer class="bg-surface-container-low mt-20 pb-24">
+      <div class="px-8 py-16 flex flex-col items-center text-center gap-8">
+        <div class="text-lg font-bold text-[#e84a5f] brand-font uppercase tracking-tighter">
+          The Editorial Node
+        </div>
+        <div
+          class="flex flex-wrap justify-center gap-6 font-['Inter'] text-xs uppercase tracking-[0.2em] text-slate-500"
+        >
+          <a class="hover:underline decoration-[#e84a5f] underline-offset-4" href="#">Privacy</a>
+          <a class="hover:underline decoration-[#e84a5f] underline-offset-4" href="#">Terms</a>
+          <a class="hover:underline decoration-[#e84a5f] underline-offset-4" href="#"
+            >Open Source</a
+          >
+          <a class="hover:underline decoration-[#e84a5f] underline-offset-4" href="#">Connect</a>
+        </div>
+        <p
+          class="font-['Inter'] text-[10px] uppercase tracking-widest text-slate-400 opacity-80 leading-loose"
+        >
+          © 2024 The Editorial Node.<br />Built for the community.
+        </p>
+      </div>
+    </footer>
+    <!-- Side Navigation Shell (Hidden on Mobile by default, but mapped for structure) -->
+    <!-- The prompt requested a mobile version, so we primarily use a scroll-based flow with a top nav -->
+    <!-- Global Nav Mockup (Bottom bar for Mobile UX as per Shell Rules) -->
+    <div
+      class="md:hidden fixed bottom-0 w-full bg-[#f1fbff]/90 backdrop-blur-2xl px-6 py-4 flex justify-between items-center z-50 border-t border-surface-container-highest"
+    >
+      <a
+        class="flex flex-col items-center gap-1 text-slate-500 transition-all duration-200"
+        href="#"
+      >
+        <span class="material-symbols-outlined">home</span>
+        <span class="text-[10px] font-bold uppercase tracking-tighter">Home</span>
+      </a>
+      <a
+        class="flex flex-col items-center gap-1 text-[#e84a5f] font-bold transition-all duration-200"
+        href="#"
+      >
+        <span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1"
+          >gavel</span
+        >
+        <span class="text-[10px] uppercase tracking-tighter">Conduct</span>
+      </a>
+      <a
+        class="flex flex-col items-center gap-1 text-slate-500 transition-all duration-200"
+        href="#"
+      >
+        <span class="material-symbols-outlined">archive</span>
+        <span class="text-[10px] uppercase tracking-tighter">Archive</span>
+      </a>
+      <a
+        class="flex flex-col items-center gap-1 text-slate-500 transition-all duration-200"
+        href="#"
+      >
+        <span class="material-symbols-outlined">groups</span>
+        <span class="text-[10px] uppercase tracking-tighter">Connect</span>
+      </a>
+    </div>
+  </body>
+</html>

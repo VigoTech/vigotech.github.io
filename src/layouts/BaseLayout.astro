@@ -1,0 +1,104 @@
+---
+import { withBase } from '../lib/base-path'
+import ThemeScript from '../components/theme/ThemeScript.astro'
+import Footer from '../components/layout/Footer.astro'
+import Header from '../components/layout/Header.astro'
+import '../styles/global.css'
+
+type Props = {
+  title?: string
+  description?: string
+  mainClass?: string
+}
+
+const {
+  title = 'VigoTech Alliance',
+  description = 'Federated ecosystem of tech communities from Vigo',
+  mainClass = 'pt-28',
+} = Astro.props
+
+const shouldNoIndex = import.meta.env.PUBLIC_NOINDEX === 'true'
+---
+
+<!doctype html>
+<html lang="gl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="generator" content={Astro.generator} />
+    <meta name="description" content={description} />
+    {shouldNoIndex && <meta name="robots" content="noindex, nofollow" />}
+    <title>{title}</title>
+    <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
+    <link rel="icon" href={withBase('/favicon.ico')} />
+    <link rel="preload" href={withBase('/fonts/inter-latin.woff2')} as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href={withBase('/fonts/instrument-serif-latin.woff2')} as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href={withBase('/fonts/instrument-serif-latin-italic.woff2')}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap"
+      rel="stylesheet"
+    />
+    <ThemeScript />
+  </head>
+  <body class="bg-[var(--bg)] text-[var(--ink)]">
+    <Header />
+
+    <main class={mainClass} data-page-content>
+      <slot />
+    </main>
+
+    <Footer />
+
+    <script is:inline>
+      (() => {
+        const selector = '.reveal'
+
+        const revealAll = () => {
+          document.querySelectorAll(selector).forEach((el) => {
+            el.classList.add('is-visible')
+          })
+        }
+
+        const setup = () => {
+          const elements = Array.from(document.querySelectorAll(selector))
+          if (elements.length === 0) {
+            return
+          }
+
+          if (
+            !('IntersectionObserver' in window) ||
+            window.matchMedia('(prefers-reduced-motion: reduce)').matches
+          ) {
+            revealAll()
+            return
+          }
+
+          const observer = new IntersectionObserver(
+            (entries) => {
+              entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                  entry.target.classList.add('is-visible')
+                  observer.unobserve(entry.target)
+                }
+              })
+            },
+            {
+              rootMargin: '0px 0px -8% 0px',
+              threshold: 0.16,
+            },
+          )
+
+          elements.forEach((el) => observer.observe(el))
+        }
+
+        setup()
+      })()
+    </script>
+  </body>
+</html>

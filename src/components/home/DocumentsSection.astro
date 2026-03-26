@@ -1,0 +1,28 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { withBase } from '../../lib/base-path'
+
+type Props = {
+  docs: Array<CollectionEntry<'documents'>>
+}
+
+const { docs } = Astro.props
+---
+
+<section class='reveal py-12' style='--reveal-delay: 170ms;'>
+  <div class='vt-content-shell'>
+    <div class='flex flex-wrap justify-center gap-3'>
+      {
+        docs.map((doc) => (
+          <a
+            class='rounded-md border border-[var(--line)] bg-[var(--bg-elevated)] px-4 py-2 text-sm text-[var(--ink-soft)] transition-colors hover:text-[var(--accent)]'
+            href={withBase(`/${doc.data.slug}`)}
+          >
+            {doc.data.title}
+          </a>
+        ))
+      }
+    </div>
+  </div>
+</section>

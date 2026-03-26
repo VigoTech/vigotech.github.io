@@ -1,0 +1,96 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LANG } from '../../i18n/config'
+import { homeHeroT } from '../../i18n/home-hero'
+import HeroShader from '../shaders/HeroShader.astro'
+import GroupLogo from '../ui/GroupLogo.astro'
+import UpcomingEventsPanel from './UpcomingEventsPanel.astro'
+
+type Props = {
+  featuredGroups: Array<CollectionEntry<'groups'>>
+  totalGroups: number
+  upcomingEvents: Array<CollectionEntry<'events'>>
+}
+
+const { featuredGroups, totalGroups, upcomingEvents } = Astro.props
+const t = homeHeroT[LANG]
+
+const escapeHtml = (value: string): string =>
+  value
+    .replace(/&/g, '&amp;')
+    .replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;')
+    .replace(/"/g, '&quot;')
+    .replace(/'/g, '&#39;')
+
+const renderTitleMarkdown = (value: string): string => {
+  const escaped = escapeHtml(value)
+
+  return escaped
+    .replace(
+      /\*\*(.+?)\*\*/g,
+      '<span class="italic text-primary-strong dark:text-primary">$1</span>',
+    )
+    .replace(/\n/g, '<br />')
+}
+
+const titleHtml = renderTitleMarkdown(t.titleMarkdown)
+---
+
+<div
+  class="reveal relative overflow-hidden bg-primary/70"
+  style="--reveal-delay: 20ms;"
+>
+  <HeroShader />
+  <section class="relative mb-24 px-4 pt-26 sm:px-8 sm:pt-28 xl:px-12">
+    <div class="vt-content-shell grid grid-cols-12 items-end gap-8 lg:gap-12">
+      <div class="col-span-12 lg:col-span-7 pr-6 sm:pr-4">
+        <div
+          class="relative overflow-hidden rounded-xl px-4 py-8 sm:px-8 sm:py-12"
+        >
+          <div class="relative z-10">
+            <h1
+              class="font-headline text-4xl tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-8xl lg:leading-[0.9]"
+              set:html={titleHtml}
+            />
+            <p
+              class="mt-6 max-w-2xl text-base leading-relaxed text-white sm:text-xl"
+            >
+              {t.description}
+            </p>
+            <div class="mt-9 flex flex-wrap items-center gap-6">
+              <a
+                href="#grupos"
+                class="primary-gradient rounded-md px-8 py-4 font-headline text-base font-bold text-white shadow-[0_32px_32px_-4px_rgba(232,74,95,0.14)]"
+              >
+                {t.exploreButton}
+              </a>
+              <div class="flex -space-x-4">
+                {
+                  featuredGroups
+                    .slice(0, 3)
+                    .map((group) => (
+                      <GroupLogo
+                        src={group.data.logo}
+                        name={group.data.name}
+                        sizeClass="size-11"
+                        class="-mr-4 border-2 border-[var(--bg)]"
+                      />
+                    ))
+                }
+                <div
+                  class="vt-squircle flex size-11 items-center justify-center border-2 border-[var(--bg)] bg-[var(--accent)] text-xs font-bold text-white"
+                >
+                  +{totalGroups}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <UpcomingEventsPanel upcomingEvents={upcomingEvents} />
+    </div>
+  </section>
+</div>
