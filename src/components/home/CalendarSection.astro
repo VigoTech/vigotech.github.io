@@ -1,8 +1,10 @@
 ---
 import { LANG, LOCALE } from '../../i18n/config'
 import { calendarT } from '../../i18n/calendar'
+import { withBase } from '../../lib/base-path'
 
 const t = calendarT[LANG]
+const calendarApiUrl = withBase('/api/calendar.json')
 ---
 
 <section id='calendar' class='reveal px-2 py-20 sm:px-6' style='--reveal-delay: 90ms;'>
@@ -69,7 +71,7 @@ const t = calendarT[LANG]
   </div>
 </section>
 
-<script is:inline define:vars={{ locale: LOCALE, labels: t }} lang='js'>
+<script is:inline define:vars={{ locale: LOCALE, labels: t, calendarApiUrl }} lang='js'>
   (() => {
     const dayEventsContainer = document.querySelector('[data-calendar-day-events]')
     const dayLabel = document.querySelector('[data-calendar-day-label]')
@@ -138,11 +140,31 @@ const t = calendarT[LANG]
       return map
     }
 
+    const hasEventsOnDate = (eventsByDay, key) => (eventsByDay.get(key) || []).length > 0
+
     const getDefaultSelectedDate = (eventsByDay) => {
-      const month = displayDate.getMonth()
       const year = displayDate.getFullYear()
+      const month = displayDate.getMonth()
+      const monthStart = new Date(year, month, 1)
+      const mondayOffset = (monthStart.getDay() + 6) % 7
+      const weekStart = new Date(year, month, monthStart.getDate() - mondayOffset)
+      const weekEnd = new Date(
+        weekStart.getFullYear(),
+        weekStart.getMonth(),
+        weekStart.getDate() + 6,
+        23,
+        59,
+        59,
+        999,
+      )
+
       const keys = [...eventsByDay.keys()].filter((key) => {
         const date = keyToDate(key)
+
+        if (calendarView === 'week') {
+          return date >= weekStart && date <= weekEnd
+        }
+
         return date.getFullYear() === year && date.getMonth() === month
       })
 
@@ -150,7 +172,7 @@ const t = calendarT[LANG]
         return keys.sort()[0]
       }
 
-      return getDateKey(new Date(year, month, 1))
+      return calendarView === 'week' ? getDateKey(weekStart) : getDateKey(monthStart)
     }
 
     const renderCalendarGrid = (events) => {
@@ -173,12 +195,8 @@ const t = calendarT[LANG]
         calendarLabel.textContent = monthLabelFormatter.format(baseDate)
       }
 
-      const eventDays = new Set(
-        events
-          .map((event) => new Date(event.start))
-          .filter((date) => !Number.isNaN(date.getTime()))
-          .map((date) => getDateKey(date)),
-      )
+      const eventsByDay = getEventsByDay(events)
+      const eventDays = new Set(eventsByDay.keys())
 
       calendarGrid.innerHTML = ''
 
@@ -204,15 +222,22 @@ const t = calendarT[LANG]
 
         if (inMonth) {
           const key = getDateKey(currentDate)
+          const hasEvents = hasEventsOnDate(eventsByDay, key)
           dayCell.textContent = String(currentDate.getDate())
           dayCell.classList.remove('text-[var(--ink-soft)]')
-          dayCell.classList.add('cursor-pointer', 'text-[var(--ink)]')
+          dayCell.classList.add('text-[var(--ink)]')
 
-          dayCell.addEventListener('click', () => {
-            selectedDateKey = key
-            renderCalendarGrid(loadedEvents)
-            renderSelectedDayEvents(loadedEvents)
-          })
+          if (hasEvents) {
+            dayCell.classList.add('cursor-pointer')
+            dayCell.addEventListener('click', () => {
+              selectedDateKey = key
+              renderCalendarGrid(loadedEvents)
+              renderSelectedDayEvents(loadedEvents)
+            })
+          } else {
+            dayCell.classList.add('cursor-default')
+            dayCell.setAttribute('aria-disabled', 'true')
+          }
 
           if (eventDays.has(key)) {
             dayCell.classList.add('bg-primary', 'font-semibold', 'text-white')
@@ -308,13 +333,13 @@ const t = calendarT[LANG]
       return `${dateLabel} - ${labels.at} ${timeLabel}`
     }
 
-      const loadCalendar = async () => {
+    const loadCalendar = async () => {
       setVisible(loading, true)
       setVisible(error, false)
-      setVisible(empty, false)
+      setVisible(dayEmpty, false)
 
       try {
-        const response = await fetch('/api/calendar.json', {
+        const response = await fetch(calendarApiUrl, {
           headers: {
             accept: 'application/json',
           },
@@ -382,6 +407,7 @@ const t = calendarT[LANG]
           item.classList.toggle('text-[var(--ink-soft)]', !selected)
         })
 
+        selectedDateKey = getDefaultSelectedDate(getEventsByDay(loadedEvents))
         renderCalendarGrid(loadedEvents)
         renderSelectedDayEvents(loadedEvents)
       })
@@ -395,7 +421,7 @@ const t = calendarT[LANG]
         } else {
           displayDate = new Date(displayDate.getFullYear(), displayDate.getMonth() + 1, 1)
         }
-        selectedDateKey = getDateKey(new Date(displayDate.getFullYear(), displayDate.getMonth(), 1))
+        selectedDateKey = getDefaultSelectedDate(getEventsByDay(loadedEvents))
         renderCalendarGrid(loadedEvents)
         renderSelectedDayEvents(loadedEvents)
       })
