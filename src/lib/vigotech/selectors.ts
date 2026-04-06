@@ -11,8 +11,20 @@ export const sortVideosByDate = (videos: VideoEntry[]): VideoEntry[] =>
     return bDate - aDate
   })
 
-export const getRecentVideos = (videos: VideoEntry[], amount = 4): VideoEntry[] =>
-  sortVideosByDate(videos).slice(0, amount)
+export const getRecentVideos = (videos: VideoEntry[], amount = 4): VideoEntry[] => {
+  const seenGroups = new Set<string>()
+
+  return sortVideosByDate(videos)
+    .filter((video) => {
+      if (seenGroups.has(video.data.groupId)) {
+        return false
+      }
+
+      seenGroups.add(video.data.groupId)
+      return true
+    })
+    .slice(0, amount)
+}
 
 export const getUpcomingEvents = (events: EventEntry[], amount = 3): EventEntry[] => {
   const now = Date.now()

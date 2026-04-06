@@ -56,7 +56,12 @@
           "channel_id": "UC9DPKfcLiNd7SEU-QLlIG7A"
         }
       ],
-      "nextEvent": null,
+      "nextEvent": {
+        "title": "Introdución ao procesado de audio con STM32 e I2S",
+        "date": 1776499200000,
+        "url": "https://www.meetup.com/aindustriosa/events/314059100/",
+        "location": "Vigo - es"
+      },
       "videoList": [
         {
           "player": "youtube",
@@ -1219,7 +1224,12 @@
         "type": "meetup",
         "meetupid": "craftersvigo"
       },
-      "nextEvent": null,
+      "nextEvent": {
+        "title": "#65 - Forjando código: TDD con IA en el reino medieval",
+        "date": 1775583000000,
+        "url": "https://www.meetup.com/craftersvigo/events/314077652/",
+        "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
+      },
       "videoList": [],
       "eventList": []
     },
@@ -1230,6 +1240,10 @@
         "web": "https://www.galpon.org",
         "twitter": "https://twitter.com/galpon",
         "maillist": "https://www.galpon.org/content/listas-correo-galpon"
+      },
+      "events": {
+        "type": "json",
+        "source": "https://raw.githubusercontent.com/Daniel-at-github/vigotech_events/refs/heads/main/calendars/obradoiros_galpon.json"
       },
       "nextEvent": null,
       "videoList": [],
@@ -4690,6 +4704,29 @@
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
+        {
+          "player": "youtube",
+          "id": "kFLjqsvZKEc",
+          "title": "Posicionando sin IA en tiempos de IA",
+          "pubDate": 1775159541000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/kFLjqsvZKEc/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/kFLjqsvZKEc/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/kFLjqsvZKEc/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
         {
           "player": "youtube",
           "id": "IWd72H69Xqo",
