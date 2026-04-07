@@ -1,0 +1,182 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LANG, LOCALE } from '../../i18n/config'
+import { videosBrowserT } from '../../i18n/videos-browser'
+import { withBase } from '../../lib/base-path'
+import FloatingHeader from '../ui/FloatingHeader.astro'
+import GroupLogo from '../ui/GroupLogo.astro'
+
+type Props = {
+  videos: Array<CollectionEntry<'videos'>>
+  groups: Array<CollectionEntry<'groups'>>
+}
+
+const { videos, groups } = Astro.props
+
+const sortedGroups = [...groups]
+  .filter((group) => group.data.videoCount > 0)
+  .sort((a, b) => a.data.name.localeCompare(b.data.name, LOCALE))
+
+const t = videosBrowserT[LANG]
+
+const filterOptions = [
+  { id: 'all', label: t.allGroups },
+  ...sortedGroups.map((group) => ({ id: group.id, label: group.data.name })),
+]
+
+const formatDate = (value: number | null): string => {
+  if (!value) {
+    return ''
+  }
+  return new Intl.DateTimeFormat(LOCALE, {
+    year: 'numeric',
+    month: 'short',
+    day: '2-digit',
+  })
+    .format(new Date(value))
+    .replace(/\./g, '')
+}
+---
+
+<section class='vt-content-shell mt-6 px-2 pb-16 sm:px-6'>
+  <FloatingHeader
+    eyebrow={t.eyebrow}
+    title={t.heading}
+    searchPlaceholder={t.searchPlaceholder}
+    filters={filterOptions}
+    activeFilterId='all'
+    eventName='vt:videos-filters-change'
+  />
+
+  <div class='mt-8 grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4' data-videos-list>
+    {
+      videos.map((video) => (
+        <article
+          class='overflow-hidden rounded-3xl bg-[var(--bg-panel)] shadow-[0_20px_30px_-24px_rgba(0,0,0,.3)]'
+          data-video-card
+          data-video-group={video.data.groupId}
+          data-video-searchable={`${video.data.title} ${video.data.groupName}`.toLowerCase()}
+        >
+          <a href={video.data.url ?? '#'} target='_blank' rel='noreferrer' class='block'>
+            {video.data.thumbnail ? (
+              <img
+                src={withBase(video.data.thumbnail)}
+                alt={video.data.title}
+                class='aspect-video w-full object-cover'
+                loading='lazy'
+              />
+            ) : (
+              <div class='aspect-video w-full bg-[var(--bg-elevated)]' />
+            )}
+          </a>
+
+          <div class='p-3'>
+            <div class='mb-3 flex items-center gap-2'>
+              <GroupLogo
+                src={video.data.groupLogo}
+                name={video.data.groupName}
+                sizeClass='size-7'
+                class='bg-white'
+                fallbackClass='text-[10px] font-semibold text-[var(--ink)]'
+              />
+              <span class='font-headline text-xs font-bold tracking-[0.12em] text-primary uppercase'>
+                {video.data.groupName}
+              </span>
+            </div>
+
+            <h2 class='font-headline text-base leading-tight text-[var(--ink)]'>{video.data.title}</h2>
+
+            <div class='mt-4 flex items-center justify-between'>
+              <span class='text-xs text-[var(--ink-soft)]'>{formatDate(video.data.publishedAt)}</span>
+              <a
+                href={video.data.url ?? '#'}
+                target='_blank'
+                rel='noreferrer'
+                class='inline-flex items-center gap-1 font-headline text-sm font-bold text-primary'
+              >
+                {t.watchNow}
+                <span class='material-symbols-outlined text-base'>arrow_forward</span>
+              </a>
+            </div>
+          </div>
+        </article>
+      ))
+    }
+  </div>
+
+  <p class='mt-6 hidden text-sm text-[var(--ink-soft)]' data-videos-empty>{t.emptyResults}</p>
+</section>
+
+<script is:inline>
+  (() => {
+    const cards = Array.from(document.querySelectorAll('[data-video-card]'))
+    const empty = document.querySelector('[data-videos-empty]')
+    const stickyFilters = document.querySelector('[data-sticky-event="vt:videos-filters-change"]')
+
+    if (!(stickyFilters instanceof HTMLElement) || cards.length === 0) {
+      return
+    }
+
+    const preselectedGroup = new URLSearchParams(window.location.search).get('group')
+    let activeGroup = preselectedGroup || 'all'
+    let query = ''
+
+    const update = () => {
+      let visibleCount = 0
+
+      cards.forEach((card) => {
+        const group = card.getAttribute('data-video-group') || ''
+        const searchable = card.getAttribute('data-video-searchable') || ''
+
+        const byGroup = activeGroup === 'all' || group === activeGroup
+        const byQuery = query.length === 0 || searchable.includes(query)
+        const visible = byGroup && byQuery
+
+        card.classList.toggle('hidden', !visible)
+        if (visible) {
+          visibleCount += 1
+        }
+      })
+
+      if (empty) {
+        empty.classList.toggle('hidden', visibleCount !== 0)
+      }
+    }
+
+    const availableFilters = Array.from(stickyFilters.querySelectorAll('[data-filter-id]')).map((item) =>
+      item.getAttribute('data-filter-id'),
+    )
+
+    if (!availableFilters.includes(activeGroup)) {
+      activeGroup = 'all'
+    }
+
+    stickyFilters.dispatchEvent(
+      new CustomEvent('vt:sticky-filters-sync', {
+        detail: {
+          activeFilterId: activeGroup,
+        },
+      }),
+    )
+
+    stickyFilters.addEventListener('vt:videos-filters-change', (event) => {
+      const detail = event.detail || {}
+
+      activeGroup = detail.activeFilterId || 'all'
+      query = (detail.searchValue || '').trim().toLowerCase()
+
+      const url = new URL(window.location.href)
+      if (activeGroup === 'all') {
+        url.searchParams.delete('group')
+      } else {
+        url.searchParams.set('group', activeGroup)
+      }
+      window.history.replaceState({}, '', url)
+
+      update()
+    })
+
+    update()
+  })()
+</script>

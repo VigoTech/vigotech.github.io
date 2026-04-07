@@ -1,0 +1,14 @@
+---
+import { getCollection } from 'astro:content'
+
+import VideosBrowser from '../components/videos/VideosBrowser.astro'
+import BaseLayout from '../layouts/BaseLayout.astro'
+import { sortVideosByDate } from '../lib/vigotech/selectors'
+
+const videos = sortVideosByDate(await getCollection('videos'))
+const groups = await getCollection('groups')
+---
+
+<BaseLayout title='VigoTech Videos' description='Biblioteca de videos da comunidade VigoTech'>
+  <VideosBrowser videos={videos} groups={groups} />
+</BaseLayout>

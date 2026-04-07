@@ -1,0 +1,172 @@
+---
+import Logo from '../../assets/logo.svg'
+import { menuItems } from '../../config/menu'
+import { LANG } from '../../i18n/config'
+import { headerT } from '../../i18n/header'
+import { stripBase, withBase } from '../../lib/base-path'
+import ThemeToggle from '../theme/ThemeToggle.astro'
+
+const t = headerT[LANG]
+
+const normalizePath = (value: string): string => {
+  if (value === '/') {
+    return '/'
+  }
+  return value.replace(/\/+$/, '')
+}
+
+const currentPath = normalizePath(stripBase(Astro.url.pathname))
+
+const isActiveUrl = (url: string): boolean => {
+  const target = normalizePath(url)
+
+  if (target === '/') {
+    return currentPath === '/'
+  }
+
+  return currentPath === target || currentPath.startsWith(`${target}/`)
+}
+---
+
+<nav
+  class="glass-nav fixed top-0 z-50 w-full bg-[#f1fbff]/80 shadow-[0_32px_32px_-4px_rgba(232,74,95,0.06)] dark:bg-slate-900/80"
+  data-mobile-nav-root
+  data-mobile-nav-open="false"
+>
+  <div
+    class="vt-shell flex items-center justify-between px-3 py-4 sm:px-6 sm:py-5"
+  >
+    <div class="flex flex-none items-center">
+      <a href={withBase('/')} class="text-primary">
+        <Logo
+          class="vt-site-logo h-6 w-auto sm:h-7 md:h-8"
+          aria-label={t.logoAria}
+          role="img"
+        />
+      </a>
+    </div>
+    <div class="hidden flex-1 items-center justify-end gap-8 md:flex">
+      {
+        menuItems.map((item) => (
+          <a
+            class="vt-nav-link font-headline text-base font-medium tracking-tight text-slate-600 transition-colors hover:text-primary dark:text-slate-300"
+            href={withBase(item.url)}
+            aria-current={isActiveUrl(item.url) ? 'page' : undefined}
+          >
+            {t.menu[item.id]}
+          </a>
+        ))
+      }
+    </div>
+    <div class="flex flex-none items-center justify-end gap-1 md:ml-6">
+      <ThemeToggle />
+      <button
+        type="button"
+        class="inline-flex h-10 w-10 items-center justify-center rounded-full bg-[var(--bg-panel)] text-[var(--ink)] shadow-[0_16px_24px_-20px_rgba(0,0,0,.45)] md:hidden"
+        data-mobile-nav-toggle
+        aria-expanded="false"
+        aria-label="Abrir menu"
+      >
+        <span class="material-symbols-outlined" data-mobile-nav-icon>menu</span>
+      </button>
+    </div>
+  </div>
+
+  <div
+    class="vt-mobile-nav-panel md:hidden"
+    data-mobile-nav-panel
+    data-open="false"
+  >
+    <div
+      class="vt-shell flex min-h-full items-center justify-center px-6 py-2 overflow-y-auto"
+    >
+      <div class="flex flex-col items-center gap-5 text-center">
+        {
+          menuItems.map((item) => (
+            <a
+              class="vt-mobile-nav-link font-headline text-3xl font-medium tracking-tight text-slate-700 dark:text-slate-200"
+              href={withBase(item.url)}
+              aria-current={isActiveUrl(item.url) ? 'page' : undefined}
+            >
+              {t.menu[item.id]}
+            </a>
+          ))
+        }
+      </div>
+    </div>
+  </div>
+</nav>
+
+<script is:inline>
+  ;(() => {
+    const setup = () => {
+      const root = document.querySelector('[data-mobile-nav-root]')
+      const toggle = root?.querySelector('[data-mobile-nav-toggle]')
+      const icon = root?.querySelector('[data-mobile-nav-icon]')
+      const panel = root?.querySelector('[data-mobile-nav-panel]')
+      const pageContent = document.querySelector('[data-page-content]')
+
+      if (
+        !(root instanceof HTMLElement) ||
+        !(toggle instanceof HTMLButtonElement) ||
+        !(icon instanceof HTMLElement) ||
+        !(panel instanceof HTMLElement)
+      ) {
+        return
+      }
+
+      let open = root.dataset.mobileNavOpen === 'true'
+
+      const sync = () => {
+        root.dataset.mobileNavOpen = open ? 'true' : 'false'
+        panel.dataset.open = open ? 'true' : 'false'
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false')
+        icon.textContent = open ? 'close' : 'menu'
+        pageContent?.setAttribute('data-overlay-blocked', open ? 'true' : 'false')
+      }
+
+      if (root.dataset.mobileNavBound === 'true') {
+        sync()
+        return
+      }
+
+      const close = () => {
+        open = false
+        sync()
+      }
+
+      const toggleMenu = () => {
+        open = !open
+        sync()
+      }
+
+      toggle.addEventListener('click', (event) => {
+        event.stopPropagation()
+        toggleMenu()
+      })
+
+      panel.addEventListener('click', (event) => {
+        if (event.target === panel) {
+          close()
+        }
+      })
+
+      panel.querySelectorAll('a').forEach((link) => {
+        link.addEventListener('click', () => {
+          close()
+        })
+      })
+
+      window.addEventListener('resize', () => {
+        if (window.innerWidth >= 768) {
+          close()
+        }
+      })
+
+      root.dataset.mobileNavBound = 'true'
+      sync()
+    }
+
+    setup()
+  })()
+</script>

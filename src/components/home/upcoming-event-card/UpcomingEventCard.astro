@@ -1,0 +1,34 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LANG } from '../../../i18n/config'
+import { homeHeroT } from '../../../i18n/home-hero'
+import UpcomingEventCardContent from './UpcomingEventCardContent.astro'
+
+type Props = {
+  event: CollectionEntry<'events'>
+}
+
+const { event } = Astro.props
+const t = homeHeroT[LANG]
+
+const cardClass =
+  'block rounded-lg bg-white/40 p-3 text-ink-contrast transition-transform hover:-translate-y-0.5'
+---
+
+{
+  event.data.link ? (
+    <a
+      href={event.data.link}
+      target="_blank"
+      rel="noreferrer"
+      class={cardClass}
+    >
+      <UpcomingEventCardContent event={event} ctaLabel={t.viewEvent} />
+    </a>
+  ) : (
+    <article class={cardClass}>
+      <UpcomingEventCardContent event={event} />
+    </article>
+  )
+}

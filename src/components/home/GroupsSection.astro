@@ -1,0 +1,38 @@
+---
+import type { CollectionEntry } from 'astro:content'
+
+import { LANG } from '../../i18n/config'
+import { groupsT } from '../../i18n/groups'
+import GroupCard from '../groups/GroupCard.astro'
+
+type Props = {
+  groups: Array<CollectionEntry<'groups'>>
+}
+
+const { groups } = Astro.props
+const t = groupsT[LANG]
+---
+
+<section
+  id="grupos"
+  class="reveal py-20"
+  style="--reveal-delay: 60ms;"
+>
+  <div class="vt-content-shell">
+    <header class="mb-6 text-center">
+      <h2 class="font-headline text-3xl tracking-tight sm:text-5xl">
+        {t.activeHeading}
+      </h2>
+    </header>
+
+    <div
+      class="grid gap-3 [grid-template-columns:repeat(auto-fit,minmax(180px,1fr))]"
+    >
+      {
+        groups.map((group) => (
+          <GroupCard group={group} compact={true} />
+        ))
+      }
+    </div>
+  </div>
+</section>
