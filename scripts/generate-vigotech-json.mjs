@@ -1,4 +1,4 @@
-import { mkdir, readFile, writeFile } from 'node:fs/promises'
+import { mkdir, readFile, readdir, unlink, writeFile } from 'node:fs/promises'
 import { dirname, resolve } from 'node:path'
 import { fileURLToPath } from 'node:url'
 import { createRequire } from 'node:module'
@@ -110,7 +110,15 @@ const ensureDirectory = async (directoryPath) => {
   await mkdir(directoryPath, { recursive: true })
 }
 
-const safeYamlScalar = (value) => JSON.stringify(value ?? '')
+const safeYamlScalar = (value) => {
+  const text = String(value ?? '')
+
+  if (text.includes('\n')) {
+    return JSON.stringify(text)
+  }
+
+  return `'${text.replace(/'/g, "''")}'`
+}
 
 const formatFrontmatterValue = (value, indent = 0) => {
   const prefix = ' '.repeat(indent)
@@ -192,6 +200,34 @@ const writeIfChanged = async (filePath, content) => {
   return true
 }
 
+const pruneGeneratedMarkdownFiles = async (directoryPath, expectedFileNames) => {
+  const expected = new Set(expectedFileNames)
+
+  let entries = []
+  try {
+    entries = await readdir(directoryPath, { withFileTypes: true })
+  } catch {
+    return 0
+  }
+
+  let deletedFiles = 0
+
+  for (const entry of entries) {
+    if (!entry.isFile() || !entry.name.endsWith('.md')) {
+      continue
+    }
+
+    if (expected.has(entry.name)) {
+      continue
+    }
+
+    await unlink(resolve(directoryPath, entry.name))
+    deletedFiles += 1
+  }
+
+  return deletedFiles
+}
+
 const getVideoId = (video) =>
   video && typeof video === 'object' && typeof video.id === 'string' && video.id.length > 0
     ? video.id
@@ -248,26 +284,77 @@ const sortVideosByDate = (videos) =>
   })
 
 const dedupeEvents = (events) => {
-  const orderedIds = []
-  const eventsById = new Map()
+  const orderedKeys = []
+  const eventsByKey = new Map()
+
+  const getEventKey = (event) => {
+    if (!event || typeof event !== 'object') {
+      return null
+    }
+
+    const link = typeof event.link === 'string' ? event.link.trim() : ''
+    if (link) {
+      return `link:${link}`
+    }
+
+    const title = typeof event.title === 'string' ? normalizeForIdentity(event.title) : ''
+    const date = typeof event.date === 'number' ? event.date : Number.NaN
+    if (title && Number.isFinite(date)) {
+      return `title-date:${title}:${date}`
+    }
+
+    if (event?.sourceId) {
+      return `source:${event.sourceId}`
+    }
+
+    return null
+  }
+
+  const choosePreferredEvent = (current, incoming) => {
+    if (!current) {
+      return incoming
+    }
+
+    const currentDescription = typeof current.description === 'string' && current.description.trim()
+    const incomingDescription =
+      typeof incoming.description === 'string' && incoming.description.trim()
+    const currentLocation = typeof current.location === 'string' && current.location.trim()
+    const incomingLocation = typeof incoming.location === 'string' && incoming.location.trim()
+
+    if (!currentDescription && incomingDescription) {
+      return { ...current, ...incoming }
+    }
+
+    if (!currentLocation && incomingLocation) {
+      return { ...current, ...incoming }
+    }
+
+    return { ...incoming, ...current }
+  }
 
   for (const event of events) {
-    if (!event?.sourceId) {
+    const key = getEventKey(event)
+    if (!key) {
       continue
     }
 
-    if (!eventsById.has(event.sourceId)) {
-      orderedIds.push(event.sourceId)
+    if (!eventsByKey.has(key)) {
+      orderedKeys.push(key)
     }
 
-    eventsById.set(event.sourceId, {
-      ...eventsById.get(event.sourceId),
-      ...event,
-    })
+    eventsByKey.set(key, choosePreferredEvent(eventsByKey.get(key), event))
   }
 
-  return orderedIds.map((id) => eventsById.get(id))
+  return orderedKeys.map((key) => eventsByKey.get(key))
 }
+
+const normalizeForIdentity = (value) =>
+  String(value ?? '')
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim()
 
 const sortEventsByDate = (events) => [...events].sort((a, b) => a.date - b.date)
 
@@ -619,18 +706,21 @@ const writeVideoContentFiles = async (members) => {
     await ensureDirectory(groupDir)
 
     const rawList = Array.isArray(member.videoList) ? member.videoList : []
+    const expectedFileNames = []
+
     for (const [index, videoRaw] of rawList.entries()) {
       const video = normalizeVideoEntry(groupId, groupName, groupLogo, videoRaw, index)
       if (!video) {
         continue
       }
 
-      const filePath = resolve(
-        groupDir,
-        `${toContentSlug(video.sourceId, `${groupId}-${index + 1}`)}.md`,
-      )
+      const fileName = `${toContentSlug(video.sourceId, `${groupId}-${index + 1}`)}.md`
+      expectedFileNames.push(fileName)
+      const filePath = resolve(groupDir, fileName)
       writtenFiles += Number(await writeIfChanged(filePath, buildFrontmatterDocument(video)))
     }
+
+    await pruneGeneratedMarkdownFiles(groupDir, expectedFileNames)
   }
 
   return writtenFiles
@@ -644,8 +734,10 @@ const writeEventContentFiles = async (members, historicalEventsByGroup, rootEntr
   if (rootEntry) {
     const rootDir = resolve(generatedEventsDir, 'root')
     await ensureDirectory(rootDir)
-    const filePath = resolve(rootDir, `${toContentSlug(rootEntry.sourceId, 'root-next-event')}.md`)
+    const rootFileName = `${toContentSlug(rootEntry.sourceId, 'root-next-event')}.md`
+    const filePath = resolve(rootDir, rootFileName)
     writtenFiles += Number(await writeIfChanged(filePath, buildFrontmatterDocument(rootEntry)))
+    await pruneGeneratedMarkdownFiles(rootDir, [rootFileName])
   }
 
   for (const [groupId, member] of Object.entries(members)) {
@@ -656,18 +748,21 @@ const writeEventContentFiles = async (members, historicalEventsByGroup, rootEntr
 
     const events =
       historicalEventsByGroup.get(groupId) ?? getPersistedEventsForMember(groupId, member)
+    const expectedFileNames = []
+
     for (const [index, eventRaw] of events.entries()) {
       const event = normalizeEventEntry(groupId, groupName, groupLogo, eventRaw, index)
       if (!event) {
         continue
       }
 
-      const filePath = resolve(
-        groupDir,
-        `${toContentSlug(event.sourceId, `${groupId}-${index + 1}`)}.md`,
-      )
+      const fileName = `${toContentSlug(event.sourceId, `${groupId}-${index + 1}`)}.md`
+      expectedFileNames.push(fileName)
+      const filePath = resolve(groupDir, fileName)
       writtenFiles += Number(await writeIfChanged(filePath, buildFrontmatterDocument(event)))
     }
+
+    await pruneGeneratedMarkdownFiles(groupDir, expectedFileNames)
   }
 
   return writtenFiles
