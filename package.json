@@ -24,7 +24,7 @@
     "@tailwindcss/vite": "^4.2.2",
     "astro": "^6.1.4",
     "astro-icon": "^1.1.5",
-    "metagroup-schema-tools": "^1.1.0",
+    "metagroup-schema-tools": "^1.1.1",
     "shaders": "^2.4.78",
     "tailwindcss": "^4.2.2"
   },

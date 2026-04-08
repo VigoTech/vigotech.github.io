@@ -12,7 +12,9 @@ const normalizeTitle = (value: string): string =>
     .replace(/\s+/g, ' ')
     .trim()
 
-const mapContentEvent = (entry: Awaited<ReturnType<typeof getCollection<'events'>>>[number]): CalendarEvent => ({
+const mapContentEvent = (
+  entry: Awaited<ReturnType<typeof getCollection<'events'>>>[number],
+): CalendarEvent => ({
   id: entry.data.sourceId,
   title: entry.data.title,
   start: entry.data.dateISO,
@@ -23,7 +25,10 @@ const mapContentEvent = (entry: Awaited<ReturnType<typeof getCollection<'events'
   allDay: false,
 })
 
-const mergeEventsByTitle = (contentEvents: CalendarEvent[], googleEvents: CalendarEvent[]): CalendarEvent[] => {
+const mergeEventsByTitle = (
+  contentEvents: CalendarEvent[],
+  googleEvents: CalendarEvent[],
+): CalendarEvent[] => {
   const merged = new Map<string, CalendarEvent>()
 
   for (const event of contentEvents) {

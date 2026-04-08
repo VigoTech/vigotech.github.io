@@ -67,7 +67,10 @@ const events = defineCollection({
     sourceId: z.string(),
     groupId: z.string(),
     groupName: z.string(),
-    groupLogo: z.string().nullable().transform((value) => toLocalGroupLogo(value)),
+    groupLogo: z
+      .string()
+      .nullable()
+      .transform((value) => toLocalGroupLogo(value)),
     title: z.string(),
     description: z.string().nullable(),
     date: z.number(),
@@ -83,7 +86,10 @@ const videos = defineCollection({
     sourceId: z.string(),
     groupId: z.string(),
     groupName: z.string(),
-    groupLogo: z.string().nullable().transform((value) => toLocalGroupLogo(value)),
+    groupLogo: z
+      .string()
+      .nullable()
+      .transform((value) => toLocalGroupLogo(value)),
     title: z.string(),
     player: z.string(),
     url: z.string().nullable(),
