@@ -3,11 +3,10 @@ name: Deploy Pages
 on:
   push:
     branches:
-      - main  
+      - main
   workflow_dispatch:
   schedule:
-    - cron: "30 16 * * *"
-  
+    - cron: '30 16 * * *'
 
 permissions:
   contents: write

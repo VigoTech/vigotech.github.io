@@ -1196,13 +1196,6 @@
       ],
       "eventList": [
         {
-          "sourceId": "AIndustriosa-314059100",
-          "title": "Introdución ao procesado de audio con STM32 e I2S",
-          "date": 1776499200000,
-          "url": "https://www.meetup.com/aindustriosa/events/314059100/",
-          "location": "Vigo - es"
-        },
-        {
           "sourceId": "aindustriosa-1776499200000-introducion-ao-procesado-de-audio-con-stm32-e-i2s",
           "title": "Introdución ao procesado de audio con STM32 e I2S",
           "date": 1776499200000,
@@ -1211,26 +1204,12 @@
           "description": "O vindeiro **18 de abril en A Industriosa** teremos unha sesión práctica para achegarnos ao mundo do procesado de audio dixital con microcontroladores **ST"
         },
         {
-          "sourceId": "AIndustriosa-314167108",
-          "title": "Pensaches algunha vez en crear unha biblioteca de compoñentes UI?",
-          "date": 1776965400000,
-          "url": "https://www.meetup.com/aindustriosa/events/314167108/",
-          "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
-        },
-        {
           "sourceId": "aindustriosa-1776965400000-pensaches-algunha-vez-en-crear-unha-biblioteca-de-componentes-ui",
           "title": "Pensaches algunha vez en crear unha biblioteca de compoñentes UI?",
           "date": 1776965400000,
           "url": "https://www.meetup.com/aindustriosa/events/314167108/",
           "location": "A Industriosa, Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw, Vigo, pw, es",
           "description": "Queres saber todo o que necesitas para facelo?\nO vindeiro **18 de abril ás 19:30 en A Industriosa**, **Sergio Carracedo** explicará dende o principio:\n\n* *"
-        },
-        {
-          "sourceId": "AIndustriosa-314059417",
-          "title": "Ciberseguridade orientada ao ámbito doméstico",
-          "date": 1777109400000,
-          "url": "https://www.meetup.com/aindustriosa/events/314059417/",
-          "location": "Vigo - es"
         },
         {
           "sourceId": "aindustriosa-1777109400000-ciberseguridade-orientada-ao-ambito-domestico",
@@ -3707,7 +3686,13 @@
           }
         }
       ],
-      "eventList": []
+      "eventList": [
+        {
+          "date": 1750356000000,
+          "title": "Reunión junio 2025",
+          "url": "https://www.python-vigo.es/posts/reunion-junio-2025/"
+        }
+      ]
     },
     "seogalicia": {
       "name": "Seo Galicia",
@@ -5625,13 +5610,6 @@
         }
       ],
       "eventList": [
-        {
-          "sourceId": "Vigo-WordPress-Meetup-314167142",
-          "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WP",
-          "date": 1776963600000,
-          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314167142/",
-          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
-        },
         {
           "sourceId": "vigowordpress-1776963600000-marketing4ecommerce-como-crear-unha-comunidade-masiva-e-internacional-con-wp",
           "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WP",
