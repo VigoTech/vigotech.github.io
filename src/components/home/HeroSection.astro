@@ -43,19 +43,21 @@ const titleHtml = renderTitleMarkdown(t.titleMarkdown)
   style="--reveal-delay: 20ms;"
 >
   <HeroShader />
-  <section class="relative mb-24 px-4 pt-26 sm:px-8 sm:pt-28 xl:px-12">
-    <div class="vt-content-shell grid grid-cols-12 items-end gap-8 lg:gap-12">
-      <div class="col-span-12 lg:col-span-7 pr-6 sm:pr-4">
+  <section class="relative mb-24 px-2 pt-20 sm:px-8 sm:pt-28 xl:px-12">
+    <div
+      class="vt-content-shell grid grid-cols-1 items-end gap-8 lg:grid-cols-12 lg:gap-12"
+    >
+      <div class="min-w-0 w-full overflow-hidden pr-0 sm:pr-4 lg:col-span-7">
         <div
           class="relative overflow-hidden rounded-xl px-4 py-8 sm:px-8 sm:py-12"
         >
           <div class="relative z-10">
             <h1
-              class="font-headline text-4xl tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.65)] sm:text-6xl lg:text-8xl lg:leading-[0.9]"
+              class="max-w-full text-balance wrap-break-word font-headline text-4xl leading-[1.02] tracking-tight text-white drop-shadow-[0_6px_24px_rgba(0,0,0,0.65)] sm:text-6xl sm:leading-[0.95] lg:text-8xl lg:leading-[0.9]"
               set:html={titleHtml}
             />
             <p
-              class="mt-6 max-w-2xl text-base leading-relaxed text-white sm:text-xl"
+              class="mt-6 max-w-2xl wrap-break-word text-base leading-relaxed text-white sm:text-xl"
             >
               {t.description}
             </p>
