@@ -21,17 +21,17 @@ const activeUpcomingEvents = upcomingEvents.filter(
 {
   activeUpcomingEvents.length > 0 && (
     <aside
-      class="col-span-12 h-full lg:col-span-5 lg:block lg:pt-8"
+      class="h-full min-w-0 max-w-full lg:block lg:col-span-5 lg:pt-8"
       data-upcoming-events-panel
       data-buffer-ms="7200000"
     >
-      <div class="flex h-[32rem] flex-col overflow-hidden rounded-xl bg-white/25 p-5 text-ink backdrop-blur-xl">
+      <div class="flex h-[32rem] min-w-0 w-full max-w-full flex-col overflow-hidden rounded-xl bg-white/25 p-5 text-ink backdrop-blur-xl">
         <div class="mb-4 flex items-center justify-between">
           <p class="text-xs font-semibold tracking-[0.14em] text-ink-contrast uppercase">
             {t.upcomingEvents} ({activeUpcomingEvents.length})
           </p>
         </div>
-        <div class="flex flex-1 flex-col gap-3 overflow-y-auto pr-1">
+        <div class="flex min-w-0 flex-1 flex-col gap-3 overflow-y-auto pr-1">
           {activeUpcomingEvents.map((event) => (
             <div data-event-card data-event-date={event.data.date}>
               <UpcomingEventCard event={event} />
