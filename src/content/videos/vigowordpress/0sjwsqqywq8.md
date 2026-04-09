@@ -2,7 +2,7 @@
 sourceId: '0SjwSQqYWQ8'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #02 - Jerarquía de plantillas, el ABC para desarrollar con WordPress'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=0SjwSQqYWQ8'

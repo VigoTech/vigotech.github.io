@@ -2,7 +2,7 @@
 sourceId: 'PhkMZaAX3HA'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Tinkering with CLI: Refining your terminal toolbox with pipx por Daniel Sanchez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=PhkMZaAX3HA'

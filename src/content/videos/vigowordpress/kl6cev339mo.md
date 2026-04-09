@@ -2,7 +2,7 @@
 sourceId: 'KL6cev339Mo'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #05 - Cómo ser un profesional freelance legal'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=KL6cev339Mo'

@@ -2,7 +2,7 @@
 sourceId: 'cQaMK4jm5Y0'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Los ingredientes de una buena estrategia de DATA DRIVEN en las campañas de publicidad'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=cQaMK4jm5Y0'

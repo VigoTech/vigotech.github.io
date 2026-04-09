@@ -2,7 +2,7 @@
 sourceId: 'b6ErBdjfBWg'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20190227 - Cómo construirte una impresora 3d XXL'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=b6ErBdjfBWg'

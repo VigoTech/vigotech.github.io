@@ -2,7 +2,7 @@
 sourceId: 'cRS2oFs_aqw'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'A Industriosa en Localia'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=cRS2oFs_aqw'

@@ -2,7 +2,7 @@
 sourceId: 'o8_24tjP-2o'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Charla Introducción a Joomla por Pablo Arias - #PHPVigo Meetup #2'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=o8_24tjP-2o'

@@ -2,7 +2,7 @@
 sourceId: 'R1CZGU-SWsA'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20180216 - Bulebule - Making of de un robot "micromouse"'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=R1CZGU-SWsA'

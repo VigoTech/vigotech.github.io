@@ -2,7 +2,7 @@
 sourceId: 'IY_6vY-M60Y'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Metodos magicos python'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=IY_6vY-M60Y'

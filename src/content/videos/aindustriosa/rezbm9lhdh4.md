@@ -2,7 +2,7 @@
 sourceId: 'ReZbM9lhdH4'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20180314 - Introducción al diseño naval - III Regata Solar - Íñigo Echenique'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ReZbM9lhdH4'

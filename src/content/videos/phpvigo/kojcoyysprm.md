@@ -2,7 +2,7 @@
 sourceId: 'KOJcOyySPRM'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'DÃ³nde estÃ¡ mi Ã±'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=KOJcOyySPRM'

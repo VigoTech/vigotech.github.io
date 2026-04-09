@@ -2,7 +2,7 @@
 sourceId: 'pLsC3jnbX5o'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Emisión en directo de Vigo JUG'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=pLsC3jnbX5o'

@@ -2,7 +2,7 @@
 sourceId: 'uMJGN-gTid0'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #04 - CoP: Comunidades de práctica online'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=uMJGN-gTid0'

@@ -2,7 +2,7 @@
 sourceId: 'L6aSDjE_2Vc'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #11 - Cómo gestionar una gran cantidad de sitios WordPress'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=L6aSDjE_2Vc'

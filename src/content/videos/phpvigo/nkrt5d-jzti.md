@@ -2,7 +2,7 @@
 sourceId: 'Nkrt5d_jZtI'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'PHPVigo   Drupal'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Nkrt5d_jZtI'

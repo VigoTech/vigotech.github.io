@@ -2,7 +2,7 @@
 sourceId: 'D5vmTg95Ov0'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Python 3, Primeros pasos.'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=D5vmTg95Ov0'

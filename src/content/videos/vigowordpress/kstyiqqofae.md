@@ -2,7 +2,7 @@
 sourceId: 'kstyIQqofaE'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #17 - ¿Tienes un ecommerce y no consigues vender lo que esperabas?'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=kstyIQqofaE'

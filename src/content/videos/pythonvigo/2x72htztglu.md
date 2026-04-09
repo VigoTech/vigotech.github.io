@@ -2,7 +2,7 @@
 sourceId: '2X72HTZTgLU'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Introducción a Machine Learning con Python - Xurxo Fresco - PyDay'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=2X72HTZTgLU'

@@ -2,7 +2,7 @@
 sourceId: 'km9YiCqhtps'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Eloy Coto'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=km9YiCqhtps'

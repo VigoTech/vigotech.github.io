@@ -2,7 +2,7 @@
 sourceId: 'T1wih6Hs-Yw'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Brujería con Numpy.einsum, por David de la Iglesia'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=T1wih6Hs-Yw'

@@ -2,7 +2,7 @@
 sourceId: 'wJvxjbGmK9A'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #10 - ¿Cuánto cuesta una web? Y, ¿como poner en valor mi trabajo?'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=wJvxjbGmK9A'

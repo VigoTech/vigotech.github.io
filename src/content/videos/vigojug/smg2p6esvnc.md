@@ -2,7 +2,7 @@
 sourceId: 'smG2P6Esvnc'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: '"De Groovy... e Sancho Panza" por Antón Rodríguez de Optare Solutions 30 min.'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=smG2P6Esvnc'

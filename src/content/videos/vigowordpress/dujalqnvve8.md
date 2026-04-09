@@ -2,7 +2,7 @@
 sourceId: 'DuJaLqNVVe8'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #03 - RRSS y su importancia en los negocios digitales'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=DuJaLqNVVe8'

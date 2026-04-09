@@ -2,7 +2,7 @@
 sourceId: 'iC-typrnn6U'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #06 - Dominios y hostings: el interrogatorio'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=iC-typrnn6U'

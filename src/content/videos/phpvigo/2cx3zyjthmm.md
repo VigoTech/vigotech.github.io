@@ -2,7 +2,7 @@
 sourceId: '2cx3ZyJTHmM'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Charla sobre GIT por Jesus Amieiro en #PHPVigo Meetup #2'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=2cx3ZyJTHmM'

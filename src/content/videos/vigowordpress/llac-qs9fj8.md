@@ -2,7 +2,7 @@
 sourceId: 'lLac-qS9fj8'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #01 - Plugins recomendados para WordPress y cómo crear el tuyo'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=lLac-qS9fj8'

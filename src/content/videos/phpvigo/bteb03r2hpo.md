@@ -2,7 +2,7 @@
 sourceId: 'bteb03R2hpo'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'DÃ³nde estÃ¡ mi Ã±" -Miguel Gonzalez (@migonzalvar)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=bteb03R2hpo'

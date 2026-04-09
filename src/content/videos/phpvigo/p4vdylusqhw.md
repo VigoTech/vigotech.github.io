@@ -2,7 +2,7 @@
 sourceId: 'p4vdyLUsqHw'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Encabezados HTTP de seguridade @rocasan_'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=p4vdyLUsqHw'

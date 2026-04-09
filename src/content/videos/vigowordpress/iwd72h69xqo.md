@@ -2,7 +2,7 @@
 sourceId: 'IWd72H69Xqo'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Convertir emoción en experiencias digitales'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=IWd72H69Xqo'

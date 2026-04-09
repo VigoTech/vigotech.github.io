@@ -2,7 +2,7 @@
 sourceId: 'JL7pEGKda4s'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Abdón Rodríguez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=JL7pEGKda4s'

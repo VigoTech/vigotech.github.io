@@ -2,7 +2,7 @@
 sourceId: '09hfTif_FaE'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Algoritmo Binary Search, por Antón Yuste'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=09hfTif_FaE'
