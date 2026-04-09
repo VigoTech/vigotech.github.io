@@ -110,11 +110,34 @@ const calendarApiUrl = withBase('/api/calendar.json')
     })
 
     const weekdayFormatter = new Intl.DateTimeFormat(locale, { weekday: 'short' })
+    const vigoTimezone = 'Europe/Madrid'
 
     const getDateKey = (date) => `${date.getFullYear()}-${date.getMonth()}-${date.getDate()}`
     const keyToDate = (key) => {
       const [year, month, day] = key.split('-').map(Number)
       return new Date(year, month, day)
+    }
+    const getTimezoneDateParts = (date, timeZone) => {
+      const parts = new Intl.DateTimeFormat('en-CA', {
+        timeZone,
+        year: 'numeric',
+        month: '2-digit',
+        day: '2-digit',
+      }).formatToParts(date)
+
+      return {
+        year: Number(parts.find((part) => part.type === 'year')?.value),
+        month: Number(parts.find((part) => part.type === 'month')?.value) - 1,
+        day: Number(parts.find((part) => part.type === 'day')?.value),
+      }
+    }
+    const getTimezoneDateKey = (date, timeZone) => {
+      const { year, month, day } = getTimezoneDateParts(date, timeZone)
+      return `${year}-${month}-${day}`
+    }
+    const getDayStamp = (key) => {
+      const [year, month, day] = key.split('-').map(Number)
+      return Date.UTC(year, month, day)
     }
 
     const getEventsByDay = (events) => {
@@ -197,6 +220,9 @@ const calendarApiUrl = withBase('/api/calendar.json')
 
       const eventsByDay = getEventsByDay(events)
       const eventDays = new Set(eventsByDay.keys())
+      const now = new Date()
+      const todayKey = getTimezoneDateKey(now, vigoTimezone)
+      const todayStamp = getDayStamp(todayKey)
 
       calendarGrid.innerHTML = ''
 
@@ -223,6 +249,8 @@ const calendarApiUrl = withBase('/api/calendar.json')
         if (inMonth) {
           const key = getDateKey(currentDate)
           const hasEvents = hasEventsOnDate(eventsByDay, key)
+          const isToday = key === todayKey
+          const isPastDate = getDayStamp(key) < todayStamp
           dayCell.textContent = String(currentDate.getDate())
           dayCell.classList.remove('text-[var(--ink-soft)]')
           dayCell.classList.add('text-[var(--ink)]')
@@ -240,13 +268,26 @@ const calendarApiUrl = withBase('/api/calendar.json')
           }
 
           if (eventDays.has(key)) {
-            dayCell.classList.add('bg-primary', 'font-semibold', 'text-white')
+            if (isPastDate) {
+              dayCell.classList.add('bg-primary-past', 'font-semibold', 'text-white')
+            } else {
+              dayCell.classList.add('bg-primary', 'font-semibold', 'text-white')
+            }
           } else {
             dayCell.classList.add('bg-[var(--bg-panel)]/65')
           }
 
           if (selectedDateKey === key) {
             dayCell.classList.add('ring-2', 'ring-primary/40', 'ring-offset-2', 'ring-offset-[var(--bg-elevated)]')
+          }
+
+          if (isToday) {
+            dayCell.classList.add(
+              'outline',
+              'outline-2',
+              'outline-[var(--accent)]',
+              'outline-offset-2',
+            )
           }
         } else {
           dayCell.textContent = ''
