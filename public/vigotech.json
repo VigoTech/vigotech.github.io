@@ -64,6 +64,16 @@
       },
       "inactive": true
     },
+    "cloudnativegalicia": {
+      "name": "Cloud Native Galicia",
+      "logo": "https://cloudnativegalicia.es/wp-content/uploads/2024/08/cncfgalicia4.jpg",
+      "links": {
+        "web": "https://cloudnativegalicia.es/",
+        "twitter": "https://x.com/cloudnativegal",
+        "linkedin": "https://www.linkedin.com/company/104357067",
+        "cncf": "https://community.cncf.io/cloud-native-galicia/"
+      }
+    },
     "craftersvigo": {
       "name": "Crafters Vigo",
       "logo": "https://vigotech.org/images/craftersVigo.png",
@@ -80,8 +90,7 @@
       "name": "GALPon",
       "logo": "https://vigotech.org/images/galpon.png",
       "links": {
-        "web": "https://www.galpon.org",
-        "maillist": "https://www.galpon.org/content/listas-correo-galpon"
+        "web": "https://www.galpon.org"
       },
       "events": {
         "type": "json",
@@ -127,9 +136,7 @@
       "name": "Grupo de Usuarios de Joomla de Vigo",
       "logo": "https://vigotech.org/images/joomla_vigo.png",
       "links": {
-        "web": "https://www.joomlavigo.es/",
-        "twitter": "https://twitter.com/JoomlaVigo",
-        "facebook": "https://www.facebook.com/JoomlaVigo/"
+        "web": "https://www.joomlavigo.es/"
       }
     },
     "phpvigo": {
@@ -269,19 +276,6 @@
       ],
       "inactive": true
     },
-    "wppontevedra": {
-      "name": "WordpressPontevedra",
-      "logo": "https://vigotech.org/images/wordpress-pontevedra.png",
-      "links": {
-        "meetup": "https://www.meetup.com/es-ES/Pontevedra-WordPress-Meetup/",
-        "twitter": "https://twitter.com/wppontevedra"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Pontevedra-WordPress-Meetup"
-      },
-      "inactive": true
-    },
     "vigowordpress": {
       "name": "VigoWordpress",
       "logo": "https://vigotech.org/images/vigowordpress.png",
@@ -300,8 +294,7 @@
           "type": "youtube",
           "channel_id": "UCuipENHgKAhr1VgK59156Tw"
         }
-      ],
-      "inactive": true
+      ]
     }
   }
 }
