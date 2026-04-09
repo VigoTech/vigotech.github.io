@@ -2,7 +2,7 @@
 sourceId: 'ZIX6z-xYN90'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Jenkins: Deja ya de hacerlo a mano!" - Santiago Rodriguez Collazo'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ZIX6z-xYN90'

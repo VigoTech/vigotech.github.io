@@ -2,7 +2,7 @@
 sourceId: 'Vrgi0hr0Dsk'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20190325 - Consecuencias de la Nueva Directiva de Copyright Europea (y qué puedo hacer)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Vrgi0hr0Dsk'

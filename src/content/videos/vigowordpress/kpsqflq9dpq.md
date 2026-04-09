@@ -2,7 +2,7 @@
 sourceId: 'kPsqFlq9DPQ'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #09 - Modelo de negocio de un profesional freelance'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=kPsqFlq9DPQ'

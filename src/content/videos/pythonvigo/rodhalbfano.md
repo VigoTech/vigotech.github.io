@@ -2,7 +2,7 @@
 sourceId: 'RODHAlBFANo'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Great balls of fire (Visualizando datos con Dash), por Iván Nieto'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=RODHAlBFANo'

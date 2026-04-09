@@ -2,7 +2,7 @@
 sourceId: 'FuQ5glFzmJA'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20200408 - [LIVE] - Regata Solar - Curso Radiocontrol e Telemetría'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=FuQ5glFzmJA'

@@ -2,7 +2,7 @@
 sourceId: '6niRYcubxPk'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Entornos Interactivos en python'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=6niRYcubxPk'

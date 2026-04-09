@@ -2,7 +2,7 @@
 sourceId: 'wyLUeXr7v_M'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Meetup #12: "Gestionar un WP con 250k pv diarias"'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=wyLUeXr7v_M'

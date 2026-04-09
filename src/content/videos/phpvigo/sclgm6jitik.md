@@ -2,7 +2,7 @@
 sourceId: 'ScLGm6jitik'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Meetup#7: AWS Reload y Despliegue con Deployer'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ScLGm6jitik'

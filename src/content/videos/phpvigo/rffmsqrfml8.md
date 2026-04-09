@@ -2,7 +2,7 @@
 sourceId: 'rffMsQRFml8'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'phpVigo   AWS'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=rffMsQRFml8'

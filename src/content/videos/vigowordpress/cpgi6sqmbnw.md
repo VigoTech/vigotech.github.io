@@ -2,7 +2,7 @@
 sourceId: 'cpGi6sQMbnw'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'MeetUp WordPress Vigo 24 10 2023'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=cpGi6sQMbnw'

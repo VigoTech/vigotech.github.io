@@ -2,7 +2,7 @@
 sourceId: 'NbeP64e8DZQ'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'CSS Grid Layout: El futuro ya está aquí'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=NbeP64e8DZQ'

@@ -2,7 +2,7 @@
 sourceId: 'bmMG6O0I4eI'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20200801 - [LIVE] - Hackeando mi robot aspirador'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=bmMG6O0I4eI'

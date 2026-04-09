@@ -2,7 +2,7 @@
 sourceId: '9DPtfApk8co'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Emisión en directo Python Vigo'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=9DPtfApk8co'

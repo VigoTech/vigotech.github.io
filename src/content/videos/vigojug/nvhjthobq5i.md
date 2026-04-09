@@ -2,7 +2,7 @@
 sourceId: 'nvHJthOBQ5I'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'LaretasGeek - Febrero 2021 - Especial Developer Experience'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=nvHJthOBQ5I'

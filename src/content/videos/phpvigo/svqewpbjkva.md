@@ -2,7 +2,7 @@
 sourceId: 'svqEwpbjkvA'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: '¿Nos hacen los tests ir más rápidos?'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=svqEwpbjkvA'

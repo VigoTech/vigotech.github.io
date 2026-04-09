@@ -2,7 +2,7 @@
 sourceId: '5BRaPH5BYPY'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Octubre 2020 - Especial desarrollo web con Adalab'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=5BRaPH5BYPY'

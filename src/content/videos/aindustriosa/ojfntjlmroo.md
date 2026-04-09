@@ -2,7 +2,7 @@
 sourceId: 'OJFnTJlMrOo'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Galicia, el espacio y por qué seguir explorando'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=OJFnTJlMrOo'

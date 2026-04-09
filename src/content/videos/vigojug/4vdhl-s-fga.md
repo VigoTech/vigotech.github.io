@@ -2,7 +2,7 @@
 sourceId: '4vDhL_S_FGA'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Cristina Vázquez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=4vDhL_S_FGA'

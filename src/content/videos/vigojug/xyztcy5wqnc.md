@@ -2,7 +2,7 @@
 sourceId: 'XyZTCy5WQNc'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Julio 2020 - Especial Engineering Management'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=XyZTCy5WQNc'

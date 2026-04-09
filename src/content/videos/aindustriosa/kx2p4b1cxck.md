@@ -2,7 +2,7 @@
 sourceId: 'Kx2P4b1cxCk'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20180301 - Monitorización de una regata de barcos radiocontrol'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Kx2P4b1cxCk'

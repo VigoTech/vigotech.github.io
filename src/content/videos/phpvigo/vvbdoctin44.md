@@ -2,7 +2,7 @@
 sourceId: 'VVbdoCTiN44'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Shame on you PHP!! (Sergio Carracedo)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=VVbdoCTiN44'

@@ -2,7 +2,7 @@
 sourceId: 'nxKtcLQl-OY'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Resque: Workers Asíncronos (Sergio Carracedo)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=nxKtcLQl-OY'

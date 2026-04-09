@@ -2,7 +2,7 @@
 sourceId: 'QWF0qd26gWM'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Agile, Scrum y Kanban - Pepe Doval - PyDay Galicia'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=QWF0qd26gWM'

@@ -2,7 +2,7 @@
 sourceId: 'TuGZWmsf-Mk'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Meetup #12: "Performance blackfire.io"'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=TuGZWmsf-Mk'

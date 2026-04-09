@@ -2,7 +2,7 @@
 sourceId: 'l8ORg4kzBoI'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Resolviendo la kata Args con TDD, por Javier Sánchez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=l8ORg4kzBoI'

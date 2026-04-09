@@ -2,7 +2,7 @@
 sourceId: 'z_4Up8HzjLQ'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Noviembre 2020 - Especial Kubernetes'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=z_4Up8HzjLQ'

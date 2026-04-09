@@ -2,7 +2,7 @@
 sourceId: 'd-K35EeIvcA'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Enero 2021 - Especial Elastic'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=d-K35EeIvcA'

@@ -2,7 +2,7 @@
 sourceId: 'kFLjqsvZKEc'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Posicionando sin IA en tiempos de IA'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=kFLjqsvZKEc'

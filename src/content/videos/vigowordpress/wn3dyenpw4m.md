@@ -2,7 +2,7 @@
 sourceId: 'WN3dyEnpW4M'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #16 - WebP, un formato para dominarlos a todos'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=WN3dyEnpW4M'

@@ -2,7 +2,7 @@
 sourceId: 'vYO-e3A9hlg'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: David García'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=vYO-e3A9hlg'

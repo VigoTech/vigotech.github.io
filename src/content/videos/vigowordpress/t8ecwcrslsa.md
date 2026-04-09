@@ -2,7 +2,7 @@
 sourceId: 't8ECwCRSlsA'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #14 - Encuentra y lanza tu idea de negocio'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=t8ECwCRSlsA'

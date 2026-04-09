@@ -2,7 +2,7 @@
 sourceId: 'yzoyQg1NIRo'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'PHP Traits (Carlos Goce)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=yzoyQg1NIRo'

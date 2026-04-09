@@ -2,7 +2,7 @@
 sourceId: 'qWHoyvLUK-U'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Mi primera metaclase: un ejemplo práctico - Miguel González Álvarez - PyDay'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=qWHoyvLUK-U'

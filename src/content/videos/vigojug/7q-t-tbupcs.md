@@ -2,7 +2,7 @@
 sourceId: '7Q-t_TbUPCs'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Marzo 2021 - especial Extreme Programming'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=7Q-t_TbUPCs'

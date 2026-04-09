@@ -2,7 +2,7 @@
 sourceId: 'nf8a_OrQSSI'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Badge OSHWDem 2017'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=nf8a_OrQSSI'
