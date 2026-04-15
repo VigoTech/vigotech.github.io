@@ -2623,10 +2623,9 @@
         }
       ],
       "nextEvent": {
-        "date": 1671130800000,
-        "location": "Cafe UF",
-        "title": "Reunión Diciembre 2022",
-        "url": "https://www.python-vigo.es/posts/reunion-diciembre-2022/"
+        "date": 1776362400000,
+        "title": "Reunión abril 2026",
+        "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
       },
       "videoList": [
         {
@@ -3708,6 +3707,11 @@
           "date": 1750356000000,
           "title": "Reunión junio 2025",
           "url": "https://www.python-vigo.es/posts/reunion-junio-2025/"
+        },
+        {
+          "date": 1776362400000,
+          "title": "Reunión abril 2026",
+          "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
         }
       ]
     },
