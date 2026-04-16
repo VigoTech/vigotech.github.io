@@ -2,7 +2,7 @@
 sourceId: 'AIndustriosa-314293120'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: '/images/groups/aindustriosa.png'
+groupLogo: 'https://vigotech.org/images/aindustriosa.png'
 title: 'AI Fundamentals: entende as bases da IA para espremela'
 description: null
 date: 1778175000000

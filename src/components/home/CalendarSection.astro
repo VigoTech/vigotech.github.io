@@ -16,15 +16,6 @@ const calendarApiUrl = withBase('/api/calendar.json')
       </div>
 
       <div class='flex flex-wrap items-center justify-end gap-2'>
-        <div class='inline-flex items-center gap-1 rounded-full border border-[var(--line)] bg-[var(--bg-elevated)] p-1'>
-          <button data-calendar-view='month' data-active='true' class='cursor-pointer rounded-full bg-primary px-3 py-1 text-xs font-semibold text-white'>
-            {t.viewMonth}
-          </button>
-          <button data-calendar-view='week' class='cursor-pointer rounded-full px-3 py-1 text-xs font-semibold text-[var(--ink-soft)]'>
-            {t.viewWeek}
-          </button>
-        </div>
-
         <a
           data-calendar-ics-link
           href='#'
@@ -82,8 +73,6 @@ const calendarApiUrl = withBase('/api/calendar.json')
     const calendarGrid = document.querySelector('[data-calendar-grid]')
     const calendarLabel = document.querySelector('[data-calendar-label]')
     const navButtons = Array.from(document.querySelectorAll('[data-calendar-nav]'))
-    const viewButtons = Array.from(document.querySelectorAll('[data-calendar-view]'))
-    let calendarView = 'month'
     let loadedEvents = []
     let displayDate = new Date()
     let selectedDateKey = ''
@@ -169,25 +158,9 @@ const calendarApiUrl = withBase('/api/calendar.json')
       const year = displayDate.getFullYear()
       const month = displayDate.getMonth()
       const monthStart = new Date(year, month, 1)
-      const mondayOffset = (monthStart.getDay() + 6) % 7
-      const weekStart = new Date(year, month, monthStart.getDate() - mondayOffset)
-      const weekEnd = new Date(
-        weekStart.getFullYear(),
-        weekStart.getMonth(),
-        weekStart.getDate() + 6,
-        23,
-        59,
-        59,
-        999,
-      )
 
       const keys = [...eventsByDay.keys()].filter((key) => {
         const date = keyToDate(key)
-
-        if (calendarView === 'week') {
-          return date >= weekStart && date <= weekEnd
-        }
-
         return date.getFullYear() === year && date.getMonth() === month
       })
 
@@ -195,7 +168,7 @@ const calendarApiUrl = withBase('/api/calendar.json')
         return keys.sort()[0]
       }
 
-      return calendarView === 'week' ? getDateKey(weekStart) : getDateKey(monthStart)
+      return getDateKey(monthStart)
     }
 
     const renderCalendarGrid = (events) => {
@@ -204,15 +177,11 @@ const calendarApiUrl = withBase('/api/calendar.json')
       }
 
       const baseDate = new Date(displayDate.getFullYear(), displayDate.getMonth(), 1)
-      const mondayOffset = (baseDate.getDay() + 6) % 7
-      const weekStart = new Date(baseDate.getFullYear(), baseDate.getMonth(), baseDate.getDate() - mondayOffset)
-
       const monthStart = new Date(baseDate.getFullYear(), baseDate.getMonth(), 1)
       const monthEnd = new Date(baseDate.getFullYear(), baseDate.getMonth() + 1, 0)
       const monthStartWeekday = (monthStart.getDay() + 6) % 7
       const monthTotalDays = monthEnd.getDate()
-      const monthTotalCells = Math.ceil((monthStartWeekday + monthTotalDays) / 7) * 7
-      const totalCells = calendarView === 'week' ? 7 : monthTotalCells
+      const totalCells = Math.ceil((monthStartWeekday + monthTotalDays) / 7) * 7
 
       if (calendarLabel instanceof HTMLElement) {
         calendarLabel.textContent = monthLabelFormatter.format(baseDate)
@@ -240,11 +209,8 @@ const calendarApiUrl = withBase('/api/calendar.json')
         dayCell.className =
           'calendar-day flex min-h-14 items-center justify-center rounded-lg text-sm text-[var(--ink-soft)]'
 
-        const currentDate =
-          calendarView === 'week'
-            ? new Date(weekStart.getFullYear(), weekStart.getMonth(), weekStart.getDate() + index)
-            : new Date(baseDate.getFullYear(), baseDate.getMonth(), index - monthStartWeekday + 1)
-        const inMonth = calendarView === 'week' || currentDate.getMonth() === baseDate.getMonth()
+        const currentDate = new Date(baseDate.getFullYear(), baseDate.getMonth(), index - monthStartWeekday + 1)
+        const inMonth = currentDate.getMonth() === baseDate.getMonth()
 
         if (inMonth) {
           const key = getDateKey(currentDate)
@@ -436,23 +402,6 @@ const calendarApiUrl = withBase('/api/calendar.json')
         setVisible(error, true)
       }
     }
-
-    viewButtons.forEach((button) => {
-      button.addEventListener('click', () => {
-        calendarView = button.getAttribute('data-calendar-view') || 'month'
-        viewButtons.forEach((item) => {
-          const selected = item.getAttribute('data-calendar-view') === calendarView
-          item.setAttribute('data-active', selected ? 'true' : 'false')
-          item.classList.toggle('bg-primary', selected)
-          item.classList.toggle('text-white', selected)
-          item.classList.toggle('text-[var(--ink-soft)]', !selected)
-        })
-
-        selectedDateKey = getDefaultSelectedDate(getEventsByDay(loadedEvents))
-        renderCalendarGrid(loadedEvents)
-        renderSelectedDayEvents(loadedEvents)
-      })
-    })
 
     navButtons.forEach((button) => {
       button.addEventListener('click', () => {
