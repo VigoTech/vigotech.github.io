@@ -2,7 +2,7 @@
 sourceId: 'DjLP6VgNtTU'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #12 - WooCommerce no es solo una tienda online'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=DjLP6VgNtTU'

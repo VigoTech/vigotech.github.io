@@ -106,6 +106,28 @@ const slugify = (value) =>
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/(^-|-$)/g, '')
 
+const toLocalGroupLogo = (logo) => {
+  if (!logo) {
+    return null
+  }
+
+  if (logo.startsWith('/images/groups/')) {
+    return logo
+  }
+
+  const fromGroupsUrl = logo.match(/\/images\/groups\/([^/?#]+)$/i)?.[1]
+  if (fromGroupsUrl) {
+    return `/images/groups/${fromGroupsUrl}`
+  }
+
+  const fromUrl = logo.match(/\/images\/([^/?#]+)$/i)?.[1]
+  if (fromUrl) {
+    return `/images/groups/${fromUrl}`
+  }
+
+  return logo
+}
+
 const ensureDirectory = async (directoryPath) => {
   await mkdir(directoryPath, { recursive: true })
 }
@@ -179,7 +201,8 @@ const buildFrontmatterDocument = (data) => `---\n${formatFrontmatterValue(data)}
 const getGroupName = (groupId, member) =>
   typeof member?.name === 'string' && member.name.trim() ? member.name : groupId
 
-const getGroupLogo = (member) => (typeof member?.logo === 'string' ? member.logo : null)
+const getGroupLogo = (member) =>
+  typeof member?.logo === 'string' ? toLocalGroupLogo(member.logo) : null
 
 const toContentSlug = (value, fallback) => {
   const slug = slugify(value)

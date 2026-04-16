@@ -49,7 +49,8 @@ export const getTopGroupsByLastEvent = (
     }
   }
 
-  return [...groups]
+  return groups
+    .filter((group) => !group.data.inactive)
     .sort((a, b) => {
       const aDate = lastEventByGroup.get(a.id) ?? 0
       const bDate = lastEventByGroup.get(b.id) ?? 0

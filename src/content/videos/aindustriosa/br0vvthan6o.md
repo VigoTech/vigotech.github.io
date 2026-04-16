@@ -2,7 +2,7 @@
 sourceId: 'bR0vVThAn6o'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'A Industriosa no telexornal da TVG'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=bR0vVThAn6o'

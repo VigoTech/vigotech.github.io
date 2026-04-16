@@ -2,7 +2,7 @@
 sourceId: 'hjx-lqLlrhw'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'PythonVigo - David de la Iglesia'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=hjx-lqLlrhw'

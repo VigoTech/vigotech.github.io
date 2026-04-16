@@ -73,6 +73,11 @@ export const toLocalGroupLogo = (logo: string | null | undefined): string | null
     return logo
   }
 
+  const fromGroupsUrl = logo.match(/\/images\/groups\/([^/?#]+)$/i)?.[1]
+  if (fromGroupsUrl) {
+    return `/images/groups/${fromGroupsUrl}`
+  }
+
   const fromUrl = logo.match(/\/images\/([^/?#]+)$/i)?.[1]
   if (fromUrl) {
     return `/images/groups/${fromUrl}`

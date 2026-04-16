@@ -2,7 +2,7 @@
 sourceId: 'bQhakj6y7-Q'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Factura electrónica vs Verifactu:  Diferencias, obligaciones y soluciones'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=bQhakj6y7-Q'

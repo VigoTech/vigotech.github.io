@@ -2,7 +2,7 @@
 sourceId: 'cfQ-1H7bXjk'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Mira mamá, sin ifs - Miguel González'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=cfQ-1H7bXjk'

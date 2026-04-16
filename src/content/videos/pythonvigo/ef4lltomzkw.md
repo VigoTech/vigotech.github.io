@@ -2,7 +2,7 @@
 sourceId: 'ef4LLtomZKw'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'PythonVigo - oklog - José COrral'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ef4LLtomZKw'

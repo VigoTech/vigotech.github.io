@@ -2,7 +2,7 @@
 sourceId: 'oUZ-mqFcCuY'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Testing && Pizza - Álvaro Gómez (@lito_ordes)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=oUZ-mqFcCuY'

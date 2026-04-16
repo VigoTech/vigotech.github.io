@@ -2,7 +2,7 @@
 sourceId: 'Q9c0dQTEyc8'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Codenamize: presentación de la librería. Por José Juan Montes.'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Q9c0dQTEyc8'

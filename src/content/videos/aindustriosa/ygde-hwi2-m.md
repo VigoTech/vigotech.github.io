@@ -2,7 +2,7 @@
 sourceId: 'ygDE-hWi2-M'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20180123 - TVG - Entrevista a Ana Cidre'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ygDE-hWi2-M'

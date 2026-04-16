@@ -2,7 +2,7 @@
 sourceId: 'vigowordpress-1776963600000-marketing4ecommerce-como-crear-unha-comunidade-masiva-e-internacional-con-wp'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WP'
 description: "Desde o equipo de WordPress Vigo convidámosvos a unha nova edición da nosa Meetup.\n\n**Marketing4eCommerce: Cómo crear unha comunidade masiva e internaciona"
 date: 1776963600000

@@ -2,7 +2,7 @@
 sourceId: 'Dz8giDh9j9k'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Métodos mágicos (Rolando Caldas Sánchez)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Dz8giDh9j9k'

@@ -2,7 +2,7 @@
 sourceId: 'q4Vl54AsnaI'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Felicitacion PHPVigo 2016'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=q4Vl54AsnaI'

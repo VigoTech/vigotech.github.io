@@ -2,7 +2,7 @@
 sourceId: '7oKgu70oDtI'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: '20180601 - Garabullo - Diego Lale'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=7oKgu70oDtI'

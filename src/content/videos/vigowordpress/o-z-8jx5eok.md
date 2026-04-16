@@ -2,7 +2,7 @@
 sourceId: 'O-z_8jx5EOk'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Cómo construir una marca sólida y generar ventas a través del contenido gratuito'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=O-z_8jx5EOk'

@@ -2,7 +2,7 @@
 sourceId: 'craftersvigo-1775583000000-65-forjando-codigo-tdd-con-ia-en-el-reino-medieval'
 groupId: 'craftersvigo'
 groupName: 'Crafters Vigo'
-groupLogo: 'https://vigotech.org/images/craftersVigo.png'
+groupLogo: '/images/groups/craftersVigo.png'
 title: '#65 - Forjando código: TDD con IA en el reino medieval'
 description: null
 date: 1775583000000

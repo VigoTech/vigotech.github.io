@@ -2,7 +2,7 @@
 sourceId: 'R_K0saprZPw'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Reciclaxe de plásticos a pequeña escala con máquinas open source'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=R_K0saprZPw'

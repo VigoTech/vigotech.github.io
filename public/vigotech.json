@@ -15,7 +15,7 @@
   "members": {
     "agilevigo": {
       "name": "Agile Vigo",
-      "logo": "https://vigotech.org/images/agile_vigo.jpg",
+      "logo": "https://vigotech.org/images/groups/agile_vigo.jpg",
       "links": {
         "twitter": "https://twitter.com/agilevigo",
         "meetup": "https://www.meetup.com/es-ES/agile-vigo/",
@@ -31,7 +31,7 @@
     },
     "aindustriosa": {
       "name": "A Industriosa",
-      "logo": "https://vigotech.org/images/aindustriosa.png",
+      "logo": "https://vigotech.org/images/groups/aindustriosa.png",
       "links": {
         "web": "https://aindustriosa.org/",
         "twitter": "https://twitter.com/aindustriosa",
@@ -51,7 +51,7 @@
     },
     "blockchaingal": {
       "name": "Blockchain.gal Vigo",
-      "logo": "https://vigotech.org/images/blockchaingal.png",
+      "logo": "https://vigotech.org/images/groups/blockchaingal.png",
       "links": {
         "web": "https://blockchain.gal/",
         "twitter": "https://twitter.com/blockchain_gal",
@@ -64,9 +64,19 @@
       },
       "inactive": true
     },
+    "cloudnativegalicia": {
+      "name": "Cloud Native Galicia",
+      "logo": "https://cloudnativegalicia.es/wp-content/uploads/2024/08/cncfgalicia4.jpg",
+      "links": {
+        "web": "https://cloudnativegalicia.es/",
+        "twitter": "https://x.com/cloudnativegal",
+        "linkedin": "https://www.linkedin.com/company/104357067",
+        "cncf": "https://community.cncf.io/cloud-native-galicia/"
+      }
+    },
     "craftersvigo": {
       "name": "Crafters Vigo",
-      "logo": "https://vigotech.org/images/craftersVigo.png",
+      "logo": "https://vigotech.org/images/groups/craftersVigo.png",
       "links": {
         "twitter": "https://twitter.com/CraftersVigo",
         "meetup": "https://www.meetup.com/craftersvigo/"
@@ -78,10 +88,9 @@
     },
     "galpon": {
       "name": "GALPon",
-      "logo": "https://vigotech.org/images/galpon.png",
+      "logo": "https://vigotech.org/images/groups/galpon.png",
       "links": {
-        "web": "https://www.galpon.org",
-        "maillist": "https://www.galpon.org/content/listas-correo-galpon"
+        "web": "https://www.galpon.org"
       },
       "events": {
         "type": "json",
@@ -90,7 +99,7 @@
     },
     "galstech": {
       "name": "GalsTech",
-      "logo": "https://vigotech.org/images/galstech.png",
+      "logo": "https://vigotech.org/images/groups/galstech.png",
       "links": {
         "meetup": "https://www.meetup.com/GalsTech/",
         "twitter": "https://twitter.com/galstech_?lang=es"
@@ -103,7 +112,7 @@
     },
     "gdgvigo": {
       "name": "GDG Vigo",
-      "logo": "https://vigotech.org/images/gdg_vigo.png",
+      "logo": "https://vigotech.org/images/groups/gdg_vigo.png",
       "links": {
         "twitter": "http://twitter.com/GDGVigo/",
         "meetup": "https://www.meetup.com/es-ES/GDGVigo/?chapter_analytics_code=UA-73757047-1",
@@ -125,16 +134,14 @@
     },
     "joomlavigo": {
       "name": "Grupo de Usuarios de Joomla de Vigo",
-      "logo": "https://vigotech.org/images/joomla_vigo.png",
+      "logo": "https://vigotech.org/images/groups/joomla_vigo.png",
       "links": {
-        "web": "https://www.joomlavigo.es/",
-        "twitter": "https://twitter.com/JoomlaVigo",
-        "facebook": "https://www.facebook.com/JoomlaVigo/"
+        "web": "https://www.joomlavigo.es/"
       }
     },
     "phpvigo": {
       "name": "PHPVigo",
-      "logo": "https://vigotech.org/images/php_vigo.jpg",
+      "logo": "https://vigotech.org/images/groups/php_vigo.jpg",
       "links": {
         "web": "http://phpvigo.com/",
         "meetup": "https://www.meetup.com/es-ES/PHPVigo/",
@@ -162,7 +169,7 @@
     },
     "pythonvigo": {
       "name": "PythonVigo",
-      "logo": "https://vigotech.org/images/python_vigo.png",
+      "logo": "https://vigotech.org/images/groups/python_vigo.png",
       "links": {
         "web": "https://www.python-vigo.es/",
         "twitter": "https://twitter.com/python_vigo",
@@ -182,7 +189,7 @@
     },
     "seogalicia": {
       "name": "Seo Galicia",
-      "logo": "https://vigotech.org/images/seogalicia.png",
+      "logo": "https://vigotech.org/images/groups/seogalicia.png",
       "links": {
         "facebook": "https://www.facebook.com/SEOGaliciaMeetup",
         "meetup": "https://www.meetup.com/es/SEO-Galicia/",
@@ -196,7 +203,7 @@
     },
     "sysadmingalicia": {
       "name": "SysAdmin Galicia",
-      "logo": "https://vigotech.org/images/sysadmin_galicia.jpg",
+      "logo": "https://vigotech.org/images/groups/sysadmin_galicia.jpg",
       "links": {
         "meetup": "https://www.meetup.com/es-ES/Sysadmin-Galicia/",
         "twitter": "https://twitter.com/sysadmingalicia/"
@@ -215,7 +222,7 @@
     },
     "uxgalicia": {
       "name": "UX Galicia",
-      "logo": "https://vigotech.org/images/ux_gal.jpg",
+      "logo": "https://vigotech.org/images/groups/ux_gal.jpg",
       "links": {
         "web": "http://www.uxgalicia.com/",
         "meetup": "https://www.meetup.com/es-ES/Experiencia-de-Usuario-Meetup/",
@@ -229,7 +236,7 @@
     },
     "vigoadg": {
       "name": "Vigo Android Developer Group",
-      "logo": "https://vigotech.org/images/vigoadg.jpg",
+      "logo": "https://vigotech.org/images/groups/vigoadg.jpg",
       "links": {
         "twitter": "https://twitter.com/VigoADG",
         "meetup": "https://www.meetup.com/Vigo-Android-Developer-Group/"
@@ -242,7 +249,7 @@
     },
     "vigojug": {
       "name": "VigoJUG",
-      "logo": "https://vigotech.org/images/vigojug.jpg",
+      "logo": "https://vigotech.org/images/groups/vigojug.jpg",
       "links": {
         "web": "http://www.vigojug.org/",
         "github": "https://github.com/vigojug/",
@@ -269,22 +276,9 @@
       ],
       "inactive": true
     },
-    "wppontevedra": {
-      "name": "WordpressPontevedra",
-      "logo": "https://vigotech.org/images/wordpress-pontevedra.png",
-      "links": {
-        "meetup": "https://www.meetup.com/es-ES/Pontevedra-WordPress-Meetup/",
-        "twitter": "https://twitter.com/wppontevedra"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Pontevedra-WordPress-Meetup"
-      },
-      "inactive": true
-    },
     "vigowordpress": {
       "name": "VigoWordpress",
-      "logo": "https://vigotech.org/images/vigowordpress.png",
+      "logo": "https://vigotech.org/images/groups/vigowordpress.png",
       "links": {
         "mail": "wpmeetupvigo@gmail.com",
         "meetup": "https://www.meetup.com/es-ES/Vigo-WordPress-Meetup/",
@@ -300,8 +294,7 @@
           "type": "youtube",
           "channel_id": "UCuipENHgKAhr1VgK59156Tw"
         }
-      ],
-      "inactive": true
+      ]
     }
   }
 }

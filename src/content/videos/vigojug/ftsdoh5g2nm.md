@@ -2,7 +2,7 @@
 sourceId: 'FTsDoh5G2nM'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'JReleaser - Liberando a la velocidad de la luz'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=FTsDoh5G2nM'

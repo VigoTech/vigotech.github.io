@@ -2,7 +2,7 @@
 sourceId: 'AXgsnBT9A3M'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Ilustración, cómic y marca identidad ilustrada'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=AXgsnBT9A3M'

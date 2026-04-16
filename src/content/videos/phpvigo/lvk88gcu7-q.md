@@ -2,7 +2,7 @@
 sourceId: 'LVK88Gcu7-Q'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Preprocesadores CSS'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=LVK88Gcu7-Q'

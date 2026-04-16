@@ -2,7 +2,7 @@
 sourceId: 'uC1f88SGFJI'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Facturascripts 2018 técnico'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=uC1f88SGFJI'

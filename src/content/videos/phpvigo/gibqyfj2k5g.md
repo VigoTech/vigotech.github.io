@@ -2,7 +2,7 @@
 sourceId: 'GIbQYfj2K5g'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Blackfire.io: Mide tu performance (Ruben Gonzalez)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=GIbQYfj2K5g'

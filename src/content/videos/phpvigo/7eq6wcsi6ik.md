@@ -2,7 +2,7 @@
 sourceId: '7eQ6WCsi6ik'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Charla presentación PHPVigo #PHPVigo Meetup#1'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=7eQ6WCsi6ik'
