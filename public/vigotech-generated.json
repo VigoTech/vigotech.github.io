@@ -1218,6 +1218,13 @@
           "url": "https://www.meetup.com/aindustriosa/events/314059417/",
           "location": "Vigo, es",
           "description": "Nesta charla abordaremos cuestións clave para mellorar a seguridade dixital no día a día da casa. Falaremos da xestión segura de contrasinais e dos distint"
+        },
+        {
+          "sourceId": "AIndustriosa-314293120",
+          "title": "AI Fundamentals: entende as bases da IA para espremela",
+          "date": 1778175000000,
+          "url": "https://www.meetup.com/aindustriosa/events/314293120/",
+          "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
         }
       ]
     },
@@ -3691,6 +3698,11 @@
           "date": 1750356000000,
           "title": "Reunión junio 2025",
           "url": "https://www.python-vigo.es/posts/reunion-junio-2025/"
+        },
+        {
+          "date": 1776362400000,
+          "title": "Reunión abril 2026",
+          "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
         }
       ]
     },
