@@ -1271,13 +1271,22 @@
         "meetupid": "craftersvigo"
       },
       "nextEvent": {
-        "title": "#65 - Forjando código: TDD con IA en el reino medieval",
-        "date": 1775583000000,
-        "url": "https://www.meetup.com/craftersvigo/events/314077652/",
+        "sourceId": "craftersvigo-314353102",
+        "title": "#67 - TDD con IA (continuación)",
+        "date": 1776792600000,
+        "url": "https://www.meetup.com/craftersvigo/events/314353102/",
         "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
       },
       "videoList": [],
-      "eventList": []
+      "eventList": [
+        {
+          "sourceId": "craftersvigo-314353102",
+          "title": "#67 - TDD con IA (continuación)",
+          "date": 1776792600000,
+          "url": "https://www.meetup.com/craftersvigo/events/314353102/",
+          "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
+        }
+      ]
     },
     "galpon": {
       "name": "GALPon",
