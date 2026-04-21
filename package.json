@@ -22,7 +22,7 @@
   "dependencies": {
     "@iconify-json/lucide": "^1.2.98",
     "@tailwindcss/vite": "^4.2.2",
-    "astro": "^6.1.4",
+    "astro": "^6.1.6",
     "astro-icon": "^1.1.5",
     "metagroup-schema-tools": "^1.1.1",
     "shaders": "^2.4.78",
