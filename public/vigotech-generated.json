@@ -57,10 +57,10 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "AIndustriosa-314059417",
-        "title": "Ciberseguridade orientada ao ámbito doméstico",
-        "date": 1777109400000,
-        "url": "https://www.meetup.com/aindustriosa/events/314059417/",
+        "sourceId": "AIndustriosa-314293120",
+        "title": "AI Fundamentals: entende as bases da IA para espremela",
+        "date": 1778175000000,
+        "url": "https://www.meetup.com/aindustriosa/events/314293120/",
         "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
       },
       "videoList": [
@@ -4749,6 +4749,29 @@
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
+        {
+          "player": "youtube",
+          "id": "Mpijd508jEY",
+          "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WordPress",
+          "pubDate": 1777055266000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
         {
           "player": "youtube",
           "id": "kFLjqsvZKEc",
