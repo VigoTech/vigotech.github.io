@@ -34,6 +34,7 @@
       "logo": "https://vigotech.org/images/groups/aindustriosa.png",
       "links": {
         "web": "https://aindustriosa.org/",
+        "git": "https://github.com/aindustriosa",
         "twitter": "https://twitter.com/aindustriosa",
         "meetup": "https://www.meetup.com/es-ES/AIndustriosa/",
         "youtube": "https://www.youtube.com/channel/UC9DPKfcLiNd7SEU-QLlIG7A"
@@ -78,6 +79,7 @@
       "name": "Crafters Vigo",
       "logo": "https://vigotech.org/images/groups/craftersVigo.png",
       "links": {
+        "git": "https://github.com/CraftersVigo",
         "twitter": "https://twitter.com/CraftersVigo",
         "meetup": "https://www.meetup.com/craftersvigo/"
       },
@@ -90,7 +92,8 @@
       "name": "GALPon",
       "logo": "https://vigotech.org/images/groups/galpon.png",
       "links": {
-        "web": "https://www.galpon.org"
+        "web": "https://www.galpon.org",
+        "git": "https://codeberg.org/GALPon"
       },
       "events": {
         "type": "json",
@@ -172,6 +175,7 @@
       "logo": "https://vigotech.org/images/groups/python_vigo.png",
       "links": {
         "web": "https://www.python-vigo.es/",
+        "git": "https://github.com/python-vigo",
         "twitter": "https://twitter.com/python_vigo",
         "maillist": "https://lists.es.python.org/listinfo/vigo",
         "youtube": "https://www.youtube.com/channel/UCTUXabChakosnupWEnz4xTA"
