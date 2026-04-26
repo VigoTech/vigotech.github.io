@@ -6,6 +6,6 @@ groupLogo: '/images/groups/python_vigo.png'
 title: 'Entornos Interactivos en python'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=6niRYcubxPk'
-publishedAt: null
+publishedAt: 1432590137000
 thumbnail: 'https://i.ytimg.com/vi/6niRYcubxPk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA1w3xhPuYzyx7hsC_TIWce9lscLw'
 ---

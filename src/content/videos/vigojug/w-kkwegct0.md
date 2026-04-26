@@ -6,6 +6,6 @@ groupLogo: '/images/groups/vigojug.jpg'
 title: 'Quarkus World Tour 2021: VigoJUG & CoruñaJUG'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=_w_kKWeGct0'
-publishedAt: null
+publishedAt: 1616746238000
 thumbnail: 'https://i.ytimg.com/vi/_w_kKWeGct0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBFpudfE6cvfbjFFqzWSBiBn-0Z1g'
 ---

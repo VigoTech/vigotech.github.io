@@ -6,6 +6,6 @@ groupLogo: '/images/groups/aindustriosa.png'
 title: '20200319 - [LIVE] - Introducción a Lora e LoraWAN'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=VynI1x3QGI0'
-publishedAt: null
+publishedAt: 1584645933000
 thumbnail: 'https://i.ytimg.com/vi/VynI1x3QGI0/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAH7AHrp7Z9ColRWV4U1GIlynOtlw'
 ---

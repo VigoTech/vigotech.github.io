@@ -6,6 +6,6 @@ groupLogo: '/images/groups/aindustriosa.png'
 title: '20180301 - Monitorización de una regata de barcos radiocontrol'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Kx2P4b1cxCk'
-publishedAt: null
+publishedAt: 1521847560000
 thumbnail: 'https://i.ytimg.com/vi/Kx2P4b1cxCk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAQtgx6tz6CsJVjnF6C-PxC9jlsBg'
 ---

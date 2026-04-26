@@ -6,6 +6,6 @@ groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Arrays y Js, vamos a jugar - David García (@tansitos)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=LOQ7zTWD5tI'
-publishedAt: null
+publishedAt: 1485385666000
 thumbnail: 'https://i.ytimg.com/vi/LOQ7zTWD5tI/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCuB-wsXHuzdqifnmuonX1-ZinHag'
 ---

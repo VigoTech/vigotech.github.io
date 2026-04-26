@@ -6,6 +6,6 @@ groupLogo: '/images/groups/vigowordpress.png'
 title: 'Meetup #14 - Encuentra y lanza tu idea de negocio'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=t8ECwCRSlsA'
-publishedAt: null
+publishedAt: 1573126404000
 thumbnail: 'https://i.ytimg.com/vi/t8ECwCRSlsA/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAwvpdbyNGrDeD3xQnwObPghLsz3g'
 ---

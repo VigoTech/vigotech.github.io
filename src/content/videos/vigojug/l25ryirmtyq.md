@@ -6,6 +6,6 @@ groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Septiembre 2020 - Especial Apache Kafka'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=L25ryiRmTYQ'
-publishedAt: null
+publishedAt: 1601498660000
 thumbnail: 'https://i.ytimg.com/vi/L25ryiRmTYQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAjVkLSNcgqUAMLHqjDBBWW6kAqew'
 ---

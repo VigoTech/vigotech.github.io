@@ -6,6 +6,6 @@ groupLogo: '/images/groups/python_vigo.png'
 title: 'Measure all the things'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=oMst3JU-RjQ'
-publishedAt: null
+publishedAt: 1429586203000
 thumbnail: 'https://i.ytimg.com/vi/oMst3JU-RjQ/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLCSpe5sjXUhTGX6yav9iQo7T468nA'
 ---

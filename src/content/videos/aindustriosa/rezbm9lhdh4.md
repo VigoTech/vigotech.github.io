@@ -6,6 +6,6 @@ groupLogo: '/images/groups/aindustriosa.png'
 title: '20180314 - Introducción al diseño naval - III Regata Solar - Íñigo Echenique'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ReZbM9lhdH4'
-publishedAt: null
+publishedAt: 1521299972000
 thumbnail: 'https://i.ytimg.com/vi/ReZbM9lhdH4/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAreF2SzojhDu32tSX4n_5jruApmg'
 ---

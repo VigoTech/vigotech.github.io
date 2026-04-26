@@ -6,6 +6,6 @@ groupLogo: '/images/groups/aindustriosa.png'
 title: '20181213 - E-téxtiles nos espacios maker'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=UP_HuKoMZco'
-publishedAt: null
+publishedAt: 1546257281000
 thumbnail: 'https://i.ytimg.com/vi/UP_HuKoMZco/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDsGOcV47e17Rd5dn0gG07Eez48Ag'
 ---

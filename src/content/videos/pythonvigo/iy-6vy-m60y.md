@@ -6,6 +6,6 @@ groupLogo: '/images/groups/python_vigo.png'
 title: 'Metodos magicos python'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=IY_6vY-M60Y'
-publishedAt: null
+publishedAt: 1465405878000
 thumbnail: 'https://i.ytimg.com/vi/IY_6vY-M60Y/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhyIE0oQTAP&rs=AOn4CLBOCObX4S7Gdwwv5wSAhCSwhyKBOw'
 ---

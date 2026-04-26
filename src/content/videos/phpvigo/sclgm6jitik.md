@@ -6,6 +6,6 @@ groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Meetup#7: AWS Reload y Despliegue con Deployer'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ScLGm6jitik'
-publishedAt: null
+publishedAt: 1471460227000
 thumbnail: 'https://i.ytimg.com/vi/ScLGm6jitik/hqdefault.jpg?sqp=-oaymwE2CNACELwBSFXyq4qpAygIARUAAIhCGAFwAcABBvABAfgB_gmAAtAFigIMCAAQARhEIFMocjAP&rs=AOn4CLCY7Abq3mniZSvU5kb4g6WvGOwcMg'
 ---

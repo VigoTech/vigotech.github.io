@@ -6,6 +6,6 @@ groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Julio 2020 - Especial Engineering Management'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=XyZTCy5WQNc'
-publishedAt: null
+publishedAt: 1595608236000
 thumbnail: 'https://i.ytimg.com/vi/XyZTCy5WQNc/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLA5oaApvgzD8pVCgh4EEmGD3l60Ww'
 ---

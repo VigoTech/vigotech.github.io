@@ -6,6 +6,6 @@ groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Meetup #12: "Performance blackfire.io"'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=TuGZWmsf-Mk'
-publishedAt: null
+publishedAt: 1490220824000
 thumbnail: 'https://i.ytimg.com/vi/TuGZWmsf-Mk/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLDCaZxqEl9FVN2vSFBBWxiX9BUkLA'
 ---

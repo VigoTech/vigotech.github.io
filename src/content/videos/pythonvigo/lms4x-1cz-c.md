@@ -6,6 +6,6 @@ groupLogo: '/images/groups/python_vigo.png'
 title: 'PythonVigo - logging - Miguel Gonzalez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=lmS4x_1Cz-c'
-publishedAt: null
+publishedAt: 1489701304000
 thumbnail: 'https://i.ytimg.com/vi/lmS4x_1Cz-c/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLBSt2aW1O2wsVXjO222gTxP88CdRg'
 ---

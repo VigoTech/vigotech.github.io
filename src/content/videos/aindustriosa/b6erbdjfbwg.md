@@ -6,6 +6,6 @@ groupLogo: '/images/groups/aindustriosa.png'
 title: '20190227 - Cómo construirte una impresora 3d XXL'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=b6ErBdjfBWg'
-publishedAt: null
+publishedAt: 1553513127000
 thumbnail: 'https://i.ytimg.com/vi/b6ErBdjfBWg/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLAybyN4extkcliKgLPu9uEEgznWPw'
 ---

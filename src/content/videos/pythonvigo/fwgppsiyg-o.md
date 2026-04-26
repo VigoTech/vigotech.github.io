@@ -6,6 +6,6 @@ groupLogo: '/images/groups/python_vigo.png'
 title: 'PythonVigo - jython - Antón R. Yuste'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=FwgpPsiYg_o'
-publishedAt: null
+publishedAt: 1489701306000
 thumbnail: 'https://i.ytimg.com/vi/FwgpPsiYg_o/hqdefault.jpg?sqp=-oaymwEcCNACELwBSFXyq4qpAw4IARUAAIhCGAFwAcABBg==&rs=AOn4CLC_l6jUKGydJ7D_J0NIhOfpkdoTew'
 ---
