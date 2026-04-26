@@ -289,7 +289,7 @@ const calendarApiUrl = withBase('/api/calendar.json')
 
         const title = document.createElement('h3')
         title.className = 'font-headline text-lg leading-tight text-[var(--ink)]'
-        title.textContent = event.title
+        title.textContent = event.displayTitle || event.title
         card.append(title)
 
         const date = document.createElement('p')
