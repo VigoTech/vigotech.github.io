@@ -112,10 +112,11 @@ export const mergeCalendarEvents = (
   for (const event of googleEvents) {
     const key = normalizeTitle(event.title)
     const existingEvent = merged.get(key)
+    const { groupName, ...eventWithoutGroupName } = event
     const mergedEvent = {
       ...existingEvent,
-      ...event,
-      groupName: event.groupName ?? existingEvent?.groupName ?? null,
+      ...eventWithoutGroupName,
+      groupName: groupName ?? existingEvent?.groupName ?? null,
     }
 
     merged.set(key, {
