@@ -67,6 +67,39 @@
       "videoList": [
         {
           "player": "youtube",
+          "id": "SfBMwunsKp8",
+          "title": "20260425 - Título - Ciberseguridade orientada ao ámbito doméstico",
+          "pubDate": 1778228538000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "player": "youtube",
           "id": "9U0djWiKyGA",
           "title": "20250322 - Galegos na FOSDEM - David de la Iglesia",
           "pubDate": 1743146051000,
