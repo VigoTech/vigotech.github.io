@@ -67,6 +67,39 @@
       "videoList": [
         {
           "player": "youtube",
+          "id": "4sJoX5EyYic",
+          "title": "20260507 - AI Fundamentals: entende as bases da IA para espremela",
+          "pubDate": 1778873158000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "player": "youtube",
           "id": "SfBMwunsKp8",
           "title": "20260425 - Título - Ciberseguridade orientada ao ámbito doméstico",
           "pubDate": 1778228538000,
