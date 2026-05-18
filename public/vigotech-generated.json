@@ -67,6 +67,39 @@
       "videoList": [
         {
           "player": "youtube",
+          "id": "Ii0pDyDN0gw",
+          "title": "20260516 - Non todos os chips son iguais: tecnoloxía GaN, desde a oblea ata o sistema radar",
+          "pubDate": 1779121165000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            },
+            "standard": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/sddefault.jpg",
+              "width": 640,
+              "height": 480
+            },
+            "maxres": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/maxresdefault.jpg",
+              "width": 1280,
+              "height": 720
+            }
+          }
+        },
+        {
+          "player": "youtube",
           "id": "4sJoX5EyYic",
           "title": "20260507 - AI Fundamentals: entende as bases da IA para espremela",
           "pubDate": 1778873158000,
@@ -2708,9 +2741,9 @@
         }
       ],
       "nextEvent": {
-        "date": 1776362400000,
-        "title": "Reunión abril 2026",
-        "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
+        "date": 1779386400000,
+        "title": "Reunión mayo 2026",
+        "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
       },
       "videoList": [
         {
@@ -3797,6 +3830,11 @@
           "date": 1776362400000,
           "title": "Reunión abril 2026",
           "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
+        },
+        {
+          "date": 1779386400000,
+          "title": "Reunión mayo 2026",
+          "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
         }
       ]
     },
