@@ -89,6 +89,8 @@ const toArray = (value) => {
   return Array.isArray(value) ? value : [value]
 }
 
+const unique = (values) => [...new Set(values.filter(Boolean))]
+
 const warnFallback = (label, error) => {
   const message = error instanceof Error ? error.message : String(error)
   console.warn(`[generate:data] ${label}: ${message}`)
@@ -97,6 +99,22 @@ const warnFallback = (label, error) => {
 const hasObjectValue = (value) => Boolean(value && typeof value === 'object')
 
 const hasArrayItems = (value) => Array.isArray(value) && value.length > 0
+
+const isFutureEvent = (event) =>
+  !hasObjectValue(event) || typeof event.date !== 'number' || event.date >= Date.now()
+
+const getUsableNextEventFallback = (fallback, label) => {
+  if (!hasObjectValue(fallback)) {
+    return null
+  }
+
+  if (isFutureEvent(fallback)) {
+    return fallback
+  }
+
+  warnFallback(`discarding previous nextEvent for ${label}`, 'event date is in the past')
+  return null
+}
 
 const slugify = (value) =>
   String(value ?? '')
@@ -381,6 +399,145 @@ const normalizeForIdentity = (value) =>
 
 const sortEventsByDate = (events) => [...events].sort((a, b) => a.date - b.date)
 
+const getMeetupUrlNameFromMember = (member) => {
+  const meetupUrl = member?.links?.meetup
+  if (typeof meetupUrl !== 'string') {
+    return null
+  }
+
+  try {
+    const url = new URL(meetupUrl)
+    const segments = url.pathname.split('/').filter(Boolean)
+    return segments.at(-1) ?? null
+  } catch {
+    return null
+  }
+}
+
+const getMeetupSourceVariants = (source, member) => {
+  if (source?.type !== 'meetup') {
+    return [source]
+  }
+
+  const ids = unique([source.meetupid, getMeetupUrlNameFromMember(member)]).flatMap((id) =>
+    unique([id, id.toLowerCase()]),
+  )
+
+  return unique(ids).map((meetupid) => ({ ...source, meetupid }))
+}
+
+const getMeetupApiUrl = (meetupid, status) => {
+  const url = new URL(`https://api.meetup.com/${encodeURIComponent(meetupid)}/events`)
+  url.searchParams.set('status', status)
+  return url
+}
+
+const getMeetupLocation = (event) => {
+  const venue = event?.venue
+  const venueParts = [
+    venue?.name,
+    venue?.address_1,
+    venue?.city,
+    venue?.state,
+    venue?.country,
+  ].filter(Boolean)
+
+  return event?.how_to_find_us || venueParts.join(' - ')
+}
+
+const normalizeMeetupApiEvent = (event, source) => {
+  const date =
+    typeof event?.time === 'number'
+      ? event.time
+      : typeof event?.local_date === 'string'
+        ? Date.parse(`${event.local_date}T${event.local_time ?? '00:00:00'}`)
+        : Number.NaN
+
+  if (!Number.isFinite(date)) {
+    return null
+  }
+
+  return {
+    sourceId: `${source.meetupid}-${event.id ?? date}`,
+    title: event?.name ?? `${source.meetupid} event`,
+    date,
+    url: event?.link ?? null,
+    location: getMeetupLocation(event),
+  }
+}
+
+const fetchMeetupApiEvents = async (source, member, status, label) => {
+  const variants = getMeetupSourceVariants(source, member)
+  const errors = []
+
+  for (const variant of variants) {
+    try {
+      const url = getMeetupApiUrl(variant.meetupid, status)
+      const response = await fetch(url)
+
+      if (!response.ok) {
+        throw new Error(`${response.status} ${response.statusText}`)
+      }
+
+      const data = await response.json()
+      const events = toArray(data)
+        .map((event) => normalizeMeetupApiEvent(event, variant))
+        .filter(Boolean)
+
+      if (events.length > 0) {
+        if (variant.meetupid !== source.meetupid) {
+          warnFallback(
+            `using meetup id ${variant.meetupid} for ${label}`,
+            `${source.meetupid} returned no ${status} events`,
+          )
+        }
+
+        return Events.sortByDate(events)
+      }
+    } catch (error) {
+      errors.push(`${variant.meetupid}: ${error.message}`)
+    }
+  }
+
+  if (errors.length > 0) {
+    warnFallback(`meetup ${status} fetch failed for ${label}`, errors.join('; '))
+  }
+
+  return []
+}
+
+const getEventsFromSource = async (source, member, status, label) => {
+  const getEvents =
+    status === 'past' ? Events.getPrevFromSource.bind(Events) : Events.getNextFromSource.bind(Events)
+  const variants = getMeetupSourceVariants(source, member)
+
+  for (const variant of variants) {
+    const events = toArray(
+      getEvents(variant, {
+        eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
+        member,
+      }),
+    )
+
+    if (events.length > 0) {
+      if (variant.meetupid !== source.meetupid) {
+        warnFallback(
+          `using meetup id ${variant.meetupid} for ${label}`,
+          `${source.meetupid} returned no ${status} events`,
+        )
+      }
+
+      return events
+    }
+  }
+
+  if (source?.type === 'meetup') {
+    return fetchMeetupApiEvents(source, member, status, label)
+  }
+
+  return []
+}
+
 const getYoutubeUploadsPlaylistId = (channelId) => {
   if (typeof channelId !== 'string' || channelId.length < 3 || !channelId.startsWith('UC')) {
     return null
@@ -495,46 +652,49 @@ const getYoutubeArchiveVideos = async (channelId) => {
     .filter(Boolean)
 }
 
-const getNextEvent = (member, sources, fallback, label) => {
+const getNextEvent = async (member, sources, fallback, label) => {
   const sourceList = toArray(sources)
+  const usableFallback = getUsableNextEventFallback(fallback, label)
 
   if (
     sourceList.some((source) => source?.type === 'eventbrite') &&
     !process.env.EVENTBRITE_OAUTH_TOKEN
   ) {
-    if (hasObjectValue(fallback)) {
+    if (hasObjectValue(usableFallback)) {
       warnFallback(`keeping previous nextEvent for ${label}`, 'missing EVENTBRITE_OAUTH_TOKEN')
-      return fallback
+      return usableFallback
     }
 
     return null
   }
 
   try {
-    const nextEvents = Events.getGroupNextEvents(sourceList, {
-      eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
-      member,
-    })
-
-    const nextEvent = Array.isArray(nextEvents) ? (nextEvents[0] ?? null) : (nextEvents ?? null)
+    const nextEvents = Events.sortByDate(
+      (
+        await Promise.all(
+          sourceList.map((source) => getEventsFromSource(source, member, 'upcoming', label)),
+        )
+      ).flat(),
+    )
+    const nextEvent = nextEvents[0] ?? null
 
     if (hasObjectValue(nextEvent)) {
       return nextEvent
     }
 
-    if (hasObjectValue(fallback)) {
+    if (hasObjectValue(usableFallback)) {
       warnFallback(`keeping previous nextEvent for ${label}`, 'no upcoming events fetched')
-      return fallback
+      return usableFallback
     }
 
     return null
   } catch (error) {
     warnFallback(`using previous nextEvent for ${label}`, error)
-    return fallback ?? null
+    return usableFallback ?? null
   }
 }
 
-const getHistoricalEvents = (member, sources, fallback, label) => {
+const getHistoricalEvents = async (member, sources, fallback, label) => {
   const sourceList = toArray(sources)
   const fallbackList = Array.isArray(fallback) ? fallback : []
   const allEvents = []
@@ -550,18 +710,10 @@ const getHistoricalEvents = (member, sources, fallback, label) => {
     }
 
     try {
-      const nextEvents = toArray(
-        Events.getNextFromSource(source, {
-          eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
-          member,
-        }),
-      )
-      const prevEvents = toArray(
-        Events.getPrevFromSource(source, {
-          eventbriteToken: process.env.EVENTBRITE_OAUTH_TOKEN,
-          member,
-        }),
-      )
+      const [nextEvents, prevEvents] = await Promise.all([
+        getEventsFromSource(source, member, 'upcoming', label),
+        getEventsFromSource(source, member, 'past', label),
+      ])
 
       allEvents.push(...nextEvents, ...prevEvents)
     } catch (error) {
@@ -807,7 +959,7 @@ const main = async () => {
   }
 
   const generated = structuredClone(source)
-  generated.nextEvent = getNextEvent(
+  generated.nextEvent = await getNextEvent(
     generated,
     generated.events,
     previousGenerated.nextEvent ?? null,
@@ -825,7 +977,7 @@ const main = async () => {
 
     const member = memberValue
     const previousMember = previousMembers[memberKey] ?? {}
-    member.nextEvent = getNextEvent(
+    member.nextEvent = await getNextEvent(
       member,
       member.events,
       previousMember.nextEvent ?? null,
@@ -839,7 +991,7 @@ const main = async () => {
     )
 
     const historicalEvents = sortEventsByDate(
-      getHistoricalEvents(member, member.events, previousMember.eventList ?? [], memberKey),
+      await getHistoricalEvents(member, member.events, previousMember.eventList ?? [], memberKey),
     )
     member.eventList = historicalEvents
     historicalEventsByGroup.set(memberKey, historicalEvents)
