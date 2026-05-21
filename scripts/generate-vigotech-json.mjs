@@ -32,6 +32,7 @@ const shouldSuppressLog = (args) => {
     text.includes("Method doesn't allow unregistered callers") ||
     text.includes('GaxiosError') ||
     text.includes('Status code 404') ||
+    text.includes('getaddrinfo ENOTFOUND api.meetup.com') ||
     text.includes('INVALID_AUTH') ||
     text.includes('Not Found')
   )
