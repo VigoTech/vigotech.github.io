@@ -102,7 +102,7 @@ const hasObjectValue = (value) => Boolean(value && typeof value === 'object')
 const hasArrayItems = (value) => Array.isArray(value) && value.length > 0
 
 const isUsableNextEventFallback = (event) =>
-  hasObjectValue(event) && (typeof event.date !== 'number' || event.date >= Date.now())
+  hasObjectValue(event) && typeof event.date === 'number' && event.date >= Date.now()
 
 const getUsableNextEventFallback = (fallback, label) => {
   if (isUsableNextEventFallback(fallback)) {
@@ -423,7 +423,7 @@ const getMeetupSourceVariants = (source, member) => {
     [source.meetupid, getMeetupUrlNameFromMember(member)]
       .filter((id) => typeof id === 'string')
       .map((id) => id.trim()),
-  ).flatMap((id) => unique([id, id.toLowerCase()]))
+  ).flatMap((id) => [id, id.toLowerCase()])
 
   return unique(ids).map((meetupid) => ({ ...source, meetupid }))
 }
@@ -447,6 +447,9 @@ const getMeetupLocation = (event) => {
   return event?.how_to_find_us || venueParts.join(' - ')
 }
 
+const getMeetupApiEventSourceId = (event, source, date, title) =>
+  event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${date}-${slugify(title)}`
+
 const normalizeMeetupApiEvent = (event, source) => {
   const hasLocalDate =
     typeof event?.local_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.local_date)
@@ -466,7 +469,7 @@ const normalizeMeetupApiEvent = (event, source) => {
   const title = event?.name ?? `${source.meetupid} event`
 
   return {
-    sourceId: event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${date}-${slugify(title)}`,
+    sourceId: getMeetupApiEventSourceId(event, source, date, title),
     title,
     date,
     url: event?.link ?? null,
@@ -516,7 +519,10 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
 
 const getEventsFromSource = async (source, member, status, label) => {
   const getEvents =
-    status === 'past' ? Events.getPrevFromSource.bind(Events) : Events.getNextFromSource.bind(Events)
+    {
+      past: Events.getPrevFromSource.bind(Events),
+      upcoming: Events.getNextFromSource.bind(Events),
+    }[status] ?? Events.getNextFromSource.bind(Events)
   const variants = getMeetupSourceVariants(source, member)
 
   for (const variant of variants) {
