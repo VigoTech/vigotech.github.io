@@ -423,7 +423,7 @@ const getMeetupSourceVariants = (source, member) => {
     [source.meetupid, getMeetupUrlNameFromMember(member)]
       .filter((id) => typeof id === 'string')
       .map((id) => id.trim()),
-  ).flatMap((id) => [id, id.toLowerCase()])
+  ).flatMap((id) => (id === id.toLowerCase() ? [id] : [id, id.toLowerCase()]))
 
   return unique(ids).map((meetupid) => ({ ...source, meetupid }))
 }
@@ -431,7 +431,7 @@ const getMeetupSourceVariants = (source, member) => {
 const getMeetupApiUrl = (meetupid, status) => {
   const url = new URL(`https://api.meetup.com/${encodeURIComponent(meetupid)}/events`)
   url.searchParams.set('status', status)
-  return url
+  return url.toString()
 }
 
 const getMeetupLocation = (event) => {
@@ -444,22 +444,26 @@ const getMeetupLocation = (event) => {
     venue?.country,
   ].filter(Boolean)
 
-  return event?.how_to_find_us || venueParts.join(' - ')
+  return event?.how_to_find_us ?? venueParts.join(' - ')
 }
 
 const getMeetupApiEventSourceId = (event, source, date, title) =>
-  event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${date}-${slugify(title)}`
+  event.id
+    ? `${source.meetupid}-${event.id}`
+    : `${source.meetupid}-${date}-${slugify(event.link ?? event.venue?.id ?? title)}`
 
 const normalizeMeetupApiEvent = (event, source) => {
   const hasLocalDate =
     typeof event?.local_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.local_date)
   const hasLocalTime =
     typeof event?.local_time === 'string' && /^\d{2}:\d{2}(:\d{2})?$/.test(event.local_time)
+  const utcOffset = typeof event?.utc_offset === 'number' ? event.utc_offset : 0
+  const localTime = hasLocalTime ? event.local_time : '00:00:00'
   const date =
     typeof event?.time === 'number'
       ? event.time
       : hasLocalDate
-        ? Date.parse(`${event.local_date}T${hasLocalTime ? event.local_time : '00:00:00'}`)
+        ? Date.parse(`${event.local_date}T${localTime}Z`) - utcOffset
         : Number.NaN
 
   if (!Number.isFinite(date)) {
