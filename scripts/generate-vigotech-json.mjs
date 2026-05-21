@@ -90,7 +90,7 @@ const toArray = (value) => {
   return Array.isArray(value) ? value : [value]
 }
 
-const unique = (values) => [...new Set(values.filter(Boolean))]
+const getUniqueValues = (values) => [...new Set(values.filter(Boolean))]
 
 const warnFallback = (label, error) => {
   const message = error instanceof Error ? error.message : String(error)
@@ -419,7 +419,7 @@ const getMeetupSourceVariants = (source, member) => {
     return [source]
   }
 
-  const validIds = unique(
+  const validIds = getUniqueValues(
     [source.meetupid, getMeetupUrlNameFromMember(member)]
       .filter((id) => typeof id === 'string')
       .map((id) => id.trim()),
@@ -428,10 +428,14 @@ const getMeetupSourceVariants = (source, member) => {
     id === id.toLowerCase() ? [id] : [id, id.toLowerCase()],
   )
 
-  return unique(ids).map((meetupid) => ({ ...source, meetupid }))
+  return getUniqueValues(ids).map((meetupid) => ({ ...source, meetupid }))
 }
 
 const getMeetupApiUrl = (meetupid, status) => {
+  if (!['past', 'upcoming'].includes(status)) {
+    throw new Error(`Unsupported Meetup event status: ${status}`)
+  }
+
   const url = new URL(`https://api.meetup.com/${encodeURIComponent(meetupid)}/events`)
   url.searchParams.set('status', status)
   return url.toString()
@@ -453,7 +457,7 @@ const getMeetupLocation = (event) => {
 const generateMeetupEventSourceId = (event, source, date, title) =>
   event.id
     ? `${source.meetupid}-${event.id}`
-    : `${source.meetupid}-${date}-${slugify(event.link ?? event.venue?.id ?? title)}`
+    : `${source.meetupid}-${slugify(event.link ?? event.venue?.id ?? `${date}-${title}`)}`
 
 const normalizeMeetupApiEvent = (event, source) => {
   const hasLocalDate =
@@ -510,10 +514,12 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
           )
         }
 
-        return Events.sortByDate(events)
+        return sortEventsByDate(events)
       }
     } catch (error) {
-      errors.push(`${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error.name} ${error.message}`)
+      errors.push(
+        `${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error?.name ?? 'Error'} ${error?.message ?? String(error)}`,
+      )
     }
   }
 
@@ -690,7 +696,7 @@ const getNextEvent = async (member, sources, fallback, label) => {
   }
 
   try {
-    const nextEvents = Events.sortByDate(
+    const nextEvents = sortEventsByDate(
       (
         await Promise.all(
           sourceList.map((source) => getEventsFromSource(source, member, 'upcoming', label)),
