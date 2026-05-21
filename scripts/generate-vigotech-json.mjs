@@ -32,7 +32,7 @@ const shouldSuppressLog = (args) => {
     text.includes("Method doesn't allow unregistered callers") ||
     text.includes('GaxiosError') ||
     text.includes('Status code 404') ||
-    text.includes('getaddrinfo ENOTFOUND api.meetup.com') ||
+    text.includes('ENOTFOUND') ||
     text.includes('INVALID_AUTH') ||
     text.includes('Not Found')
   )
@@ -101,8 +101,8 @@ const hasObjectValue = (value) => Boolean(value && typeof value === 'object')
 
 const hasArrayItems = (value) => Array.isArray(value) && value.length > 0
 
-const isUsableNextEventFallback = (event) =>
-  hasObjectValue(event) && typeof event.date === 'number' && event.date >= Date.now()
+const isUsableNextEventFallback = (event, currentTime = Date.now()) =>
+  hasObjectValue(event) && typeof event.date === 'number' && event.date >= currentTime
 
 const getUsableNextEventFallback = (fallback, label) => {
   if (isUsableNextEventFallback(fallback)) {
@@ -419,11 +419,14 @@ const getMeetupSourceVariants = (source, member) => {
     return [source]
   }
 
-  const ids = unique(
+  const validIds = unique(
     [source.meetupid, getMeetupUrlNameFromMember(member)]
       .filter((id) => typeof id === 'string')
       .map((id) => id.trim()),
-  ).flatMap((id) => (id === id.toLowerCase() ? [id] : [id, id.toLowerCase()]))
+  )
+  const ids = validIds.flatMap((id) =>
+    id === id.toLowerCase() ? [id] : [id, id.toLowerCase()],
+  )
 
   return unique(ids).map((meetupid) => ({ ...source, meetupid }))
 }
@@ -447,7 +450,7 @@ const getMeetupLocation = (event) => {
   return event?.how_to_find_us ?? venueParts.join(' - ')
 }
 
-const getMeetupApiEventSourceId = (event, source, date, title) =>
+const generateMeetupEventSourceId = (event, source, date, title) =>
   event.id
     ? `${source.meetupid}-${event.id}`
     : `${source.meetupid}-${date}-${slugify(event.link ?? event.venue?.id ?? title)}`
@@ -473,7 +476,7 @@ const normalizeMeetupApiEvent = (event, source) => {
   const title = event?.name ?? `${source.meetupid} event`
 
   return {
-    sourceId: getMeetupApiEventSourceId(event, source, date, title),
+    sourceId: generateMeetupEventSourceId(event, source, date, title),
     title,
     date,
     url: event?.link ?? null,
@@ -510,7 +513,7 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
         return Events.sortByDate(events)
       }
     } catch (error) {
-      errors.push(`${variant.meetupid}: ${error.message}`)
+      errors.push(`${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error.name} ${error.message}`)
     }
   }
 
