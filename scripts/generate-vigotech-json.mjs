@@ -90,7 +90,7 @@ const toArray = (value) => {
   return Array.isArray(value) ? value : [value]
 }
 
-const getUniqueValues = (values) => [...new Set(values.filter(Boolean))]
+const getUniqueTruthyValues = (values) => [...new Set(values.filter(Boolean))]
 
 const warnFallback = (label, error) => {
   const message = error instanceof Error ? error.message : String(error)
@@ -101,8 +101,10 @@ const hasObjectValue = (value) => Boolean(value && typeof value === 'object')
 
 const hasArrayItems = (value) => Array.isArray(value) && value.length > 0
 
-const isUsableNextEventFallback = (event, currentTime = Date.now()) =>
-  hasObjectValue(event) && typeof event.date === 'number' && event.date >= currentTime
+const isUsableNextEventFallback = (event, currentTime = null) => {
+  const time = currentTime ?? Date.now()
+  return hasObjectValue(event) && typeof event.date === 'number' && event.date >= time
+}
 
 const getUsableNextEventFallback = (fallback, label) => {
   if (isUsableNextEventFallback(fallback)) {
@@ -419,7 +421,7 @@ const getMeetupSourceVariants = (source, member) => {
     return [source]
   }
 
-  const validIds = getUniqueValues(
+  const validIds = getUniqueTruthyValues(
     [source.meetupid, getMeetupUrlNameFromMember(member)]
       .filter((id) => typeof id === 'string')
       .map((id) => id.trim()),
@@ -428,7 +430,7 @@ const getMeetupSourceVariants = (source, member) => {
     id === id.toLowerCase() ? [id] : [id, id.toLowerCase()],
   )
 
-  return getUniqueValues(ids).map((meetupid) => ({ ...source, meetupid }))
+  return getUniqueTruthyValues(ids).map((meetupid) => ({ ...source, meetupid }))
 }
 
 const getMeetupApiUrl = (meetupid, status) => {
@@ -454,14 +456,14 @@ const getMeetupLocation = (event) => {
   return event?.how_to_find_us ?? venueParts.join(' - ')
 }
 
-const getMeetupEventFallbackId = (event, date, title) =>
+const generateMeetupEventFallbackId = (event, date, title) =>
   slugify(event.link ?? event.venue?.id ?? `${date}-${title}`)
 
 const generateMeetupEventSourceId = (event, source, date, title) =>
-  event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${getMeetupEventFallbackId(event, date, title)}`
+  event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${generateMeetupEventFallbackId(event, date, title)}`
 
 const formatMeetupFetchError = (variant, status, error) =>
-  `${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error?.name ?? 'Error'} ${error?.message ?? String(error)}`
+  `${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error?.message ?? error?.name ?? String(error)}`
 
 const eventSourceGetters = {
   past: Events.getPrevFromSource.bind(Events),
@@ -540,7 +542,11 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
 }
 
 const getEventsFromSource = async (source, member, status, label) => {
-  const getEvents = eventSourceGetters[status] ?? eventSourceGetters.upcoming
+  const getEvents = eventSourceGetters[status]
+  if (!getEvents) {
+    throw new Error(`Unsupported event status: ${status}`)
+  }
+
   const variants = getMeetupSourceVariants(source, member)
 
   for (const variant of variants) {
