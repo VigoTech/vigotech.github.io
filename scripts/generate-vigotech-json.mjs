@@ -101,19 +101,18 @@ const hasObjectValue = (value) => Boolean(value && typeof value === 'object')
 
 const hasArrayItems = (value) => Array.isArray(value) && value.length > 0
 
-const isFutureEvent = (event) =>
-  !hasObjectValue(event) || typeof event.date !== 'number' || event.date >= Date.now()
+const isUsableNextEventFallback = (event) =>
+  hasObjectValue(event) && (typeof event.date !== 'number' || event.date >= Date.now())
 
 const getUsableNextEventFallback = (fallback, label) => {
-  if (!hasObjectValue(fallback)) {
-    return null
-  }
-
-  if (isFutureEvent(fallback)) {
+  if (isUsableNextEventFallback(fallback)) {
     return fallback
   }
 
-  warnFallback(`discarding previous nextEvent for ${label}`, 'event date is in the past')
+  if (hasObjectValue(fallback)) {
+    warnFallback(`discarding previous nextEvent for ${label}`, 'event date is in the past')
+  }
+
   return null
 }
 
@@ -420,9 +419,11 @@ const getMeetupSourceVariants = (source, member) => {
     return [source]
   }
 
-  const ids = unique([source.meetupid, getMeetupUrlNameFromMember(member)]).flatMap((id) =>
-    unique([id, id.toLowerCase()]),
-  )
+  const ids = unique(
+    [source.meetupid, getMeetupUrlNameFromMember(member)]
+      .filter((id) => typeof id === 'string')
+      .map((id) => id.trim()),
+  ).flatMap((id) => unique([id, id.toLowerCase()]))
 
   return unique(ids).map((meetupid) => ({ ...source, meetupid }))
 }
@@ -447,20 +448,26 @@ const getMeetupLocation = (event) => {
 }
 
 const normalizeMeetupApiEvent = (event, source) => {
+  const hasLocalDate =
+    typeof event?.local_date === 'string' && /^\d{4}-\d{2}-\d{2}$/.test(event.local_date)
+  const hasLocalTime =
+    typeof event?.local_time === 'string' && /^\d{2}:\d{2}(:\d{2})?$/.test(event.local_time)
   const date =
     typeof event?.time === 'number'
       ? event.time
-      : typeof event?.local_date === 'string'
-        ? Date.parse(`${event.local_date}T${event.local_time ?? '00:00:00'}`)
+      : hasLocalDate
+        ? Date.parse(`${event.local_date}T${hasLocalTime ? event.local_time : '00:00:00'}`)
         : Number.NaN
 
   if (!Number.isFinite(date)) {
     return null
   }
 
+  const title = event?.name ?? `${source.meetupid} event`
+
   return {
-    sourceId: `${source.meetupid}-${event.id ?? date}`,
-    title: event?.name ?? `${source.meetupid} event`,
+    sourceId: event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${date}-${slugify(title)}`,
+    title,
     date,
     url: event?.link ?? null,
     location: getMeetupLocation(event),
