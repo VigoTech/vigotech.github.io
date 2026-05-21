@@ -454,10 +454,19 @@ const getMeetupLocation = (event) => {
   return event?.how_to_find_us ?? venueParts.join(' - ')
 }
 
+const getMeetupEventFallbackId = (event, date, title) =>
+  slugify(event.link ?? event.venue?.id ?? `${date}-${title}`)
+
 const generateMeetupEventSourceId = (event, source, date, title) =>
-  event.id
-    ? `${source.meetupid}-${event.id}`
-    : `${source.meetupid}-${slugify(event.link ?? event.venue?.id ?? `${date}-${title}`)}`
+  event.id ? `${source.meetupid}-${event.id}` : `${source.meetupid}-${getMeetupEventFallbackId(event, date, title)}`
+
+const formatMeetupFetchError = (variant, status, error) =>
+  `${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error?.name ?? 'Error'} ${error?.message ?? String(error)}`
+
+const eventSourceGetters = {
+  past: Events.getPrevFromSource.bind(Events),
+  upcoming: Events.getNextFromSource.bind(Events),
+}
 
 const normalizeMeetupApiEvent = (event, source) => {
   const hasLocalDate =
@@ -470,6 +479,8 @@ const normalizeMeetupApiEvent = (event, source) => {
     typeof event?.time === 'number'
       ? event.time
       : hasLocalDate
+        // Meetup local_date/local_time are wall-clock values; parse as UTC first, then
+        // subtract utc_offset to recover the actual UTC timestamp for that local time.
         ? Date.parse(`${event.local_date}T${localTime}Z`) - utcOffset
         : Number.NaN
 
@@ -517,9 +528,7 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
         return sortEventsByDate(events)
       }
     } catch (error) {
-      errors.push(
-        `${variant.meetupid} (${getMeetupApiUrl(variant.meetupid, status)}): ${error?.name ?? 'Error'} ${error?.message ?? String(error)}`,
-      )
+      errors.push(formatMeetupFetchError(variant, status, error))
     }
   }
 
@@ -531,11 +540,7 @@ const fetchMeetupApiEvents = async (source, member, status, label) => {
 }
 
 const getEventsFromSource = async (source, member, status, label) => {
-  const getEvents =
-    {
-      past: Events.getPrevFromSource.bind(Events),
-      upcoming: Events.getNextFromSource.bind(Events),
-    }[status] ?? Events.getNextFromSource.bind(Events)
+  const getEvents = eventSourceGetters[status] ?? eventSourceGetters.upcoming
   const variants = getMeetupSourceVariants(source, member)
 
   for (const variant of variants) {
