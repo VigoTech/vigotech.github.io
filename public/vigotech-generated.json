@@ -1400,13 +1400,22 @@
         "type": "json",
         "source": "https://raw.githubusercontent.com/Daniel-at-github/vigotech_events/refs/heads/main/calendars/obradoiros_galpon.json"
       },
-      "nextEvent": null,
+      "nextEvent": {
+        "title": "Xuntanza mensual de maio",
+        "date": 1780158600000,
+        "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
+      },
       "videoList": [],
       "eventList": [
         {
           "title": "Xuntanza mensual de abril",
           "date": 1777134600000,
           "url": "https://mobilizon.fr/events/663891df-3055-41e5-b749-143184727c19/"
+        },
+        {
+          "title": "Xuntanza mensual de maio",
+          "date": 1780158600000,
+          "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
         }
       ]
     },
