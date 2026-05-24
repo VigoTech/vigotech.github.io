@@ -1,0 +1,21 @@
+vitest.config.ts
+  s_88d5171acbd1d4::t_2417987c675594 14-17
+playwright/home.spec.ts
+  s_88d5171acbd1d4::t_9eea276ca837cc 5
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.1",
+  "base_commit_sha": "4f8ae166fb76a1354afa60ccbc18d546341ba948",
+  "prompts": {},
+  "sessions": {
+    "s_88d5171acbd1d4": {
+      "agent_id": {
+        "tool": "opencode",
+        "id": "ses_1a42d9b27ffee20Jkq6Z2vbhe0",
+        "model": "deepseek-v4-flash-free"
+      },
+      "human_author": "Sergio Carracedo <hi@sergiocarracedo.es>"
+    }
+  }
+}
