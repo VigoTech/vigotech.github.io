@@ -7,5 +7,5 @@ title: '20260516 - Non todos os chips son iguais: tecnoloxía GaN, desde a oblea
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Ii0pDyDN0gw'
 publishedAt: 1779121165000
-thumbnail: 'https://i.ytimg.com/vi/Ii0pDyDN0gw/sddefault.jpg'
+thumbnail: 'https://i.ytimg.com/vi/Ii0pDyDN0gw/hqdefault.jpg'
 ---

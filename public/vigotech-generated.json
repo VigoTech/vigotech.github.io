@@ -58,10 +58,10 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "AIndustriosa-314293120",
-        "title": "AI Fundamentals: entende as bases da IA para espremela",
-        "date": 1778175000000,
-        "url": "https://www.meetup.com/aindustriosa/events/314293120/",
+        "sourceId": "AIndustriosa-314766877",
+        "title": "Skills de agentes: Unha mirada profunda",
+        "date": 1779989400000,
+        "url": "https://www.meetup.com/aindustriosa/events/314766877/",
         "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
       },
       "videoList": [
@@ -85,16 +85,6 @@
               "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/hqdefault.jpg",
               "width": 480,
               "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
             }
           }
         },
@@ -118,23 +108,13 @@
               "url": "https://i.ytimg.com/vi/4sJoX5EyYic/hqdefault.jpg",
               "width": 480,
               "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
             }
           }
         },
         {
           "player": "youtube",
           "id": "SfBMwunsKp8",
-          "title": "20260425 - Título - Ciberseguridade orientada ao ámbito doméstico",
+          "title": "20260425 - Ciberseguridade orientada ao ámbito doméstico",
           "pubDate": 1778228538000,
           "thumbnails": {
             "default": {
@@ -151,16 +131,6 @@
               "url": "https://i.ytimg.com/vi/SfBMwunsKp8/hqdefault.jpg",
               "width": 480,
               "height": 360
-            },
-            "standard": {
-              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/sddefault.jpg",
-              "width": 640,
-              "height": 480
-            },
-            "maxres": {
-              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/maxresdefault.jpg",
-              "width": 1280,
-              "height": 720
             }
           }
         },
@@ -1320,10 +1290,10 @@
           "description": "Nesta charla abordaremos cuestións clave para mellorar a seguridade dixital no día a día da casa. Falaremos da xestión segura de contrasinais e dos distint"
         },
         {
-          "sourceId": "AIndustriosa-314293120",
-          "title": "AI Fundamentals: entende as bases da IA para espremela",
-          "date": 1778175000000,
-          "url": "https://www.meetup.com/aindustriosa/events/314293120/",
+          "sourceId": "AIndustriosa-314766877",
+          "title": "Skills de agentes: Unha mirada profunda",
+          "date": 1779989400000,
+          "url": "https://www.meetup.com/aindustriosa/events/314766877/",
           "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
         }
       ]
@@ -3836,11 +3806,6 @@
           "url": "https://www.python-vigo.es/posts/reunion-junio-2025/"
         },
         {
-          "date": 1776362400000,
-          "title": "Reunión abril 2026",
-          "url": "https://www.python-vigo.es/posts/reunion-abril-2026/"
-        },
-        {
           "date": 1779386400000,
           "title": "Reunión mayo 2026",
           "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
@@ -4865,10 +4830,10 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "Vigo-WordPress-Meetup-314167142",
-        "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WP",
-        "date": 1776963600000,
-        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314167142/",
+        "sourceId": "Vigo-WordPress-Meetup-314607301",
+        "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+        "date": 1779987600000,
+        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314607301/",
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
@@ -5776,6 +5741,13 @@
           "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314167142/",
           "location": "Círculo de Empresarios de Galicia, Rúa de García Barbón, 62, Vigo, Po, Vigo, Po, es",
           "description": "Desde o equipo de WordPress Vigo convidámosvos a unha nova edición da nosa Meetup.\n\n**Marketing4eCommerce: Cómo crear unha comunidade masiva e internaciona"
+        },
+        {
+          "sourceId": "Vigo-WordPress-Meetup-314607301",
+          "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+          "date": 1779987600000,
+          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314607301/",
+          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
         }
       ]
     }
