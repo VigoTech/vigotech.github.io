@@ -2,7 +2,7 @@
 sourceId: 'Mpijd508jEY'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WordPress'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Mpijd508jEY'

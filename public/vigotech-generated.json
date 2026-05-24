@@ -4810,36 +4810,6 @@
       ],
       "eventList": []
     },
-    "wppontevedra": {
-      "name": "WordpressPontevedra",
-      "logo": "https://vigotech.org/images/wordpress-pontevedra.png",
-      "links": {
-        "meetup": "https://www.meetup.com/es-ES/Pontevedra-WordPress-Meetup/",
-        "twitter": "https://twitter.com/wppontevedra"
-      },
-      "events": {
-        "type": "meetup",
-        "meetupid": "Pontevedra-WordPress-Meetup"
-      },
-      "inactive": true,
-      "nextEvent": {
-        "sourceId": "Pontevedra-WordPress-Meetup-314874230",
-        "title": "23 años de WordPress: ¿dónde vamos?",
-        "date": 1779895800000,
-        "url": "https://www.meetup.com/pontevedra-wordpress-meetup/events/314874230/",
-        "location": "Doble M - Rúa Condesa de Pardo Bazán, 14, Pontevedra, GA - Pontevedra - GA - es"
-      },
-      "videoList": [],
-      "eventList": [
-        {
-          "sourceId": "Pontevedra-WordPress-Meetup-314874230",
-          "title": "23 años de WordPress: ¿dónde vamos?",
-          "date": 1779895800000,
-          "url": "https://www.meetup.com/pontevedra-wordpress-meetup/events/314874230/",
-          "location": "Doble M - Rúa Condesa de Pardo Bazán, 14, Pontevedra, GA - Pontevedra - GA - es"
-        }
-      ]
-    },
     "vigowordpress": {
       "name": "VigoWordpress",
       "logo": "https://vigotech.org/images/groups/vigowordpress.png",

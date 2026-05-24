@@ -2,7 +2,7 @@
 sourceId: 'AIndustriosa-314766877'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Skills de agentes: Unha mirada profunda'
 description: null
 date: 1779989400000

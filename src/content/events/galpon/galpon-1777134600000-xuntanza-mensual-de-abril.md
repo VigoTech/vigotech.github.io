@@ -2,7 +2,7 @@
 sourceId: 'galpon-1777134600000-xuntanza-mensual-de-abril'
 groupId: 'galpon'
 groupName: 'GALPon'
-groupLogo: 'https://vigotech.org/images/galpon.png'
+groupLogo: '/images/groups/galpon.png'
 title: 'Xuntanza mensual de abril'
 description: null
 date: 1777134600000

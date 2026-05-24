@@ -2,7 +2,7 @@
 sourceId: 'Vigo-WordPress-Meetup-314607301'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Cómo crecer en marca y ventas con medios que van más allá de Google y Meta'
 description: null
 date: 1779987600000
