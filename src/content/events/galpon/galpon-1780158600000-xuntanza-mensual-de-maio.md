@@ -2,7 +2,7 @@
 sourceId: 'galpon-1780158600000-xuntanza-mensual-de-maio'
 groupId: 'galpon'
 groupName: 'GALPon'
-groupLogo: '/images/groups/galpon.png'
+groupLogo: 'https://vigotech.org/images/galpon.png'
 title: 'Xuntanza mensual de maio'
 description: null
 date: 1780158600000
