@@ -57,13 +57,82 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "AIndustriosa-314059100",
-        "title": "Introdución ao procesado de audio con STM32 e I2S",
-        "date": 1776499200000,
-        "url": "https://www.meetup.com/aindustriosa/events/314059100/",
-        "location": "Vigo - es"
+        "sourceId": "AIndustriosa-314766877",
+        "title": "Skills de agentes: Unha mirada profunda",
+        "date": 1779989400000,
+        "url": "https://www.meetup.com/aindustriosa/events/314766877/",
+        "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
       },
       "videoList": [
+        {
+          "player": "youtube",
+          "id": "Ii0pDyDN0gw",
+          "title": "20260516 - Non todos os chips son iguais: tecnoloxía GaN, desde a oblea ata o sistema radar",
+          "pubDate": 1779121165000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Ii0pDyDN0gw/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
+        {
+          "player": "youtube",
+          "id": "4sJoX5EyYic",
+          "title": "20260507 - AI Fundamentals: entende as bases da IA para espremela",
+          "pubDate": 1778873158000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/4sJoX5EyYic/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
+        {
+          "player": "youtube",
+          "id": "SfBMwunsKp8",
+          "title": "20260425 - Ciberseguridade orientada ao ámbito doméstico",
+          "pubDate": 1778228538000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/SfBMwunsKp8/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
         {
           "player": "youtube",
           "id": "9U0djWiKyGA",
@@ -1218,6 +1287,13 @@
           "url": "https://www.meetup.com/aindustriosa/events/314059417/",
           "location": "Vigo, es",
           "description": "Nesta charla abordaremos cuestións clave para mellorar a seguridade dixital no día a día da casa. Falaremos da xestión segura de contrasinais e dos distint"
+        },
+        {
+          "sourceId": "AIndustriosa-314766877",
+          "title": "Skills de agentes: Unha mirada profunda",
+          "date": 1779989400000,
+          "url": "https://www.meetup.com/aindustriosa/events/314766877/",
+          "location": "A Industriosa - Avda. Gregorio Espino 38 entresuelo 3, Vigo, pw - Vigo - pw - es"
         }
       ]
     },
@@ -1270,9 +1346,24 @@
         "type": "json",
         "source": "https://raw.githubusercontent.com/Daniel-at-github/vigotech_events/refs/heads/main/calendars/obradoiros_galpon.json"
       },
-      "nextEvent": null,
+      "nextEvent": {
+        "title": "Xuntanza mensual de maio",
+        "date": 1780158600000,
+        "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
+      },
       "videoList": [],
-      "eventList": []
+      "eventList": [
+        {
+          "title": "Xuntanza mensual de abril",
+          "date": 1777134600000,
+          "url": "https://mobilizon.fr/events/663891df-3055-41e5-b749-143184727c19/"
+        },
+        {
+          "title": "Xuntanza mensual de maio",
+          "date": 1780158600000,
+          "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
+        }
+      ]
     },
     "galstech": {
       "name": "GalsTech",
@@ -3691,6 +3782,11 @@
           "date": 1750356000000,
           "title": "Reunión junio 2025",
           "url": "https://www.python-vigo.es/posts/reunion-junio-2025/"
+        },
+        {
+          "date": 1779386400000,
+          "title": "Reunión mayo 2026",
+          "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
         }
       ]
     },
@@ -4704,9 +4800,23 @@
         "meetupid": "Pontevedra-WordPress-Meetup"
       },
       "inactive": true,
-      "nextEvent": null,
+      "nextEvent": {
+        "sourceId": "Pontevedra-WordPress-Meetup-314874230",
+        "title": "23 años de WordPress: ¿dónde vamos?",
+        "date": 1779895800000,
+        "url": "https://www.meetup.com/pontevedra-wordpress-meetup/events/314874230/",
+        "location": "Doble M - Rúa Condesa de Pardo Bazán, 14, Pontevedra, GA - Pontevedra - GA - es"
+      },
       "videoList": [],
-      "eventList": []
+      "eventList": [
+        {
+          "sourceId": "Pontevedra-WordPress-Meetup-314874230",
+          "title": "23 años de WordPress: ¿dónde vamos?",
+          "date": 1779895800000,
+          "url": "https://www.meetup.com/pontevedra-wordpress-meetup/events/314874230/",
+          "location": "Doble M - Rúa Condesa de Pardo Bazán, 14, Pontevedra, GA - Pontevedra - GA - es"
+        }
+      ]
     },
     "vigowordpress": {
       "name": "VigoWordpress",
@@ -4729,13 +4839,36 @@
       ],
       "inactive": true,
       "nextEvent": {
-        "sourceId": "Vigo-WordPress-Meetup-314167142",
-        "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WP",
-        "date": 1776963600000,
-        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314167142/",
+        "sourceId": "Vigo-WordPress-Meetup-314607301",
+        "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+        "date": 1779987600000,
+        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314607301/",
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
+        {
+          "player": "youtube",
+          "id": "Mpijd508jEY",
+          "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WordPress",
+          "pubDate": 1777055266000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/Mpijd508jEY/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
         {
           "player": "youtube",
           "id": "kFLjqsvZKEc",
@@ -5617,6 +5750,13 @@
           "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314167142/",
           "location": "Círculo de Empresarios de Galicia, Rúa de García Barbón, 62, Vigo, Po, Vigo, Po, es",
           "description": "Desde o equipo de WordPress Vigo convidámosvos a unha nova edición da nosa Meetup.\n\n**Marketing4eCommerce: Cómo crear unha comunidade masiva e internaciona"
+        },
+        {
+          "sourceId": "Vigo-WordPress-Meetup-314607301",
+          "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+          "date": 1779987600000,
+          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314607301/",
+          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
         }
       ]
     }
