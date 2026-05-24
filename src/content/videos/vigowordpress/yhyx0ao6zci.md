@@ -2,7 +2,7 @@
 sourceId: 'YHyx0ao6zCI'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Impacto y experiencia del do_action WCVIGO2024'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=YHyx0ao6zCI'

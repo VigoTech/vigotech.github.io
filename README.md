@@ -40,11 +40,6 @@ Run `pnpm generate:data` to rebuild `public/vigotech-generated.json` from
   - Example: `PUBLIC_BASE_PATH=vigotech-astro` produces URLs under `/vigotech-astro/`.
   - Leave empty for root deployments.
 
-- `PUBLIC_NOINDEX`
-  - Optional search-engine opt-out for non-production deployments.
-  - Set to `true` to emit `<meta name="robots" content="noindex, nofollow">` on every page.
-  - Recommended for temporary test deployments.
-
 - `VIGOTECH_GENERATED_DATA_DIR`
   - Optional override for generated JSON directory.
   - Default: `public`.

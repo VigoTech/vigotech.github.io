@@ -2,7 +2,7 @@
 sourceId: '8643WerUG-s'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'O cuarto meetup do VigoJUG: Kotlin, o Java para o século XXI'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=8643WerUG-s'

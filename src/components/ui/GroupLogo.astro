@@ -1,5 +1,6 @@
 ---
 import { withBase } from '../../lib/base-path'
+import { toLocalGroupLogo } from '../../lib/vigotech/source'
 
 type Props = {
   src: string | null
@@ -25,20 +26,19 @@ const initials = name
   .join('')
   .toUpperCase()
 
-const resolvedSrc = src ? withBase(src) : null
+const normalizedSrc = toLocalGroupLogo(src)
+const resolvedSrc = normalizedSrc ? withBase(normalizedSrc) : null
+const frameClass = `vt-squircle ${sizeClass} aspect-square shrink-0 overflow-hidden border border-[var(--line)] ${customClass}`
 ---
 
 {
   resolvedSrc ? (
-    <img
-      src={resolvedSrc}
-      alt={name}
-      loading="lazy"
-      class={`vt-squircle ${sizeClass} border border-[var(--line)] bg-white object-cover ${customClass}`}
-    />
+    <div class={`${frameClass} bg-white`}>
+      <img src={resolvedSrc} alt={name} loading="lazy" class="block size-full object-contain p-1" />
+    </div>
   ) : (
     <div
-      class={`vt-squircle ${sizeClass} flex items-center justify-center border border-[var(--line)] bg-[var(--bg-elevated)] ${fallbackClass} ${customClass}`}
+      class={`${frameClass} flex items-center justify-center bg-[var(--bg-elevated)] ${fallbackClass}`}
       aria-label={name}
     >
       {initials || 'VT'}

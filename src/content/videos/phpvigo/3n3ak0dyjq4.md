@@ -2,7 +2,7 @@
 sourceId: '3n3aK0DYJq4'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Novedades PHP 7.2 con Raúl Araya'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=3n3aK0DYJq4'

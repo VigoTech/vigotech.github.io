@@ -5,8 +5,6 @@ export const calendarT = {
     loading: 'Cargando eventos...',
     empty: 'Agora mesmo non hai eventos publicados na axenda.',
     error: 'Non se puido cargar a axenda neste intre.',
-    viewMonth: 'Mes',
-    viewWeek: 'Semana',
     at: 'As',
     atLocation: 'En',
     allDay: 'Todo o dia',

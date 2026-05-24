@@ -19,7 +19,6 @@ concurrency:
 
 env:
   PUBLIC_BASE_PATH: ${{ vars.PUBLIC_BASE_PATH }}
-  PUBLIC_NOINDEX: ${{ vars.PUBLIC_NOINDEX || 'true' }}
 
 jobs:
   refresh-data:

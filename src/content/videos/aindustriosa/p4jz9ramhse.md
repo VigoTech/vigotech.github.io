@@ -2,7 +2,7 @@
 sourceId: 'P4Jz9ramhsE'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Introducción a Mesa, por Igalia 28/10/2023'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=P4Jz9ramhsE'

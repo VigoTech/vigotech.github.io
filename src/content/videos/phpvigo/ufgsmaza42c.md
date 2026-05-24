@@ -2,7 +2,7 @@
 sourceId: 'ufGsMAzA42c'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Rolando Caldas - Password Hash'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=ufGsMAzA42c'

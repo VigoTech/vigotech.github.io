@@ -2,7 +2,7 @@
 sourceId: 'umssjHE5yG0'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'Filter Input (@rolando_caldas)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=umssjHE5yG0'

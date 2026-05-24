@@ -2,7 +2,7 @@
 sourceId: 'x_J_XWR3dwc'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'No dejes la puerta abierta   ciberseguridad para WordPress'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=x_J_XWR3dwc'

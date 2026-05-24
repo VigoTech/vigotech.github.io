@@ -2,7 +2,7 @@
 sourceId: 'pythonvigo-1750356000000-reunion-junio-2025'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Reunión junio 2025'
 description: null
 date: 1750356000000

@@ -13,11 +13,7 @@ const { groups } = Astro.props
 const t = groupsT[LANG]
 ---
 
-<section
-  id="grupos"
-  class="reveal py-20"
-  style="--reveal-delay: 60ms;"
->
+<section id="grupos" class="reveal py-20" style="--reveal-delay: 60ms;">
   <div class="vt-content-shell">
     <header class="mb-6 text-center">
       <h2 class="font-headline text-3xl tracking-tight sm:text-5xl">
@@ -26,13 +22,9 @@ const t = groupsT[LANG]
     </header>
 
     <div
-      class="grid gap-3 [grid-template-columns:repeat(auto-fit,minmax(180px,1fr))]"
+      class="grid gap-3 [grid-template-columns:repeat(auto-fit,minmax(260px,1fr))]"
     >
-      {
-        groups.map((group) => (
-          <GroupCard group={group} compact={true} />
-        ))
-      }
+      {groups.map((group) => <GroupCard group={group} compact={true} />)}
     </div>
   </div>
 </section>

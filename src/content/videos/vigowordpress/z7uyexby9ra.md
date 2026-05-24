@@ -2,7 +2,7 @@
 sourceId: 'Z7uyExBY9rA'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Haz que te encuentren cómo destacar tu perfil profesional y atraer oportunidades'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Z7uyExBY9rA'

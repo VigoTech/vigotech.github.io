@@ -2,7 +2,7 @@
 sourceId: 'quj83YRodhs'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'SEO Local: Cómo ser uno de los tres elegidos de Google'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=quj83YRodhs'

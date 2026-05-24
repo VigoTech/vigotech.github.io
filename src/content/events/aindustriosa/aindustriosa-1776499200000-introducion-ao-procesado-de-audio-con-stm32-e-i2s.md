@@ -2,7 +2,7 @@
 sourceId: 'aindustriosa-1776499200000-introducion-ao-procesado-de-audio-con-stm32-e-i2s'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Introdución ao procesado de audio con STM32 e I2S'
 description: 'O vindeiro **18 de abril en A Industriosa** teremos unha sesión práctica para achegarnos ao mundo do procesado de audio dixital con microcontroladores **ST'
 date: 1776499200000

@@ -2,7 +2,7 @@
 sourceId: 'GbqcE-YN7BI'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Creando asistentes virtuales con Inteligencia Artificial'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=GbqcE-YN7BI'

@@ -2,7 +2,7 @@
 sourceId: '4WlTqDk0ASM'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Agustín Tourón'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=4WlTqDk0ASM'

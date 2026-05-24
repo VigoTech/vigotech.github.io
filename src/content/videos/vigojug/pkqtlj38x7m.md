@@ -2,7 +2,7 @@
 sourceId: 'PKqTlj38X7M'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Make Java Great Again! por @tomasalmeida de Netcentric. 30 min.'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=PKqTlj38X7M'

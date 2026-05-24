@@ -29,6 +29,7 @@
 @theme {
   --color-primary: var(--accent);
   --color-primary-strong: var(--accent-strong);
+  --color-primary-past: var(--accent-past);
   --color-surface: var(--bg);
   --color-surface-panel: var(--bg-panel);
   --color-ink: var(--ink);
@@ -55,6 +56,7 @@
   --line: #d9e4e9;
   --accent: #e84a5f;
   --accent-strong: #d33b51;
+  --accent-past: color-mix(in srgb, var(--accent-strong) 55%, black);
 
   --shell-width: 1200px;
 }
@@ -70,6 +72,7 @@
   --line: #2a3b4d;
   --accent: #e84a5f;
   --accent-strong: #ff3559;
+  --accent-past: color-mix(in srgb, var(--accent-strong) 62%, black);
 }
 
 html,

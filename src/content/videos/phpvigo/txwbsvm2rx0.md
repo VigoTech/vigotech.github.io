@@ -2,7 +2,7 @@
 sourceId: 'txWbsVM2Rx0'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'PHP Slim Api Rest (Fernando Freire)'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=txWbsVM2Rx0'

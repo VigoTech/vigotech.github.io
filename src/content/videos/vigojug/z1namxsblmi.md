@@ -2,7 +2,7 @@
 sourceId: 'Z1NAmxSbLMI'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas Geek - Mayo 2021 - Especial SpringBoot'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=Z1NAmxSbLMI'

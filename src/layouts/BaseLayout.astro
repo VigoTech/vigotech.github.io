@@ -16,8 +16,6 @@ const {
   description = 'Federated ecosystem of tech communities from Vigo',
   mainClass = 'pt-28',
 } = Astro.props
-
-const shouldNoIndex = import.meta.env.PUBLIC_NOINDEX === 'true'
 ---
 
 <!doctype html>
@@ -27,12 +25,23 @@ const shouldNoIndex = import.meta.env.PUBLIC_NOINDEX === 'true'
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="generator" content={Astro.generator} />
     <meta name="description" content={description} />
-    {shouldNoIndex && <meta name="robots" content="noindex, nofollow" />}
     <title>{title}</title>
     <link rel="icon" type="image/svg+xml" href={withBase('/favicon.svg')} />
     <link rel="icon" href={withBase('/favicon.ico')} />
-    <link rel="preload" href={withBase('/fonts/inter-latin.woff2')} as="font" type="font/woff2" crossorigin />
-    <link rel="preload" href={withBase('/fonts/instrument-serif-latin.woff2')} as="font" type="font/woff2" crossorigin />
+    <link
+      rel="preload"
+      href={withBase('/fonts/inter-latin.woff2')}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
+    <link
+      rel="preload"
+      href={withBase('/fonts/instrument-serif-latin.woff2')}
+      as="font"
+      type="font/woff2"
+      crossorigin
+    />
     <link
       rel="preload"
       href={withBase('/fonts/instrument-serif-latin-italic.woff2')}
@@ -56,7 +65,7 @@ const shouldNoIndex = import.meta.env.PUBLIC_NOINDEX === 'true'
     <Footer />
 
     <script is:inline>
-      (() => {
+      ;(() => {
         const selector = '.reveal'
 
         const revealAll = () => {

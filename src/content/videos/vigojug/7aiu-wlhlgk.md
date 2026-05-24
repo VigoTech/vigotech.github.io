@@ -2,7 +2,7 @@
 sourceId: '7AiU-Wlhlgk'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Fran Puga'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=7AiU-Wlhlgk'

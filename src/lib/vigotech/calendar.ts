@@ -1,12 +1,14 @@
 export type CalendarEvent = {
   id: string
   title: string
+  displayTitle?: string
   start: string
   end: string | null
   location: string | null
   description: string | null
   htmlLink: string | null
   allDay: boolean
+  groupName?: string | null
 }
 
 type GoogleCalendarDate = {
@@ -23,6 +25,14 @@ type GoogleCalendarItem = {
   start?: GoogleCalendarDate
   end?: GoogleCalendarDate
 }
+
+const normalizeTitle = (value: string): string =>
+  value
+    .normalize('NFKD')
+    .replace(/[\u0300-\u036f]/g, '')
+    .toLowerCase()
+    .replace(/\s+/g, ' ')
+    .trim()
 
 const CALENDAR_ID = 'orestes.io_fj8ev1vakdnl8l8o6jeljhof1s@group.calendar.google.com'
 const DEFAULT_MAX_RESULTS = 24
@@ -61,6 +71,63 @@ export const mapGoogleCalendarItem = (item: GoogleCalendarItem): CalendarEvent |
     htmlLink: item.htmlLink ?? null,
     allDay,
   }
+}
+
+export const getCalendarEventDisplayTitle = (
+  event: Pick<CalendarEvent, 'title' | 'groupName'>,
+): string => {
+  const title = event.title.trim()
+  const groupName = event.groupName?.trim()
+
+  if (!groupName) {
+    return title
+  }
+
+  const normalizedTitle = normalizeTitle(title)
+  const normalizedGroupName = normalizeTitle(groupName)
+
+  if (
+    normalizedTitle.startsWith(`${normalizedGroupName}:`) ||
+    normalizedTitle.startsWith(`${normalizedGroupName} -`)
+  ) {
+    return title
+  }
+
+  return `${groupName}: ${title}`
+}
+
+export const mergeCalendarEvents = (
+  contentEvents: CalendarEvent[],
+  googleEvents: CalendarEvent[],
+): CalendarEvent[] => {
+  const merged = new Map<string, CalendarEvent>()
+
+  for (const event of contentEvents) {
+    merged.set(normalizeTitle(event.title), {
+      ...event,
+      displayTitle: getCalendarEventDisplayTitle(event),
+    })
+  }
+
+  for (const event of googleEvents) {
+    const key = normalizeTitle(event.title)
+    const existingEvent = merged.get(key)
+    const { groupName, ...eventWithoutGroupName } = event
+    const mergedEvent = {
+      ...existingEvent,
+      ...eventWithoutGroupName,
+      groupName: groupName ?? existingEvent?.groupName ?? null,
+    }
+
+    merged.set(key, {
+      ...mergedEvent,
+      displayTitle: getCalendarEventDisplayTitle(mergedEvent),
+    })
+  }
+
+  return [...merged.values()].sort(
+    (a, b) => new Date(a.start).getTime() - new Date(b.start).getTime(),
+  )
 }
 
 export const fetchGoogleCalendarEvents = async (

@@ -2,7 +2,7 @@
 sourceId: 'tx_ji5FTXPQ'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Luz Castro'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=tx_ji5FTXPQ'

@@ -2,7 +2,7 @@
 sourceId: 'OXqQL7jXCGI'
 groupId: 'vigowordpress'
 groupName: 'VigoWordpress'
-groupLogo: 'https://vigotech.org/images/vigowordpress.png'
+groupLogo: '/images/groups/vigowordpress.png'
 title: 'Green Web  diseños web eficientes, optimizados y de transferencia de datos reducida'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=OXqQL7jXCGI'

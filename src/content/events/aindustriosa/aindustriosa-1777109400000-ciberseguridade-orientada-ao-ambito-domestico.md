@@ -2,7 +2,7 @@
 sourceId: 'aindustriosa-1777109400000-ciberseguridade-orientada-ao-ambito-domestico'
 groupId: 'aindustriosa'
 groupName: 'A Industriosa'
-groupLogo: 'https://vigotech.org/images/aindustriosa.png'
+groupLogo: '/images/groups/aindustriosa.png'
 title: 'Ciberseguridade orientada ao ámbito doméstico'
 description: 'Nesta charla abordaremos cuestións clave para mellorar a seguridade dixital no día a día da casa. Falaremos da xestión segura de contrasinais e dos distint'
 date: 1777109400000

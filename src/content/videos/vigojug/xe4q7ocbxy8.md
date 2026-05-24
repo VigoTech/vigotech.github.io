@@ -2,7 +2,7 @@
 sourceId: 'XE4q7OCBXy8'
 groupId: 'vigojug'
 groupName: 'VigoJUG'
-groupLogo: 'https://vigotech.org/images/vigojug.jpg'
+groupLogo: '/images/groups/vigojug.jpg'
 title: 'Laretas AMA: Telmo Pérez'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=XE4q7OCBXy8'

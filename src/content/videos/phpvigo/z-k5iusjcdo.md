@@ -2,7 +2,7 @@
 sourceId: 'z_K5iuSjCDo'
 groupId: 'phpvigo'
 groupName: 'PHPVigo'
-groupLogo: 'https://vigotech.org/images/php_vigo.jpg'
+groupLogo: '/images/groups/php_vigo.jpg'
 title: 'PHPVigo 39: "Crea tu propia librería de componentes Vue. From scratch to NPM"'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=z_K5iuSjCDo'

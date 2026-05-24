@@ -2,7 +2,7 @@
 sourceId: '7U7vEO8AHlk'
 groupId: 'pythonvigo'
 groupName: 'PythonVigo'
-groupLogo: 'https://vigotech.org/images/python_vigo.png'
+groupLogo: '/images/groups/python_vigo.png'
 title: 'Cómo evitar alucinaciones en ChatGPT con la arquitectura RAG por Maryna Bogdan'
 player: 'youtube'
 url: 'https://www.youtube.com/watch?v=7U7vEO8AHlk'
