@@ -1,10 +1,6 @@
 import { describe, expect, it } from 'vitest'
 
-import {
-  getCalendarEventDisplayTitle,
-  mergeCalendarEvents,
-  type CalendarEvent,
-} from '../calendar'
+import { getCalendarEventDisplayTitle, mergeCalendarEvents, type CalendarEvent } from '../calendar'
 
 const baseEvent = {
   end: null,
