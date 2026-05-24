@@ -1,0 +1,14 @@
+package.json
+  h_f90ee31b03fc41 27
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.5.0",
+  "base_commit_sha": "b6eb2ae0b38a4556282cf3cd9e49a68586da63ad",
+  "prompts": {},
+  "humans": {
+    "h_f90ee31b03fc41": {
+      "author": "Sergio Carracedo <hi@sergiocarracedo.es>"
+    }
+  }
+}
