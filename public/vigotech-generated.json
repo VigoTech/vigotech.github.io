@@ -1342,10 +1342,10 @@
         "meetupid": "craftersvigo"
       },
       "nextEvent": {
-        "sourceId": "craftersvigo-314353102",
-        "title": "#67 - TDD con IA (continuación)",
-        "date": 1776792600000,
-        "url": "https://www.meetup.com/craftersvigo/events/314353102/",
+        "sourceId": "craftersvigo-314965909",
+        "title": "#70 - Charla: Dobles de test. ¡Hazte con todos!",
+        "date": 1780421400000,
+        "url": "https://www.meetup.com/craftersvigo/events/314965909/",
         "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
       },
       "videoList": [],
@@ -1355,6 +1355,13 @@
           "title": "#67 - TDD con IA (continuación)",
           "date": 1776792600000,
           "url": "https://www.meetup.com/craftersvigo/events/314353102/",
+          "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
+        },
+        {
+          "sourceId": "craftersvigo-314965909",
+          "title": "#70 - Charla: Dobles de test. ¡Hazte con todos!",
+          "date": 1780421400000,
+          "url": "https://www.meetup.com/craftersvigo/events/314965909/",
           "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
         }
       ]
