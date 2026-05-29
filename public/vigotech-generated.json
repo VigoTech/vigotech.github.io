@@ -4846,6 +4846,29 @@
       "videoList": [
         {
           "player": "youtube",
+          "id": "9Kk9UVJr-v0",
+          "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+          "pubDate": 1780079643000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/9Kk9UVJr-v0/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/9Kk9UVJr-v0/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/9Kk9UVJr-v0/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
+        {
+          "player": "youtube",
           "id": "Mpijd508jEY",
           "title": "Marketing4eCommerce: Cómo crear unha comunidade masiva e internacional con WordPress",
           "pubDate": 1777055266000,
