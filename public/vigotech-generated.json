@@ -1342,10 +1342,10 @@
         "meetupid": "craftersvigo"
       },
       "nextEvent": {
-        "sourceId": "craftersvigo-314965909",
-        "title": "#70 - Charla: Dobles de test. ¡Hazte con todos!",
-        "date": 1780421400000,
-        "url": "https://www.meetup.com/craftersvigo/events/314965909/",
+        "sourceId": "craftersvigo-315252003",
+        "title": "#71 - Coding Dojo",
+        "date": 1781631000000,
+        "url": "https://www.meetup.com/craftersvigo/events/315252003/",
         "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
       },
       "videoList": [],
@@ -1362,6 +1362,13 @@
           "title": "#70 - Charla: Dobles de test. ¡Hazte con todos!",
           "date": 1780421400000,
           "url": "https://www.meetup.com/craftersvigo/events/314965909/",
+          "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
+        },
+        {
+          "sourceId": "craftersvigo-315252003",
+          "title": "#71 - Coding Dojo",
+          "date": 1781631000000,
+          "url": "https://www.meetup.com/craftersvigo/events/315252003/",
           "location": "A Industriosa - Gregorio Espino 38, Entresuelo 3, Vigo, al - Vigo - al - es"
         }
       ]
@@ -4838,7 +4845,7 @@
       ],
       "nextEvent": {
         "sourceId": "Vigo-WordPress-Meetup-315245253",
-        "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
+        "title": "La era agéntica de WordPress: hablar en vez de configurar",
         "date": 1782406800000,
         "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315245253/",
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
@@ -5777,6 +5784,13 @@
           "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
           "date": 1779987600000,
           "url": "https://www.meetup.com/vigo-wordpress-meetup/events/314607301/",
+          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
+        },
+        {
+          "sourceId": "Vigo-WordPress-Meetup-315245253",
+          "title": "La era agéntica de WordPress: hablar en vez de configurar",
+          "date": 1782406800000,
+          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315245253/",
           "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
         },
         {
