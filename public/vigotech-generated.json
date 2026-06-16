@@ -1385,9 +1385,9 @@
         "source": "https://raw.githubusercontent.com/Daniel-at-github/vigotech_events/refs/heads/main/calendars/obradoiros_galpon.json"
       },
       "nextEvent": {
-        "title": "Xuntanza mensual de maio",
-        "date": 1780158600000,
-        "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
+        "title": "Obradoiro: gravación e difusión de eventos (admítense erros) + xuntanza de GALPon",
+        "date": 1782550800000,
+        "url": "https://mobilizon.fr/events/58704f7a-a390-44fe-b1e0-8aa80ac819e8/"
       },
       "videoList": [],
       "eventList": [
@@ -1400,6 +1400,11 @@
           "title": "Xuntanza mensual de maio",
           "date": 1780158600000,
           "url": "https://mobilizon.fr/events/7a494552-2535-4c88-bfec-549f8d8ee971/"
+        },
+        {
+          "title": "Obradoiro: gravación e difusión de eventos (admítense erros) + xuntanza de GALPon",
+          "date": 1782550800000,
+          "url": "https://mobilizon.fr/events/58704f7a-a390-44fe-b1e0-8aa80ac819e8/"
         }
       ]
     },
@@ -2734,9 +2739,9 @@
         }
       ],
       "nextEvent": {
-        "date": 1779386400000,
-        "title": "Reunión mayo 2026",
-        "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
+        "date": 1781805600000,
+        "title": "Reunión junio 2026",
+        "url": "https://www.python-vigo.es/posts/reunion-junio-2026/"
       },
       "videoList": [
         {
@@ -3823,6 +3828,11 @@
           "date": 1779386400000,
           "title": "Reunión mayo 2026",
           "url": "https://www.python-vigo.es/posts/reunion-mayo-2026/"
+        },
+        {
+          "date": 1781805600000,
+          "title": "Reunión junio 2026",
+          "url": "https://www.python-vigo.es/posts/reunion-junio-2026/"
         }
       ]
     },
