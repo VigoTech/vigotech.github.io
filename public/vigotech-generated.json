@@ -4854,10 +4854,10 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "Vigo-WordPress-Meetup-315245253",
-        "title": "La era agéntica de WordPress: hablar en vez de configurar",
-        "date": 1782406800000,
-        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315245253/",
+        "sourceId": "Vigo-WordPress-Meetup-315286145",
+        "title": "Cómo sobrevivir con herramientas medievales en la era tecnológica",
+        "date": 1784221200000,
+        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315286145/",
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
@@ -5831,6 +5831,13 @@
           "title": "Cómo crecer en marca y ventas con medios que van más allá de Google y Meta",
           "date": 1782406800000,
           "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315245253/",
+          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
+        },
+        {
+          "sourceId": "Vigo-WordPress-Meetup-315286145",
+          "title": "Cómo sobrevivir con herramientas medievales en la era tecnológica",
+          "date": 1784221200000,
+          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/315286145/",
           "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
         }
       ]
