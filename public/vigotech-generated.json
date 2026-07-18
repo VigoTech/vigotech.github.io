@@ -4863,6 +4863,29 @@
       "videoList": [
         {
           "player": "youtube",
+          "id": "zGhKIdgbWZk",
+          "title": "Cómo sobrevivir con herramientas medievales en la era tecnológica",
+          "pubDate": 1784319859000,
+          "thumbnails": {
+            "default": {
+              "url": "https://i.ytimg.com/vi/zGhKIdgbWZk/default.jpg",
+              "width": 120,
+              "height": 90
+            },
+            "medium": {
+              "url": "https://i.ytimg.com/vi/zGhKIdgbWZk/mqdefault.jpg",
+              "width": 320,
+              "height": 180
+            },
+            "high": {
+              "url": "https://i.ytimg.com/vi/zGhKIdgbWZk/hqdefault.jpg",
+              "width": 480,
+              "height": 360
+            }
+          }
+        },
+        {
+          "player": "youtube",
           "id": "ID-_1A94eHw",
           "title": "La era agéntica de WordPress: hablar en vez de configurar",
           "pubDate": 1782492985000,
