@@ -29,6 +29,19 @@
       ],
       "inactive": true
     },
+    "vigo404": {
+      "name": "Vigo404",
+      "logo": "https://vigotech.org/images/groups/vigo404.png",
+      "links": {
+        "git": "https://github.com/Vigo404",
+        "telegram": "https://t.me/vigo404",
+        "linkedin": "https://www.linkedin.com/company/vigo404/"
+      },
+      "events": {
+        "type": "meetup",
+        "meetupid": "vigo404"
+      }
+    },
     "aindustriosa": {
       "name": "A Industriosa",
       "logo": "https://vigotech.org/images/groups/aindustriosa.png",
