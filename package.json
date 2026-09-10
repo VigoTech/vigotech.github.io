@@ -44,7 +44,7 @@
     "oxlint": "^1.56.0",
     "postcss": "^8.5.10",
     "typescript": "^5.9.3",
-    "vitest": "^4.1.1"
+    "vitest": "^4.1.11"
   },
   "engines": {
     "node": ">=22.12.0"
