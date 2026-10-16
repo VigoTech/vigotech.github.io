@@ -16,10 +16,10 @@ importers:
         version: 4.2.2(vite@7.3.2(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(yaml@2.8.3))
       astro:
         specifier: ^6.1.6
-        version: 6.1.9(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.0)(typescript@5.9.3)(yaml@2.8.3)
+        version: 6.1.9(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.0)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.8.3)
       astro-icon:
         specifier: ^1.1.5
-        version: 1.1.5
+        version: 1.1.5(supports-color@7.2.0)
       metagroup-schema-tools:
         specifier: ^1.2.0
         version: 1.2.0
@@ -2762,8 +2762,8 @@ packages:
     resolution: {integrity: sha512-dWUG8F5sIIARXih1DTaQAX4SsiTXhInKf1buxdY9DIg4ZYPZK5nGM1VRIYmEbDbsHt7USo99xSLFu5Q1IqTmsg==}
     engines: {node: '>= 18'}
 
-  source-map-js@1.2.1:
-    resolution: {integrity: sha512-UXWMKhLOwVKb728IUtQPXxfYU+usdybtUrK/8uGE8CQMvrhOpwvzDBwj0QhSL7MQc7vIsISBG8VQ8+IDQxpfQA==}
+  source-map-js@1.2.2:
+    resolution: {integrity: sha512-KGj/8Y43x35aZVDtt+J4mK1hoLGHULMYfSkODJNQjNDC3oW1PqPoxMwo0pLUsWM/UEGzON/NxeHywEfNXNP3Vw==}
     engines: {node: '>=0.10.0'}
 
   space-separated-tokens@2.0.2:
@@ -3399,7 +3399,7 @@ snapshots:
     transitivePeerDependencies:
       - typescript
 
-  '@astrojs/markdown-remark@7.1.1':
+  '@astrojs/markdown-remark@7.1.1(supports-color@7.2.0)':
     dependencies:
       '@astrojs/internal-helpers': 0.9.0
       '@astrojs/prism': 4.0.1
@@ -3410,8 +3410,8 @@ snapshots:
       mdast-util-definitions: 6.0.0
       rehype-raw: 7.0.0
       rehype-stringify: 10.0.1
-      remark-gfm: 4.0.1
-      remark-parse: 11.0.0
+      remark-gfm: 4.0.1(supports-color@7.2.0)
+      remark-parse: 11.0.0(supports-color@7.2.0)
       remark-rehype: 11.1.2
       remark-smartypants: 3.0.2
       retext-smartypants: 6.2.0
@@ -3738,13 +3738,13 @@ snapshots:
     dependencies:
       '@iconify/types': 2.0.0
 
-  '@iconify/tools@4.2.0':
+  '@iconify/tools@4.2.0(supports-color@7.2.0)':
     dependencies:
       '@iconify/types': 2.0.0
-      '@iconify/utils': 2.3.0
+      '@iconify/utils': 2.3.0(supports-color@7.2.0)
       cheerio: 1.2.0
       domhandler: 5.0.3
-      extract-zip: 2.0.1
+      extract-zip: 2.0.1(supports-color@7.2.0)
       local-pkg: 1.1.2
       pathe: 2.0.3
       svgo: 3.3.3
@@ -3754,12 +3754,12 @@ snapshots:
 
   '@iconify/types@2.0.0': {}
 
-  '@iconify/utils@2.3.0':
+  '@iconify/utils@2.3.0(supports-color@7.2.0)':
     dependencies:
       '@antfu/install-pkg': 1.1.0
       '@antfu/utils': 8.1.1
       '@iconify/types': 2.0.0
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       globals: 15.15.0
       kolorist: 1.8.0
       local-pkg: 1.1.2
@@ -4147,7 +4147,7 @@ snapshots:
       jiti: 2.6.1
       lightningcss: 1.32.0
       magic-string: 0.30.21
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
       tailwindcss: 4.2.2
 
   '@tailwindcss/oxide-android-arm64@4.2.2':
@@ -4429,19 +4429,19 @@ snapshots:
       estree-walker: 3.0.3
       js-tokens: 10.0.0
 
-  astro-icon@1.1.5:
+  astro-icon@1.1.5(supports-color@7.2.0):
     dependencies:
-      '@iconify/tools': 4.2.0
+      '@iconify/tools': 4.2.0(supports-color@7.2.0)
       '@iconify/types': 2.0.0
-      '@iconify/utils': 2.3.0
+      '@iconify/utils': 2.3.0(supports-color@7.2.0)
     transitivePeerDependencies:
       - supports-color
 
-  astro@6.1.9(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.0)(typescript@5.9.3)(yaml@2.8.3):
+  astro@6.1.9(@types/node@25.5.0)(jiti@2.6.1)(lightningcss@1.32.0)(rollup@4.60.0)(supports-color@7.2.0)(typescript@5.9.3)(yaml@2.8.3):
     dependencies:
       '@astrojs/compiler': 3.0.1
       '@astrojs/internal-helpers': 0.9.0
-      '@astrojs/markdown-remark': 7.1.1
+      '@astrojs/markdown-remark': 7.1.1(supports-color@7.2.0)
       '@astrojs/telemetry': 3.3.1
       '@capsizecss/unpack': 4.0.0
       '@clack/prompts': 1.1.0
@@ -4720,17 +4720,17 @@ snapshots:
   css-tree@2.2.1:
     dependencies:
       mdn-data: 2.0.28
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-tree@2.3.1:
     dependencies:
       mdn-data: 2.0.30
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-tree@3.2.1:
     dependencies:
       mdn-data: 2.27.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   css-what@6.2.2: {}
 
@@ -4747,9 +4747,11 @@ snapshots:
     transitivePeerDependencies:
       - '@noble/hashes'
 
-  debug@4.4.3:
+  debug@4.4.3(supports-color@7.2.0):
     dependencies:
       ms: 2.1.3
+    optionalDependencies:
+      supports-color: 7.2.0
 
   decimal.js@10.6.0: {}
 
@@ -4910,9 +4912,9 @@ snapshots:
 
   extend@3.0.2: {}
 
-  extract-zip@2.0.1:
+  extract-zip@2.0.1(supports-color@7.2.0):
     dependencies:
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       get-stream: 5.2.0
       yauzl: 2.10.0
     optionalDependencies:
@@ -5388,7 +5390,7 @@ snapshots:
     dependencies:
       '@babel/parser': 7.29.2
       '@babel/types': 7.29.0
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   make-dir@4.0.0:
     dependencies:
@@ -5411,14 +5413,14 @@ snapshots:
       unist-util-is: 6.0.1
       unist-util-visit-parents: 6.0.2
 
-  mdast-util-from-markdown@2.0.3:
+  mdast-util-from-markdown@2.0.3(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
       '@types/unist': 3.0.3
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       mdast-util-to-string: 4.0.0
-      micromark: 4.0.2
+      micromark: 4.0.2(supports-color@7.2.0)
       micromark-util-decode-numeric-character-reference: 2.0.2
       micromark-util-decode-string: 2.0.1
       micromark-util-normalize-identifier: 2.0.1
@@ -5436,51 +5438,51 @@ snapshots:
       mdast-util-find-and-replace: 3.0.2
       micromark-util-character: 2.1.1
 
-  mdast-util-gfm-footnote@2.1.0:
+  mdast-util-gfm-footnote@2.1.0(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       mdast-util-to-markdown: 2.1.2
       micromark-util-normalize-identifier: 2.0.1
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-strikethrough@2.0.0:
+  mdast-util-gfm-strikethrough@2.0.0(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-table@2.0.0:
+  mdast-util-gfm-table@2.0.0(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
       markdown-table: 3.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm-task-list-item@2.0.0:
+  mdast-util-gfm-task-list-item@2.0.0(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
       devlop: 1.1.0
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
 
-  mdast-util-gfm@3.1.0:
+  mdast-util-gfm@3.1.0(supports-color@7.2.0):
     dependencies:
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       mdast-util-gfm-autolink-literal: 2.0.1
-      mdast-util-gfm-footnote: 2.1.0
-      mdast-util-gfm-strikethrough: 2.0.0
-      mdast-util-gfm-table: 2.0.0
-      mdast-util-gfm-task-list-item: 2.0.0
+      mdast-util-gfm-footnote: 2.1.0(supports-color@7.2.0)
+      mdast-util-gfm-strikethrough: 2.0.0(supports-color@7.2.0)
+      mdast-util-gfm-table: 2.0.0(supports-color@7.2.0)
+      mdast-util-gfm-task-list-item: 2.0.0(supports-color@7.2.0)
       mdast-util-to-markdown: 2.1.2
     transitivePeerDependencies:
       - supports-color
@@ -5702,10 +5704,10 @@ snapshots:
 
   micromark-util-types@2.0.2: {}
 
-  micromark@4.0.2:
+  micromark@4.0.2(supports-color@7.2.0):
     dependencies:
       '@types/debug': 4.1.13
-      debug: 4.4.3
+      debug: 4.4.3(supports-color@7.2.0)
       decode-named-character-reference: 1.3.0
       devlop: 1.1.0
       micromark-core-commonmark: 2.0.3
@@ -5939,7 +5941,7 @@ snapshots:
     dependencies:
       nanoid: 3.3.11
       picocolors: 1.1.1
-      source-map-js: 1.2.1
+      source-map-js: 1.2.2
 
   prettier@3.8.1: {}
 
@@ -6031,21 +6033,21 @@ snapshots:
       rehype-stringify: 10.0.1
       unified: 11.0.5
 
-  remark-gfm@4.0.1:
+  remark-gfm@4.0.1(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-gfm: 3.1.0
+      mdast-util-gfm: 3.1.0(supports-color@7.2.0)
       micromark-extension-gfm: 3.0.0
-      remark-parse: 11.0.0
+      remark-parse: 11.0.0(supports-color@7.2.0)
       remark-stringify: 11.0.0
       unified: 11.0.5
     transitivePeerDependencies:
       - supports-color
 
-  remark-parse@11.0.0:
+  remark-parse@11.0.0(supports-color@7.2.0):
     dependencies:
       '@types/mdast': 4.0.4
-      mdast-util-from-markdown: 2.0.3
+      mdast-util-from-markdown: 2.0.3(supports-color@7.2.0)
       micromark-util-types: 2.0.2
       unified: 11.0.5
     transitivePeerDependencies:
@@ -6252,7 +6254,7 @@ snapshots:
 
   smol-toml@1.6.1: {}
 
-  source-map-js@1.2.1: {}
+  source-map-js@1.2.2: {}
 
   space-separated-tokens@2.0.2: {}
 
