@@ -357,30 +357,7 @@ const calendarApiUrl = withBase('/api/calendar.json')
         }
 
         const payload = await response.json()
-        const apiEvents = Array.isArray(payload.events) ? payload.events : []
-        const fakeEvents = [
-          {
-            id: 'fake-next-1',
-            title: 'Demo meetup frontend VigoTech',
-            start: new Date().setHours(18, 30, 0, 0),
-            end: null,
-            location: 'Espazo Demo, Vigo',
-            description: null,
-            htmlLink: null,
-            allDay: false,
-          },
-          {
-            id: 'fake-next-2',
-            title: 'Obradoiro aberto de IA',
-            start: new Date(new Date().getFullYear(), new Date().getMonth(), new Date().getDate() + 6, 19, 0).toISOString(),
-            end: null,
-            location: 'A Industriosa',
-            description: null,
-            htmlLink: null,
-            allDay: false,
-          },
-        ]
-        const events = [...apiEvents, ...fakeEvents.map((event) => ({ ...event, start: typeof event.start === 'number' ? new Date(event.start).toISOString() : event.start }))]
+        const events = Array.isArray(payload.events) ? payload.events : []
         loadedEvents = events
 
         selectedDateKey = getDefaultSelectedDate(getEventsByDay(events))
