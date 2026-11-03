@@ -4902,10 +4902,10 @@
         }
       ],
       "nextEvent": {
-        "sourceId": "Vigo-WordPress-Meetup-316875139",
-        "title": "¡Levanta, c4br0n, que la vida sigue!",
-        "date": 1792688400000,
-        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/316875139/",
+        "sourceId": "Vigo-WordPress-Meetup-317274392",
+        "title": "Gobernanza de la IA en WordPress: lo que estamos pasando por alto",
+        "date": 1795716000000,
+        "url": "https://www.meetup.com/vigo-wordpress-meetup/events/317274392/",
         "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
       },
       "videoList": [
@@ -5946,6 +5946,13 @@
           "title": "¡Levanta, c4br0n, que la vida sigue!",
           "date": 1792688400000,
           "url": "https://www.meetup.com/vigo-wordpress-meetup/events/316875139/",
+          "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
+        },
+        {
+          "sourceId": "Vigo-WordPress-Meetup-317274392",
+          "title": "Gobernanza de la IA en WordPress: lo que estamos pasando por alto",
+          "date": 1795716000000,
+          "url": "https://www.meetup.com/vigo-wordpress-meetup/events/317274392/",
           "location": "Círculo de Empresarios de Galicia - Rúa de García Barbón, 62, Vigo, Po - Vigo - Po - es"
         }
       ]
